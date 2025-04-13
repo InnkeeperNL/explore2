@@ -131,7 +131,7 @@ function get_building_bonus(bonus_id, base_amount){
 				}
 				if(all_available_buildings[building_id]['effect_type'] == 'percent')
 				{
-					total_percent_bonus *= ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
+					total_percent_bonus *= 1 + ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
 				}
 				if(all_available_buildings[building_id]['effect_type'] == 'factor')
 				{
@@ -151,7 +151,7 @@ function get_building_bonus(bonus_id, base_amount){
 			}
 			if(all_available_items[item_id]['effect_type'] == 'percent')
 			{
-				total_percent_bonus *= ((owned_amount * all_available_items[item_id]['effects'][bonus_id]) / 100);
+				total_percent_bonus *= 1 + ((owned_amount * all_available_items[item_id]['effects'][bonus_id]) / 100);
 			}
 			if(all_available_items[item_id]['effect_type'] == 'factor')
 			{

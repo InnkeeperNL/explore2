@@ -28,7 +28,7 @@ var effects_per_value 		= {
 }
 
 eachoa(effects_per_value, function(effect_id, bonus_amount){
-	effects_per_value[effect_id] = bonus_amount / 5;
+	effects_per_value[effect_id] = bonus_amount / 25;
 });
 
 // ACTIONS
