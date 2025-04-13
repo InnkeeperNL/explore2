@@ -368,7 +368,7 @@ function calc_effect_per_value(value, effect_id){
 	{
 		calced_effect_per_value = effects_per_value[effect_id];
 	}
-	value *= Math.sqrt(value);
+	value *= Math.sqrt(Math.sqrt(value));
 	return Math.ceil(/*Math.sqrt*/(calced_effect_per_value * value));
 }
 

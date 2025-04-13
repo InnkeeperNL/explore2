@@ -129,7 +129,8 @@
 .expeditions_cost_icon,
 .action_cost_icon,
 .max_storage_icon,
-.max_inventory_icon
+.max_inventory_icon,
+.skill_bonus_icon
 {
 	display: inline-block;
 	width: 12px;
@@ -166,6 +167,13 @@
 	width: 16px;
 	margin-right: 2px;
 	background-image: url('../images/icons/knapsack-grey.svg');
+}
+
+.skill_bonus_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/electric-grey.svg');
 }
 
 .expeditions_cost_text,

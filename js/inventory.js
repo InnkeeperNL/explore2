@@ -381,3 +381,10 @@ function close_white_screen(){
 	class_remove_class('dark_overlay','active');
 	class_remove_class('white_screen','active');
 }
+
+function gain_all_items(amount){
+	if(amount == undefined){amount = 1;}
+	eachoa(all_available_items, function(item_id, item_info){
+		gamedata['inventory'][item_id] = amount;
+	});
+}
