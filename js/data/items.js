@@ -37,7 +37,7 @@ var all_available_items = {
 	barrel:{
 		image: 	'items/barrels-g9348f93d3_640.jpg',
 		effects:{
-			max_energy: 	1,
+			max_inventory: 	5,
 		},
 		effect_type: 		'percent',
 		value: 	25,
@@ -58,7 +58,7 @@ var all_available_items = {
 	bucket:{
 		image: 	'items/dream_TradingCard-2023-08-18T094513.jpg',
 		effects:{
-			max_energy: 	1,
+			max_inventory: 	5,
 		},
 		effect_type: 		'percent',
 		value: 	25,
@@ -91,7 +91,7 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-05-31T142320.jpg',
 		value: 	5,
 		effects:{
-			max_energy: 	1,
+			max_inventory: 	1,
 		},
 		effect_type: 		'percent',
 	},
@@ -247,6 +247,11 @@ var all_available_items = {
 	
 };
 
+/*var effects_per_value = {
+	max_inventory: 	10,
+	max_storage: 	3,
+}*/
+
 eachoa(all_available_items, function(item_id, item_info){
 	if(item_info['name'] == undefined)
 	{
@@ -262,6 +267,20 @@ eachoa(all_available_items, function(item_id, item_info){
 		{
 			console.log('cannot set energy for ' + item_id);
 		}
+	}
+	if(item_info['effects'] != undefined)
+	{
+		eachoa(item_info['effects'], function(effect_id, effect_amount){
+			all_available_items[item_id]['effects'][effect_id] = 1;
+			/*if(effects_per_value[effect_id] != undefined)
+			{
+				temp_effect_amount = (item_info['value'] / effects_per_value[effect_id]);
+				temp_effect_amount *= 1 + (temp_effect_amount / 10);
+				temp_effect_amount = Math.floor(temp_effect_amount);
+				all_available_items[item_id]['effects'][effect_id] = temp_effect_amount;
+				console.log(item_id + ' effect_amount = ' + temp_effect_amount);
+			}*/
+		});
 	}
 	/*if((item_info['type'] == undefined || item_info['type'] != 'resource') && item_info['value'] != undefined)
 	{

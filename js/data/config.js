@@ -15,16 +15,16 @@ var expeditions_per_tick_base = 1 / 60;
 // ITEMS
 var energy_per_value 		= 1;
 var effects_per_value 		= {
-	max_energy: 	0.25,
-	max_inventory: 	0.25,
+	max_energy: 	0.1,
+	max_inventory: 	0.1,
 
-	max_storage: 	0.25,
+	max_storage: 	0.1,
 
-	farming: 		2,
-	gathering: 		2,
-	hunting: 		2,
-	mining: 		2,
-	woodcutting: 	2,
+	farming: 		1,
+	gathering: 		1,
+	hunting: 		1,
+	mining: 		1,
+	woodcutting: 	1,
 }
 
 // ACTIONS

@@ -349,7 +349,8 @@ function calc_effect_per_value(value, effect_id){
 	{
 		calced_effect_per_value = effects_per_value[effect_id];
 	}
-	return Math.ceil(Math.sqrt(calced_effect_per_value * value));
+	value *= 1 + (value / 10);
+	return Math.ceil(/*Math.sqrt*/(calced_effect_per_value * value));
 }
 
 check_all_recipes();
