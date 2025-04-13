@@ -250,15 +250,15 @@ function parse_recipe(recipe_id){
 			}
 			if(item_info['effects'] && item_info['effects']['max_energy'] != undefined)
 			{
-				parsed_recipe += 	'<div class="actions_energy_cost"><div class="action_cost_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_energy'] + '</span></div>';
+				parsed_recipe += 	'<div class="actions_energy_cost"><div class="action_cost_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_energy'] + '%</span></div>';
 			}
 			if(item_info['effects'] && item_info['effects']['max_storage'] != undefined)
 			{
-				parsed_recipe += 	'<div class="actions_energy_cost"><div class="max_storage_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_storage'] + '</span></div>';
+				parsed_recipe += 	'<div class="actions_energy_cost"><div class="max_storage_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_storage'] + '%</span></div>';
 			}
 			if(item_info['effects'] && item_info['effects']['max_inventory'] != undefined)
 			{
-				parsed_recipe += 	'<div class="actions_energy_cost"><div class="max_inventory_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_inventory'] + '</span></div>';
+				parsed_recipe += 	'<div class="actions_energy_cost"><div class="max_inventory_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_inventory'] + '%</span></div>';
 			}
 			parsed_recipe += 	'<div class="amount_gained">+' + gained_amount + '</div>';
 			parsed_recipe += 	'<div class="item_amount">' + owned_amount + '</div>';

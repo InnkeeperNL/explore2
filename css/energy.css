@@ -11,6 +11,7 @@
 	position: relative;
 	overflow: visible;
 	z-index: 101;
+	display: none;
 }
 
 .expeditions_container

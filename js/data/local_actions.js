@@ -276,7 +276,8 @@ eachoa(all_available_actions, function(action_id, action_info){
 	{
 		set_action_image(action_id);
 	}
-	correct_action(action_id);
+	action_info['energy_cost'] = 0;
+	//correct_action(action_id);
 });
 
 function set_action_image(action_id){

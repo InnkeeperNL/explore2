@@ -16,7 +16,7 @@ var all_available_recipes = {
 		result:{
 			axe: 		1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	backpack:{
 		cost:{
@@ -26,7 +26,7 @@ var all_available_recipes = {
 		result:{
 			backpack: 	1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	barrel:{
 		cost:{
@@ -37,7 +37,7 @@ var all_available_recipes = {
 		result:{
 			barrel: 	1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	basket:{
 		cost:{
@@ -46,7 +46,7 @@ var all_available_recipes = {
 		result:{
 			basket: 	1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	bow:{
 		cost:{
@@ -57,7 +57,7 @@ var all_available_recipes = {
 		result:{
 			bow: 		1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	bread:{
 		cost:{
@@ -76,7 +76,7 @@ var all_available_recipes = {
 		result:{
 			bucket: 	1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	cloth:{
 		cost:{
@@ -103,7 +103,7 @@ var all_available_recipes = {
 		result:{
 			copper_pot: 	1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	crate:{
 		cost:{
@@ -113,7 +113,7 @@ var all_available_recipes = {
 		result:{
 			crate: 	1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	flour:{
 		cost:{
@@ -196,7 +196,7 @@ var all_available_recipes = {
 		result:{
 			pickaxe: 1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	pitchfork:{
 		cost:{
@@ -206,7 +206,7 @@ var all_available_recipes = {
 		result:{
 			pitchfork: 1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	plank:{
 		cost:{
@@ -231,7 +231,7 @@ var all_available_recipes = {
 		result:{
 			pouch: 1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	roasted_meat:{
 		cost:{
@@ -250,7 +250,7 @@ var all_available_recipes = {
 		result:{
 			sack: 		1
 		},
-		cost_factor: 2,
+		//cost_factor: 2,
 	},
 	twine:{
 		cost:{

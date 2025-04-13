@@ -1,7 +1,7 @@
 function show_locations(){
 	var all_parsed_locations = '';
 	class_html('locations_container', '');
-	if(gamedata['known_locations'] == undefined){gamedata['known_locations'] = {};}
+	if(gamedata['known_locations'] == undefined){gamedata['known_locations'] = {};eachoa(all_available_locations, function(location_id, location_info){check_location_available(location_id);});}
 	eachoa(gamedata['known_locations'], function(location_id, location_unlocked){
 		all_parsed_locations += parse_location_button(location_id);
 	});

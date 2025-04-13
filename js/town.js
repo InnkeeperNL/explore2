@@ -159,5 +159,5 @@ function get_building_bonus(bonus_id, base_amount){
 	});
 	base_amount *= 1 + total_percent_bonus;
 	base_amount *= total_factor;
-	return base_amount;
+	return Math.floor(base_amount);
 }

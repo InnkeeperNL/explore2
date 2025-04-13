@@ -36,7 +36,14 @@ function set_location(location_id, forced){
 					}
 				}
 			}
+			var action_pick_chances = {};
 			eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
+				action_pick_chances[action_id] = action_chances['chance'];
+			});
+			var chosen_action_id = get_random_key_from_object_based_on_num_value(action_pick_chances);
+			var action_id = chosen_action_id;
+			var action_chances = all_available_locations[location_id]['local_actions'][action_id];
+			//eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
 				if(Math.random() * 100 <= action_chances['chance'] || true)
 				{
 					var action_amount = round_by_percent((Math.random() * (action_chances['max'] - action_chances['min'])) + action_chances['min']);
@@ -58,13 +65,14 @@ function set_location(location_id, forced){
 						}
 					}
 				}
-			});
+			//});
 		}
 	}
 }
 
 function reset_location(){
-	set_location(gamedata['current_location']['location_id'], true);
+	gamedata['current_location']['actions'] = {};
+	//set_location(gamedata['current_location']['location_id'], true);
 }
 
 function show_current_location(fade_in){
@@ -96,7 +104,7 @@ function parse_current_action(current_action_id, current_action_info, fade_in){
 		var action_energy_cost = 1;
 		if(action_info['energy_cost'] != undefined){action_energy_cost = action_info['energy_cost'];}
 		parsed_current_action += '<div class="current_action_button fade_in_' + fade_in + ' current_action_button_' + current_action_id + ' action_x_' + current_action_info['x'] + ' action_y_' + current_action_info['y'] + '" style="background-image:url(\'images/' + action_info['image'] + '\')"">';
-		parsed_current_action += 	'<div class="actions_energy_cost"><div class="action_cost_icon"></div><span class="action_energy_cost_text">' + action_energy_cost + '</span></div>';
+		//parsed_current_action += 	'<div class="actions_energy_cost"><div class="action_cost_icon"></div><span class="action_energy_cost_text">' + action_energy_cost + '</span></div>';
 		parsed_current_action += 	'<div class="actions_left_bar_container">';
 		//var action_bar_width = (current_action_info['current_action_amount'] / current_action_info['max_action_amount']) * 100;
 		var action_bar_width = 100 / current_action_info['max_action_amount'];
@@ -120,7 +128,7 @@ function perform_action(current_action_id){
 		var current_action_info = gamedata['current_location']['actions'][current_action_id];
 		var action_id = current_action_info['action_id'];
 		var action_info = all_available_actions[action_id];
-		var action_energy_cost = 1;
+		var action_energy_cost = 0;
 		if(action_info['energy_cost'] != undefined){action_energy_cost = action_info['energy_cost'];}
 		if(current_action_info['current_action_amount'] > 0 && gamedata['energy'] >= action_energy_cost)
 		{
@@ -185,11 +193,11 @@ function perform_action(current_action_id){
 		
 			gamedata['energy'] -= action_energy_cost;
 			update_energy();
-			if(count_object(gamedata['current_location']['actions']) == 0)
+			/*if(count_object(gamedata['current_location']['actions']) == 0)
 			{
 				set_location(gamedata['current_location']['location_id'], true);
 				show_current_location(true);
-			}
+			}*/
 		}
 	}
 }

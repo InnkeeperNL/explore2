@@ -2,7 +2,7 @@ var all_available_items = {
 	apple:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T080707.jpg',
-		energy: 3,
+		//energy: 3,
 		value: 	3,
 	},
 	arrow:{
@@ -23,7 +23,7 @@ var all_available_items = {
 		effects:{
 			max_inventory: 	2,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	31,
 	},
 	basket:{
@@ -39,7 +39,7 @@ var all_available_items = {
 		effects:{
 			max_energy: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	25,
 	},
 	bow:{
@@ -52,7 +52,7 @@ var all_available_items = {
 	},
 	bread:{
 		image: 	'items/dream_TradingCard-2023-05-20T094512.jpg',
-		energy: 3,
+		//energy: 3,
 		value: 	3,
 	},
 	bucket:{
@@ -60,13 +60,13 @@ var all_available_items = {
 		effects:{
 			max_energy: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	25,
 	},
 	carrot:{
 		type: 	'resource',
 		image: 	'items/carrot-1565597_640.jpg',
-		energy: 3,
+		//energy: 3,
 		value: 	3,
 	},
 	cloth:{
@@ -93,14 +93,14 @@ var all_available_items = {
 		effects:{
 			max_energy: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	crate:{
 		image: 	'items/boxes-2719166_640.jpg',
 		effects:{
 			max_storage: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	5,
 	},
 	firewood:{
@@ -124,7 +124,7 @@ var all_available_items = {
 	},
 	fries:{
 		image: 	'items/french-fries-923687_640.jpg',
-		energy: 1,
+		//energy: 1,
 		value: 	1,
 	},
 	
@@ -203,12 +203,12 @@ var all_available_items = {
 		effects:{
 			max_inventory: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	18,
 	},
 	roasted_meat:{
 		image: 	'items/dream_TradingCard-2023-08-24T113417.jpg',
-		energy: 1,
+		//energy: 1,
 		value: 	1,
 	},
 	sack:{
@@ -216,7 +216,7 @@ var all_available_items = {
 		effects:{
 			max_inventory: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	18,
 	},
 	salt:{
@@ -236,7 +236,7 @@ var all_available_items = {
 	water:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-20T073449.jpg',
-		energy: 1,
+		//energy: 1,
 		value: 	1,
 	},
 	wheat:{
