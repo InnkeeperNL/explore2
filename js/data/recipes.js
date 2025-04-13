@@ -41,7 +41,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	5,
+			firewood: 	1,
 		},
 		result:{
 			basket: 	1
@@ -71,7 +71,7 @@ var all_available_recipes = {
 	},
 	bucket:{
 		cost:{
-			lumber: 	2,
+			lumber: 	1,
 		},
 		result:{
 			bucket: 	1
@@ -368,7 +368,7 @@ function calc_effect_per_value(value, effect_id){
 	{
 		calced_effect_per_value = effects_per_value[effect_id];
 	}
-	value *= Math.sqrt(Math.sqrt(value));
+	value = (Math.sqrt(value));
 	return Math.ceil(/*Math.sqrt*/(calced_effect_per_value * value));
 }
 

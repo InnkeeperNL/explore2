@@ -17,6 +17,7 @@ var all_available_buildings = {
 		effects:{
 		},
 		recipes:{
+			coal: 		1,
 			copper: 	1,
 			iron: 		2,
 		},
@@ -162,25 +163,26 @@ var all_available_buildings = {
 		cost:{
 			lumber: 	5,
 		},
-		additional_costs:{
+		/*additional_costs:{
 			3:{
 				lumber: -5,
 				nail: 	10,
 				plank: 	5,
 			}
-		},
+		},*/
 		cost_factor: 	2,
 		recipes:{
 			basket: 	1,
+			bucket: 	2,
 			crate: 		3,
 		},
 		effects:{
-			max_storage: 	2,
+			max_storage: 	10,
 		},
-		effect_type: 		'factor',
+		effect_type: 		'fixed',
 	},
-	/*well:{
-		description: 	'Increases energy generation by 10% each level.',
+	well:{
+		description: 	'Increases storage by 10% each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
 		item_image: 'water',
 		//free_levels: 1,
@@ -189,12 +191,12 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			energy_per_tick: 	10,
+			max_storage: 	10,
 		},
 		effect_type: 	'percent',
 		//effect_is_local: true,
 
-	},*/
+	},
 	wood_workshop:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
 		item_image: 'lumber',
@@ -223,7 +225,6 @@ var all_available_buildings = {
 		recipes:{
 			plank: 		1,
 			pole: 		1,
-			bucket: 	1,
 			barrel: 	3,
 			arrow: 		2,
 			bow: 		2,

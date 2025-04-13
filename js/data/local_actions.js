@@ -130,7 +130,6 @@ var all_available_actions = {
 		},
 		action_loot:{
 			coal: 		50,
-			stone: 		50,
 		},
 		final_loot:{
 			coal: 		2,
@@ -150,7 +149,6 @@ var all_available_actions = {
 		},
 		action_loot:{
 			copper_ore: 	50,
-			stone: 			50,
 		},
 		final_loot:{
 			copper_ore: 	2,
@@ -275,7 +273,6 @@ var all_available_actions = {
 		image: 					'items/meteorite-91891_640.jpg',
 		action_loot:{
 			iron_ore: 	50,
-			stone: 		50,
 		},
 		final_loot:{
 			iron_ore: 	2,

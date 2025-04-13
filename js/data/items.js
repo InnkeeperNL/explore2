@@ -37,7 +37,7 @@ var all_available_items = {
 	barrel:{
 		image: 	'items/barrels-g9348f93d3_640.jpg',
 		effects:{
-			max_inventory: 	5,
+			max_storage: 	5,
 		},
 		effect_type: 		'percent',
 		value: 	25,
@@ -58,7 +58,7 @@ var all_available_items = {
 	bucket:{
 		image: 	'items/dream_TradingCard-2023-08-18T094513.jpg',
 		effects:{
-			max_inventory: 	5,
+			max_storage: 	5,
 		},
 		effect_type: 		'percent',
 		value: 	25,
@@ -91,7 +91,7 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-05-31T142320.jpg',
 		value: 	5,
 		effects:{
-			max_inventory: 	1,
+			max_storage: 	1,
 		},
 		effect_type: 		'percent',
 	},
@@ -214,7 +214,7 @@ var all_available_items = {
 	sack:{
 		image: 	'items/dream_TradingCard-2023-08-26T074414.jpg',
 		effects:{
-			max_inventory: 	1,
+			max_storage: 	1,
 		},
 		effect_type: 		'percent',
 		value: 	18,

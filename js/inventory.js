@@ -385,6 +385,6 @@ function close_white_screen(){
 function gain_all_items(amount){
 	if(amount == undefined){amount = 1;}
 	eachoa(all_available_items, function(item_id, item_info){
-		gamedata['inventory'][item_id] = amount;
+		gamedata['storage'][item_id] = amount;
 	});
 }
