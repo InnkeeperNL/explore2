@@ -121,19 +121,22 @@ function get_building_bonus(bonus_id, base_amount){
 	var total_percent_bonus = 0;
 	var total_factor = 1;
 	eachoa(gamedata['buildings'], function(building_id, building_level){
-		if(all_available_buildings[building_id]['effects'][bonus_id] != undefined && (all_available_buildings[building_id]['effect_is_local'] == undefined || (current_building_id == building_id && current_content == 'building')))
+		if(all_available_buildings[building_id] != undefined)
 		{
-			if(all_available_buildings[building_id]['effect_type'] == 'fixed')
+			if(all_available_buildings[building_id]['effects'][bonus_id] != undefined && (all_available_buildings[building_id]['effect_is_local'] == undefined || (current_building_id == building_id && current_content == 'building')))
 			{
-				base_amount += building_level * all_available_buildings[building_id]['effects'][bonus_id];
-			}
-			if(all_available_buildings[building_id]['effect_type'] == 'percent')
-			{
-				total_percent_bonus += ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
-			}
-			if(all_available_buildings[building_id]['effect_type'] == 'factor')
-			{
-				total_factor = to_the_nth(total_factor, building_level, all_available_buildings[building_id]['effects'][bonus_id]);
+				if(all_available_buildings[building_id]['effect_type'] == 'fixed')
+				{
+					base_amount += building_level * all_available_buildings[building_id]['effects'][bonus_id];
+				}
+				if(all_available_buildings[building_id]['effect_type'] == 'percent')
+				{
+					total_percent_bonus += ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
+				}
+				if(all_available_buildings[building_id]['effect_type'] == 'factor')
+				{
+					total_factor = to_the_nth(total_factor, building_level, all_available_buildings[building_id]['effects'][bonus_id]);
+				}
 			}
 		}
 	});
