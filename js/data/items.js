@@ -76,7 +76,7 @@ var all_available_items = {
 	coal:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-06-02T062230.jpg',
-		value: 	3,
+		value: 	5,
 	},
 	copper:{
 		image: 	'items/dream_TradingCard-2023-06-03T065335.jpg',
@@ -222,7 +222,7 @@ var all_available_items = {
 	salt:{
 		type: 	'resource',
 		image: 	'items/salt-602215_640.jpg',
-		value: 	2,
+		value: 	5,
 	},
 	stone:{
 		type: 	'resource',

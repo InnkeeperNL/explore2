@@ -41,7 +41,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	5,
+			firewood: 	1,
 		},
 		result:{
 			basket: 	1
@@ -52,7 +52,7 @@ var all_available_recipes = {
 		cost:{
 			pole: 		1,
 			twine: 		1,
-			arrow: 		10,
+			arrow: 		2,
 		},
 		result:{
 			bow: 		1
@@ -86,6 +86,14 @@ var all_available_recipes = {
 			cloth: 		1
 		},
 	},
+	coal:{
+		cost:{
+			firewood: 2,
+		},
+		result:{
+			coal: 	1
+		}
+	},
 	copper:{
 		cost:{
 			copper_ore: 1,
@@ -107,18 +115,26 @@ var all_available_recipes = {
 	},
 	crate:{
 		cost:{
-			nail: 	10,
-			plank: 	4,
+			nail: 		5,
+			plank: 		2,
 		},
 		result:{
 			crate: 	1
 		},
 		//cost_factor: 2,
 	},
+	firewood:{
+		cost:{
+			lumber: 1,
+		},
+		result:{
+			firewood: 	10
+		}
+	},
 	flour:{
 		cost:{
 			stone: 		1,
-			wheat: 		3,
+			wheat: 		2,
 		},
 		result:{
 			flour: 		1
@@ -126,8 +142,8 @@ var all_available_recipes = {
 	},
 	fries:{
 		cost:{
-			firewood: 	2,
-			potato: 	2,
+			firewood: 	1,
+			potato: 	1,
 			salt: 		1,
 		},
 		result:{
@@ -145,8 +161,8 @@ var all_available_recipes = {
 	},
 	leather:{
 		cost:{
-			firewood: 1,
-			hide: 1,
+			firewood: 	1,
+			hide: 		1,
 		},
 		result:{
 			leather: 1
@@ -154,8 +170,8 @@ var all_available_recipes = {
 	},
 	map:{
 		cost:{
-			firewood: 2,
-			paper: 2,
+			firewood: 	1,
+			paper: 		1,
 		},
 		result:{
 			map: 1
@@ -163,7 +179,7 @@ var all_available_recipes = {
 	},
 	nail:{
 		cost:{
-			iron: 1,
+			iron: 		1,
 		},
 		result:{
 			nail: 20
@@ -171,9 +187,9 @@ var all_available_recipes = {
 	},
 	paper:{
 		cost:{
-			firewood: 1,
-			lumber: 1,
-			water: 	1,
+			firewood: 	1,
+			lumber: 	1,
+			water: 		1,
 		},
 		result:{
 			paper: 1
@@ -181,8 +197,8 @@ var all_available_recipes = {
 	},
 	parchment:{
 		cost:{
-			hide: 1,
-			stone: 1,
+			hide: 		1,
+			stone: 		1,
 		},
 		result:{
 			paper: 1
@@ -210,33 +226,33 @@ var all_available_recipes = {
 	},
 	plank:{
 		cost:{
-			lumber: 2,
+			lumber: 	2,
 		},
 		result:{
-			plank: 1
+			plank: 		1
 		}
 	},
 	pole:{
 		cost:{
-			lumber: 2,
+			lumber: 	2,
 		},
 		result:{
-			pole: 1
+			pole: 		1
 		}
 	},
 	pouch:{
 		cost:{
-			leather: 2,
+			leather: 	2,
 		},
 		result:{
-			pouch: 1
+			pouch: 		1
 		},
 		//cost_factor: 2,
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 1,
-			meat: 1,
+			firewood: 	1,
+			meat: 		1,
 		},
 		result:{
 			roasted_meat: 1
@@ -267,6 +283,9 @@ eachoa(all_available_recipes, function(recipe_id, recipe_info){
 	{
 		delete all_available_items[recipe_id]['value'];
 	}
+	eachoa(recipe_info['cost'], function(cost_id, cost_amount){
+		all_available_recipes[recipe_id]['cost'][cost_id] = cost_amount * recipe_cost_factor;
+	});
 });
 
 function check_all_recipes(){
@@ -344,12 +363,12 @@ function check_all_item_effects(){
 }
 
 function calc_effect_per_value(value, effect_id){
-	calced_effect_per_value = 1;
+	calced_effect_per_value = 0.1;
 	if(effects_per_value[effect_id] != undefined)
 	{
 		calced_effect_per_value = effects_per_value[effect_id];
 	}
-	value *= 1 + (value / 10);
+	value *= Math.sqrt(value);
 	return Math.ceil(/*Math.sqrt*/(calced_effect_per_value * value));
 }
 

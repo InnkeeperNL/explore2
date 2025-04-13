@@ -118,7 +118,7 @@ function get_max_storage(){
 
 function get_building_bonus(bonus_id, base_amount){
 	if(gamedata['buildings'] == undefined){gamedata['buildings'] = {};}
-	var total_percent_bonus = 0;
+	var total_percent_bonus = 1;
 	var total_factor = 1;
 	eachoa(gamedata['buildings'], function(building_id, building_level){
 		if(all_available_buildings[building_id] != undefined)
@@ -131,7 +131,7 @@ function get_building_bonus(bonus_id, base_amount){
 				}
 				if(all_available_buildings[building_id]['effect_type'] == 'percent')
 				{
-					total_percent_bonus += ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
+					total_percent_bonus *= ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
 				}
 				if(all_available_buildings[building_id]['effect_type'] == 'factor')
 				{
@@ -160,7 +160,7 @@ function get_building_bonus(bonus_id, base_amount){
 			
 		}
 	});
-	base_amount *= 1 + total_percent_bonus;
+	base_amount *= total_percent_bonus;
 	base_amount *= total_factor;
 	return Math.floor(base_amount);
 }

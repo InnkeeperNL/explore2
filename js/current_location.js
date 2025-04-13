@@ -137,17 +137,16 @@ function perform_action(current_action_id){
 			var gained_amount = 1;
 			if(current_action_info['current_action_amount'] > 0)
 			{
-				eachoa(action_info['action_loot'], function(loot_id, loot_chance){
-					if(chosen_loot == false && Math.random() * 100 < loot_chance)
-					{
-						chosen_loot = loot_id;
-					}
-				});
+				var action_chosen_loot = get_random_key_from_object_based_on_num_value(action_info['action_loot']);
+				if(Math.random() * 100 < action_info['action_loot'][action_chosen_loot])
+				{
+					chosen_loot = action_chosen_loot;
+				}
 			}
 			else
 			{
 				chosen_loot = get_random_key_from_object_based_on_num_value(action_info['final_loot']);
-				if(action_info['final_loot'][chosen_loot] > 1)
+				if(action_info['final_loot'][chosen_loot] > 0)
 				{
 					gained_amount = action_info['final_loot'][chosen_loot];
 				}

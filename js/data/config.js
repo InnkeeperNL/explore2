@@ -20,15 +20,22 @@ var effects_per_value 		= {
 
 	max_storage: 	0.1,
 
-	farming: 		1,
-	gathering: 		1,
-	hunting: 		1,
-	mining: 		1,
-	woodcutting: 	1,
+	farming: 		0.1,
+	gathering: 		0.1,
+	hunting: 		0.1,
+	mining: 		0.1,
+	woodcutting: 	0.1,
 }
+
+eachoa(effects_per_value, function(effect_id, bonus_amount){
+	effects_per_value[effect_id] = bonus_amount / 25;
+});
 
 // ACTIONS
 var value_per_energy 		= 1.5;
 
 // BUILDINGS
 var building_cost_factor = 1;
+
+// RECIPES
+var recipe_cost_factor = 2;
