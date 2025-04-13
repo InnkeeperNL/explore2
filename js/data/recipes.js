@@ -41,7 +41,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	1,
+			firewood: 	5,
 		},
 		result:{
 			basket: 	1
