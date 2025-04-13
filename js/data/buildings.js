@@ -179,7 +179,7 @@ var all_available_buildings = {
 		},
 		effect_type: 		'factor',
 	},
-	well:{
+	/*well:{
 		description: 	'Increases energy generation by 10% each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
 		item_image: 'water',
@@ -194,7 +194,7 @@ var all_available_buildings = {
 		effect_type: 	'percent',
 		//effect_is_local: true,
 
-	},
+	},*/
 	wood_workshop:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
 		item_image: 'lumber',
