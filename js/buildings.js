@@ -48,7 +48,7 @@ function show_building(){
 					}
 				}
 			});
-			if(count_object(building_info['recipes']) > 0 && parsed_recipes_title == false && lowest_recipe_value > 0)
+			if(building_level > 0 && count_object(building_info['recipes']) > 0 && parsed_recipes_title == false && lowest_recipe_value > 0)
 			{
 				max_recipe_value = lowest_recipe_value;
 				eachoa(building_info['recipes'], function(recipe_id, recipe_level){
