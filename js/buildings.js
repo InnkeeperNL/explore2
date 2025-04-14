@@ -27,9 +27,32 @@ function show_building(){
 
 		if(building_info['recipes'] != undefined)
 		{
+			var max_recipe_value = to_the_nth(1, building_level, 10);
 			var parsed_recipes_title = false;
+			var lowest_recipe_value = false;
 			eachoa(building_info['recipes'], function(recipe_id, recipe_level){
-				if(recipe_level <= building_level)
+				if(all_available_recipes[recipe_id]['value'] != undefined && all_available_recipes[recipe_id]['value'] <= max_recipe_value /*recipe_level <= building_level*/)
+				{
+					if(parsed_recipes_title == false)
+					{
+						parsed_building += '<br/><br/>Crafting<br/>';
+						parsed_recipes_title = true;
+					}
+					parsed_building += parse_recipe(recipe_id);
+				}
+				else
+				{
+					if(lowest_recipe_value == false || all_available_recipes[recipe_id]['value'] < lowest_recipe_value)
+					{
+						lowest_recipe_value = all_available_recipes[recipe_id]['value'];
+					}
+				}
+			});
+			if(count_object(building_info['recipes']) > 0 && parsed_recipes_title == false && lowest_recipe_value > 0)
+			{
+				max_recipe_value = lowest_recipe_value;
+				eachoa(building_info['recipes'], function(recipe_id, recipe_level){
+				if(all_available_recipes[recipe_id]['value'] != undefined && all_available_recipes[recipe_id]['value'] <= max_recipe_value /*recipe_level <= building_level*/)
 				{
 					if(parsed_recipes_title == false)
 					{
@@ -39,6 +62,7 @@ function show_building(){
 					parsed_building += parse_recipe(recipe_id);
 				}
 			});
+			}
 			parsed_building += '<div class="breaker"></div>';
 		}
 

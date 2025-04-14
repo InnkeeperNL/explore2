@@ -5,14 +5,13 @@ var all_available_buildings = {
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		item_image: 'coal',
 		cost:{
-			coal: 		5,
-			stone: 		5,
+			firewood: 	20,
 		},
-		additional_costs:{
+		/*additional_costs:{
 			2:{
 				iron_ore: 	2,
 			}
-		},
+		},*/
 		cost_factor: 	2,
 		effects:{
 		},
@@ -21,21 +20,13 @@ var all_available_buildings = {
 			copper: 	1,
 			iron: 		2,
 		},
-		max_level: 2,
+		max_level: 3,
 	},
 	kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		item_image: 'meat',
 		cost:{
-			firewood: 	10,
-			meat: 		5,
-		},
-		additional_costs:{
-			2:{
-				flour: 	5,
-				meat: 	-5,
-				water: 	5,
-			}
+			firewood: 	20,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -45,16 +36,13 @@ var all_available_buildings = {
 			bread: 			2,
 			fries: 			2,
 		},
-		max_level: 2,
+		max_level: 3,
 	},
 	mill:{
 		image: 		'buildings/mill-1745186_640.jpg',
 		item_image: 'flax',
 		cost:{
-			flax: 		5,
-			wheat: 		5,
-			plank: 		5,
-			stone: 		5
+			flax: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -63,23 +51,14 @@ var all_available_buildings = {
 			twine: 		1,
 			flour: 		1,
 		},
-		max_level: 1,
+		max_level: 2,
 	},
 	paper_mill:{
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		item_image: 'paper',
 		cost:{
 			lumber: 	5,
-			water: 		10
-		},
-		additional_costs:{
-			2:{
-				lumber: -5,
-				water: -10,
-				plank: 	5,
-				hide: 	5,
-				stone: 	5,
-			}
+			water: 		5
 		},
 		cost_factor: 	2,
 		effects:{
@@ -89,21 +68,13 @@ var all_available_buildings = {
 			parchment: 	2,
 			map: 		1,
 		},
-		max_level: 2,
+		max_level: 3,
 	},
 	smithy:{
 		image: 		'buildings/horseshoe-1516273_640.jpg',
 		item_image: 'copper_pot',
 		cost:{
-			copper: 	5,
-			stone: 		5,
-		},
-		additional_costs:{
-			2:{
-				copper: -5,
-				iron: 	2,
-				pole: 	2,
-			}
+			stone: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -115,14 +86,13 @@ var all_available_buildings = {
 			pickaxe: 		2,
 			pitchfork: 		2,
 		},
-		max_level: 2,
+		max_level: 4,
 	},
 	tailor_shop:{
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
 		item_image: 'cloth',
 		cost:{
 			twine: 		5,
-			plank: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -131,7 +101,7 @@ var all_available_buildings = {
 			cloth: 		1,
 			sack: 		1,
 		},
-		max_level: 1,
+		max_level: 4,
 	},
 	tannery:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T110639.jpg',
@@ -139,13 +109,6 @@ var all_available_buildings = {
 		cost:{
 			hide: 		5,
 			lumber: 	5,
-		},
-		additional_costs:{
-			2:{
-				lumber: -5,
-				iron: 	5,
-				plank: 	5,
-			}
 		},
 		cost_factor: 	2,
 		effects:{
@@ -155,7 +118,7 @@ var all_available_buildings = {
 			pouch: 		1,
 			backpack: 	2,
 		},
-		max_level: 2,
+		max_level: 4,
 	},
 	warehouse:{
 		image: 		'buildings/dream_TradingCard-2023-08-17T141755.jpg',
@@ -163,13 +126,6 @@ var all_available_buildings = {
 		cost:{
 			lumber: 	5,
 		},
-		/*additional_costs:{
-			3:{
-				lumber: -5,
-				nail: 	10,
-				plank: 	5,
-			}
-		},*/
 		cost_factor: 	2,
 		recipes:{
 			basket: 	1,
@@ -201,23 +157,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
 		item_image: 'lumber',
 		cost:{
-			lumber: 	5,
-			stone: 		2
-		},
-		additional_costs:{
-			2:{
-				lumber: -5,
-				feather: 2,
-				plank: 	5,
-				pole: 	1,
-				twine: 	1,
-			},
-			3:{
-				feather: -2,
-				pole: 	-1,
-				twine: 	-1,
-				nail: 	10,
-			}
+			lumber: 	10,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -229,7 +169,7 @@ var all_available_buildings = {
 			arrow: 		2,
 			bow: 		2,
 		},
-		max_level: 3,
+		max_level: 4,
 	},
 	
 }

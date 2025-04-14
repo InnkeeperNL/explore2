@@ -242,7 +242,7 @@ var all_available_recipes = {
 	},
 	pouch:{
 		cost:{
-			leather: 	2,
+			leather: 	1,
 		},
 		result:{
 			pouch: 		1
@@ -351,6 +351,16 @@ function check_all_recipes(){
 	
 }
 
+function check_all_recipe_values(){
+	eachoa(all_available_recipes, function(recipe_id, recipe_info){
+		var recipe_value = 0;
+		eachoa(recipe_info['result'], function(result_id, result_amount){
+			recipe_value += all_available_items[result_id]['value'] * result_amount;
+		});
+		all_available_recipes[recipe_id]['value'] = recipe_value;
+	});
+}
+
 function check_all_item_effects(){
 	eachoa(all_available_items, function(item_id, item_info){
 		if(item_info['effects'] != undefined)
@@ -374,3 +384,4 @@ function calc_effect_per_value(value, effect_id){
 
 check_all_recipes();
 check_all_item_effects();
+check_all_recipe_values();

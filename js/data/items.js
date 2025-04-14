@@ -53,6 +53,10 @@ var all_available_items = {
 	bread:{
 		image: 	'items/dream_TradingCard-2023-05-20T094512.jpg',
 		//energy: 3,
+		effects:{
+			gathering: 	1,
+		},
+		effect_type: 		'percent',
 		value: 	3,
 	},
 	bucket:{
@@ -209,6 +213,10 @@ var all_available_items = {
 	roasted_meat:{
 		image: 	'items/dream_TradingCard-2023-08-24T113417.jpg',
 		//energy: 1,
+		effects:{
+			gathering: 	1,
+		},
+		effect_type: 		'percent',
 		value: 	1,
 	},
 	sack:{

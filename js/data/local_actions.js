@@ -32,7 +32,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			feather: 	1,
+			feather: 	5,
 			meat: 		1,
 		}
 	},
@@ -300,8 +300,8 @@ var all_available_actions = {
 	stream:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		1,
-		max_action_amount: 		3,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			1,
