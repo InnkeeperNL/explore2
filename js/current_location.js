@@ -154,10 +154,10 @@ function perform_action(current_action_id){
 			eachoa(action_info['subtypes'], function(useless_key, subtype){
 				gained_amount = get_building_bonus(subtype,gained_amount);
 			});
-			if(gained_amount > 1)
+			/*if(gained_amount > 1)
 			{
 				gained_amount = (Math.random() * (gained_amount - 1)) + 1;
-			}
+			}*/
 			gained_amount = round_by_percent(gained_amount);
 			if(chosen_loot != false && gained_amount > 0)
 			{

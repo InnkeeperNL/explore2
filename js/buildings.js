@@ -30,9 +30,11 @@ function show_building(){
 			var max_recipe_value = to_the_nth(1, building_level, 10);
 			var parsed_recipes_title = false;
 			var lowest_recipe_value = false;
+			var shown_recipe_count = 0;
 			eachoa(building_info['recipes'], function(recipe_id, recipe_level){
 				if(all_available_recipes[recipe_id]['value'] != undefined && all_available_recipes[recipe_id]['value'] <= max_recipe_value /*recipe_level <= building_level*/)
 				{
+					shown_recipe_count++;
 					if(parsed_recipes_title == false)
 					{
 						parsed_building += '<br/><br/>Crafting<br/>';
@@ -66,7 +68,7 @@ function show_building(){
 			parsed_building += '<div class="breaker"></div>';
 		}
 
-		if(building_info['max_level'] == undefined || building_level < building_info['max_level'])
+		if(building_info['max_level'] == undefined || /*building_level < building_info['max_level']*/ count_object(building_info['recipes']) > shown_recipe_count)
 		{
 			parsed_building += parse_build_building(current_building_id);
 		}
@@ -270,6 +272,8 @@ function parse_recipe(recipe_id){
 			parsed_recipe += '<div class="result_item" style="background-image:url(\'images/' + item_info['image'] + '\')">';
 			var total_bonus = 0;
 			var bonus_icon = '';
+			var bonus_type = '';
+			if(item_info['effect_type'] != undefined && item_info['effect_type'] == 'percent'){bonus_type = '%';}
 			/*if(item_info['energy'] != undefined)
 			{
 				parsed_recipe += 	'<div class="actions_energy_cost"><div class="consume_energy_amount_icon"></div><span class="action_energy_cost_text">' + item_info['energy'] + '</span></div>';
@@ -305,9 +309,9 @@ function parse_recipe(recipe_id){
 			}
 			if(total_bonus > 0)
 			{
-				if(total_bonus <= 100)
+				if(total_bonus <= 100 || bonus_type == '')
 				{
-					parsed_recipe += 	'<div class="actions_energy_cost"><div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text">' + total_bonus + '%</span></div>';
+					parsed_recipe += 	'<div class="actions_energy_cost"><div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text">' + total_bonus + bonus_type + '</span></div>';
 				}
 				else
 				{

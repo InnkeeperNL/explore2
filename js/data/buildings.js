@@ -163,6 +163,7 @@ var all_available_buildings = {
 		effects:{
 		},
 		recipes:{
+			firewood: 	1,
 			plank: 		1,
 			pole: 		1,
 			barrel: 	3,

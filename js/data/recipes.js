@@ -10,7 +10,7 @@ var all_available_recipes = {
 	},
 	axe:{
 		cost:{
-			iron: 		1,
+			iron: 		2,
 			pole: 		1,
 		},
 		result:{
@@ -21,7 +21,7 @@ var all_available_recipes = {
 	backpack:{
 		cost:{
 			iron: 		1,
-			leather: 	1,
+			leather: 	5,
 		},
 		result:{
 			backpack: 	1
@@ -30,9 +30,9 @@ var all_available_recipes = {
 	},
 	barrel:{
 		cost:{
-			iron: 	1,
-			nail: 	10,
-			plank: 	2,
+			iron: 		2,
+			nail: 		20,
+			plank: 		6,
 		},
 		result:{
 			barrel: 	1
@@ -41,7 +41,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	1,
+			firewood: 	10,
 		},
 		result:{
 			basket: 	1
@@ -52,7 +52,7 @@ var all_available_recipes = {
 		cost:{
 			pole: 		1,
 			twine: 		1,
-			arrow: 		2,
+			arrow: 		5,
 		},
 		result:{
 			bow: 		1
@@ -62,7 +62,7 @@ var all_available_recipes = {
 	bread:{
 		cost:{
 			firewood: 	1,
-			flour: 		1,
+			flour: 		4,
 			water: 		1,
 		},
 		result:{
@@ -71,7 +71,7 @@ var all_available_recipes = {
 	},
 	bucket:{
 		cost:{
-			lumber: 	1,
+			lumber: 	5,
 		},
 		result:{
 			bucket: 	1
@@ -96,7 +96,7 @@ var all_available_recipes = {
 	},
 	copper:{
 		cost:{
-			copper_ore: 1,
+			copper_ore: 2,
 			coal: 		1,
 		},
 		result:{
@@ -106,7 +106,7 @@ var all_available_recipes = {
 	copper_pot:{
 		cost:{
 			copper: 	2,
-			coal: 		2,
+			coal: 		1,
 		},
 		result:{
 			copper_pot: 	1
@@ -115,8 +115,8 @@ var all_available_recipes = {
 	},
 	crate:{
 		cost:{
-			nail: 		5,
-			plank: 		2,
+			nail: 		20,
+			plank: 		6,
 		},
 		result:{
 			crate: 	1
@@ -128,13 +128,13 @@ var all_available_recipes = {
 			lumber: 1,
 		},
 		result:{
-			firewood: 	10
+			firewood: 	5
 		}
 	},
 	flour:{
 		cost:{
 			stone: 		1,
-			wheat: 		2,
+			wheat: 		4,
 		},
 		result:{
 			flour: 		1
@@ -143,7 +143,7 @@ var all_available_recipes = {
 	fries:{
 		cost:{
 			firewood: 	1,
-			potato: 	1,
+			potato: 	4,
 			salt: 		1,
 		},
 		result:{
@@ -152,7 +152,7 @@ var all_available_recipes = {
 	},
 	iron:{
 		cost:{
-			iron_ore: 	1,
+			iron_ore: 	2,
 			coal: 		1,
 		},
 		result:{
@@ -161,7 +161,7 @@ var all_available_recipes = {
 	},
 	leather:{
 		cost:{
-			firewood: 	1,
+			firewood: 	4,
 			hide: 		1,
 		},
 		result:{
@@ -170,8 +170,7 @@ var all_available_recipes = {
 	},
 	map:{
 		cost:{
-			firewood: 	1,
-			paper: 		1,
+			paper: 		5,
 		},
 		result:{
 			map: 1
@@ -182,7 +181,7 @@ var all_available_recipes = {
 			iron: 		1,
 		},
 		result:{
-			nail: 20
+			nail: 		10
 		}
 	},
 	paper:{
@@ -206,7 +205,7 @@ var all_available_recipes = {
 	},
 	pickaxe:{
 		cost:{
-			iron: 		1,
+			iron: 		2,
 			pole: 		1,
 		},
 		result:{
@@ -216,7 +215,7 @@ var all_available_recipes = {
 	},
 	pitchfork:{
 		cost:{
-			iron: 		1,
+			iron: 		2,
 			pole: 		1,
 		},
 		result:{
@@ -226,7 +225,7 @@ var all_available_recipes = {
 	},
 	plank:{
 		cost:{
-			lumber: 	2,
+			lumber: 	5,
 		},
 		result:{
 			plank: 		1
@@ -242,7 +241,7 @@ var all_available_recipes = {
 	},
 	pouch:{
 		cost:{
-			leather: 	1,
+			leather: 	2,
 		},
 		result:{
 			pouch: 		1
@@ -251,7 +250,7 @@ var all_available_recipes = {
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 	1,
+			firewood: 	4,
 			meat: 		1,
 		},
 		result:{
@@ -366,20 +365,36 @@ function check_all_item_effects(){
 		if(item_info['effects'] != undefined)
 		{
 			eachoa(item_info['effects'], function(effect_id, effect_amount){
-				item_info['effects'][effect_id] = calc_effect_per_value(item_info['value'], effect_id);
+				item_info['effects'][effect_id] = calc_effect_per_value(item_info['value'], effect_id, item_info['effect_type'], item_id);
 			});
 		}
 	});
 }
 
-function calc_effect_per_value(value, effect_id){
-	calced_effect_per_value = 0.1;
+function calc_effect_per_value(base_value, effect_id, effect_type, item_id){
+	calced_effect_per_value = 1;
 	if(effects_per_value[effect_id] != undefined)
 	{
 		calced_effect_per_value = effects_per_value[effect_id];
 	}
-	value = (Math.sqrt(value));
-	return Math.ceil(/*Math.sqrt*/(calced_effect_per_value * value));
+	var value = base_value * 1; 
+	if(effect_type != undefined && effect_type == 'fixed')
+	{
+		value *= fixed_effect_factor;
+	}
+	else
+	{
+		value = (Math.sqrt(base_value)); 
+	}
+	value *= calced_effect_per_value;
+	
+	if(value < 1)
+	{
+		console.log(item_id + ' effect to low: ' + value);
+		console.log('calced_effect_per_value: ' + calced_effect_per_value);
+		console.log('base_value: ' + base_value);
+	}
+	return Math.ceil(value);
 }
 
 check_all_recipes();

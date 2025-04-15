@@ -23,7 +23,7 @@ var all_available_items = {
 		effects:{
 			max_inventory: 	2,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	31,
 	},
 	basket:{
@@ -89,7 +89,7 @@ var all_available_items = {
 	copper_ore:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-31T141828.jpg',
-		value: 	5,
+		value: 	10,
 	},
 	copper_pot:{
 		image: 	'items/dream_TradingCard-2023-05-31T142320.jpg',
@@ -144,7 +144,7 @@ var all_available_items = {
 	iron_ore:{
 		type: 	'resource',
 		image: 	'items/meteorite-91891_640.jpg',
-		value: 	10,
+		value: 	20,
 	},
 	leather:{
 		image: 	'items/dream_TradingCard-2023-08-18T110531.jpg',
@@ -207,7 +207,7 @@ var all_available_items = {
 		effects:{
 			max_inventory: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	18,
 	},
 	roasted_meat:{
@@ -230,7 +230,7 @@ var all_available_items = {
 	salt:{
 		type: 	'resource',
 		image: 	'items/salt-602215_640.jpg',
-		value: 	5,
+		value: 	10,
 	},
 	stone:{
 		type: 	'resource',

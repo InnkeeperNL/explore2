@@ -70,7 +70,7 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			stone: 	50,
+			stone: 	10,
 		},
 		final_loot:{
 			stone: 	1
@@ -99,7 +99,7 @@ var all_available_actions = {
 	bushes:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		2,
+		min_action_amount: 		1,
 		max_action_amount: 		4,
 		locations:{
 			forest:{
@@ -110,17 +110,18 @@ var all_available_actions = {
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
 			firewood: 	100,
-			twine: 		10,
+			twine: 		25,
 		},
 		final_loot:{
 			firewood: 		1,
+			twine: 			0.5,
 		}
 	},
 	coal:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
-		max_action_amount: 		10,
+		min_action_amount: 		1,
+		max_action_amount: 		2,
 		energy_cost: 			2,
 		locations:{
 			mountain:{
@@ -129,10 +130,10 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			coal: 		50,
+			coal: 		10,
 		},
 		final_loot:{
-			coal: 		2,
+			coal: 		1,
 		}
 	},
 	copper_ore:{
@@ -148,10 +149,10 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			copper_ore: 	50,
+			copper_ore: 	10,
 		},
 		final_loot:{
-			copper_ore: 	2,
+			copper_ore: 	1,
 		}
 	},
 	deer:{
@@ -272,10 +273,10 @@ var all_available_actions = {
 		},
 		image: 					'items/meteorite-91891_640.jpg',
 		action_loot:{
-			iron_ore: 	50,
+			iron_ore: 	10,
 		},
 		final_loot:{
-			iron_ore: 	2,
+			iron_ore: 	1,
 		}
 	},
 	salt:{
@@ -319,8 +320,8 @@ var all_available_actions = {
 	tree:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
-		min_action_amount: 		6,
-		max_action_amount: 		6,
+		min_action_amount: 		5,
+		max_action_amount: 		10,
 		locations:{
 			forest:{
 				min: 			4,
@@ -373,7 +374,7 @@ eachoa(all_available_actions, function(action_id, action_info){
 			if(all_available_locations[location_id] != undefined)
 			{
 				all_available_locations[location_id]['local_actions'][action_id] = {
-					chance: 	100 / action_info['value'],
+					chance: 	100 / sqr(action_info['value']),
 					min: 		action_location_info['min'],
 					max: 		action_location_info['max'],
 				};
