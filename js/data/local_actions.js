@@ -351,8 +351,7 @@ var all_available_actions = {
 		energy_cost: 			2,
 		image: 					'actions/dream_TradingCard-2023-08-26T072820.jpg',
 		action_loot:{
-			lumber: 	25,
-			firewood: 	10,
+			lumber: 	100,
 		},
 		final_loot:{
 			lumber: 	1
