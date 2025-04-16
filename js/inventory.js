@@ -50,7 +50,7 @@ function update_inventory_counter(){
 }
 
 function get_inventory_size(){
-	return get_building_bonus('max_inventory',inventory_base_size);
+	return Math.ceil(get_building_bonus('max_inventory',inventory_base_size));
 }
 
 function show_inventory(){

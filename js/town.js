@@ -113,7 +113,7 @@ function deposit_inventory(keep_energy_items){
 function get_max_storage(){
 	var max_storage = max_storage_base;
 	max_storage = get_building_bonus('max_storage', max_storage);
-	return max_storage;
+	return Math.ceil(max_storage);
 }
 
 function get_building_bonus(bonus_id, base_amount){
@@ -162,5 +162,5 @@ function get_building_bonus(bonus_id, base_amount){
 	});
 	base_amount *= total_percent_bonus;
 	base_amount *= total_factor;
-	return Math.floor(base_amount);
+	return /*Math.floor*/(base_amount);
 }

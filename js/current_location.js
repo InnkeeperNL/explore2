@@ -21,8 +21,8 @@ function set_location(location_id, forced){
 		//gamedata['energy'] = get_max_energy();
 		update_energy();
 	}
-	if(gamedata['current_location'] == undefined || gamedata['current_location']['location_id'] != location_id || (forced != undefined && forced == true))
-	{
+	/*if(gamedata['current_location'] == undefined || gamedata['current_location']['location_id'] != location_id || (forced != undefined && forced == true))
+	{*/
 		gamedata['current_location'] = {};
 		if(all_available_locations[location_id] != undefined)
 		{
@@ -41,20 +41,20 @@ function set_location(location_id, forced){
 			}
 			var action_pick_chances = {};
 			eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
-				action_pick_chances[action_id] = action_chances['chance'] * (1 + gamedata['expedition_distance'] / 100);
-				if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 / (1 + action_pick_chances[action_id] / 100);}
+				action_pick_chances[action_id] = action_chances['chance'] + (gamedata['expedition_distance'] / 100);
+				//if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 / (1 + action_pick_chances[action_id] / 100);}
 			});
-			//console.log(action_pick_chances);
 			var chosen_action_id = get_random_key_from_object_based_on_num_value(action_pick_chances);
 			var action_id = chosen_action_id;
 			var action_chances = all_available_locations[location_id]['local_actions'][action_id];
+			console.log(action_pick_chances);
 			//eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
 				if(Math.random() * 100 <= action_chances['chance'] || true)
 				{
 					var action_amount = round_by_percent((Math.random() * (action_chances['max'] - action_chances['min'])) + action_chances['min']);
 					var action_info = all_available_actions[action_id];
 					for (var z = 1; z <= action_amount; z++) {
-						if(count_object(empty_slots) > 5 && Math.random() * 100 <= action_chances['chance'])
+						if(count_object(empty_slots) > 5 /*&& Math.random() * 100 <= action_chances['chance']*/)
 						{
 							var chosen_slot_id = get_random_key_from_object(empty_slots);
 							var chosen_slot = {x:empty_slots[chosen_slot_id]['x'],y:empty_slots[chosen_slot_id]['y']};
@@ -72,31 +72,33 @@ function set_location(location_id, forced){
 				}
 			//});
 		}
-	}
+	/*}*/
 }
 
 function reset_location(){
 	gamedata['current_location']['actions'] = {};
-	//set_location(gamedata['current_location']['location_id'], true);
+	set_location(gamedata['current_location']['location_id'], true);
+	show_current_location(true);
 }
 
 function show_current_location(fade_in){
-	if(fade_in == undefined){fade_in = false;}
+	if(fade_in == undefined){fade_in = true;}
 	if(gamedata['current_location'] != undefined && gamedata['current_location']['location_id'] != undefined && all_available_locations[gamedata['current_location']['location_id']] != undefined && gamedata['current_location']['actions'] != undefined)
 	{
 		var parsed_current_location = '';
 		eachoa(gamedata['current_location']['actions'], function(current_action_id, current_action_info){
 			parsed_current_location += parse_current_action(current_action_id, current_action_info, fade_in);
 		});
+		parsed_current_location += 	'<div class="expedition_distance">Traveled: ' + nFormatter(gamedata['expedition_distance'],3) + 'm</div>';
 		class_style('current_location_bg','backgroundImage','url(\'images/' + all_available_locations[gamedata['current_location']['location_id']]['image'] + '\')')
 		class_html('current_location_container', parsed_current_location);
 		update_inventory_counter();
 		update_energy();
-		if(parsed_current_location == '')
+		/*if(parsed_current_location == '')
 		{
 			set_location(gamedata['current_location']['location_id'], true);
 			show_current_location(true);
-		}
+		}*/
 	}
 }
 
@@ -121,7 +123,6 @@ function parse_current_action(current_action_id, current_action_info, fade_in){
 		parsed_current_action += '</div>';
 		parsed_current_action += '<div class="current_action_button_overlay current_action_button_' + current_action_id + ' action_x_' + current_action_info['x'] + ' action_y_' + current_action_info['y'] + '" onclick="perform_action(\'' + current_action_id + '\');"></div>';
 	}
-	parsed_current_action += 	'<div class="expedition_distance">Traveled: ' + nFormatter(gamedata['expedition_distance'],3) + 'm</div>';
 	return parsed_current_action;
 }
 
