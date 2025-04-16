@@ -58,7 +58,7 @@ function parse_building_button(building_id){
 			{
 				can_build_now = 'can_build_now';
 			}
-			parsed_building_button += '<div class="can_build_container"><div class="can_build ' + can_build_now + '" style="width:' + (0 + can_build_percent) + '%"></div></div>';
+			/*parsed_building_button += '<div class="can_build_container"><div class="can_build ' + can_build_now + '" style="width:' + (0 + can_build_percent) + '%"></div></div>';*/
 		}
 		parsed_building_button += '</div>';
 	}

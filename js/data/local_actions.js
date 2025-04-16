@@ -109,8 +109,8 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
-			firewood: 	100,
-			twine: 		25,
+			firewood: 	50,
+			twine: 		50,
 		},
 		final_loot:{
 			firewood: 		1,

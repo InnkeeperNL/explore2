@@ -8,6 +8,7 @@ function set_new_location(location_id){
 		if(gamedata['expeditions'] >= location_info['expeditions_cost'])
 		{
 			gamedata['expeditions'] -= location_info['expeditions_cost'];
+			gamedata['expedition_distance'] = 0;
 			set_location(location_id);
 			show_content('current_location');
 		}
@@ -25,6 +26,8 @@ function set_location(location_id, forced){
 		gamedata['current_location'] = {};
 		if(all_available_locations[location_id] != undefined)
 		{
+			if(gamedata['expedition_distance'] == undefined){gamedata['expedition_distance'] = 0;}
+			gamedata['expedition_distance'] += get_building_bonus('travel_speed',10);
 			gamedata['current_location']['location_id'] = location_id;
 			gamedata['current_location']['actions'] = {};
 			var empty_slots = {};
@@ -38,8 +41,10 @@ function set_location(location_id, forced){
 			}
 			var action_pick_chances = {};
 			eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
-				action_pick_chances[action_id] = action_chances['chance'];
+				action_pick_chances[action_id] = action_chances['chance'] * (1 + gamedata['expedition_distance'] / 100);
+				if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 / (1 + action_pick_chances[action_id] / 100);}
 			});
+			//console.log(action_pick_chances);
 			var chosen_action_id = get_random_key_from_object_based_on_num_value(action_pick_chances);
 			var action_id = chosen_action_id;
 			var action_chances = all_available_locations[location_id]['local_actions'][action_id];
@@ -116,6 +121,7 @@ function parse_current_action(current_action_id, current_action_info, fade_in){
 		parsed_current_action += '</div>';
 		parsed_current_action += '<div class="current_action_button_overlay current_action_button_' + current_action_id + ' action_x_' + current_action_info['x'] + ' action_y_' + current_action_info['y'] + '" onclick="perform_action(\'' + current_action_id + '\');"></div>';
 	}
+	parsed_current_action += 	'<div class="expedition_distance">Traveled: ' + nFormatter(gamedata['expedition_distance'],3) + 'm</div>';
 	return parsed_current_action;
 }
 

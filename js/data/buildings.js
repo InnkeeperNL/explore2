@@ -14,13 +14,14 @@ var all_available_buildings = {
 		},*/
 		cost_factor: 	2,
 		effects:{
+			mining: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			coal: 		1,
 			copper: 	1,
 			iron: 		2,
 		},
-		max_level: 3,
 	},
 	kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
@@ -30,13 +31,14 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			hunting: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			roasted_meat: 	1,
 			bread: 			2,
 			fries: 			2,
 		},
-		max_level: 3,
 	},
 	mill:{
 		image: 		'buildings/mill-1745186_640.jpg',
@@ -46,12 +48,13 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			farming: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			twine: 		1,
 			flour: 		1,
 		},
-		max_level: 2,
 	},
 	paper_mill:{
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
@@ -62,13 +65,14 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			woodcutting: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			paper: 		1,
 			parchment: 	2,
 			map: 		1,
 		},
-		max_level: 3,
 	},
 	smithy:{
 		image: 		'buildings/horseshoe-1516273_640.jpg',
@@ -78,7 +82,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			mining: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			copper_pot: 	1,
 			nail: 			2,
@@ -86,7 +92,6 @@ var all_available_buildings = {
 			pickaxe: 		2,
 			pitchfork: 		2,
 		},
-		max_level: 4,
 	},
 	tailor_shop:{
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
@@ -96,12 +101,13 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			gathering: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			cloth: 		1,
 			sack: 		1,
 		},
-		max_level: 4,
 	},
 	tannery:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T110639.jpg',
@@ -112,13 +118,14 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			hunting: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			leather: 	1,
 			pouch: 		1,
 			backpack: 	2,
 		},
-		max_level: 4,
 	},
 	warehouse:{
 		image: 		'buildings/dream_TradingCard-2023-08-17T141755.jpg',
@@ -161,7 +168,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
+			woodcutting: 	10,
 		},
+		effect_type: 	'percent',
 		recipes:{
 			firewood: 	1,
 			plank: 		1,
@@ -170,7 +179,6 @@ var all_available_buildings = {
 			arrow: 		2,
 			bow: 		2,
 		},
-		max_level: 4,
 	},
 	
 }
