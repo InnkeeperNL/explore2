@@ -261,12 +261,12 @@ var all_available_actions = {
 		min_action_amount: 		5,
 		max_action_amount: 		12,
 		image: 					'items/dream_TradingCard-2023-08-17T072416.jpg',
-		locations:{
+		/*locations:{
 			forest:{
 				min: 			1,
 				max: 			1
 			}
-		},
+		},*/
 		action_loot:{
 			firewood: 	10
 		},
