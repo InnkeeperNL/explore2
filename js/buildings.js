@@ -192,7 +192,7 @@ function parse_building_effect(building_id){
 	eachoa(all_skills, function(skill_id, skill_available){
 		if(building_info['effects'][skill_id] != undefined)
 		{
-			parsed_building_effect += skill_id + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '%<br/>';
+			parsed_building_effect += skill_id.replaceAll('_',' ') + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '%<br/>';
 		}
 	});
 	
@@ -237,6 +237,7 @@ function parse_recipe(recipe_id){
 	{
 		parsed_recipe += '<div class="recipe_bar">';
 		var can_craft = true;
+		var can_craft_10 = true;
 		var recipe_info = all_available_recipes[recipe_id];
 		parsed_recipe += '<div class="recipe_cost_container">';
 		var result_item = false;
@@ -261,6 +262,10 @@ function parse_recipe(recipe_id){
 					not_enough = 'not_enough';
 					can_craft = false;
 				}
+				if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < real_cost * 10)
+				{
+					can_craft_10 = false;
+				}
 				var owned_amount = 0;
 				if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
 				parsed_recipe += '<div class="recipe_cost_bar ' + not_enough + '">';
@@ -271,11 +276,13 @@ function parse_recipe(recipe_id){
 			});
 		parsed_recipe += '</div>';
 		var any_result_not_maxed = false;
+		var any_result_not_maxed_10 = false;
 		eachoa(recipe_info['result'], function(result_id, gained_amount){
 			var owned_amount = 0;
 			var item_info = all_available_items[result_id];
 			if(gamedata['storage'][result_id] != undefined){owned_amount = gamedata['storage'][result_id];}
 			if(owned_amount < get_max_storage()){any_result_not_maxed = true;}
+			if(owned_amount + 10 <= get_max_storage()){any_result_not_maxed_10 = true;}
 			parsed_recipe += '<div class="result_item" style="background-image:url(\'images/' + item_info['image'] + '\')">';
 			var total_bonus = 0;
 			var bonus_icon = '';
@@ -339,12 +346,17 @@ function parse_recipe(recipe_id){
 		{
 			parsed_recipe += '<div class="button slim build_now_button danger">CRAFT</div>';
 		}
+		if(can_craft_10 == true && any_result_not_maxed_10 == true)
+		{
+			parsed_recipe += '<div class="button slim build_now_button good craft_10" onclick="craft_recipe(\'' + recipe_id + '\', 10)">x10</div>';
+		}
 		parsed_recipe += '</div>';
 	}
 	return parsed_recipe;
 }
 
-function craft_recipe(recipe_id){
+function craft_recipe(recipe_id, craft_amount){
+	if(craft_amount == undefined){craft_amount = 1;}
 	if(all_available_recipes[recipe_id] != undefined)
 	{
 		var can_craft = true;
@@ -366,7 +378,7 @@ function craft_recipe(recipe_id){
 			}
 			if(gamedata['storage'] == undefined){gamedata['storage'] = {};}
 			var not_enough = '';
-			if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < real_cost)
+			if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < real_cost * craft_amount)
 			{
 				can_craft = false;
 			}
@@ -381,11 +393,11 @@ function craft_recipe(recipe_id){
 					gamedata['storage']
 					real_cost = to_the_nth(cost_amount, get_total_item_owned(result_item), recipe_info['cost_factor']);
 				}
-				gamedata['storage'][cost_id] -= real_cost;
+				gamedata['storage'][cost_id] -= real_cost * craft_amount;
 			});
 			eachoa(recipe_info['result'], function(result_id, gained_amount){
 				if(gamedata['storage'][result_id] == undefined){gamedata['storage'][result_id] = 0;}
-				gamedata['storage'][result_id] += gained_amount;
+				gamedata['storage'][result_id] += gained_amount * craft_amount;
 			});
 			saveToLocalStorage();
 			show_content('building');

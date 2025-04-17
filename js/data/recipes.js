@@ -41,12 +41,22 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	10,
+			firewood: 	25,
 		},
 		result:{
 			basket: 	1
 		},
 		//cost_factor: 2,
+	},
+	boot:{
+		cost:{
+			leather: 	4,
+			lumber: 	1,
+			twine: 		2,
+		},
+		result:{
+			boot: 		1
+		},
 	},
 	bow:{
 		cost:{
@@ -71,7 +81,7 @@ var all_available_recipes = {
 	},
 	bucket:{
 		cost:{
-			lumber: 	5,
+			lumber: 	10,
 		},
 		result:{
 			bucket: 	1
@@ -80,7 +90,7 @@ var all_available_recipes = {
 	},
 	cane:{
 		cost:{
-			lumber: 	2,
+			pole: 	2,
 		},
 		result:{
 			cane: 	1
@@ -249,7 +259,7 @@ var all_available_recipes = {
 	},
 	pouch:{
 		cost:{
-			leather: 	2,
+			leather: 	4,
 		},
 		result:{
 			pouch: 		1
@@ -267,8 +277,8 @@ var all_available_recipes = {
 	},
 	sack:{
 		cost:{
-			cloth: 		2,
-			twine: 		1,
+			cloth: 		4,
+			twine: 		2,
 		},
 		result:{
 			sack: 		1
@@ -396,13 +406,13 @@ function calc_effect_per_value(base_value, effect_id, effect_type, item_id){
 	}
 	value *= calced_effect_per_value;
 	
-	if(value < 1)
+	if(value < 0.5)
 	{
 		console.log(item_id + ' effect to low: ' + value);
 		console.log('calced_effect_per_value: ' + calced_effect_per_value);
 		console.log('base_value: ' + base_value);
 	}
-	return Math.ceil(value);
+	return Math.ceil(value * 10) / 10;
 }
 
 check_all_recipes();

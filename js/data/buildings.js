@@ -5,7 +5,7 @@ var all_available_buildings = {
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		item_image: 'coal',
 		cost:{
-			firewood: 	20,
+			coal: 		5,
 		},
 		/*additional_costs:{
 			2:{
@@ -27,7 +27,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		item_image: 'meat',
 		cost:{
-			firewood: 	20,
+			meat: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -36,8 +36,8 @@ var all_available_buildings = {
 		effect_type: 	'percent',
 		recipes:{
 			roasted_meat: 	1,
-			bread: 			2,
-			fries: 			2,
+			/*bread: 			2,
+			fries: 			2,*/
 		},
 	},
 	mill:{
@@ -60,12 +60,13 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		item_image: 'paper',
 		cost:{
+			firewood: 	5,
 			lumber: 	5,
 			water: 		5
 		},
 		cost_factor: 	2,
 		effects:{
-			woodcutting: 	10,
+			travel_speed: 	10,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -78,7 +79,7 @@ var all_available_buildings = {
 		image: 		'buildings/horseshoe-1516273_640.jpg',
 		item_image: 'copper_pot',
 		cost:{
-			stone: 		10,
+			copper: 	5,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -114,7 +115,6 @@ var all_available_buildings = {
 		item_image: 'leather',
 		cost:{
 			hide: 		5,
-			lumber: 	5,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -124,6 +124,7 @@ var all_available_buildings = {
 		recipes:{
 			leather: 	1,
 			pouch: 		1,
+			boot: 		1,
 			backpack: 	2,
 		},
 	},
@@ -145,7 +146,7 @@ var all_available_buildings = {
 		effect_type: 		'fixed',
 	},
 	well:{
-		description: 	'Increases maximum energy by 1 each level.',
+		description: 	'Increases maximum energy by 2 each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
 		item_image: 	'water',
 		//free_levels: 1,

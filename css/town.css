@@ -128,6 +128,13 @@
 	background-image: url('../images/icons/hammer-nails.svg');
 }
 
+.explore_now_button
+{
+	margin-top:10px;
+	background-image: url('../images/icons/walking-boot-white.svg');
+}
+
+.explore_now_button.danger,
 .build_now_button.danger
 {
 	cursor: default;
@@ -191,4 +198,15 @@
 	position: absolute;
 	top: 7px;
 	right: 0px;
+	height: 50px;
+}
+
+.recipe_bar .build_now_button.craft_10
+{
+	position: absolute;
+	top: 60px;
+	right: 0px;
+	font-size: 20px;
+	text-align: center;
+	padding-top:10px;
 }

@@ -33,7 +33,7 @@ function check_energy_gain(){
 }
 
 function calc_energy_per_value(value){
-	return Math.ceil(/*Math.sqrt*/(energy_per_value * value));
+	return Math.ceil(Math.sqrt(energy_per_value * value));
 }
 
 function get_max_expeditions(){

@@ -4,6 +4,7 @@ function show_town(){
 	eachoa(all_available_buildings, function(building_id, building_info){
 		all_parsed_buildings += parse_building_button(building_id);
 	});
+	gain_energy(get_max_energy());
 	class_html('town_container', all_parsed_buildings);
 	class_html('bottom_bar_right', '<button class="menu_button options_button slim" data-target-content="options">Options</button>');
 }

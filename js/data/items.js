@@ -42,6 +42,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	25,
 	},
+	boot:{
+		image: 	'items/dream_TradingCard-2025-04-17T152546.292.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	25,
+	},
 	bow:{
 		image: 	'items/bow-1367578_640.jpg',
 		effects:{
@@ -93,7 +101,7 @@ var all_available_items = {
 	copper_ore:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-31T141828.jpg',
-		value: 	10,
+		value: 	5,
 	},
 	copper_pot:{
 		image: 	'items/dream_TradingCard-2023-05-31T142320.jpg',
@@ -148,7 +156,7 @@ var all_available_items = {
 	iron_ore:{
 		type: 	'resource',
 		image: 	'items/meteorite-91891_640.jpg',
-		value: 	20,
+		value: 	10,
 	},
 	leather:{
 		image: 	'items/dream_TradingCard-2023-08-18T110531.jpg',

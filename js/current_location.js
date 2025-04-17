@@ -41,11 +41,15 @@ function set_location(location_id, forced){
 			}
 			var action_pick_chances = {};
 			eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
-				var actual_chance = action_chances['chance'] + (gamedata['expedition_distance'] / 100);
-				if(actual_chance > 100){actual_chance = 100;}
+				var actual_chance = action_chances['chance'] + (gamedata['expedition_distance'] / 10);
+				if(actual_chance > 100){actual_chance = 100 / (actual_chance / 100);}
 				if(actual_chance > 0)
 				{
 					action_pick_chances[action_id] = actual_chance;
+				}
+				else
+				{
+					//console.log(action_id + ' ' + actual_chance + ' chance to be picked');
 				}
 				//if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 / (1 + action_pick_chances[action_id] / 100);}
 			});
@@ -98,7 +102,7 @@ function show_current_location(fade_in){
 		eachoa(gamedata['current_location']['actions'], function(current_action_id, current_action_info){
 			parsed_current_location += parse_current_action(current_action_id, current_action_info, fade_in);
 		});
-		parsed_current_location += 	'<div class="expedition_distance">Traveled: ' + nFormatter(gamedata['expedition_distance'],3) + 'm</div>';
+		parsed_current_location += 	'<div class="expedition_distance">Traveled: ' + nFormatter(gamedata['expedition_distance'],1) + 'm</div>';
 		class_style('current_location_bg','backgroundImage','url(\'images/' + all_available_locations[gamedata['current_location']['location_id']]['image'] + '\')')
 		class_html('current_location_container', parsed_current_location);
 		update_inventory_counter();
@@ -139,7 +143,7 @@ var loot_count = 0;
 var loot_timers = {};
 
 function perform_action(current_action_id){
-	if(get_inventory_space_left() > 0 && gamedata['energy'] >= 1 && gamedata['current_location'] != undefined && gamedata['current_location']['location_id'] != undefined && all_available_locations[gamedata['current_location']['location_id']] != undefined && gamedata['current_location']['actions'][current_action_id] != undefined)
+	if(get_inventory_space_left() > 0 && gamedata['energy'] >= 0 && gamedata['current_location'] != undefined && gamedata['current_location']['location_id'] != undefined && all_available_locations[gamedata['current_location']['location_id']] != undefined && gamedata['current_location']['actions'][current_action_id] != undefined)
 	{
 		var current_action_info = gamedata['current_location']['actions'][current_action_id];
 		var action_id = current_action_info['action_id'];
@@ -154,26 +158,27 @@ function perform_action(current_action_id){
 			if(current_action_info['current_action_amount'] > 0)
 			{
 				var action_chosen_loot = get_random_key_from_object_based_on_num_value(action_info['action_loot']);
-				if(Math.random() * 100 < action_info['action_loot'][action_chosen_loot])
-				{
-					chosen_loot = action_chosen_loot;
-				}
+				/*if(Math.random() * 100 < action_info['action_loot'][action_chosen_loot])
+				{*/
+				chosen_loot = action_chosen_loot;
+				/*}*/
+				gained_amount = action_info['action_loot'][action_chosen_loot] / 100;
 			}
 			else
 			{
 				chosen_loot = get_random_key_from_object_based_on_num_value(action_info['final_loot']);
-				if(action_info['final_loot'][chosen_loot] > 0)
-				{
+				/*if(action_info['final_loot'][chosen_loot] > 0)
+				{*/
 					gained_amount = action_info['final_loot'][chosen_loot];
-				}
+				/*}*/
 			}
 			eachoa(action_info['subtypes'], function(useless_key, subtype){
 				gained_amount = get_building_bonus(subtype,gained_amount);
 			});
-			/*if(gained_amount > 1)
+			if(gained_amount > 0)
 			{
-				gained_amount = (Math.random() * (gained_amount - 1)) + 1;
-			}*/
+				gained_amount = (Math.random() * (gained_amount));
+			}
 			gained_amount = round_by_percent(gained_amount);
 			if(chosen_loot != false && gained_amount > 0)
 			{

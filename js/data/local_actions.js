@@ -3,8 +3,8 @@ var all_available_actions = {
 	apple_tree:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
-		min_action_amount: 		4,
-		max_action_amount: 		4,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		image: 					'actions/dream_TradingCard-2023-08-18T081111.jpg',
 		locations:{
 			forest:{
@@ -17,16 +17,16 @@ var all_available_actions = {
 			firewood: 	10,
 		},
 		final_loot:{
-			apple: 		1,
-			lumber: 	0.25,
-			firewood: 	0.5,
+			apple: 		2,
+			lumber: 	2,
+			firewood: 	2,
 		}
 	},
 	bird:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			1,
@@ -39,14 +39,13 @@ var all_available_actions = {
 		},
 		final_loot:{
 			feather: 	5,
-			meat: 		1,
 		}
 	},
 	boar:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			1,
@@ -58,8 +57,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		2,
-			hide: 		1,
+			meat: 		4,
+			hide: 		2,
 		}
 	},
 	boulder:{
@@ -79,7 +78,7 @@ var all_available_actions = {
 			stone: 	10,
 		},
 		final_loot:{
-			stone: 	1
+			stone: 	2
 		}
 	},
 	bunny:{
@@ -99,14 +98,13 @@ var all_available_actions = {
 		},
 		final_loot:{
 			hide: 		1,
-			meat: 		0.1,
 		}
 	},
 	bushes:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		1,
-		max_action_amount: 		4,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			4,
@@ -116,18 +114,18 @@ var all_available_actions = {
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
 			firewood: 	50,
-			twine: 		50,
+			twine: 		25,
 		},
 		final_loot:{
-			firewood: 		1,
+			firewood: 		2,
 			twine: 			0.5,
 		}
 	},
 	coal:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		1,
-		max_action_amount: 		2,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		energy_cost: 			2,
 		locations:{
 			mountain:{
@@ -139,13 +137,13 @@ var all_available_actions = {
 			coal: 		10,
 		},
 		final_loot:{
-			coal: 		1,
+			coal: 		2,
 		}
 	},
 	copper_ore:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
+		min_action_amount: 		10,
 		max_action_amount: 		10,
 		energy_cost: 			2,
 		locations:{
@@ -155,7 +153,7 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			copper_ore: 	10,
+			copper_ore: 	5,
 		},
 		final_loot:{
 			copper_ore: 	1,
@@ -164,8 +162,8 @@ var all_available_actions = {
 	deer:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			1,
@@ -177,23 +175,24 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		2,
-			meat: 		1,
+			hide: 		4,
+			meat: 		2,
 		}
 	},
 	field_carrot:{
 		type: 					'resource',
 		subtypes: 				['farming'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			1,
-				max: 			1
+				min: 			3,
+				max: 			6
 			}
 		},
 		action_loot:{
+			carrot: 	10,
 		},
 		final_loot:{
 			carrot: 	1,
@@ -202,16 +201,17 @@ var all_available_actions = {
 	field_flax:{
 		type: 					'resource',
 		subtypes: 				['farming'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			1,
-				max: 			1
+				min: 			5,
+				max: 			10
 			}
 		},
 		action_loot:{
+			flax: 	10,
 		},
 		final_loot:{
 			flax: 	1,
@@ -220,16 +220,17 @@ var all_available_actions = {
 	field_potato:{
 		type: 					'resource',
 		subtypes: 				['farming'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			1,
-				max: 			1
+				min: 			3,
+				max: 			6
 			}
 		},
 		action_loot:{
+			potato: 	10,
 		},
 		final_loot:{
 			potato: 	1,
@@ -238,31 +239,39 @@ var all_available_actions = {
 	field_wheat:{
 		type: 					'resource',
 		subtypes: 				['farming'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			1,
-				max: 			1
+				min: 			5,
+				max: 			10
 			}
 		},
 		action_loot:{
+			wheat: 		10,
 		},
 		final_loot:{
-			wheat: 	1,
+			wheat: 		1,
 		}
 	},
 	firewood:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		5,
+		max_action_amount: 		12,
 		image: 					'items/dream_TradingCard-2023-08-17T072416.jpg',
+		locations:{
+			forest:{
+				min: 			1,
+				max: 			1
+			}
+		},
 		action_loot:{
+			firewood: 	10
 		},
 		final_loot:{
-			firewood: 	1
+			firewood: 	4
 		}
 	},
 	iron_ore:{
@@ -279,7 +288,7 @@ var all_available_actions = {
 		},
 		image: 					'items/meteorite-91891_640.jpg',
 		action_loot:{
-			iron_ore: 	10,
+			iron_ore: 	5,
 		},
 		final_loot:{
 			iron_ore: 	1,
@@ -298,10 +307,10 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			salt: 		50,
+			salt: 		10,
 		},
 		final_loot:{
-			salt: 		2,
+			salt: 		1,
 		}
 	},
 	stream:{
@@ -317,10 +326,10 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
 		action_loot:{
-			water: 		100,
+			water: 		10,
 		},
 		final_loot:{
-			water: 		3
+			water: 		4
 		},
 	},
 	tree:{
@@ -336,31 +345,29 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
 		action_loot:{
-			firewood: 	25,
-			lumber: 	10,
 		},
 		final_loot:{
-			lumber: 	1
+			lumber: 	2
 		},
 	},
 	tree_large:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
-		min_action_amount: 		6,
-		max_action_amount: 		6,
+		min_action_amount: 		10,
+		max_action_amount: 		20,
 		locations:{
 			forest:{
 				min: 			1,
-				max: 			2
+				max: 			3
 			}
 		},
 		energy_cost: 			2,
 		image: 					'actions/dream_TradingCard-2023-08-26T072820.jpg',
 		action_loot:{
-			lumber: 	100,
+			lumber: 	10,
 		},
 		final_loot:{
-			lumber: 	1
+			lumber: 	5
 		},
 	},
 	
@@ -378,8 +385,9 @@ eachoa(all_available_actions, function(action_id, action_info){
 		eachoa(action_info['locations'], function(location_id, action_location_info){
 			if(all_available_locations[location_id] != undefined)
 			{
+				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
 				all_available_locations[location_id]['local_actions'][action_id] = {
-					chance: 	100 - (action_info['value'] * 25),
+					chance: 	100 - (action_info['total_value'] * 15 / local_action_amount),
 					min: 		action_location_info['min'],
 					max: 		action_location_info['max'],
 				};
@@ -423,6 +431,7 @@ function correct_action(action_id, show_stats){
 		var ideal_value = (average_actions + 1) * action_info['energy_cost'] * value_per_energy;
 		var current_value = (total_action_loot + total_final_loot) / (average_actions + 1);
 		all_available_actions[action_id]['value'] = current_value;
+		all_available_actions[action_id]['total_value'] = total_action_loot + total_final_loot;
 		if(false && (ideal_value != current_value || show_stats != undefined || action_info['show_calc'] != undefined))
 		{
 			var final_value_left = ideal_value - current_value;
