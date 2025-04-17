@@ -2,7 +2,7 @@ var all_available_items = {
 	apple:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T080707.jpg',
-		//energy: 3,
+		energy: 3,
 		value: 	3,
 	},
 	arrow:{
@@ -52,17 +52,21 @@ var all_available_items = {
 	},
 	bread:{
 		image: 	'items/dream_TradingCard-2023-05-20T094512.jpg',
-		//energy: 3,
-		effects:{
-			gathering: 	1,
-		},
-		effect_type: 		'percent',
+		energy: 3,
 		value: 	3,
 	},
 	bucket:{
 		image: 	'items/dream_TradingCard-2023-08-18T094513.jpg',
 		effects:{
-			max_storage: 	5,
+			max_inventory: 	1,
+		},
+		effect_type: 		'fixed',
+		value: 	25,
+	},
+	cane:{
+		image: 	'items/dream_TradingCard-2025-04-17T061405.141.jpg',
+		effects:{
+			travel_speed: 	1,
 		},
 		effect_type: 		'percent',
 		value: 	25,
@@ -70,7 +74,7 @@ var all_available_items = {
 	carrot:{
 		type: 	'resource',
 		image: 	'items/carrot-1565597_640.jpg',
-		//energy: 3,
+		energy: 3,
 		value: 	3,
 	},
 	cloth:{
@@ -128,7 +132,7 @@ var all_available_items = {
 	},
 	fries:{
 		image: 	'items/french-fries-923687_640.jpg',
-		//energy: 1,
+		energy: 1,
 		value: 	1,
 	},
 	
@@ -212,19 +216,15 @@ var all_available_items = {
 	},
 	roasted_meat:{
 		image: 	'items/dream_TradingCard-2023-08-24T113417.jpg',
-		//energy: 1,
-		effects:{
-			gathering: 	1,
-		},
-		effect_type: 		'percent',
+		energy: 1,
 		value: 	1,
 	},
 	sack:{
 		image: 	'items/dream_TradingCard-2023-08-26T074414.jpg',
 		effects:{
-			max_storage: 	1,
+			max_inventory: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	18,
 	},
 	salt:{
@@ -244,7 +244,7 @@ var all_available_items = {
 	water:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-20T073449.jpg',
-		//energy: 1,
+		energy: 1,
 		value: 	1,
 	},
 	wheat:{

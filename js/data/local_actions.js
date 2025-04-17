@@ -1,11 +1,17 @@
 var all_available_actions = {
 	
-	/*apple_tree:{
+	apple_tree:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
 		min_action_amount: 		4,
 		max_action_amount: 		4,
 		image: 					'actions/dream_TradingCard-2023-08-18T081111.jpg',
+		locations:{
+			forest:{
+				min: 			1,
+				max: 			1
+			}
+		},
 		action_loot:{
 			apple: 		10,
 			firewood: 	10,
@@ -15,7 +21,7 @@ var all_available_actions = {
 			lumber: 	0.25,
 			firewood: 	0.5,
 		}
-	},*/
+	},
 	bird:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -373,7 +379,7 @@ eachoa(all_available_actions, function(action_id, action_info){
 			if(all_available_locations[location_id] != undefined)
 			{
 				all_available_locations[location_id]['local_actions'][action_id] = {
-					chance: 	100 / sqr(action_info['value']),
+					chance: 	100 - (action_info['value'] * 25),
 					min: 		action_location_info['min'],
 					max: 		action_location_info['max'],
 				};

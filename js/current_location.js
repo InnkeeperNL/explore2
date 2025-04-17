@@ -41,13 +41,18 @@ function set_location(location_id, forced){
 			}
 			var action_pick_chances = {};
 			eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
-				action_pick_chances[action_id] = action_chances['chance'] + (gamedata['expedition_distance'] / 100);
+				var actual_chance = action_chances['chance'] + (gamedata['expedition_distance'] / 100);
+				if(actual_chance > 100){actual_chance = 100;}
+				if(actual_chance > 0)
+				{
+					action_pick_chances[action_id] = actual_chance;
+				}
 				//if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 / (1 + action_pick_chances[action_id] / 100);}
 			});
 			var chosen_action_id = get_random_key_from_object_based_on_num_value(action_pick_chances);
 			var action_id = chosen_action_id;
 			var action_chances = all_available_locations[location_id]['local_actions'][action_id];
-			console.log(action_pick_chances);
+			//console.log(action_pick_chances);
 			//eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
 				if(Math.random() * 100 <= action_chances['chance'] || true)
 				{
@@ -76,9 +81,13 @@ function set_location(location_id, forced){
 }
 
 function reset_location(){
-	gamedata['current_location']['actions'] = {};
-	set_location(gamedata['current_location']['location_id'], true);
-	show_current_location(true);
+	if(gamedata['energy'] >= 1)
+	{
+		gain_energy(-1);
+		gamedata['current_location']['actions'] = {};
+		set_location(gamedata['current_location']['location_id'], true);
+		show_current_location(true);
+	}
 }
 
 function show_current_location(fade_in){

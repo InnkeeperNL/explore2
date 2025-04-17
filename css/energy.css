@@ -11,7 +11,6 @@
 	position: relative;
 	overflow: visible;
 	z-index: 101;
-	display: none;
 }
 
 .expeditions_container
@@ -130,7 +129,13 @@
 .action_cost_icon,
 .max_storage_icon,
 .max_inventory_icon,
-.skill_bonus_icon
+.skill_bonus_icon,
+.travel_speed_icon,
+.hunting_icon,
+.woodcutting_icon,
+.mining_icon,
+.farming_icon,
+.gathering_icon
 {
 	display: inline-block;
 	width: 12px;
@@ -176,6 +181,49 @@
 	background-image: url('../images/icons/electric-grey.svg');
 }
 
+.travel_speed_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/walking-boot-grey.svg');
+}
+
+.farming_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/wheat-grey.svg');
+}
+
+.gathering_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/basket-grey.svg');
+}
+
+.hunting_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/high-shot-grey.svg');
+}
+
+.mining_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/dig-dug-grey.svg');
+}
+
+.woodcutting_icon
+{
+	width: 16px;
+	margin-right: 2px;
+	background-image: url('../images/icons/hatchet-grey.svg');
+}
+
+
 .expeditions_cost_text,
 .action_energy_cost_text
 {
@@ -183,6 +231,7 @@
 	padding: 2px;
 	margin-left: -4px;
     padding-right: 3px;
+    text-shadow: none;
 }
 
 .expeditions_cost_text

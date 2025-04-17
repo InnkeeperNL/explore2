@@ -189,6 +189,13 @@ function parse_building_effect(building_id){
 	{
 		parsed_building_effect += 'Maximum storage stack size: ' + get_max_storage() + '<br/>';
 	}
+	eachoa(all_skills, function(skill_id, skill_available){
+		if(building_info['effects'][skill_id] != undefined)
+		{
+			parsed_building_effect += skill_id + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '%<br/>';
+		}
+	});
+	
 	if(building_info['effects']['energy_on_click'] != undefined)
 	{
 		parsed_building_effect += 'Press the button below to get energy.<br/>';
@@ -274,7 +281,7 @@ function parse_recipe(recipe_id){
 			var bonus_icon = '';
 			var bonus_type = '';
 			if(item_info['effect_type'] != undefined && item_info['effect_type'] == 'percent'){bonus_type = '%';}
-			/*if(item_info['energy'] != undefined)
+			if(item_info['energy'] != undefined)
 			{
 				parsed_recipe += 	'<div class="actions_energy_cost"><div class="consume_energy_amount_icon"></div><span class="action_energy_cost_text">' + item_info['energy'] + '</span></div>';
 			}
@@ -283,7 +290,7 @@ function parse_recipe(recipe_id){
 				total_bonus += item_info['effects']['max_energy'];
 				bonus_icon = 'action_cost';
 				//parsed_recipe += 	'<div class="actions_energy_cost"><div class="action_cost_icon"></div><span class="action_energy_cost_text">' + item_info['effects']['max_energy'] + '%</span></div>';
-			}*/
+			}
 			if(item_info['effects'] && item_info['effects']['max_storage'] != undefined)
 			{
 				total_bonus += item_info['effects']['max_storage'];
@@ -303,9 +310,10 @@ function parse_recipe(recipe_id){
 					if(effect_amount > total_bonus)
 					{
 						total_bonus = effect_amount;
+						bonus_icon = effect_id;
 					}
 				});
-				bonus_icon = 'skill_bonus';
+				
 			}
 			if(total_bonus > 0)
 			{

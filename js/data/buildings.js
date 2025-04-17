@@ -145,18 +145,18 @@ var all_available_buildings = {
 		effect_type: 		'fixed',
 	},
 	well:{
-		description: 	'Increases storage by 10% each level.',
+		description: 	'Increases maximum energy by 1 each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
-		item_image: 'water',
+		item_image: 	'water',
 		//free_levels: 1,
 		cost:{
 			stone: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
-			max_storage: 	10,
+			max_energy: 	2,
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		//effect_is_local: true,
 
 	},
@@ -173,6 +173,7 @@ var all_available_buildings = {
 		effect_type: 	'percent',
 		recipes:{
 			firewood: 	1,
+			cane:  		1,
 			plank: 		1,
 			pole: 		1,
 			barrel: 	3,

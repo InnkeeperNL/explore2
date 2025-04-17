@@ -27,6 +27,14 @@ var effects_per_value 		= {
 	woodcutting: 	0.5,
 }
 
+var all_skills = {
+	farming: 		0.5,
+	gathering: 		0.5,
+	hunting: 		0.5,
+	mining: 		0.5,
+	woodcutting: 	0.5,
+};
+
 eachoa(effects_per_value, function(effect_id, bonus_amount){
 	effects_per_value[effect_id] = bonus_amount / 1;
 });

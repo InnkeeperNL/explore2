@@ -5,6 +5,7 @@ var all_available_locations = {
 		local_actions:{},
 		cost:{
 			map: 		20,
+			stone: 		10,
 		}
 	},
 	forest:{

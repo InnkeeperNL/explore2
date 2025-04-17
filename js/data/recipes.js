@@ -78,6 +78,14 @@ var all_available_recipes = {
 		},
 		//cost_factor: 2,
 	},
+	cane:{
+		cost:{
+			lumber: 	2,
+		},
+		result:{
+			cane: 	1
+		},
+	},
 	cloth:{
 		cost:{
 			twine: 		2,
