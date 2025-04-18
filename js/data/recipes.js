@@ -96,6 +96,18 @@ var all_available_recipes = {
 			cane: 	1
 		},
 	},
+	cloak:{
+		cost:{
+			cloth: 	5,
+			twine: 	5
+		},
+		result:{
+			cloak: 	1
+		},
+		buildings:{
+			tailor_shop: 	true,
+		}
+	},
 	cloth:{
 		cost:{
 			twine: 		2,
@@ -285,14 +297,29 @@ var all_available_recipes = {
 		},
 		//cost_factor: 2,
 	},
-	twine:{
+	twine_flax:{
 		cost:{
 			flax: 		2,
 		},
 		result:{
 			twine: 		1
 		},
+		buildings:{
+			//tailor_shop: true,
+		}
 	},
+	twine_reeds:{
+		cost:{
+			reeds: 		4,
+		},
+		result:{
+			twine: 		1
+		},
+		buildings:{
+			tailor_shop: true,
+		}
+	},
+	
 }
 
 eachoa(all_available_recipes, function(recipe_id, recipe_info){

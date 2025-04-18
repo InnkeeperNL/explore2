@@ -212,12 +212,13 @@ function parse_explore(){
 }
 
 function unlock_random_location(){
-	var explore_cost = to_the_nth(1, 5, count_object(gamedata['known_locations']));
+	var explore_cost = to_the_nth(1, count_object(gamedata['known_locations']), 5);
 	var can_unlock = true;
 	var cost_id = 'map';
 	if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
 	{
 		can_unlock = false;
+		console.log('ding');
 	}
 	var owned_amount = 0;
 	if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}

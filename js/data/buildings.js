@@ -185,6 +185,18 @@ var all_available_buildings = {
 	
 }
 
+eachoa(all_available_recipes, function(recipe_id, recipe_info){
+	if(recipe_info['buildings'] != undefined)
+	{
+		eachoa(recipe_info['buildings'], function(building_id, set_building){
+			if(all_available_buildings[building_id] != undefined)
+			{
+				if(all_available_buildings[building_id]['recipes'] == undefined){all_available_buildings[building_id]['recipes'] = {};}
+				all_available_buildings[building_id]['recipes'][recipe_id] = recipe_info['value'];
+			}
+		});
+	}
+});
 
 eachoa(all_available_buildings, function(building_id, building_info){
 	if(building_info['name'] == undefined)
@@ -194,4 +206,15 @@ eachoa(all_available_buildings, function(building_id, building_info){
 	eachoa(building_info['cost'], function(cost_id, cost_amount){
 		building_info['cost'][cost_id] = Math.ceil(cost_amount * building_cost_factor);
 	});
+	eachoa(building_info['recipes'], function(recipe_id, recipe_level){
+		if(all_available_recipes[recipe_id] == undefined)
+		{
+			delete building_info['recipes'][recipe_id];
+		}
+		else
+		{
+			building_info['recipes'][recipe_id] = all_available_recipes[recipe_id]['value'];
+		}
+	});
+	building_info['recipes'] = sortObj(building_info['recipes'], 'value');
 });

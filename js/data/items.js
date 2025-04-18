@@ -85,6 +85,14 @@ var all_available_items = {
 		energy: 3,
 		value: 	3,
 	},
+	cloak:{
+		image: 	'items/dream_TradingCard-2025-04-18T063009.220.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
 	cloth:{
 		image: 	'items/dream_TradingCard-2023-06-03T070523.jpg',
 		value: 	5,
@@ -221,6 +229,10 @@ var all_available_items = {
 		},
 		effect_type: 		'fixed',
 		value: 	18,
+	},
+	reeds:{
+		image: 	'items/dream_TradingCard-2025-04-18T063401.552.jpg',
+		value: 	1,
 	},
 	roasted_meat:{
 		image: 	'items/dream_TradingCard-2023-08-24T113417.jpg',

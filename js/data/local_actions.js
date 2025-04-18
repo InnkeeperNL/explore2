@@ -69,9 +69,17 @@ var all_available_actions = {
 		energy_cost: 			2,
 		image: 					'actions/dream_TradingCard-2023-08-18T093059.jpg',
 		locations:{
+			cave:{
+				min: 			4,
+				max: 			6
+			},
 			mountain:{
 				min: 			4,
 				max: 			6
+			},
+			river:{
+				min: 			1,
+				max: 			3
 			}
 		},
 		action_loot:{
@@ -109,7 +117,11 @@ var all_available_actions = {
 			forest:{
 				min: 			4,
 				max: 			6
-			}
+			},
+			river:{
+				min: 			1,
+				max: 			1
+			},
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
@@ -128,9 +140,13 @@ var all_available_actions = {
 		max_action_amount: 		6,
 		energy_cost: 			2,
 		locations:{
-			mountain:{
+			cave:{
 				min: 			1,
 				max: 			1
+			},
+			mountain:{
+				min: 			1,
+				max: 			2
 			}
 		},
 		action_loot:{
@@ -294,6 +310,26 @@ var all_available_actions = {
 			iron_ore: 	1,
 		}
 	},
+	reeds:{
+		type: 					'resource',
+		subtypes: 				['gathering'],
+		min_action_amount: 		3,
+		max_action_amount: 		6,
+		locations:{
+			river:{
+				min: 			3,
+				max: 			6
+			},
+		},
+		action_loot:{
+			reeds: 		50,
+			twine: 		25,
+		},
+		final_loot:{
+			reeds: 		2,
+			twine: 		0.5,
+		}
+	},
 	salt:{
 		type: 					'resource',
 		subtypes: 				['mining'],
@@ -319,10 +355,18 @@ var all_available_actions = {
 		min_action_amount: 		3,
 		max_action_amount: 		6,
 		locations:{
+			cave:{
+				min: 			1,
+				max: 			1
+			},
 			forest:{
 				min: 			1,
 				max: 			1
 			},
+			river:{
+				min: 			3,
+				max: 			6
+			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
 		action_loot:{
@@ -341,6 +385,10 @@ var all_available_actions = {
 			forest:{
 				min: 			4,
 				max: 			6
+			},
+			river:{
+				min: 			1,
+				max: 			2
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
@@ -359,6 +407,10 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			3
+			},
+			river:{
+				min: 			1,
+				max: 			1
 			}
 		},
 		energy_cost: 			2,
