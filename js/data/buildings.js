@@ -175,8 +175,6 @@ var all_available_buildings = {
 			plank: 		1,
 			pole: 		1,
 			barrel: 	3,
-			arrow: 		2,
-			bow: 		2,
 		},
 	},
 	
