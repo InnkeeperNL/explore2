@@ -214,6 +214,18 @@ var all_available_recipes = {
 			nail: 		10
 		}
 	},
+	nail_copper:{
+		cost:{
+			copper: 	1,
+		},
+		result:{
+			nail: 		1
+		},
+		buildings:{
+			smithy: true,
+		}
+	},
+
 	paper:{
 		cost:{
 			firewood: 	1,
@@ -310,7 +322,7 @@ var all_available_recipes = {
 	},
 	twine_reeds:{
 		cost:{
-			reeds: 		4,
+			reeds: 		1,
 		},
 		result:{
 			twine: 		1
@@ -327,6 +339,12 @@ eachoa(all_available_recipes, function(recipe_id, recipe_info){
 	{
 		delete all_available_items[recipe_id]['value'];
 	}
+	eachoa(recipe_info['result'], function(result_id, result_amount){
+		if(all_available_items[result_id] != undefined && all_available_items[result_id]['value'] != undefined)
+		{
+			delete all_available_items[result_id]['value'];
+		}
+	});
 	eachoa(recipe_info['cost'], function(cost_id, cost_amount){
 		all_available_recipes[recipe_id]['cost'][cost_id] = cost_amount * recipe_cost_factor;
 	});
@@ -340,12 +358,13 @@ function check_all_recipes(){
 			var total_cost = 0;
 			var can_calc_this = true;
 			eachoa(recipe_info['cost'], function(cost_id, cost_amount){
-				if(all_available_items[cost_id] != undefined && all_available_items[cost_id]['value'] != undefined)
+				if((all_available_items[cost_id] != undefined && all_available_items[cost_id]['value'] != undefined)/* || recipe_info['value'] == undefined*/)
 				{
 					total_cost += all_available_items[cost_id]['value'] * cost_amount;
 				}
 				else
 				{
+					//console.log('cannot calc ' + recipe_id + ': ' + cost_id + ' has no value yet');
 					can_calc_this = false;
 				}
 			});
@@ -364,7 +383,7 @@ function check_all_recipes(){
 					}
 				});
 				cost_value = Math.ceil(total_cost * (0.5 + count_object(recipe_info['cost']) * 0.5));
-				if(cost_value != total_result && allready_calculated == false)
+				if(cost_value != total_result && recipe_info['value'] == undefined)
 				{
 					found_recipe_to_adjust = recipe_id;
 					//console.log(found_recipe_to_adjust);
@@ -382,8 +401,29 @@ function check_all_recipes(){
 								}
 								//console.log(all_available_items[result_id]);
 							}
+							else
+							{
+								if(cost_value >= all_available_items[result_id]['value'])
+								{
+									var result_amount = Math.floor(cost_value / all_available_items[result_id]['value']);
+									if(result_amount < 1){result_amount = 1;}
+									recipe_info['result'][result_id] = result_amount
+									total_result = result_amount * all_available_items[result_id]['value'];
+								}
+								else
+								{
+									var cost_correction_factor = all_available_items[result_id]['value'] / cost_value;
+									eachoa(recipe_info['cost'], function(cost_id, cost_amount){
+										recipe_info['cost'][cost_id] = Math.floor(cost_amount * cost_correction_factor);
+									});
+								}
+							}
 						});
 					}
+				}
+				if(total_result > 0)
+				{
+					recipe_info['value'] = total_result;
 				}
 			}
 		}
@@ -444,4 +484,4 @@ function calc_effect_per_value(base_value, effect_id, effect_type, item_id){
 
 check_all_recipes();
 check_all_item_effects();
-check_all_recipe_values();
+//check_all_recipe_values();
