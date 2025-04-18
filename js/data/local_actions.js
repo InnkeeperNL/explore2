@@ -22,6 +22,26 @@ var all_available_actions = {
 			firewood: 	2,
 		}
 	},
+	bear:{
+		type: 					'resource',
+		subtypes: 				['hunting'],
+		min_action_amount: 		8,
+		max_action_amount: 		10,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1
+			}
+		},
+		energy_cost: 			5,
+		image: 					'actions/dream_TradingCard-2025-04-18T161525.169.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			hide: 		2,
+			meat: 		2,
+		}
+	},
 	bird:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -97,7 +117,7 @@ var all_available_actions = {
 		locations:{
 			forest:{
 				min: 			1,
-				max: 			1
+				max: 			3
 			}
 		},
 		energy_cost: 			5,
@@ -105,7 +125,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		1,
+			hide: 		2,
 		}
 	},
 	bushes:{
@@ -165,7 +185,7 @@ var all_available_actions = {
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			}
 		},
 		action_loot:{
@@ -299,7 +319,7 @@ var all_available_actions = {
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			}
 		},
 		image: 					'items/meteorite-91891_640.jpg',
@@ -308,6 +328,29 @@ var all_available_actions = {
 		},
 		final_loot:{
 			iron_ore: 	1,
+		}
+	},
+	rat:{
+		type: 					'resource',
+		subtypes: 				['hunting'],
+		min_action_amount: 		1,
+		max_action_amount: 		1,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			3
+			},
+			river:{
+				min: 			1,
+				max: 			2
+			}
+		},
+		energy_cost: 			5,
+		image: 					'actions/dream_TradingCard-2025-04-18T162051.177.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			hide: 		2,
 		}
 	},
 	reeds:{
@@ -339,7 +382,7 @@ var all_available_actions = {
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			}
 		},
 		action_loot:{
@@ -384,7 +427,7 @@ var all_available_actions = {
 		locations:{
 			forest:{
 				min: 			4,
-				max: 			6
+				max: 			8
 			},
 			river:{
 				min: 			1,

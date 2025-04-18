@@ -145,8 +145,11 @@ function check_can_upgrade_building_percent(building_id){
 	var building_level = 0;
 	if(gamedata['buildings'][building_id] != undefined){building_level = gamedata['buildings'][building_id];}
 	var temp_cost = get_building_level_costs(building_id, building_level);
+	var max_storage = get_max_storage();
+	var not_enough_storage = false;
 	eachoa(temp_cost, function(cost_id, cost_amount){
 		var real_cost = to_the_nth(cost_amount, building_level, building_info['cost_factor']);
+		if(real_cost > max_storage){not_enough_storage = true;}
 		if(gamedata['storage'] == undefined){gamedata['storage'] = {};}
 
 		if(gamedata['storage'][cost_id] != undefined && gamedata['storage'][cost_id] < real_cost)
@@ -160,6 +163,7 @@ function check_can_upgrade_building_percent(building_id){
 		total_build_cost += real_cost;
 	});
 	can_build_percent = Math.floor((have_materials / total_build_cost) * 100);
+	if(not_enough_storage == true){can_build_percent = -1;}
 	return can_build_percent;
 }
 

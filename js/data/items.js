@@ -58,6 +58,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	33,
 	},
+	box:{
+		image: 	'items/dream_TradingCard-2025-04-18T153204.687.jpg',
+		effects:{
+			max_storage: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
 	bread:{
 		image: 	'items/dream_TradingCard-2023-05-20T094512.jpg',
 		energy: 3,
@@ -256,6 +264,13 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T090111.jpg',
 		value: 	5,
+	},
+	trap:{
+		image: 	'items/dream_TradingCard-2025-04-18T154805.392.jpg',
+		effects:{
+			hunting: 	1,
+		},
+		effect_type: 		'percent',
 	},
 	twine:{
 		image: 	'items/dream_TradingCard-2023-05-29T084103.jpg',

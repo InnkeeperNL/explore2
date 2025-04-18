@@ -3,7 +3,7 @@ var all_available_buildings = {
 	
 	furnace:{
 		image: 		'buildings/metallurgy-2932947_640.jpg',
-		item_image: 'coal',
+		//item_image: 'coal',
 		cost:{
 			coal: 		5,
 		},
@@ -23,6 +23,21 @@ var all_available_buildings = {
 			iron: 		2,
 		},
 	},
+	hunting_lodge:{
+		name: 		'Hunting lodge',
+		image: 		'buildings/dream_TradingCard-2025-04-18T155127.500.jpg',
+		//item_image: 'meat',
+		cost:{
+			lumber: 	10,
+		},
+		cost_factor: 	2,
+		effects:{
+			hunting: 	10,
+		},
+		effect_type: 	'percent',
+		recipes:{
+		},
+	},
 	kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		item_image: 'meat',
@@ -40,9 +55,9 @@ var all_available_buildings = {
 			fries: 			2,*/
 		},
 	},
-	mill:{
+	/*mill:{
 		image: 		'buildings/mill-1745186_640.jpg',
-		item_image: 'flax',
+		//item_image: 'flax',
 		cost:{
 			flax: 		10,
 		},
@@ -55,10 +70,10 @@ var all_available_buildings = {
 			twine: 		1,
 			flour: 		1,
 		},
-	},
+	},*/
 	paper_mill:{
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
-		item_image: 'paper',
+		//item_image: 'paper',
 		cost:{
 			firewood: 	5,
 			lumber: 	5,
@@ -77,7 +92,7 @@ var all_available_buildings = {
 	},
 	smithy:{
 		image: 		'buildings/horseshoe-1516273_640.jpg',
-		item_image: 'copper_pot',
+		//item_image: 'copper_pot',
 		cost:{
 			copper: 	5,
 		},
@@ -96,7 +111,7 @@ var all_available_buildings = {
 	},
 	tailor_shop:{
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
-		item_image: 'cloth',
+		//item_image: 'cloth',
 		cost:{
 			twine: 		5,
 		},
@@ -110,27 +125,9 @@ var all_available_buildings = {
 			sack: 		1,
 		},
 	},
-	tannery:{
-		image: 		'buildings/dream_TradingCard-2023-08-18T110639.jpg',
-		item_image: 'leather',
-		cost:{
-			hide: 		5,
-		},
-		cost_factor: 	2,
-		effects:{
-			hunting: 	10,
-		},
-		effect_type: 	'percent',
-		recipes:{
-			leather: 	1,
-			pouch: 		1,
-			boot: 		1,
-			backpack: 	2,
-		},
-	},
 	warehouse:{
 		image: 		'buildings/dream_TradingCard-2023-08-17T141755.jpg',
-		item_image: 'basket',
+		//item_image: 'basket',
 		cost:{
 			lumber: 	5,
 		},
@@ -148,7 +145,7 @@ var all_available_buildings = {
 	well:{
 		description: 	'Increases maximum energy by 2 each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
-		item_image: 	'water',
+		//item_image: 	'water',
 		//free_levels: 1,
 		cost:{
 			stone: 		5,
@@ -163,7 +160,7 @@ var all_available_buildings = {
 	},
 	wood_workshop:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
-		item_image: 'lumber',
+		//item_image: 'lumber',
 		cost:{
 			lumber: 	10,
 		},

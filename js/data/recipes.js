@@ -7,6 +7,9 @@ var all_available_recipes = {
 		result:{
 			arrow: 		1
 		},
+		buildings:{
+			hunters_lodge: true,
+		}
 	},
 	axe:{
 		cost:{
@@ -26,7 +29,9 @@ var all_available_recipes = {
 		result:{
 			backpack: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			hunters_lodge: true,
+		}
 	},
 	barrel:{
 		cost:{
@@ -41,7 +46,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	25,
+			firewood: 	5,
 		},
 		result:{
 			basket: 	1
@@ -57,6 +62,9 @@ var all_available_recipes = {
 		result:{
 			boot: 		1
 		},
+		buildings:{
+			hunters_lodge: true,
+		}
 	},
 	bow:{
 		cost:{
@@ -67,7 +75,20 @@ var all_available_recipes = {
 		result:{
 			bow: 		1
 		},
-		//cost_factor: 2,
+		buildings:{
+			hunters_lodge: true,
+		}
+	},
+	box:{
+		cost:{
+			lumber: 	6,
+		},
+		result:{
+			box: 	1
+		},
+		buildings:{
+			warehouse: true,
+		}
 	},
 	bread:{
 		cost:{
@@ -196,6 +217,9 @@ var all_available_recipes = {
 		},
 		result:{
 			leather: 1
+		},
+		buildings:{
+			hunters_lodge: true,
 		}
 	},
 	map:{
@@ -288,7 +312,9 @@ var all_available_recipes = {
 		result:{
 			pouch: 		1
 		},
-		//cost_factor: 2,
+		buildings:{
+			hunters_lodge: true,
+		}
 	},
 	roasted_meat:{
 		cost:{
@@ -308,6 +334,18 @@ var all_available_recipes = {
 			sack: 		1
 		},
 		//cost_factor: 2,
+	},
+	trap:{
+		cost:{
+			firewood: 	2,
+			twine: 		1,
+		},
+		result:{
+			trap: 		1
+		},
+		buildings:{
+			hunters_lodge: true,
+		}
 	},
 	twine_flax:{
 		cost:{
@@ -473,7 +511,7 @@ function calc_effect_per_value(base_value, effect_id, effect_type, item_id){
 	}
 	value *= calced_effect_per_value;
 	
-	if(value < 0.5)
+	if(value < 0.1)
 	{
 		console.log(item_id + ' effect to low: ' + value);
 		console.log('calced_effect_per_value: ' + calced_effect_per_value);

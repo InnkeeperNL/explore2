@@ -59,7 +59,14 @@ function parse_building_button(building_id){
 			{
 				can_build_now = 'can_build_now';
 			}
-			parsed_building_button += '<div class="can_build_container"><div class="can_build ' + can_build_now + '" style="width:' + (0 + can_build_percent) + '%"></div></div>';
+			if(can_build_percent >= 0)
+			{
+				parsed_building_button += '<div class="can_build_container"><div class="can_build ' + can_build_now + '" style="width:' + (0 + can_build_percent) + '%"></div></div>';
+			}
+			else
+			{
+				parsed_building_button += '<div class="can_build_container"><div class="can_build ' + can_build_now + ' not_enough_storage" style="width:100%"></div></div>';
+			}
 		}
 		parsed_building_button += '</div>';
 	}

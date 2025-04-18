@@ -92,6 +92,11 @@
 	background-color: rgba(0,200,0,0.8);
 }
 
+.building_button .can_build.not_enough_storage
+{
+	background-color: rgba(200,0,0,0.5);
+}
+
 .building_name
 {
 	font-size: 24px;

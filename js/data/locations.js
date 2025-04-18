@@ -9,7 +9,7 @@ var all_available_locations = {
 	},*/
 	
 	cave:{
-		image: 'locations/dream_TradingCard-2025-04-18T061116.001.jpg',
+		image: 'locations/dream_TradingCard-2025-04-18T161409.540.jpg',
 		local_actions:{},
 		cost:{
 			map: 	5,
