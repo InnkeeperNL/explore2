@@ -8,7 +8,7 @@ var all_available_recipes = {
 			arrow: 		1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	axe:{
@@ -30,7 +30,7 @@ var all_available_recipes = {
 			backpack: 	1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	barrel:{
@@ -63,7 +63,7 @@ var all_available_recipes = {
 			boot: 		1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	bow:{
@@ -76,7 +76,7 @@ var all_available_recipes = {
 			bow: 		1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	box:{
@@ -219,7 +219,7 @@ var all_available_recipes = {
 			leather: 1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	map:{
@@ -313,7 +313,7 @@ var all_available_recipes = {
 			pouch: 		1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	roasted_meat:{
@@ -344,7 +344,7 @@ var all_available_recipes = {
 			trap: 		1
 		},
 		buildings:{
-			hunters_lodge: true,
+			hunting_lodge: true,
 		}
 	},
 	twine_flax:{
