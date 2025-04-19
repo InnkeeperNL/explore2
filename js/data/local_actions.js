@@ -504,15 +504,15 @@ var all_available_actions = {
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			},
 			forest:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			},
 			mountain:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			},
 			river:{
 				min: 			2,
