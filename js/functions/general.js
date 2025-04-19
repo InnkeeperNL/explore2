@@ -58,13 +58,13 @@ function get_random_key_from_object_based_on_num_value(object){
   var object_count = 0;
   var found_one = false;
   eachoa(object, function(key, item){
-    object_count += parseInt(item);
+    object_count += /*parseInt*/(item);
   });
-  var chosen_object = Math.floor(Math.random() * object_count) + 1;
+  var chosen_object = (Math.random() * object_count);
   var chosen_key;
   eachoa(object, function(key, item){
-    chosen_object -= parseInt(item);
-    if(chosen_object <= 0 && chosen_object > item * -1 && found_one == false){
+    chosen_object -= /*parseInt*/(item);
+    if(chosen_object <= 0 && /*chosen_object > item * -1 &&*/ found_one == false){
       chosen_key = key;
       found_one = true;
     }
