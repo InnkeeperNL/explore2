@@ -125,7 +125,7 @@ var all_available_recipes = {
 			pottery: true,
 		}
 	},
-	brick_lumber:{
+	/*brick_lumber:{
 		cost:{
 			lumber: 	5,
 		},
@@ -135,7 +135,7 @@ var all_available_recipes = {
 		buildings:{
 			wood_workshop: true,
 		}
-	},
+	},*/
 	brick_stone:{
 		cost:{
 			stone: 	5,
