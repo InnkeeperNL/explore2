@@ -27,8 +27,11 @@ function show_building(){
 
 		if(building_info['recipes'] != undefined)
 		{
-			var max_recipe_value = to_the_nth(1, building_level, 10);
-			max_recipe_value = get_building_upgrade_cost_value(current_building_id);
+			var max_recipe_value = 0;
+			if(building_level > 0)
+			{
+				max_recipe_value = get_building_upgrade_cost_value(current_building_id);
+			}
 			//parsed_building += '<div class="building_description">' + max_recipe_value + '</div>';
 			var parsed_recipes_title = false;
 			var lowest_recipe_value = false;
@@ -85,7 +88,7 @@ function get_building_upgrade_cost_value(building_id){
 	var building_info = all_available_buildings[building_id];
 	var building_level = 0;
 	var total_value = 0;
-	if(gamedata['buildings'][building_id] != undefined){building_level = gamedata['buildings'][building_id];}
+	if(gamedata['buildings'][building_id] != undefined){building_level = gamedata['buildings'][building_id] - 1;}
 	var temp_cost = get_building_level_costs(building_id, building_level);
 	eachoa(temp_cost, function(cost_id, cost_amount){
 		if(all_available_items[cost_id] != undefined && all_available_items[cost_id]['value'] != undefined)
