@@ -33,11 +33,23 @@ var all_available_recipes = {
 			hunting_lodge: true,
 		}
 	},
+	bag:{
+		cost:{
+			cloth: 		10,
+			twine: 		5,
+		},
+		result:{
+			bag: 		1
+		},
+		buildings:{
+			tailor_shop: true,
+		}
+	},
 	barrel:{
 		cost:{
 			iron: 		2,
-			nail: 		20,
-			plank: 		6,
+			nail: 		10,
+			plank: 		24,
 		},
 		result:{
 			barrel: 	1
@@ -99,6 +111,30 @@ var all_available_recipes = {
 		result:{
 			bread: 		1
 		},
+	},
+	brick_clay:{
+		cost:{
+			firewood: 	1,
+			clay: 		4,
+			water: 		1,
+		},
+		result:{
+			brick: 		1
+		},
+		buildings:{
+			pottery: true,
+		}
+	},
+	brick_stone:{
+		cost:{
+			stone: 	5,
+		},
+		result:{
+			brick: 		1
+		},
+		buildings:{
+			warehouse: true,
+		}
 	},
 	bucket:{
 		cost:{
@@ -166,8 +202,8 @@ var all_available_recipes = {
 	},
 	crate:{
 		cost:{
-			nail: 		20,
-			plank: 		6,
+			nail: 		5,
+			plank: 		12,
 		},
 		result:{
 			crate: 	1
@@ -208,6 +244,19 @@ var all_available_recipes = {
 		},
 		result:{
 			iron: 		1
+		}
+	},
+	jar:{
+		cost:{
+			firewood: 	5,
+			clay: 		5,
+			water: 		5,
+		},
+		result:{
+			jar: 		1
+		},
+		buildings:{
+			pottery: true,
 		}
 	},
 	leather:{

@@ -22,6 +22,31 @@ var all_available_actions = {
 			firewood: 	2,
 		}
 	},
+	bandit:{
+		type: 					'resource',
+		subtypes: 				['combat'],
+		min_action_amount: 		8,
+		max_action_amount: 		10,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1
+			},
+			forest:{
+				min: 			1,
+				max: 			1
+			}
+		},
+		energy_cost: 			5,
+		image: 					'actions/dream_TradingCard26.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			twine: 		1,
+			cloth: 		0.5,
+			peasant: 	0.2,
+		}
+	},
 	bear:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -29,6 +54,10 @@ var all_available_actions = {
 		max_action_amount: 		10,
 		locations:{
 			cave:{
+				min: 			1,
+				max: 			1
+			},
+			forest:{
 				min: 			1,
 				max: 			1
 			}
@@ -73,7 +102,7 @@ var all_available_actions = {
 			}
 		},
 		energy_cost: 			6,
-		image: 					'actions/dream_TradingCard-2023-08-24T112735.jpg',
+		image: 					'actions/dream_TradingCard37.jpg',
 		action_loot:{
 		},
 		final_loot:{
@@ -90,8 +119,12 @@ var all_available_actions = {
 		image: 					'actions/dream_TradingCard-2023-08-18T093059.jpg',
 		locations:{
 			cave:{
-				min: 			4,
-				max: 			6
+				min: 			3,
+				max: 			5
+			},
+			forest:{
+				min: 			1,
+				max: 			1
 			},
 			mountain:{
 				min: 			4,
@@ -151,6 +184,33 @@ var all_available_actions = {
 		final_loot:{
 			firewood: 		2,
 			twine: 			0.5,
+		}
+	},
+	clay:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		3,
+		max_action_amount: 		6,
+		energy_cost: 			2,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1
+			},
+			mountain:{
+				min: 			1,
+				max: 			1
+			},
+			river:{
+				min: 			3,
+				max: 			6
+			}
+		},
+		action_loot:{
+			clay: 		10,
+		},
+		final_loot:{
+			clay: 		2,
 		}
 	},
 	coal:{
@@ -313,7 +373,7 @@ var all_available_actions = {
 	iron_ore:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
+		min_action_amount: 		10,
 		max_action_amount: 		10,
 		energy_cost: 			2,
 		locations:{
@@ -330,6 +390,36 @@ var all_available_actions = {
 			iron_ore: 	1,
 		}
 	},
+	peasant:{
+		type: 					'resource',
+		subtypes: 				['charm'],
+		min_action_amount: 		1,
+		max_action_amount: 		1,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1
+			},
+			forest:{
+				min: 			1,
+				max: 			1
+			},
+			mountain:{
+				min: 			1,
+				max: 			1
+			},
+			river:{
+				min: 			1,
+				max: 			1
+			}
+		},
+		energy_cost: 			5,
+		action_loot:{
+		},
+		final_loot:{
+			peasant: 		1,
+		}
+	},
 	rat:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -337,12 +427,12 @@ var all_available_actions = {
 		max_action_amount: 		1,
 		locations:{
 			cave:{
-				min: 			1,
-				max: 			3
+				min: 			2,
+				max: 			4
 			},
 			river:{
-				min: 			1,
-				max: 			2
+				min: 			2,
+				max: 			4
 			}
 		},
 		energy_cost: 			5,

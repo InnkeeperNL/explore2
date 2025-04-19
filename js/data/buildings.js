@@ -5,7 +5,8 @@ var all_available_buildings = {
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		//item_image: 'coal',
 		cost:{
-			coal: 		5,
+			brick: 		2,
+			coal: 		1,
 		},
 		/*additional_costs:{
 			2:{
@@ -14,7 +15,7 @@ var all_available_buildings = {
 		},*/
 		cost_factor: 	2,
 		effects:{
-			mining: 	10,
+			mining: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -32,7 +33,22 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	10,
+			hunting: 	1,
+		},
+		effect_type: 	'percent',
+		recipes:{
+		},
+	},
+	
+	pottery:{
+		image: 		'buildings/dream_TradingCard-2025-04-19T063316.434.jpg',
+		//item_image: 'meat',
+		cost:{
+			clay: 		5,
+		},
+		cost_factor: 	2,
+		effects:{
+			mining: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -42,11 +58,12 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		item_image: 'meat',
 		cost:{
-			meat: 		5,
+			brick: 		2,
+			meat: 		1,
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	10,
+			hunting: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -75,13 +92,12 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
 		cost:{
-			firewood: 	5,
-			lumber: 	5,
-			water: 		5
+			brick: 		2,
+			lumber: 	2,
 		},
 		cost_factor: 	2,
 		effects:{
-			travel_speed: 	10,
+			travel_speed: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -94,11 +110,12 @@ var all_available_buildings = {
 		image: 		'buildings/horseshoe-1516273_640.jpg',
 		//item_image: 'copper_pot',
 		cost:{
-			copper: 	5,
+			brick: 		2,
+			copper: 	1,
 		},
 		cost_factor: 	2,
 		effects:{
-			mining: 	10,
+			mining: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -113,11 +130,12 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
 		//item_image: 'cloth',
 		cost:{
-			twine: 		5,
+			brick: 		2,
+			twine: 		1,
 		},
 		cost_factor: 	2,
 		effects:{
-			gathering: 	10,
+			gathering: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -148,7 +166,7 @@ var all_available_buildings = {
 		//item_image: 	'water',
 		//free_levels: 1,
 		cost:{
-			stone: 		5,
+			brick: 		2,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -166,7 +184,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			woodcutting: 	10,
+			woodcutting: 	1,
 		},
 		effect_type: 	'percent',
 		recipes:{

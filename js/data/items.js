@@ -26,6 +26,14 @@ var all_available_items = {
 		effect_type: 		'fixed',
 		value: 	31,
 	},
+	bag:{
+		image: 	'items/dream_TradingCard-2025-04-19T054929.451.jpg',
+		effects:{
+			max_inventory: 	1,
+		},
+		effect_type: 		'fixed',
+		value: 	18,
+	},
 	basket:{
 		image: 	'items/basket-1195754_640.jpg',
 		effects:{
@@ -71,6 +79,9 @@ var all_available_items = {
 		energy: 3,
 		value: 	3,
 	},
+	brick:{
+		image: 	'items/dream_TradingCard-2025-04-19T062059.395.jpg',
+	},
 	bucket:{
 		image: 	'items/dream_TradingCard-2023-08-18T094513.jpg',
 		effects:{
@@ -91,6 +102,11 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/carrot-1565597_640.jpg',
 		energy: 3,
+		value: 	3,
+	},
+	clay:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-19T055341.297.jpg',
 		value: 	3,
 	},
 	cloak:{
@@ -174,6 +190,13 @@ var all_available_items = {
 		image: 	'items/meteorite-91891_640.jpg',
 		value: 	10,
 	},
+	jar:{
+		image: 	'items/dream_TradingCard-2025-04-19T064458.051.jpg',
+		effects:{
+			max_storage: 	1,
+		},
+		effect_type: 		'percent',
+	},
 	leather:{
 		image: 	'items/dream_TradingCard-2023-08-18T110531.jpg',
 		value: 	9,
@@ -199,6 +222,10 @@ var all_available_items = {
 	paper:{
 		image: 	'items/dream_TradingCard-2023-08-20T070748.jpg',
 		value: 	7,
+	},
+	peasant:{
+		image: 	'items/dream_TradingCard25.jpg',
+		value: 	50,
 	},
 	pickaxe:{
 		image: 	'items/pickaxe-5070026_640.jpg',
@@ -250,9 +277,9 @@ var all_available_items = {
 	sack:{
 		image: 	'items/dream_TradingCard-2023-08-26T074414.jpg',
 		effects:{
-			max_inventory: 	1,
+			max_storage: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 		value: 	18,
 	},
 	salt:{

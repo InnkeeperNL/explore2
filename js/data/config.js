@@ -26,6 +26,7 @@ var effects_per_value 		= {
 	hunting: 		0.5,
 	mining: 		0.5,
 	woodcutting: 	0.5,
+	combat: 		0.5,
 }
 
 var all_skills = {
@@ -34,6 +35,7 @@ var all_skills = {
 	hunting: 		0.5,
 	mining: 		0.5,
 	woodcutting: 	0.5,
+	combat: 		0.5,
 	travel_speed: 	1,
 };
 
