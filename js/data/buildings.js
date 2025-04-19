@@ -29,7 +29,8 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2025-04-18T155127.500.jpg',
 		//item_image: 'meat',
 		cost:{
-			lumber: 	10,
+			lumber: 	5,
+			hide: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
