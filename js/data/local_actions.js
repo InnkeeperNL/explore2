@@ -161,8 +161,8 @@ var all_available_actions = {
 		max_action_amount: 		1,
 		locations:{
 			forest:{
-				min: 			1,
-				max: 			1
+				min: 			2,
+				max: 			3
 			}
 		},
 		energy_cost: 			5,
@@ -170,7 +170,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		0.2,
+			hide: 		0.5,
 		}
 	},
 	bushes:{
@@ -452,7 +452,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		0.2,
+			hide: 		0.5,
 		}
 	},
 	reeds:{
@@ -515,8 +515,8 @@ var all_available_actions = {
 				max: 			2
 			},
 			river:{
-				min: 			2,
-				max: 			4
+				min: 			3,
+				max: 			5
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
