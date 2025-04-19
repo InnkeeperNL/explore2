@@ -300,14 +300,14 @@ function parse_recipe(recipe_id){
 				parsed_recipe += '</div>';
 			});
 		parsed_recipe += '</div>';
-		var any_result_not_maxed = false;
-		var any_result_not_maxed_10 = false;
+		var any_result_not_maxed = true;
+		var any_result_not_maxed_10 = true;
 		eachoa(recipe_info['result'], function(result_id, gained_amount){
 			var owned_amount = 0;
 			var item_info = all_available_items[result_id];
 			if(gamedata['storage'][result_id] != undefined){owned_amount = gamedata['storage'][result_id];}
-			if(owned_amount < get_max_storage()){any_result_not_maxed = true;}
-			if(owned_amount + 10 <= get_max_storage()){any_result_not_maxed_10 = true;}
+			if(owned_amount + (1 * gained_amount) > get_max_storage()){any_result_not_maxed = false;}
+			if(owned_amount + (10 * gained_amount) > get_max_storage()){any_result_not_maxed_10 = false;}
 			parsed_recipe += '<div class="result_item" style="background-image:url(\'images/' + item_info['image'] + '\')">';
 			var total_bonus = 0;
 			var bonus_icon = '';

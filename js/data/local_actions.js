@@ -99,7 +99,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			feather: 	2,
+			feather: 	5,
 		}
 	},
 	boar:{
