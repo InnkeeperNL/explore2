@@ -266,6 +266,7 @@ var all_available_items = {
 		value: 	18,
 	},
 	reeds:{
+		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-18T063401.552.jpg',
 		value: 	1,
 	},
@@ -290,6 +291,14 @@ var all_available_items = {
 	stone:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T090111.jpg',
+		value: 	5,
+	},
+	stone_box:{
+		image: 	'items/dream_TradingCard-2025-04-19T073703.880.jpg',
+		effects:{
+			max_storage: 	1,
+		},
+		effect_type: 		'percent',
 		value: 	5,
 	},
 	trap:{

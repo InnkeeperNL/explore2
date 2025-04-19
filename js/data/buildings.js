@@ -48,9 +48,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			mining: 	1,
+			max_storage: 	5,
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 		},
 	},
@@ -92,8 +92,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
 		cost:{
-			brick: 		2,
-			lumber: 	2,
+			water: 		20,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -126,6 +125,20 @@ var all_available_buildings = {
 			pitchfork: 		2,
 		},
 	},
+	stonesmith:{
+		image: 		'buildings/dream_TradingCard-2025-04-19T073259.134.jpg',
+		//item_image: 'copper_pot',
+		cost:{
+			stone: 		5,
+		},
+		cost_factor: 	2,
+		effects:{
+			max_storage: 	5,
+		},
+		effect_type: 	'fixed',
+		recipes:{
+		},
+	},
 	tailor_shop:{
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
 		//item_image: 'cloth',
@@ -147,7 +160,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-17T141755.jpg',
 		//item_image: 'basket',
 		cost:{
-			lumber: 	5,
+			plank: 		1,
 		},
 		cost_factor: 	2,
 		recipes:{
@@ -156,7 +169,7 @@ var all_available_buildings = {
 			crate: 		3,
 		},
 		effects:{
-			max_storage: 	10,
+			max_storage: 	5,
 		},
 		effect_type: 		'fixed',
 	},
@@ -180,7 +193,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
 		//item_image: 'lumber',
 		cost:{
-			lumber: 	10,
+			lumber: 	5,
 		},
 		cost_factor: 	2,
 		effects:{

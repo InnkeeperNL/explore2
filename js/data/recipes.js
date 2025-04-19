@@ -144,7 +144,7 @@ var all_available_recipes = {
 			brick: 		1
 		},
 		buildings:{
-			warehouse: true,
+			stonesmith: true,
 		}
 	},
 	bucket:{
@@ -227,6 +227,17 @@ var all_available_recipes = {
 		},
 		result:{
 			firewood: 	5
+		}
+	},
+	firewood_reeds:{
+		cost:{
+			reeds: 10,
+		},
+		result:{
+			firewood: 	10
+		},
+		buildings:{
+			pottery: true,
 		}
 	},
 	flour:{
@@ -322,8 +333,8 @@ var all_available_recipes = {
 	},
 	parchment:{
 		cost:{
+			firewood: 	5,
 			hide: 		1,
-			stone: 		1,
 		},
 		result:{
 			paper: 1
@@ -394,6 +405,28 @@ var all_available_recipes = {
 			sack: 		1
 		},
 		//cost_factor: 2,
+	},
+	stone_box:{
+		cost:{
+			stone: 	6,
+		},
+		result:{
+			stone_box: 	1
+		},
+		buildings:{
+			stonesmith: true,
+		}
+	},
+	stone:{
+		cost:{
+			clay: 	5,
+		},
+		result:{
+			stone: 	3
+		},
+		buildings:{
+			//pottery: true,
+		}
 	},
 	trap:{
 		cost:{

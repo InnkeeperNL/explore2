@@ -25,20 +25,28 @@ var all_available_actions = {
 	bandit:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		8,
-		max_action_amount: 		10,
+		min_action_amount: 		2,
+		max_action_amount: 		6,
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			},
 			forest:{
 				min: 			1,
-				max: 			1
-			}
+				max: 			2
+			},
+			mountain:{
+				min: 			1,
+				max: 			2
+			},
+			river:{
+				min: 			1,
+				max: 			2
+			},
 		},
 		energy_cost: 			5,
-		image: 					'actions/dream_TradingCard26.jpg',
+		image: 					'actions/dream_TradingCard-2025-04-19T081056.357.jpg',
 		action_loot:{
 		},
 		final_loot:{
@@ -55,9 +63,13 @@ var all_available_actions = {
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			1
+				max: 			2
 			},
 			forest:{
+				min: 			1,
+				max: 			1
+			},
+			mountain:{
 				min: 			1,
 				max: 			1
 			}
@@ -67,8 +79,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		2,
-			meat: 		2,
+			hide: 		5,
+			meat: 		5,
 		}
 	},
 	bird:{
@@ -87,7 +99,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			feather: 	5,
+			feather: 	2,
 		}
 	},
 	boar:{
@@ -122,10 +134,10 @@ var all_available_actions = {
 				min: 			3,
 				max: 			5
 			},
-			forest:{
+			/*forest:{
 				min: 			1,
 				max: 			1
-			},
+			},*/
 			mountain:{
 				min: 			4,
 				max: 			6
@@ -136,10 +148,10 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			stone: 	10,
+			stone: 	5,
 		},
 		final_loot:{
-			stone: 	2
+			stone: 	1
 		}
 	},
 	bunny:{
@@ -150,7 +162,7 @@ var all_available_actions = {
 		locations:{
 			forest:{
 				min: 			1,
-				max: 			3
+				max: 			1
 			}
 		},
 		energy_cost: 			5,
@@ -158,7 +170,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		2,
+			hide: 		0.2,
 		}
 	},
 	bushes:{
@@ -207,10 +219,10 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			clay: 		10,
+			clay: 		5,
 		},
 		final_loot:{
-			clay: 		2,
+			clay: 		1,
 		}
 	},
 	coal:{
@@ -239,8 +251,8 @@ var all_available_actions = {
 	copper_ore:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		10,
-		max_action_amount: 		10,
+		min_action_amount: 		5,
+		max_action_amount: 		8,
 		energy_cost: 			2,
 		locations:{
 			mountain:{
@@ -249,10 +261,10 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			copper_ore: 	5,
+			copper_ore: 	10,
 		},
 		final_loot:{
-			copper_ore: 	1,
+			copper_ore: 	2,
 		}
 	},
 	deer:{
@@ -384,10 +396,10 @@ var all_available_actions = {
 		},
 		image: 					'items/meteorite-91891_640.jpg',
 		action_loot:{
-			iron_ore: 	5,
+			iron_ore: 	10,
 		},
 		final_loot:{
-			iron_ore: 	1,
+			iron_ore: 	2,
 		}
 	},
 	peasant:{
@@ -440,7 +452,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		2,
+			hide: 		0.2,
 		}
 	},
 	reeds:{
@@ -457,10 +469,12 @@ var all_available_actions = {
 		action_loot:{
 			reeds: 		50,
 			twine: 		25,
+			firewood: 	10,
 		},
 		final_loot:{
 			reeds: 		2,
 			twine: 		0.5,
+			firewood: 	0.1,
 		}
 	},
 	salt:{
@@ -496,9 +510,13 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1
 			},
+			mountain:{
+				min: 			1,
+				max: 			1
+			},
 			river:{
-				min: 			3,
-				max: 			6
+				min: 			2,
+				max: 			4
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
@@ -528,7 +546,29 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			lumber: 	2
+			lumber: 	1
+		},
+	},
+	tree_pine:{
+		type: 					'resource',
+		subtypes: 				['woodcutting'],
+		min_action_amount: 		5,
+		max_action_amount: 		10,
+		locations:{
+			forest:{
+				min: 			2,
+				max: 			4
+			},
+			mountain:{
+				min: 			1,
+				max: 			3
+			}
+		},
+		image: 					'actions/dream_TradingCard-2025-04-19T075158.894.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			lumber: 	1
 		},
 	},
 	tree_large:{
@@ -572,7 +612,7 @@ eachoa(all_available_actions, function(action_id, action_info){
 			{
 				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
 				all_available_locations[location_id]['local_actions'][action_id] = {
-					chance: 	100 - (action_info['total_value'] * 15 / local_action_amount),
+					chance: 	50 - (action_info['value'] * 50 / local_action_amount),
 					min: 		action_location_info['min'],
 					max: 		action_location_info['max'],
 				};

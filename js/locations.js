@@ -9,7 +9,7 @@ function show_locations(){
 		}
 	});
 	all_parsed_locations += '<div class="breaker"></div>';
-	if(count_object(gamedata['known_locations']) < count_object(all_available_locations) && gamedata['storage']['map'] != undefined)
+	if(count_object(gamedata['known_locations']) < count_object(all_available_locations) /*&& gamedata['storage']['map'] != undefined*/)
 	{
 		all_parsed_locations += parse_explore();
 	}
@@ -44,7 +44,7 @@ function check_location_available(location_id){
 	{
 		if(all_available_locations[location_id]['cost'] == undefined)
 		{
-			gamedata['known_locations'][location_id] = true;
+			//gamedata['known_locations'][location_id] = true;
 		}
 		else
 		{
@@ -179,24 +179,31 @@ function parse_explore(){
 	var parsed_explore = '';
 
 	var explore_cost = to_the_nth(1, count_object(gamedata['known_locations']), 5);
+	if(count_object(gamedata['known_locations']) == 0)
+	{
+		explore_cost = 0;
+	}
 
 	parsed_explore += '<div class="building_effect">';
 	parsed_explore += '<div class="building_description">Exploration</div>';
 	var can_unlock = true;
 	var cost_id = 'map';
 	var not_enough = '';
-	if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
+	if(explore_cost > 0)
 	{
-		not_enough = 'not_enough';
-		can_unlock = false;
+		if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
+		{
+			not_enough = 'not_enough';
+			can_unlock = false;
+		}
+		var owned_amount = 0;
+		if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
+		parsed_explore += 	'<div class="recipe_cost_bar ' + not_enough + '">';
+		parsed_explore += 		'<div class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
+		parsed_explore += 		'</div>';
+		parsed_explore += 		'<span>' + owned_amount + ' / ' + explore_cost + '</span>';
+		parsed_explore += 	'</div>';
 	}
-	var owned_amount = 0;
-	if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
-	parsed_explore += 	'<div class="recipe_cost_bar ' + not_enough + '">';
-	parsed_explore += 		'<div class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
-	parsed_explore += 		'</div>';
-	parsed_explore += 		'<span>' + owned_amount + ' / ' + explore_cost + '</span>';
-	parsed_explore += 	'</div>';
 	
 
 	if(can_unlock == true)
@@ -213,18 +220,28 @@ function parse_explore(){
 
 function unlock_random_location(){
 	var explore_cost = to_the_nth(1, count_object(gamedata['known_locations']), 5);
+	if(count_object(gamedata['known_locations']) == 0)
+	{
+		explore_cost = 0;
+	}
 	var can_unlock = true;
 	var cost_id = 'map';
-	if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
+	if(explore_cost > 0)
 	{
-		can_unlock = false;
-		console.log('ding');
+		if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
+		{
+			can_unlock = false;
+			console.log('ding');
+		}
+		var owned_amount = 0;
+		if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
 	}
-	var owned_amount = 0;
-	if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
 	if(can_unlock == true)
 	{
-		gamedata['storage'][cost_id] -= explore_cost;
+		if(explore_cost > 0)
+		{
+			gamedata['storage'][cost_id] -= explore_cost;
+		}
 		var possible_locations = {};
 		eachoa(all_available_locations, function(location_id, location_info){
 			if(gamedata['known_locations'][location_id] == undefined)
