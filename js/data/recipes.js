@@ -295,7 +295,7 @@ var all_available_recipes = {
 	},
 	map:{
 		cost:{
-			paper: 		5,
+			paper: 		2,
 		},
 		result:{
 			map: 1
@@ -333,7 +333,7 @@ var all_available_recipes = {
 	},
 	parchment:{
 		cost:{
-			firewood: 	5,
+			stone: 		1,
 			hide: 		1,
 		},
 		result:{
