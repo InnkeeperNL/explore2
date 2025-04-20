@@ -173,7 +173,7 @@ var all_available_actions = {
 			}
 		},
 		action_loot:{
-			moss: 	10,
+			moss: 	4,
 		},
 		final_loot:{
 			stone: 	1
