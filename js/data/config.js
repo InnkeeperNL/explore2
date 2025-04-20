@@ -40,9 +40,9 @@ var all_skills = {
 };
 
 eachoa(effects_per_value, function(effect_id, bonus_amount){
-	effects_per_value[effect_id] = bonus_amount / 5;
+	effects_per_value[effect_id] = bonus_amount / 2.5;
 });
-var fixed_effect_factor = 0.05;
+var fixed_effect_factor = 0.1;
 
 // ACTIONS
 var value_per_energy 		= 1.5;
