@@ -93,7 +93,7 @@ var all_available_recipes = {
 	},
 	box:{
 		cost:{
-			lumber: 	6,
+			lumber: 	10,
 		},
 		result:{
 			box: 	1
@@ -482,7 +482,7 @@ var all_available_recipes = {
 	},
 	stone_box:{
 		cost:{
-			stone: 	6,
+			stone: 	10,
 		},
 		result:{
 			stone_box: 	1
