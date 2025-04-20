@@ -161,7 +161,6 @@ var all_available_actions = {
 		},
 		action_loot:{
 			stone: 	5,
-			sand: 	5,
 		},
 		final_loot:{
 			stone: 	1
