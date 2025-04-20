@@ -278,6 +278,7 @@ var all_available_recipes = {
 		cost:{
 			coal: 		1,
 			jar: 		1,
+			water: 		1,
 		},
 		result:{
 			ink: 		1
@@ -290,6 +291,7 @@ var all_available_recipes = {
 		cost:{
 			firewood: 	2,
 			jar: 		1,
+			water: 		1,
 		},
 		result:{
 			ink: 		1
