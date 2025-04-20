@@ -15,7 +15,7 @@ var all_available_buildings = {
 		},*/
 		cost_factor: 	2,
 		effects:{
-			mining: 	1,
+			mining: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -33,7 +33,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	1,
+			hunting: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -63,7 +63,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	1,
+			hunting: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -96,7 +96,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			travel_speed: 	1,
+			travel_speed: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -114,7 +114,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			mining: 	1,
+			mining: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -148,7 +148,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			gathering: 	1,
+			gathering: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -197,7 +197,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			woodcutting: 	1,
+			woodcutting: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{
