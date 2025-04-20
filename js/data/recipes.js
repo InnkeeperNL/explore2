@@ -226,9 +226,10 @@ var all_available_recipes = {
 	},
 	endurance_potion:{
 		cost:{
-			moss:  		5,
+			firewood: 	10,
+			moss:  		10,
 			jar: 		1,
-			water: 		2
+			water: 		10
 		},
 		result:{
 			endurance_potion: 	1
@@ -393,6 +394,7 @@ var all_available_recipes = {
 	mana_potion:{
 		cost:{
 			apple: 		1,
+			firewood: 	10,
 			herbs:  	10,
 			moss:  		10,
 			jar: 		1,
@@ -416,7 +418,7 @@ var all_available_recipes = {
 	},
 	mining_potion:{
 		cost:{
-			moss:  		2,
+			moss:  		10,
 			jar: 		1,
 			water: 		1
 		},
@@ -636,7 +638,7 @@ var all_available_recipes = {
 	},
 	woodcutting_potion:{
 		cost:{
-			leaves:  	2,
+			leaves:  	20,
 			jar: 		1,
 			water: 		1
 		},

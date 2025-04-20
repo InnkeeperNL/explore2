@@ -4,8 +4,8 @@ var all_available_buildings = {
 	alchemist:{
 		image: 		'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
 		cost:{
-			jar: 		2,
-			water: 		6,
+			jar: 		4,
+			water: 		10,
 		},
 		cost_factor: 	2,
 		effects:{

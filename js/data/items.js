@@ -263,7 +263,7 @@ var all_available_items = {
 	moss:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T073004.162.jpg',
-		value: 	1,
+		value: 	2,
 	},
 	nail:{
 		image: 	'items/nails-4168539_640.jpg',
