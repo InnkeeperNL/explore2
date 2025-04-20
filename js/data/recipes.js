@@ -365,7 +365,7 @@ var all_available_recipes = {
 			jar: 		1
 		},
 		buildings:{
-			stonesmith: true,
+			//stonesmith: true,
 		}
 	},
 	jar_wood:{

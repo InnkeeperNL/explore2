@@ -260,9 +260,9 @@ var all_available_actions = {
 		energy_cost: 			2,
 		locations:{
 			cave:{
-				min: 			1,
-				max: 			1,
-				chance: 		25,
+				min: 			2,
+				max: 			4,
+				chance: 		10,
 			},
 			mountain:{
 				min: 			1,
@@ -580,20 +580,25 @@ var all_available_actions = {
 	sand:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		1,
-		max_action_amount: 		3,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		energy_cost: 			2,
 		locations:{
+			cave:{
+				min: 			1,
+				max: 			2,
+				chance: 		25,
+			},
 			mountain:{
 				min: 			1,
 				max: 			2,
 				chance: 		25,
 			},
-			river:{
+			/*river:{
 				min: 			2,
 				max: 			3,
 				chance: 		25,
-			}
+			}*/
 		},
 		action_loot:{
 			sand: 		10,
