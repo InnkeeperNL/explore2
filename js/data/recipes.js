@@ -115,7 +115,7 @@ var all_available_recipes = {
 	brick_clay:{
 		cost:{
 			firewood: 	1,
-			clay: 		4,
+			clay: 		3,
 			water: 		1,
 		},
 		result:{
@@ -138,7 +138,7 @@ var all_available_recipes = {
 	},*/
 	brick_stone:{
 		cost:{
-			stone: 	5,
+			stone: 	4,
 		},
 		result:{
 			brick: 		1
