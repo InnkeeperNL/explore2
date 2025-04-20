@@ -55,9 +55,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			twine: 		1,
-			cloth: 		0.5,
-			peasant: 	0.2,
+			twine: 		0.5,
+			cloth: 		0.1,
+			peasant: 	0.01,
 		}
 	},
 	bear:{
@@ -140,27 +140,40 @@ var all_available_actions = {
 		energy_cost: 			2,
 		image: 					'actions/dream_TradingCard-2023-08-18T093059.jpg',
 		locations:{
-			cave:{
-				min: 			3,
-				max: 			5,
-				chance: 		100,
-			},
-			/*forest:{
-				min: 			1,
-				max: 			1
-			},*/
 			mountain:{
 				min: 			4,
 				max: 			6,
 				chance: 		100,
 			},
-			/*river:{
-				min: 			1,
-				max: 			3
-			}*/
 		},
 		action_loot:{
 			stone: 	5,
+		},
+		final_loot:{
+			stone: 	1
+		}
+	},
+	boulder_mossy:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		5,
+		max_action_amount: 		10,
+		energy_cost: 			2,
+		image: 					'actions/dream_TradingCard-2025-04-20T073236.033.jpg',
+		locations:{
+			cave:{
+				min: 			3,
+				max: 			5,
+				chance: 		100,
+			},
+			mountain:{
+				min: 			3,
+				max: 			5,
+				chance: 		0,
+			}
+		},
+		action_loot:{
+			moss: 	10,
 		},
 		final_loot:{
 			stone: 	1
@@ -205,12 +218,13 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
-			firewood: 	50,
-			twine: 		25,
+			leaves:  	25,
+			firewood: 	25,
+			twine: 		5,
+			herbs: 		1,
 		},
 		final_loot:{
 			firewood: 		2,
-			twine: 			0.5,
 		}
 	},
 	clay:{
@@ -399,6 +413,47 @@ var all_available_actions = {
 			firewood: 	4
 		}
 	},
+	goat:{
+		type: 					'resource',
+		subtypes: 				['hunting'],
+		min_action_amount: 		3,
+		max_action_amount: 		6,
+		locations:{
+			mountain:{
+				min: 			1,
+				max: 			1,
+				chance: 		0,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-20T072148.514.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			meat: 		2,
+			hide: 		2,
+		}
+	},
+	herbs:{
+		type: 					'resource',
+		subtypes: 				['gathering'],
+		min_action_amount: 		3,
+		max_action_amount: 		6,
+		locations:{
+			forest:{
+				min: 			1,
+				max: 			1,
+				chance: 		0,
+			}
+		},
+		energy_cost: 			5,
+		action_loot:{
+			herbs: 		10,
+		},
+		final_loot:{
+			herbs: 		1,
+		}
+	},
 	iron_ore:{
 		type: 					'resource',
 		subtypes: 				['mining'],
@@ -466,12 +521,12 @@ var all_available_actions = {
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			1,
+				max: 			3,
 				chance: 		10,
 			},
 			river:{
-				min: 			2,
-				max: 			4,
+				min: 			1,
+				max: 			1,
 				chance: 		25,
 			}
 		},
@@ -492,18 +547,14 @@ var all_available_actions = {
 			river:{
 				min: 			3,
 				max: 			6,
-				chance: 		100,
+				chance: 		75,
 			},
 		},
 		action_loot:{
-			reeds: 		50,
-			twine: 		25,
-			firewood: 	10,
+			reeds: 		25,
 		},
 		final_loot:{
-			reeds: 		2,
-			twine: 		0.5,
-			firewood: 	0.1,
+			reeds: 		1,
 		}
 	},
 	salt:{
@@ -605,6 +656,8 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
 		action_loot:{
+			leaves:  	10,
+			firewood: 	10,
 		},
 		final_loot:{
 			lumber: 	1
@@ -629,6 +682,7 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2025-04-19T075158.894.jpg',
 		action_loot:{
+			firewood: 	10,
 		},
 		final_loot:{
 			lumber: 	1

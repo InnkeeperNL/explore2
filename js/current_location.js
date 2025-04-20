@@ -126,13 +126,22 @@ function parse_current_action(current_action_id, current_action_info, fade_in){
 		if(action_info['energy_cost'] != undefined){action_energy_cost = action_info['energy_cost'];}
 		parsed_current_action += '<div class="current_action_button fade_in_' + fade_in + ' current_action_button_' + current_action_id + ' action_x_' + current_action_info['x'] + ' action_y_' + current_action_info['y'] + '" style="background-image:url(\'images/' + action_info['image'] + '\')"">';
 		//parsed_current_action += 	'<div class="actions_energy_cost"><div class="action_cost_icon"></div><span class="action_energy_cost_text">' + action_energy_cost + '</span></div>';
+		if(action_info['subtypes'] != undefined)
+		{
+			parsed_current_action += 	'<div class="actions_energy_cost">';
+			eachoa(action_info['subtypes'], function(subtype_id, subtype_name){
+				parsed_current_action += 	'<div class="' + subtype_name + '_icon"></div>';
+			});
+			parsed_current_action += 	'</div>';
+		}
+		
 		parsed_current_action += 	'<div class="actions_left_bar_container">';
-		//var action_bar_width = (current_action_info['current_action_amount'] / current_action_info['max_action_amount']) * 100;
-		var action_bar_width = 100 / current_action_info['max_action_amount'];
+		var action_bar_width = (current_action_info['current_action_amount'] / current_action_info['max_action_amount']) * 100;
+		/*var action_bar_width = 100 / current_action_info['max_action_amount'];
 		for (var i = 0; i < current_action_info['current_action_amount']; i++) {
 			parsed_current_action += 		'<div class="actions_left_bar actions_left_bar_' + i + '" style="width:' + action_bar_width + '%"></div>';
-		}
-		//parsed_current_action += 		'<div class="actions_left_bar" style="width:' + action_bar_width + '%"></div>';
+		}*/
+		parsed_current_action += 		'<div class="actions_left_bar" style="width:' + action_bar_width + '%"></div>';
 		parsed_current_action += 	'</div>';
 		parsed_current_action += '</div>';
 		parsed_current_action += '<div class="current_action_button_overlay current_action_button_' + current_action_id + ' action_x_' + current_action_info['x'] + ' action_y_' + current_action_info['y'] + '" onclick="perform_action(\'' + current_action_id + '\');"></div>';
@@ -207,9 +216,9 @@ function perform_action(current_action_id){
 					class_html_append('current_action_button.current_action_button_' + current_action_id, parsed_gained_item);
 				}
 			}
-			//var action_bar_width = (current_action_info['current_action_amount'] / current_action_info['max_action_amount']) * 100;
-			//class_style('current_action_button_' + current_action_id + ' .actions_left_bar', 'width', action_bar_width + '%');
-			class_add_class('current_action_button_' + current_action_id + ' .actions_left_bar_' + current_action_info['current_action_amount'], 'done');
+			var action_bar_width = (current_action_info['current_action_amount'] / current_action_info['max_action_amount']) * 100;
+			class_style('current_action_button_' + current_action_id + ' .actions_left_bar', 'width', action_bar_width + '%');
+			//class_add_class('current_action_button_' + current_action_id + ' .actions_left_bar_' + current_action_info['current_action_amount'], 'done');
 			if(current_action_info['current_action_amount'] == 0)
 			{
 				class_add_class('current_action_button_' + current_action_id, 'done');

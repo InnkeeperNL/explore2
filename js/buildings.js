@@ -37,15 +37,25 @@ function show_building(){
 			var lowest_recipe_value = false;
 			var shown_recipe_count = 0;
 			eachoa(building_info['recipes'], function(recipe_id, recipe_level){
+				var know_cost = true;
+				eachoa(all_available_recipes[recipe_id]['cost'], function(cost_id, cost_amount){
+					if(gamedata['storage'] == undefined || gamedata['storage'][cost_id] == undefined)
+					{
+						know_cost = false;
+					}
+				});
 				if(all_available_recipes[recipe_id]['value'] != undefined && all_available_recipes[recipe_id]['value'] <= max_recipe_value /*recipe_level <= building_level*/)
 				{
 					shown_recipe_count++;
-					if(parsed_recipes_title == false)
+					if(parsed_recipes_title == false && know_cost == true)
 					{
 						parsed_building += '<br/><br/>Crafting<br/>';
 						parsed_recipes_title = true;
 					}
-					parsed_building += parse_recipe(recipe_id);
+					if(know_cost == true)
+					{
+						parsed_building += parse_recipe(recipe_id);
+					}
 				}
 				else
 				{
@@ -55,21 +65,21 @@ function show_building(){
 					}
 				}
 			});
-			if(building_level > 0 && count_object(building_info['recipes']) > 0 && parsed_recipes_title == false && lowest_recipe_value > 0)
+			/*if(building_level > 0 && count_object(building_info['recipes']) > 0 && parsed_recipes_title == false && lowest_recipe_value > 0)
 			{
 				max_recipe_value = lowest_recipe_value;
 				eachoa(building_info['recipes'], function(recipe_id, recipe_level){
-				if(all_available_recipes[recipe_id]['value'] != undefined && all_available_recipes[recipe_id]['value'] <= max_recipe_value /*recipe_level <= building_level*/)
-				{
-					if(parsed_recipes_title == false)
+					if(all_available_recipes[recipe_id]['value'] != undefined && all_available_recipes[recipe_id]['value'] <= max_recipe_value)
 					{
-						parsed_building += '<br/><br/>Crafting<br/>';
-						parsed_recipes_title = true;
+						if(parsed_recipes_title == false)
+						{
+							parsed_building += '<br/><br/>Crafting<br/>';
+							parsed_recipes_title = true;
+						}
+						parsed_building += parse_recipe(recipe_id);
 					}
-					parsed_building += parse_recipe(recipe_id);
-				}
-			});
-			}
+				});
+			};*/
 			parsed_building += '<div class="breaker"></div>';
 		}
 

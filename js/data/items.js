@@ -91,7 +91,7 @@ var all_available_items = {
 		value: 	25,
 	},
 	cane:{
-		image: 	'items/dream_TradingCard-2025-04-17T061405.141.jpg',
+		image: 	'items/dream_TradingCard-2025-04-20T085255.359.jpg',
 		effects:{
 			travel_speed: 	1,
 		},
@@ -151,6 +151,13 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
+	endurance_potion:{
+		image: 	'items/dream_TradingCard-2025-04-20T081303.873.jpg',
+		effects:{
+			max_energy: 	1,
+		},
+		effect_type: 		'percent',
+	},
 	firewood:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-17T072416.jpg',
@@ -180,13 +187,25 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
 		value: 	5,
 	},
+	herbal_cane:{
+		image: 	'items/dream_TradingCard-2025-04-20T085611.025.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	25,
+	},
+	herbs:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-20T073923.191.jpg',
+		value: 	5,
+	},
 	hide:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T110303.jpg',
 		value: 	3,
 	},
 	ink:{
-		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T062644.592.jpg',
 		value: 	3,
 	},
@@ -210,19 +229,41 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-08-18T110531.jpg',
 		value: 	9,
 	},
+	leaves:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-20T084739.533.jpg',
+		value: 	1,
+	},
 	lumber:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-17T085131.jpg',
 		value: 	5,
+	},
+	mana_potion:{
+		image: 	'items/dream_TradingCard-2025-04-20T081019.769.jpg',
+		energy: 3,
+		value: 	3,
+	},
+	map:{
+		image: 	'items/dream_TradingCard-2023-08-20T070458.jpg',
+		value: 	16,
 	},
 	meat:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-24T112300.jpg',
 		value: 	3,
 	},
-	map:{
-		image: 	'items/dream_TradingCard-2023-08-20T070458.jpg',
-		value: 	16,
+	mining_potion:{
+		image: 	'items/dream_TradingCard-2025-04-20T083650.124.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+	},
+	moss:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-20T073004.162.jpg',
+		value: 	1,
 	},
 	nail:{
 		image: 	'items/nails-4168539_640.jpg',
@@ -256,6 +297,14 @@ var all_available_items = {
 		image: 	'items/board-g8de0d90cf_640.jpg',
 		value: 	10,
 	},
+	poison:{
+		image: 	'items/dream_TradingCard-2025-04-20T080304.936.jpg',
+		effects:{
+			combat: 	10,
+		},
+		effect_type: 		'percent',
+		value: 	10,
+	},
 	pole:{
 		image: 	'items/rods-53130_640.jpg',
 		value: 	10,
@@ -278,6 +327,14 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-18T063401.552.jpg',
 		value: 	1,
+	},
+	road:{
+		image: 	'items/dream_TradingCard-2025-04-20T072358.383.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	25,
 	},
 	roasted_meat:{
 		image: 	'items/dream_TradingCard-2023-08-24T113417.jpg',
@@ -315,6 +372,23 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
+	stone_hatchet:{
+		image: 	'items/dream_TradingCard-2025-04-20T092037.855.jpg',
+		effects:{
+			woodcutting: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
+	stone_shovel:{
+		image: 	'items/dream_TradingCard-2025-04-20T092211.503.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
+	
 	trap:{
 		image: 	'items/dream_TradingCard-2025-04-18T154805.392.jpg',
 		effects:{
@@ -336,6 +410,21 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-20T094127.jpg',
 		value: 	2,
+	},
+	woodcutting_potion:{
+		image: 	'items/dream_TradingCard-2025-04-20T084103.345.jpg',
+		effects:{
+			woodcutting: 	1,
+		},
+		effect_type: 		'percent',
+	},
+	wooden_hammer:{
+		image: 	'items/dream_TradingCard-2025-04-20T091540.624.jpg',
+		effects:{
+			mining: 	10,
+		},
+		effect_type: 		'percent',
+		value: 	33,
 	},
 	
 };

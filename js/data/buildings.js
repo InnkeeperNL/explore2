@@ -1,6 +1,19 @@
 var all_available_buildings = {
 	
 	
+	alchemist:{
+		image: 		'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
+		cost:{
+			jar: 		2,
+			water: 		6,
+		},
+		cost_factor: 	2,
+		effects:{
+			travel_speed: 	5,
+		},
+		effect_type: 	'percent',
+		recipes:{},
+	},
 	furnace:{
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		//item_image: 'coal',
@@ -39,7 +52,6 @@ var all_available_buildings = {
 		recipes:{
 		},
 	},
-	
 	pottery:{
 		image: 		'buildings/dream_TradingCard-2025-04-19T063316.434.jpg',
 		//item_image: 'meat',
@@ -122,7 +134,7 @@ var all_available_buildings = {
 			nail: 			2,
 			axe: 			2,
 			pickaxe: 		2,
-			pitchfork: 		2,
+			//pitchfork: 		2,
 		},
 	},
 	stonesmith:{

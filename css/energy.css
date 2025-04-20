@@ -122,6 +122,8 @@
 	font-weight: bold;
 	background-color: rgba(255,255,255,0.7);
 	border-bottom-right-radius: 5px;
+	min-height:20px;
+	min-width: 20px;
 }
 
 .consume_energy_amount_icon,
@@ -135,11 +137,13 @@
 .woodcutting_icon,
 .mining_icon,
 .farming_icon,
-.gathering_icon
+.gathering_icon,
+.combat_icon,
+.max_energy_icon
 {
 	display: inline-block;
-	width: 12px;
-	height: 16px;
+	width: 18px;
+	height: 18px;
 	background-size: 16px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -149,87 +153,80 @@
 
 .consume_energy_amount_icon
 {
-	width: 16px;
-	margin-right: 4px;
 	background-image: url('../images/icons/shiny-apple.svg');
 }
 
 .expeditions_cost_icon
 {
-	width: 16px;
 	background-image: url('../images/icons/walking-boot-grey.svg');
 }
 
 .max_storage_icon
 {
-	width: 16px;
-	margin-right: 4px;
 	background-image: url('../images/icons/wooden-crate-grey.svg');
 }
 
 .max_inventory_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/knapsack-grey.svg');
 }
 
 .skill_bonus_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/electric-grey.svg');
 }
 
 .travel_speed_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/walking-boot-grey.svg');
 }
 
 .farming_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/wheat-grey.svg');
 }
 
 .gathering_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/basket-grey.svg');
 }
 
 .hunting_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/high-shot-grey.svg');
 }
 
 .mining_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/dig-dug-grey.svg');
 }
 
 .woodcutting_icon
 {
-	width: 16px;
-	margin-right: 2px;
 	background-image: url('../images/icons/hatchet-grey.svg');
 }
 
+.combat_icon
+{
+	background-image: url('../images/icons/broadsword-grey.svg');
+}
+
+.combat_icon
+{
+	background-image: url('../images/icons/broadsword-grey.svg');
+}
+
+.max_energy_icon
+{
+	background-image: url('../images/icons/electric-grey.svg');
+}
 
 .expeditions_cost_text,
 .action_energy_cost_text
 {
 	display: inline-block;
 	padding: 2px;
-	margin-left: -4px;
+	margin-left: 0px;
     padding-right: 3px;
     text-shadow: none;
 }
