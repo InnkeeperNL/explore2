@@ -626,7 +626,7 @@ var all_available_actions = {
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		50,
+				chance: 		100,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
