@@ -585,13 +585,13 @@ var all_available_actions = {
 		energy_cost: 			2,
 		locations:{
 			cave:{
-				min: 			1,
-				max: 			2,
+				min: 			3,
+				max: 			6,
 				chance: 		25,
 			},
 			mountain:{
-				min: 			1,
-				max: 			2,
+				min: 			3,
+				max: 			6,
 				chance: 		25,
 			},
 			/*river:{
