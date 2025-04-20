@@ -466,9 +466,9 @@ var all_available_actions = {
 		max_action_amount: 		1,
 		locations:{
 			cave:{
-				min: 			2,
-				max: 			4,
-				chance: 		25,
+				min: 			1,
+				max: 			1,
+				chance: 		10,
 			},
 			river:{
 				min: 			2,
