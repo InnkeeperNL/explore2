@@ -175,11 +175,20 @@ var all_available_items = {
 		energy: 1,
 		value: 	1,
 	},
-	
+	glass:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
+		value: 	5,
+	},
 	hide:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T110303.jpg',
-		value: 	5,
+		value: 	3,
+	},
+	ink:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-20T062644.592.jpg',
+		value: 	3,
 	},
 	iron:{
 		image: 	'items/dream_TradingCard-2023-08-26T072143.jpg',
@@ -287,6 +296,11 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/salt-602215_640.jpg',
 		value: 	10,
+	},
+	sand:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-20T061915.192.jpg',
+		value: 	1,
 	},
 	stone:{
 		type: 	'resource',

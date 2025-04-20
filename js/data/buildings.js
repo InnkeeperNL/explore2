@@ -5,7 +5,7 @@ var all_available_buildings = {
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		//item_image: 'coal',
 		cost:{
-			brick: 		2,
+			stone: 		2,
 			coal: 		1,
 		},
 		/*additional_costs:{
@@ -19,7 +19,6 @@ var all_available_buildings = {
 		},
 		effect_type: 	'percent',
 		recipes:{
-			coal: 		1,
 			copper: 	1,
 			iron: 		2,
 		},
@@ -93,7 +92,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
 		cost:{
-			water: 		20,
+			jar: 		1,
 		},
 		cost_factor: 	2,
 		effects:{

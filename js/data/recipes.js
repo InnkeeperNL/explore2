@@ -190,6 +190,9 @@ var all_available_recipes = {
 		},
 		result:{
 			coal: 	1
+		},
+		buildings:{
+			furnace: 	true,
 		}
 	},
 	copper:{
@@ -259,6 +262,42 @@ var all_available_recipes = {
 			fries: 		1
 		},
 	},
+	glass:{
+		cost:{
+			coal: 		1,
+			sand: 		3,
+		},
+		result:{
+			glass: 		1
+		},
+		buildings:{
+			furnace: true,
+		}
+	},
+	ink:{
+		cost:{
+			coal: 		1,
+			jar: 		1,
+		},
+		result:{
+			ink: 		1
+		},
+		buildings:{
+			paper_mill: true,
+		}
+	},
+	ink_firewood:{
+		cost:{
+			firewood: 	2,
+			jar: 		1,
+		},
+		result:{
+			ink: 		1
+		},
+		buildings:{
+			paper_mill: true,
+		}
+	},
 	iron:{
 		cost:{
 			iron_ore: 	2,
@@ -268,17 +307,51 @@ var all_available_recipes = {
 			iron: 		1
 		}
 	},
-	jar:{
+	jar_clay:{
 		cost:{
-			firewood: 	5,
-			clay: 		5,
-			water: 		5,
+			firewood: 	2,
+			clay: 		2,
+			water: 		2,
 		},
 		result:{
 			jar: 		1
 		},
 		buildings:{
 			pottery: true,
+		}
+	},
+	jar_glass:{
+		cost:{
+			coal: 		2,
+			glass: 		1,
+		},
+		result:{
+			jar: 		1
+		},
+		buildings:{
+			furnace: true,
+		}
+	},
+	jar_stone:{
+		cost:{
+			stone: 		4,
+		},
+		result:{
+			jar: 		1
+		},
+		buildings:{
+			stonesmith: true,
+		}
+	},
+	jar_wood:{
+		cost:{
+			lumber: 	4,
+		},
+		result:{
+			jar: 		1
+		},
+		buildings:{
+			wood_workshop: true,
 		}
 	},
 	leather:{
@@ -295,7 +368,8 @@ var all_available_recipes = {
 	},
 	map:{
 		cost:{
-			paper: 		2,
+			ink: 		1,
+			paper: 		1,
 		},
 		result:{
 			map: 1

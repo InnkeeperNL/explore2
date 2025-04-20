@@ -142,13 +142,14 @@ var all_available_actions = {
 				min: 			4,
 				max: 			6
 			},
-			river:{
+			/*river:{
 				min: 			1,
 				max: 			3
-			}
+			}*/
 		},
 		action_loot:{
 			stone: 	5,
+			sand: 	5,
 		},
 		final_loot:{
 			stone: 	1
@@ -494,6 +495,29 @@ var all_available_actions = {
 		},
 		final_loot:{
 			salt: 		1,
+		}
+	},
+	sand:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		1,
+		max_action_amount: 		3,
+		energy_cost: 			2,
+		locations:{
+			mountain:{
+				min: 			1,
+				max: 			2
+			},
+			river:{
+				min: 			2,
+				max: 			3
+			}
+		},
+		action_loot:{
+			sand: 		10,
+		},
+		final_loot:{
+			sand: 		1,
 		}
 	},
 	stream:{
