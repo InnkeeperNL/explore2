@@ -265,7 +265,7 @@ var all_available_recipes = {
 	glass:{
 		cost:{
 			coal: 		1,
-			sand: 		3,
+			sand: 		5,
 		},
 		result:{
 			glass: 		1
@@ -324,7 +324,7 @@ var all_available_recipes = {
 	},
 	jar_glass:{
 		cost:{
-			coal: 		2,
+			coal: 		1,
 			glass: 		1,
 		},
 		result:{
