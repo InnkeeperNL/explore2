@@ -196,6 +196,12 @@
 	position: absolute;
 	top: 5px;
 	right: 65px;
+	padding-top: 10px;
+    text-align: center;
+    font-size: 80px;
+    color: rgba(0,0,0,0.3);
+    font-family: arial;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .recipe_bar .build_now_button
