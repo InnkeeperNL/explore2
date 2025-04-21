@@ -2,6 +2,7 @@ var all_available_buildings = {
 	
 	
 	alchemist:{
+		description: 	'Increases maximum energy by 1 each level.',
 		image: 		'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
 		cost:{
 			jar: 		4,
