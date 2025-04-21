@@ -27,6 +27,7 @@ var effects_per_value 		= {
 	mining: 		0.5,
 	woodcutting: 	0.5,
 	combat: 		0.5,
+	passive: 		0.33,
 }
 
 var all_skills = {
@@ -40,9 +41,9 @@ var all_skills = {
 };
 
 eachoa(effects_per_value, function(effect_id, bonus_amount){
-	effects_per_value[effect_id] = bonus_amount / 2.5;
+	effects_per_value[effect_id] = bonus_amount / 1;
 });
-var fixed_effect_factor = 0.1;
+var fixed_effect_factor = 0.02;
 
 // ACTIONS
 var value_per_energy 		= 1.5;

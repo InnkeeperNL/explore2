@@ -9,9 +9,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			travel_speed: 	5,
+			passive_jar: 	1 / all_available_items['jar']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{},
 	},
 	furnace:{
@@ -28,9 +28,9 @@ var all_available_buildings = {
 		},*/
 		cost_factor: 	2,
 		effects:{
-			mining: 	5,
+			passive_coal: 	1 / all_available_items['coal']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 			copper: 	1,
 			iron: 		2,
@@ -46,9 +46,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	5,
+			passive_hide: 	1 / all_available_items['hide']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 		},
 	},
@@ -56,11 +56,11 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2025-04-19T063316.434.jpg',
 		//item_image: 'meat',
 		cost:{
-			clay: 		5,
+			clay: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
-			max_storage: 	5,
+			passive_clay: 	1 / all_available_items['clay']['value'],
 		},
 		effect_type: 	'fixed',
 		recipes:{
@@ -75,9 +75,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	5,
+			passive_meat: 	1 / all_available_items['meat']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 			roasted_meat: 	1,
 			/*bread: 			2,
@@ -108,7 +108,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			travel_speed: 	5,
+			travel_speed: 		5,
 		},
 		effect_type: 	'percent',
 		recipes:{
@@ -145,7 +145,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			max_storage: 	5,
+			passive_stone: 	1 / all_available_items['stone']['value'],
 		},
 		effect_type: 	'fixed',
 		recipes:{
@@ -160,9 +160,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			gathering: 	5,
+			passive_reeds: 	1 / all_available_items['reeds']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 			cloth: 		1,
 			sack: 		1,
@@ -186,7 +186,7 @@ var all_available_buildings = {
 		effect_type: 		'fixed',
 	},
 	well:{
-		description: 	'Increases maximum energy by 2 each level.',
+		//description: 	'Increases maximum energy by 2 each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
 		//item_image: 	'water',
 		//free_levels: 1,
@@ -195,7 +195,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			max_energy: 	2,
+			passive_water: 	1 / all_available_items['water']['value'],
 		},
 		effect_type: 	'fixed',
 		//effect_is_local: true,
@@ -209,9 +209,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			woodcutting: 	5,
+			passive_lumber: 	1 / all_available_items['lumber']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 			firewood: 	1,
 			cane:  		1,

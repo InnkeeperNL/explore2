@@ -453,4 +453,8 @@ function set_style(classes, style_id, content){
     });
 }
 
+function split_string(string, splitter){
+  return string.split(splitter);
+}
+
 var test_obj = {0:8,1:9};

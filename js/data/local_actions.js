@@ -10,44 +10,40 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			}
 		},
 		action_loot:{
 			apple: 		10,
 			firewood: 	10,
+			leaves: 	10
 		},
 		final_loot:{
-			apple: 		2,
-			lumber: 	2,
-			firewood: 	2,
+			apple: 		1,
+			lumber: 	1,
+			firewood: 	1,
 		}
 	},
 	bandit:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		2,
-		max_action_amount: 		6,
+		min_action_amount: 		1,
+		max_action_amount: 		1,
 		locations:{
 			cave:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			},
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			},
 			mountain:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			},
 		},
 		energy_cost: 			5,
@@ -55,9 +51,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			twine: 		0.5,
+			twine: 		0.25,
 			cloth: 		0.1,
-			peasant: 	0.01,
+			peasant: 	0.1,
 		}
 	},
 	bear:{
@@ -69,17 +65,14 @@ var all_available_actions = {
 			cave:{
 				min: 			1,
 				max: 			1,
-				chance: 		-50,
 			},
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		-50,
 			},
 			mountain:{
 				min: 			1,
 				max: 			1,
-				chance: 		-50,
 			}
 		},
 		energy_cost: 			5,
@@ -87,20 +80,19 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		5,
-			meat: 		5,
+			hide: 		9,
+			meat: 		9,
 		}
 	},
 	bird:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		1,
+		max_action_amount: 		1,
 		locations:{
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			}
 		},
 		energy_cost: 			3,
@@ -108,19 +100,18 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			feather: 	5,
+			feather: 	1.5,
 		}
 	},
 	boar:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		3,
+		min_action_amount: 		4,
 		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		-20,
 			}
 		},
 		energy_cost: 			6,
@@ -141,13 +132,12 @@ var all_available_actions = {
 		image: 					'actions/dream_TradingCard-2023-08-18T093059.jpg',
 		locations:{
 			mountain:{
-				min: 			4,
-				max: 			6,
-				chance: 		100,
+				min: 			1,
+				max: 			3,
 			},
 		},
 		action_loot:{
-			stone: 	5,
+			stone: 	1,
 		},
 		final_loot:{
 			stone: 	1
@@ -162,18 +152,17 @@ var all_available_actions = {
 		image: 					'actions/dream_TradingCard-2025-04-20T073236.033.jpg',
 		locations:{
 			cave:{
-				min: 			3,
-				max: 			5,
-				chance: 		100,
+				min: 			1,
+				max: 			3,
 			},
 			mountain:{
-				min: 			3,
-				max: 			5,
-				chance: 		0,
+				min: 			1,
+				max: 			3,
+				chance: 		0.5
 			}
 		},
 		action_loot:{
-			moss: 	4,
+			moss: 	5,
 		},
 		final_loot:{
 			stone: 	1
@@ -182,13 +171,12 @@ var all_available_actions = {
 	bunny:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		100,
 			}
 		},
 		energy_cost: 			5,
@@ -196,7 +184,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		0.5,
+			hide: 		1,
+			meat: 		1,
 		}
 	},
 	bushes:{
@@ -206,25 +195,24 @@ var all_available_actions = {
 		max_action_amount: 		6,
 		locations:{
 			forest:{
-				min: 			4,
-				max: 			6,
-				chance: 		100,
+				min: 			3,
+				max: 			4,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		25,
+				chance: 		0.2,
 			},
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
-			leaves:  	25,
-			firewood: 	25,
+			leaves:  	10,
+			firewood: 	10,
 			twine: 		5,
 			herbs: 		1,
 		},
 		final_loot:{
-			firewood: 		2,
+			firewood: 		1,
 		}
 	},
 	clay:{
@@ -234,15 +222,9 @@ var all_available_actions = {
 		max_action_amount: 		6,
 		energy_cost: 			2,
 		locations:{
-			mountain:{
-				min: 			1,
-				max: 			1,
-				chance: 		0,
-			},
 			river:{
-				min: 			3,
-				max: 			6,
-				chance: 		100,
+				min: 			2,
+				max: 			4,
 			}
 		},
 		action_loot:{
@@ -262,12 +244,10 @@ var all_available_actions = {
 			cave:{
 				min: 			2,
 				max: 			4,
-				chance: 		10,
 			},
 			mountain:{
 				min: 			1,
 				max: 			1,
-				chance: 		50,
 			}
 		},
 		action_loot:{
@@ -287,7 +267,6 @@ var all_available_actions = {
 			mountain:{
 				min: 			1,
 				max: 			2,
-				chance: 		0,
 			}
 		},
 		action_loot:{
@@ -306,7 +285,6 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		-20,
 			}
 		},
 		energy_cost: 			8,
@@ -422,7 +400,6 @@ var all_available_actions = {
 			mountain:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			}
 		},
 		energy_cost: 			6,
@@ -443,7 +420,6 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			}
 		},
 		energy_cost: 			5,
@@ -464,7 +440,6 @@ var all_available_actions = {
 			mountain:{
 				min: 			1,
 				max: 			2,
-				chance: 		-50,
 			}
 		},
 		image: 					'items/meteorite-91891_640.jpg',
@@ -484,26 +459,18 @@ var all_available_actions = {
 			cave:{
 				min: 			1,
 				max: 			1,
-				chance: 		1,
-				max_chance: 	1,
 			},
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		1,
-				max_chance: 	1,
 			},
 			mountain:{
 				min: 			1,
 				max: 			1,
-				chance: 		1,
-				max_chance: 	1,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		1,
-				max_chance: 	1,
 			}
 		},
 		energy_cost: 			5,
@@ -522,12 +489,10 @@ var all_available_actions = {
 			cave:{
 				min: 			1,
 				max: 			3,
-				chance: 		10,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		25,
 			}
 		},
 		energy_cost: 			5,
@@ -547,7 +512,6 @@ var all_available_actions = {
 			river:{
 				min: 			3,
 				max: 			6,
-				chance: 		75,
 			},
 		},
 		action_loot:{
@@ -567,7 +531,6 @@ var all_available_actions = {
 			mountain:{
 				min: 			1,
 				max: 			2,
-				chance: 		-100,
 			}
 		},
 		action_loot:{
@@ -587,12 +550,10 @@ var all_available_actions = {
 			cave:{
 				min: 			3,
 				max: 			6,
-				chance: 		25,
 			},
 			mountain:{
 				min: 			3,
 				max: 			6,
-				chance: 		25,
 			},
 			/*river:{
 				min: 			2,
@@ -616,22 +577,18 @@ var all_available_actions = {
 			cave:{
 				min: 			1,
 				max: 			1,
-				chance: 		10,
 			},
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		25,
 			},
 			mountain:{
 				min: 			1,
 				max: 			1,
-				chance: 		10,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		100,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
@@ -651,12 +608,10 @@ var all_available_actions = {
 			forest:{
 				min: 			4,
 				max: 			8,
-				chance: 		100,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		10,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
@@ -677,12 +632,10 @@ var all_available_actions = {
 			forest:{
 				min: 			2,
 				max: 			4,
-				chance: 		100,
 			},
 			mountain:{
 				min: 			1,
 				max: 			3,
-				chance: 		25,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2025-04-19T075158.894.jpg',
@@ -702,12 +655,10 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
-				chance: 		0,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		-50,
 			}
 		},
 		energy_cost: 			2,
@@ -735,8 +686,9 @@ eachoa(all_available_actions, function(action_id, action_info){
 			if(all_available_locations[location_id] != undefined)
 			{
 				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
-				var local_chance = 50 - (action_info['value'] * 50 / local_action_amount);
-				if(action_location_info['chance'] != undefined){local_chance = action_location_info['chance'];}
+				var local_action_value = action_info['value'] + 0;
+				if(action_location_info['chance'] != undefined){local_action_value /= action_location_info['chance'];}
+				var local_chance = 100 - (local_action_value * 50 * Math.sqrt(local_action_amount));
 				all_available_locations[location_id]['local_actions'][action_id] = {
 					chance: 	local_chance,
 					min: 		action_location_info['min'],

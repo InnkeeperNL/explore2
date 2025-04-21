@@ -71,3 +71,38 @@ function check_expeditions_gain(){
 	gamedata['last_expeditions_tick'] += seconds_passed * 1000;
 }
 
+function check_passive_storage_gain(){
+	if(gamedata['last_passive_storage_tick'] == undefined){gamedata['last_passive_storage_tick'] = nowint();}
+	if(gamedata['storage'] == undefined){gamedata['storage'] = {};}
+	if(gamedata['passive_storage'] == undefined){gamedata['passive_storage'] = {};}
+	var seconds_passed = Math.floor((nowint() - gamedata['last_passive_storage_tick']) / 1000);
+	var max_storage = get_max_storage();
+	var any_item_gained = false;
+	eachoa(all_available_items, function(item_id, item_info){
+		if(item_info['type'] == 'resource')
+		{
+			if(gamedata['passive_storage'][item_id] == undefined){gamedata['passive_storage'][item_id] = 0;}
+			var passive_storage_per_tick = get_building_bonus('passive_' + item_id,0) / 60;
+			//if(passive_storage_per_tick > 0){console.log(passive_storage_per_tick);}
+			gamedata['passive_storage'][item_id] += seconds_passed * passive_storage_per_tick;
+			if(gamedata['passive_storage'][item_id] >= 1)
+			{
+				var gained_storage = Math.floor(gamedata['passive_storage'][item_id]);
+				if(gamedata['storage'][item_id] != undefined)
+				{
+					any_item_gained = true;
+					gamedata['storage'][item_id] += gained_storage;
+					if(gamedata['storage'][item_id] > max_storage){gamedata['storage'][item_id] = max_storage;}
+					set_html('#storage_container .item_container_' + item_id + ' .owned_amount',nFormatter(gamedata['storage'][item_id], 3));
+				}
+				gamedata['passive_storage'][item_id] -= gained_storage;
+			}
+		}
+	});
+	if(any_item_gained == true && current_content == 'building')
+	{
+		show_building();
+	}
+	gamedata['last_passive_storage_tick'] += seconds_passed * 1000;
+}
+

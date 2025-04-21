@@ -149,23 +149,26 @@ function get_building_bonus(bonus_id, base_amount){
 		}
 	});
 	eachoa(gamedata['storage'], function(item_id, item_amount){
-		var owned_amount = item_amount * 1;
-		if(gamedata['inventory'][item_id] != undefined){owned_amount += gamedata['inventory'][item_id];}
-		if(all_available_items[item_id]['effects'] != undefined && all_available_items[item_id]['effects'][bonus_id] != undefined)
+		if(all_available_items[item_id] != undefined)
 		{
-			if(all_available_items[item_id]['effect_type'] == 'fixed')
+			var owned_amount = item_amount * 1;
+			if(gamedata['inventory'][item_id] != undefined){owned_amount += gamedata['inventory'][item_id];}
+			if(all_available_items[item_id]['effects'] != undefined && all_available_items[item_id]['effects'][bonus_id] != undefined)
 			{
-				base_amount += owned_amount * all_available_items[item_id]['effects'][bonus_id];
+				if(all_available_items[item_id]['effect_type'] == 'fixed')
+				{
+					base_amount += owned_amount * all_available_items[item_id]['effects'][bonus_id];
+				}
+				if(all_available_items[item_id]['effect_type'] == 'percent')
+				{
+					total_percent_bonus *= 1 + ((Math.sqrt(owned_amount) * all_available_items[item_id]['effects'][bonus_id]) / 100);
+				}
+				if(all_available_items[item_id]['effect_type'] == 'factor')
+				{
+					total_factor = to_the_nth(total_factor, owned_amount, all_available_items[item_id]['effects'][bonus_id]);
+				}
+				
 			}
-			if(all_available_items[item_id]['effect_type'] == 'percent')
-			{
-				total_percent_bonus *= 1 + ((owned_amount * all_available_items[item_id]['effects'][bonus_id]) / 100);
-			}
-			if(all_available_items[item_id]['effect_type'] == 'factor')
-			{
-				total_factor = to_the_nth(total_factor, owned_amount, all_available_items[item_id]['effects'][bonus_id]);
-			}
-			
 		}
 	});
 	base_amount *= total_percent_bonus;

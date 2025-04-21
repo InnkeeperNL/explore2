@@ -17,7 +17,7 @@ var all_available_recipes = {
 			pole: 		1,
 		},
 		result:{
-			axe: 		1
+			hatchet: 	1
 		},
 		//cost_factor: 2,
 	},
@@ -115,7 +115,7 @@ var all_available_recipes = {
 	brick_clay:{
 		cost:{
 			firewood: 	1,
-			clay: 		3,
+			clay: 		4,
 			water: 		1,
 		},
 		result:{
@@ -279,7 +279,7 @@ var all_available_recipes = {
 	glass:{
 		cost:{
 			coal: 		1,
-			sand: 		5,
+			sand: 		4,
 		},
 		result:{
 			glass: 		1
@@ -334,9 +334,9 @@ var all_available_recipes = {
 	},
 	jar_clay:{
 		cost:{
-			firewood: 	2,
-			clay: 		2,
-			water: 		2,
+			firewood: 	1,
+			clay: 		3,
+			water: 		1,
 		},
 		result:{
 			jar: 		1
@@ -357,7 +357,7 @@ var all_available_recipes = {
 			furnace: true,
 		}
 	},
-	jar_stone:{
+	/*jar_stone:{
 		cost:{
 			stone: 		4,
 		},
@@ -367,7 +367,7 @@ var all_available_recipes = {
 		buildings:{
 			//stonesmith: true,
 		}
-	},
+	},*/
 	jar_wood:{
 		cost:{
 			lumber: 	4,
@@ -389,6 +389,18 @@ var all_available_recipes = {
 		},
 		buildings:{
 			hunting_lodge: true,
+		}
+	},
+	lumberjack:{
+		cost:{
+			hatchet: 	1,
+			peasant: 	1,
+		},
+		result:{
+			lumberjack: 1
+		},
+		buildings:{
+			wood_workshop: true,
 		}
 	},
 	mana_potion:{
@@ -414,6 +426,18 @@ var all_available_recipes = {
 		},
 		result:{
 			map: 1
+		}
+	},
+	miner:{
+		cost:{
+			stone_shovel: 	1,
+			peasant: 	1,
+		},
+		result:{
+			miner: 1
+		},
+		buildings:{
+			stonesmith: true,
 		}
 	},
 	mining_potion:{
@@ -526,6 +550,19 @@ var all_available_recipes = {
 			hunting_lodge: true,
 		}
 	},
+	reeds_collector:{
+		cost:{
+			basket: 	1,
+			reeds: 		20,
+			peasant: 	1,
+		},
+		result:{
+			reeds_collector: 	1
+		},
+		buildings:{
+			tailor_shop: true,
+		}
+	},
 	road:{
 		cost:{
 			stone: 		30,
@@ -573,7 +610,7 @@ var all_available_recipes = {
 			pole: 		1,
 		},
 		result:{
-			stone_hatchet: 	1
+			hatchet: 	1
 		},
 		buildings:{
 			stonesmith: 	true,
@@ -733,7 +770,7 @@ function check_all_recipes(){
 							}
 							else
 							{
-								if(cost_value >= all_available_items[result_id]['value'])
+								if(cost_value >= all_available_items[result_id]['value'] * 2)
 								{
 									var result_amount = Math.floor(cost_value / all_available_items[result_id]['value']);
 									if(result_amount < 1){result_amount = 1;}
@@ -744,7 +781,7 @@ function check_all_recipes(){
 								{
 									var cost_correction_factor = all_available_items[result_id]['value'] / cost_value;
 									eachoa(recipe_info['cost'], function(cost_id, cost_amount){
-										recipe_info['cost'][cost_id] = Math.floor(cost_amount * cost_correction_factor);
+										recipe_info['cost'][cost_id] = Math.ceil(cost_amount * cost_correction_factor);
 									});
 								}
 							}
@@ -791,6 +828,16 @@ function calc_effect_per_value(base_value, effect_id, effect_type, item_id){
 	if(effects_per_value[effect_id] != undefined)
 	{
 		calced_effect_per_value = effects_per_value[effect_id];
+	}
+	var split_bonus_string = split_string(effect_id, '_');
+	if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
+	{
+		calced_effect_per_value = effects_per_value['passive'];
+		var produced_item = effect_id.replaceAll('passive_','');
+		if(all_available_items[produced_item] != undefined && all_available_items[produced_item]['value'] != undefined)
+		{
+			calced_effect_per_value /= all_available_items[produced_item]['value'];
+		}
 	}
 	var value = base_value * 1; 
 	if(effect_type != undefined && effect_type == 'fixed')

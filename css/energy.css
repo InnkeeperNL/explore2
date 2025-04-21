@@ -231,6 +231,11 @@
     text-shadow: none;
 }
 
+/*.action_energy_cost_text.passive_text
+{
+	font-size: 12px;
+}*/
+
 .expeditions_cost_text
 {
 	margin-left: 0px;

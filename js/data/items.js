@@ -9,16 +9,15 @@ var all_available_items = {
 		image: 	'items/arrows-4082046_640.jpg',
 		value: 	3,
 	},
-	axe:{
+	/*axe:{
 		image: 	'items/axe-674841_640.jpg',
 		effects:{
 			woodcutting: 	10,
 		},
 		effect_type: 		'percent',
 		value: 	33,
-	},
+	},*/
 	backpack:{
-		description: 'Each backpack increases maximum inventory by 1',
 		image: 	'items/dream_TradingCard-2023-08-18T110922.jpg',
 		effects:{
 			max_inventory: 	2,
@@ -107,7 +106,7 @@ var all_available_items = {
 	clay:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-19T055341.297.jpg',
-		value: 	3,
+		value: 	2,
 	},
 	cloak:{
 		image: 	'items/dream_TradingCard-2025-04-18T063009.220.jpg',
@@ -183,7 +182,6 @@ var all_available_items = {
 		value: 	1,
 	},
 	glass:{
-		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
 		value: 	5,
 	},
@@ -239,6 +237,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-08-17T085131.jpg',
 		value: 	5,
 	},
+	lumberjack:{
+		image: 	'items/dream_TradingCard-2025-04-21T091431.826.jpg',
+		value: 	1,
+		effects:{
+			passive_lumber: 	1,
+		},
+		effect_type: 		'fixed',
+	},
 	mana_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T081019.769.jpg',
 		energy: 3,
@@ -252,6 +258,14 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-24T112300.jpg',
 		value: 	3,
+	},
+	miner:{
+		image: 	'items/dream_TradingCard-2025-04-21T094646.422.jpg',
+		value: 	1,
+		effects:{
+			passive_stone: 	1,
+		},
+		effect_type: 		'fixed',
 	},
 	mining_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T083650.124.jpg',
@@ -328,6 +342,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-18T063401.552.jpg',
 		value: 	1,
 	},
+	reeds_collector:{
+		image: 	'items/dream_TradingCard-2025-04-21T072911.980.jpg',
+		value: 	1,
+		effects:{
+			passive_reeds: 	1,
+		},
+		effect_type: 		'fixed',
+	},
 	road:{
 		image: 	'items/dream_TradingCard-2025-04-20T072358.383.jpg',
 		effects:{
@@ -372,7 +394,7 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
-	stone_hatchet:{
+	hatchet:{
 		image: 	'items/dream_TradingCard-2025-04-20T092037.855.jpg',
 		effects:{
 			woodcutting: 	1,

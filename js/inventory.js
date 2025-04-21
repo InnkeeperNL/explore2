@@ -388,3 +388,53 @@ function gain_all_items(amount){
 		gamedata['storage'][item_id] = amount;
 	});
 }
+
+function show_item_details(item_id){
+	if(all_available_items[item_id] != undefined)
+	{
+		var item_info = all_available_items[item_id];
+		var item_details = '';
+		if(item_info['value'] != undefined)
+		{
+			item_details += 'Value: ' + item_info['value'] + '<br/>';
+		}
+		if(item_info['effects'] != undefined)
+		{
+			eachoa(item_info['effects'], function(effect_id, effect_amount){
+				var total_bonus = effect_amount;
+
+				var split_bonus_string = split_string(effect_id, '_');
+				var bonus_type = '';
+				var bonus_text = '';
+				if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
+				{
+					bonus_type = ' ' + split_bonus_string[1] + '/m';
+					bonus_text = 'Production';
+				}
+				else
+				{
+					bonus_text = capitalizeFirstLetter(effect_id.replaceAll('_',' '));
+				}
+				if(item_info['effect_type'] != undefined && item_info['effect_type'] == 'percent')
+				{
+					bonus_type = '%';
+					if(gamedata['storage'][item_id] > 0)
+					{
+						total_bonus = Math.sqrt(gamedata['storage'][item_id]) * effect_amount;
+					}
+				}
+				else
+				{
+					if(gamedata['storage'][item_id] > 0)
+					{
+						total_bonus = (gamedata['storage'][item_id]) * effect_amount;
+					}
+				}
+				item_details += bonus_text + ': ' + nFormatter(total_bonus,1) + bonus_type + '</br>';
+			});
+		}
+		set_html('.white_screen_title', capitalizeFirstLetter(item_info['name']));
+		set_html('.white_screen_content',item_details);
+		show_white_screen();
+	}
+}

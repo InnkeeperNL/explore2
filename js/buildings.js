@@ -227,7 +227,18 @@ function parse_building_effect(building_id){
 	eachoa(all_skills, function(skill_id, skill_available){
 		if(building_info['effects'][skill_id] != undefined)
 		{
-			parsed_building_effect += skill_id.replaceAll('_',' ') + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '%<br/>';
+			parsed_building_effect += capitalizeFirstLetter(skill_id.replaceAll('_',' ')) + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '%<br/>';
+		}
+	});
+	eachoa(building_info['effects'], function(effect_id, effect_amount){
+		var split_bonus_string = split_string(effect_id, '_');
+		if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
+		{
+			var passive_item_id = effect_id.replaceAll('passive_','');
+			if(all_available_items[passive_item_id] != undefined)
+			{
+				parsed_building_effect += 'Production: ' + nFormatter(effect_amount * building_level,1) + ' ' + capitalizeFirstLetter(all_available_items[passive_item_id]['name']) + '/m';
+			}
 		}
 	});
 	
@@ -304,7 +315,7 @@ function parse_recipe(recipe_id){
 				var owned_amount = 0;
 				if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
 				parsed_recipe += '<div class="recipe_cost_bar ' + not_enough + '">';
-				parsed_recipe += 	'<div class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
+				parsed_recipe += 	'<div  onclick="show_item_details(\'' + cost_id + '\')" class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
 				parsed_recipe += 	'</div>';
 				parsed_recipe += 	'<span>' + nFormatter(owned_amount,0) + ' / ' + nFormatter(real_cost,0) + '</span>';
 				parsed_recipe += '</div>';
@@ -320,9 +331,57 @@ function parse_recipe(recipe_id){
 			if(owned_amount + (10 * gained_amount) > get_max_storage()){any_result_not_maxed_10 = false;}
 			if(gamedata['storage'][result_id] != undefined)
 			{
-				parsed_recipe += '<div class="result_item" style="background-image:url(\'images/' + item_info['image'] + '\')">';
+				parsed_recipe += '<div onclick="show_item_details(\'' + result_id + '\')" class="result_item" style="background-image:url(\'images/' + item_info['image'] + '\')">';
+				
+				if((item_info['effects'] != undefined && count_object(item_info['effects']) > 0) || item_info['energy'] != undefined)
+				{
+					parsed_recipe += 	'<div class="actions_energy_cost">';
+				}
+				if(item_info['energy'] != undefined)
+				{
+					parsed_recipe += 	'<div class="consume_energy_amount_icon"></div><span class="action_energy_cost_text">' + item_info['energy'] + '</span>';
+				}
+				eachoa(item_info['effects'], function(effect_id, effect_amount){
+					var total_bonus = effect_amount;
 
-				var total_bonus = 0;
+					var bonus_icon = '' + effect_id;
+					var split_bonus_string = split_string(effect_id, '_');
+					var bonus_type = '';
+					if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
+					{
+						bonus_icon = 'passive';
+						bonus_type = '/m';
+					}
+					if(item_info['effect_type'] != undefined && item_info['effect_type'] == 'percent')
+					{
+						bonus_type = '%';
+						if(gamedata['storage'][result_id] > 0)
+						{
+							total_bonus = Math.sqrt(gamedata['storage'][result_id]) * effect_amount;
+						}
+					}
+					else
+					{
+						if(gamedata['storage'][result_id] > 0)
+						{
+							total_bonus = (gamedata['storage'][result_id]) * effect_amount;
+						}
+					}
+					if(total_bonus <= 100 || bonus_type == '')
+					{
+						parsed_recipe += 	'<div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text ' + bonus_icon + '_text">' + nFormatter(total_bonus,1) + bonus_type + '</span>';
+					}
+					else
+					{
+						total_bonus = (total_bonus / 100) + 1;
+						parsed_recipe += 	'<div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text ' + bonus_icon + '_text">x' + nFormatter(total_bonus, 1) + '</span>';
+					}
+				});
+				if((item_info['effects'] != undefined && count_object(item_info['effects']) > 0) || item_info['energy'] != undefined)
+				{
+					parsed_recipe += 	'</div>';
+				}
+				/*var total_bonus = 0;
 				var bonus_icon = '';
 				var bonus_type = '';
 				if(item_info['effect_type'] != undefined && item_info['effect_type'] == 'percent'){bonus_type = '%';}
@@ -371,7 +430,7 @@ function parse_recipe(recipe_id){
 						total_bonus = (total_bonus / 100) + 1;
 						parsed_recipe += 	'<div class="actions_energy_cost"><div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text">x' + nFormatter(total_bonus, 2) + '</span></div>';
 					}
-				}
+				}*/
 				parsed_recipe += 	'<div class="amount_gained">+' + gained_amount + '</div>';
 				parsed_recipe += 	'<div class="item_amount">' + owned_amount + '</div>';
 			}
