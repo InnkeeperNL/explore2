@@ -9,7 +9,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_jar: 	1 / all_available_items['jar']['value'],
+			max_energy: 	1,
 		},
 		effect_type: 	'fixed',
 		recipes:{},
@@ -75,7 +75,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_meat: 	1 / all_available_items['meat']['value'],
+			passive_firewood: 	1 / all_available_items['firewood']['value'],
 		},
 		effect_type: 	'fixed',
 		recipes:{
