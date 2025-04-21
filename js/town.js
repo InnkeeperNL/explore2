@@ -100,7 +100,8 @@ function deposit_inventory(keep_energy_items){
 					gamedata['storage'][item_id] = max_storage;
 					wasted_items['item_id'] = surplus;
 				}
-				gamedata['inventory'][item_id] = surplus;
+				//gamedata['inventory'][item_id] = surplus;
+				gamedata['inventory'][item_id] = 0;
 				if(gamedata['inventory'][item_id] == 0)
 				{
 					delete gamedata['inventory'][item_id];

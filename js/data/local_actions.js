@@ -516,6 +516,7 @@ var all_available_actions = {
 		},
 		action_loot:{
 			reeds: 		25,
+			twine: 		5,
 		},
 		final_loot:{
 			reeds: 		1,
