@@ -212,13 +212,24 @@
 	height: 50px;
 }
 
+.top_bar .inventory_button,
+.recipe_bar .build_now_button.craft_10
+{
+	font-family: arial;
+	font-size: 20px;
+	text-align: center;
+	padding-top:10px;
+}
+
+.top_bar .inventory_button
+{
+	color:rgba(255,255,255,1);
+	font-weight: bold;
+}
+
 .recipe_bar .build_now_button.craft_10
 {
 	position: absolute;
 	top: 60px;
 	right: 0px;
-	font-family: arial;
-	font-size: 20px;
-	text-align: center;
-	padding-top:10px;
 }

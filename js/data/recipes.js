@@ -342,6 +342,19 @@ var all_available_recipes = {
 			wood_workshop: true,
 		}
 	},
+	hunter:{
+		cost:{
+			boot: 		1,
+			bow: 		1,
+			peasant: 	1,
+		},
+		result:{
+			hunter: 1
+		},
+		buildings:{
+			hunting_lodge: 	true,
+		}
+	},
 	ink:{
 		cost:{
 			coal: 		1,
@@ -694,6 +707,19 @@ var all_available_recipes = {
 		},
 		buildings:{
 			hunting_lodge: true,
+		}
+	},
+	trapper:{
+		cost:{
+			trap: 		1,
+			peasant: 	1,
+			pouch: 		1,
+		},
+		result:{
+			trapper: 1
+		},
+		buildings:{
+			hunting_lodge: 	true,
 		}
 	},
 	twine_flax:{

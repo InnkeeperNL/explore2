@@ -210,6 +210,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
 		value: 	5,
 	},
+	hatchet:{
+		image: 	'items/dream_TradingCard-2025-04-20T092037.855.jpg',
+		effects:{
+			woodcutting: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
 	herbal_cane:{
 		image: 	'items/dream_TradingCard-2025-04-20T085611.025.jpg',
 		effects:{
@@ -227,6 +235,14 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T110303.jpg',
 		value: 	3,
+	},
+	hunter:{
+		image: 	'items/dream_TradingCard-2025-04-22T091827.520.jpg',
+		value: 	1,
+		effects:{
+			passive_hide: 	1,
+		},
+		effect_type: 		'fixed',
 	},
 	ink:{
 		image: 	'items/dream_TradingCard-2025-04-20T062644.592.jpg',
@@ -414,14 +430,6 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
-	hatchet:{
-		image: 	'items/dream_TradingCard-2025-04-20T092037.855.jpg',
-		effects:{
-			woodcutting: 	1,
-		},
-		effect_type: 		'percent',
-		value: 	5,
-	},
 	shovel:{
 		image: 	'items/dream_TradingCard-2025-04-20T092211.503.jpg',
 		effects:{
@@ -437,6 +445,14 @@ var all_available_items = {
 			hunting: 	1,
 		},
 		effect_type: 		'percent',
+	},
+	trapper:{
+		image: 	'items/dream_TradingCard-2025-04-22T092243.852.jpg',
+		value: 	1,
+		effects:{
+			passive_meat: 	1,
+		},
+		effect_type: 		'fixed',
 	},
 	twine:{
 		type: 	'resource',

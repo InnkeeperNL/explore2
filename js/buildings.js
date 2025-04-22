@@ -137,14 +137,14 @@ function parse_build_building(building_id){
 		}
 		var owned_amount = 0;
 		if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
-		parsed_build_building += '<div class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
+		parsed_build_building += '<div onclick="show_item_details(\'' + cost_id + '\')" class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
 		parsed_build_building += 	'<div class="item_amount ' + not_enough + '">' + owned_amount + ' / ' + real_cost + '</div>';
 		parsed_build_building += '</div>';
 	});
 
 	if(can_build == true)
 	{
-		parsed_build_building += '<div class="breaker"></div>';
+		//parsed_build_building += '<div class="breaker"></div>';
 		parsed_build_building += '<div class="button slim build_now_button" onclick="build_building(\'' + building_id + '\')">BUILD</div>';
 	}
 
@@ -323,12 +323,13 @@ function parse_recipe(recipe_id){
 		parsed_recipe += '</div>';
 		var any_result_not_maxed = true;
 		var any_result_not_maxed_10 = true;
+		var max_storage = get_max_storage();
 		eachoa(recipe_info['result'], function(result_id, gained_amount){
 			var owned_amount = 0;
 			var item_info = all_available_items[result_id];
 			if(gamedata['storage'][result_id] != undefined){owned_amount = gamedata['storage'][result_id];}
-			if(owned_amount + (1 * gained_amount) > get_max_storage()){any_result_not_maxed = false;}
-			if(owned_amount + (10 * gained_amount) > get_max_storage()){any_result_not_maxed_10 = false;}
+			if(owned_amount + (1 * gained_amount) > max_storage){any_result_not_maxed = false;}
+			if(owned_amount + (10 * gained_amount) > max_storage){any_result_not_maxed_10 = false;}
 			if(gamedata['storage'][result_id] != undefined)
 			{
 				parsed_recipe += '<div onclick="show_item_details(\'' + result_id + '\')" class="result_item" style="background-image:url(\'images/' + item_info['image'] + '\')">';
@@ -431,8 +432,18 @@ function parse_recipe(recipe_id){
 						parsed_recipe += 	'<div class="actions_energy_cost"><div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text">x' + nFormatter(total_bonus, 2) + '</span></div>';
 					}
 				}*/
-				parsed_recipe += 	'<div class="amount_gained">+' + gained_amount + '</div>';
-				parsed_recipe += 	'<div class="item_amount">' + owned_amount + '</div>';
+				if(gained_amount != 1)
+				{
+					parsed_recipe += 	'<div class="amount_gained">+' + gained_amount + '</div>';
+				}
+				if(owned_amount + gained_amount > max_storage)
+				{
+					parsed_recipe += 	'<div class="item_amount not_enough">' + owned_amount + '</div>';
+				}
+				else
+				{
+					parsed_recipe += 	'<div class="item_amount">' + owned_amount + '</div>';
+				}
 			}
 			else
 			{

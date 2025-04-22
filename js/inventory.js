@@ -344,7 +344,14 @@ function parse_item(item_id, forced_amount, amount_gained){
 		}
 		else
 		{
-			parsed_item +=					'<span class="owned_amount">' + nFormatter(forced_amount, 3) + '</span>';
+			if(typeof(forced_amount) == 'string')
+			{
+				parsed_item +=					'<span class="owned_amount">' + forced_amount + '</span>';
+			}
+			else
+			{
+				parsed_item +=					'<span class="owned_amount">' + nFormatter(forced_amount, 3) + '</span>';
+			}
 		}
 		if(amount_gained != undefined)
 		{
@@ -394,7 +401,9 @@ function show_item_details(item_id){
 	if(all_available_items[item_id] != undefined)
 	{
 		var item_info = all_available_items[item_id];
-		var item_details = '';
+		var item_details = '<span class="item_details">';
+		item_details += parse_item(item_id, '');
+		item_details += '<div class="item_stats">';
 		if(item_info['value'] != undefined)
 		{
 			item_details += 'Value: ' + item_info['value'] + '<br/>';
@@ -434,6 +443,7 @@ function show_item_details(item_id){
 				item_details += bonus_text + ': ' + nFormatter(total_bonus,1) + bonus_type + '</br>';
 			});
 		}
+		item_details += '</div></span>';
 		set_html('.white_screen_title', capitalizeFirstLetter(item_info['name']));
 		set_html('.white_screen_content',item_details);
 		show_white_screen();

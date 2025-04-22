@@ -97,24 +97,56 @@
 	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
 }
 
+.item_details .item
+{
+	margin:0px;
+	width:100%;
+	height: 100%;
+	max-height:300px;
+	opacity: 0.75;
+}
+
+.item_details .item_name
+{
+	display: none;
+}
+
+.item_stats
+{
+	position: absolute;
+	bottom:20px;
+	left:30px;
+	background-color: rgba(255,255,255,0.9);
+	padding:10px;
+	border-radius: 5px;
+	line-height: 1.5;
+}
+
 .amount_gained,
 .owned_amount,
 .item_amount
 {
 	position: absolute;
-	left: 0px;
-	right: 0px;
+	left: 7px;
+	right: 7px;
 	bottom: 5px;
-	text-align: center;
+	text-align: right;
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
 	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
 }
 
+.cost_item .item_amount
+{
+	text-align: center;
+}
+
 .amount_gained
 {
-	bottom: 30px;
+	opacity: 0.9;
+	/*bottom: 30px;*/
+	text-align: left;
 }
 
 .owned_amount.max_owned,

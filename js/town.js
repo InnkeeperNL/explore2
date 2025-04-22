@@ -1,6 +1,7 @@
 function show_town(){
 	//deposit_inventory();
 	var all_parsed_buildings = '';
+	set_html('.top_bar .inventory_button',get_max_storage());
 	eachoa(all_available_buildings, function(building_id, building_info){
 		all_parsed_buildings += parse_building_button(building_id);
 	});
