@@ -439,6 +439,7 @@ var all_available_items = {
 		effect_type: 		'percent',
 	},
 	twine:{
+		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-29T084103.jpg',
 		value: 	5,
 	},
