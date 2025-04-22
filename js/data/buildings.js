@@ -2,15 +2,14 @@ var all_available_buildings = {
 	
 	
 	alchemist:{
-		description: 	'Increases maximum energy by 1 each level.',
-		image: 		'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
+		image: 			'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
 		cost:{
-			jar: 		4,
+			herbs: 		10,
 			water: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
-			max_energy: 	1,
+			passive_herbs: 	1 / all_available_items['herbs']['value'],
 		},
 		effect_type: 	'fixed',
 		recipes:{},
@@ -43,7 +42,7 @@ var all_available_buildings = {
 		//item_image: 'meat',
 		cost:{
 			lumber: 	3,
-			hide: 		2,
+			hide: 		4,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -161,7 +160,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_reeds: 	1 / all_available_items['reeds']['value'],
+			passive_twine: 	1 / all_available_items['twine']['value'],
 		},
 		effect_type: 	'fixed',
 		recipes:{

@@ -227,7 +227,8 @@ var all_available_recipes = {
 	endurance_potion:{
 		cost:{
 			firewood: 	10,
-			moss:  		10,
+			apple:  	10,
+			herbs: 		10,
 			jar: 		1,
 			water: 		10
 		},
@@ -296,6 +297,9 @@ var all_available_recipes = {
 		result:{
 			herbal_cane: 	1
 		},
+		buildings:{
+			wood_workshop: true,
+		}
 	},
 	ink:{
 		cost:{
@@ -381,8 +385,8 @@ var all_available_recipes = {
 	},
 	leather:{
 		cost:{
-			firewood: 	4,
-			hide: 		1,
+			firewood: 	2,
+			hide: 		2,
 		},
 		result:{
 			leather: 1
@@ -405,10 +409,9 @@ var all_available_recipes = {
 	},
 	mana_potion:{
 		cost:{
-			apple: 		1,
+			apple: 		5,
 			firewood: 	10,
 			herbs:  	10,
-			moss:  		10,
 			jar: 		1,
 			water: 		10
 		},
@@ -442,7 +445,7 @@ var all_available_recipes = {
 	},
 	mining_potion:{
 		cost:{
-			moss:  		10,
+			sand:  		20,
 			jar: 		1,
 			water: 		1
 		},
@@ -520,7 +523,7 @@ var all_available_recipes = {
 	},
 	poison:{
 		cost:{
-			herbs:  	10,
+			herbs:  	4,
 			jar: 		1,
 			water: 		10
 		},
@@ -576,8 +579,8 @@ var all_available_recipes = {
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 	4,
-			meat: 		1,
+			firewood: 	2,
+			meat: 		2,
 		},
 		result:{
 			roasted_meat: 1

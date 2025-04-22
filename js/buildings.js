@@ -364,7 +364,7 @@ function parse_recipe(recipe_id){
 					{
 						if(gamedata['storage'][result_id] > 0)
 						{
-							total_bonus = (gamedata['storage'][result_id]) * effect_amount;
+							total_bonus = Math.sqrt(gamedata['storage'][result_id]) * effect_amount;
 						}
 					}
 					if(total_bonus <= 100 || bonus_type == '')

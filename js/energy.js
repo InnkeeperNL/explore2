@@ -88,13 +88,14 @@ function check_passive_storage_gain(){
 			if(gamedata['passive_storage'][item_id] >= 1)
 			{
 				var gained_storage = Math.floor(gamedata['passive_storage'][item_id]);
-				if(gamedata['storage'][item_id] != undefined)
+				if(gamedata['storage'][item_id] == undefined)
 				{
-					any_item_gained = true;
-					gamedata['storage'][item_id] += gained_storage;
-					if(gamedata['storage'][item_id] > max_storage){gamedata['storage'][item_id] = max_storage;}
-					set_html('#storage_container .item_container_' + item_id + ' .owned_amount',nFormatter(gamedata['storage'][item_id], 3));
+					gamedata['storage'][item_id] = 0;
 				}
+				any_item_gained = true;
+				gamedata['storage'][item_id] += gained_storage;
+				if(gamedata['storage'][item_id] > max_storage){gamedata['storage'][item_id] = max_storage;}
+				set_html('#storage_container .item_container_' + item_id + ' .owned_amount',nFormatter(gamedata['storage'][item_id], 3));
 				gamedata['passive_storage'][item_id] -= gained_storage;
 			}
 		}

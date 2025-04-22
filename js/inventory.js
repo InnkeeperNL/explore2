@@ -428,7 +428,7 @@ function show_item_details(item_id){
 				{
 					if(gamedata['storage'][item_id] > 0)
 					{
-						total_bonus = (gamedata['storage'][item_id]) * effect_amount;
+						total_bonus = Math.sqrt(gamedata['storage'][item_id]) * effect_amount;
 					}
 				}
 				item_details += bonus_text + ': ' + nFormatter(total_bonus,1) + bonus_type + '</br>';

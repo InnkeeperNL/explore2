@@ -158,7 +158,7 @@ function get_building_bonus(bonus_id, base_amount){
 			{
 				if(all_available_items[item_id]['effect_type'] == 'fixed')
 				{
-					base_amount += owned_amount * all_available_items[item_id]['effects'][bonus_id];
+					base_amount += Math.sqrt(owned_amount) * all_available_items[item_id]['effects'][bonus_id];
 				}
 				if(all_available_items[item_id]['effect_type'] == 'percent')
 				{

@@ -3,8 +3,8 @@ var all_available_actions = {
 	apple_tree:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		2,
+		max_action_amount: 		4,
 		image: 					'actions/dream_TradingCard-2023-08-18T081111.jpg',
 		locations:{
 			forest:{
@@ -18,7 +18,7 @@ var all_available_actions = {
 			leaves: 	10
 		},
 		final_loot:{
-			apple: 		1,
+			apple: 		2,
 			lumber: 	1,
 			firewood: 	1,
 		}
@@ -129,8 +129,12 @@ var all_available_actions = {
 		min_action_amount: 		5,
 		max_action_amount: 		10,
 		energy_cost: 			2,
-		image: 					'actions/dream_TradingCard-2023-08-18T093059.jpg',
+		image: 					'actions/dream_TradingCard-2025-04-22T062214.270.jpg',
 		locations:{
+			cave:{
+				min: 			1,
+				max: 			3,
+			},
 			mountain:{
 				min: 			1,
 				max: 			3,
@@ -143,36 +147,11 @@ var all_available_actions = {
 			stone: 	1
 		}
 	},
-	boulder_mossy:{
-		type: 					'resource',
-		subtypes: 				['mining'],
-		min_action_amount: 		5,
-		max_action_amount: 		10,
-		energy_cost: 			2,
-		image: 					'actions/dream_TradingCard-2025-04-20T073236.033.jpg',
-		locations:{
-			cave:{
-				min: 			1,
-				max: 			3,
-			},
-			mountain:{
-				min: 			1,
-				max: 			3,
-				chance: 		0.5
-			}
-		},
-		action_loot:{
-			moss: 	5,
-		},
-		final_loot:{
-			stone: 	1
-		}
-	},
 	bunny:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		1,
+		max_action_amount: 		3,
 		locations:{
 			forest:{
 				min: 			1,
@@ -191,12 +170,12 @@ var all_available_actions = {
 	bushes:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		1,
+		max_action_amount: 		1,
 		locations:{
 			forest:{
 				min: 			3,
-				max: 			4,
+				max: 			10,
 			},
 			river:{
 				min: 			1,
@@ -206,13 +185,16 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
-			leaves:  	10,
+/*			leaves:  	10,
 			firewood: 	10,
-			twine: 		5,
-			herbs: 		1,
+			twine: 		10,
+			herbs: 		1,*/
 		},
 		final_loot:{
-			firewood: 		1,
+			leaves:  	0.5,
+			firewood: 	1,
+			twine: 		0.2,
+			herbs: 		0.1,
 		}
 	},
 	clay:{
@@ -414,8 +396,8 @@ var all_available_actions = {
 	herbs:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		2,
+		max_action_amount: 		5,
 		locations:{
 			forest:{
 				min: 			1,
@@ -572,8 +554,8 @@ var all_available_actions = {
 	stream:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		2,
+		max_action_amount: 		3,
 		locations:{
 			cave:{
 				min: 			1,
@@ -607,8 +589,8 @@ var all_available_actions = {
 		max_action_amount: 		10,
 		locations:{
 			forest:{
-				min: 			4,
-				max: 			8,
+				min: 			2,
+				max: 			4,
 			},
 			river:{
 				min: 			1,
@@ -617,8 +599,8 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
 		action_loot:{
-			leaves:  	10,
-			firewood: 	10,
+			leaves:  	5,
+			firewood: 	5,
 		},
 		final_loot:{
 			lumber: 	1
@@ -641,7 +623,7 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2025-04-19T075158.894.jpg',
 		action_loot:{
-			firewood: 	10,
+			firewood: 	5,
 		},
 		final_loot:{
 			lumber: 	1
