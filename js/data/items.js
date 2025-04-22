@@ -165,6 +165,14 @@ var all_available_items = {
 		},
 		effect_type: 		'percent',
 	},
+	explorer:{
+		image: 	'items/dream_TradingCard-2025-04-22T080550.376.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	25,
+	},
 	firewood:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-17T072416.jpg',
@@ -189,6 +197,15 @@ var all_available_items = {
 		energy: 1,
 		value: 	1,
 	},
+	gatherer:{
+		image: 	'items/dream_TradingCard-2025-04-22T081056.345.jpg',
+		value: 	1,
+		effects:{
+			passive_firewood: 	1,
+		},
+		effect_type: 		'fixed',
+	},
+	
 	glass:{
 		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
 		value: 	5,

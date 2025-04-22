@@ -51,7 +51,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			twine: 		0.5,
+			twine: 		0.75,
 			cloth: 		0.1,
 			peasant: 	0.1,
 		}
@@ -457,6 +457,26 @@ var all_available_actions = {
 			peasant: 		1,
 		}
 	},
+	peasant_stuck:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		10,
+		max_action_amount: 		20,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1,
+			},
+		},
+		energy_cost: 			5,
+		image: 					'actions/dream_TradingCard-2025-04-22T082408.969.jpg',
+		action_loot:{
+			stone: 			10,
+		},
+		final_loot:{
+			peasant: 		1,
+		}
+	},
 	rat:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -465,7 +485,7 @@ var all_available_actions = {
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			3,
+				max: 			1,
 			},
 			river:{
 				min: 			1,
@@ -477,7 +497,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		0.5,
+			hide: 		0.6,
 		}
 	},
 	reeds:{
@@ -520,17 +540,17 @@ var all_available_actions = {
 	sand:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		1,
+		max_action_amount: 		1,
 		energy_cost: 			2,
 		locations:{
 			cave:{
-				min: 			3,
-				max: 			6,
+				min: 			2,
+				max: 			4,
 			},
 			mountain:{
-				min: 			3,
-				max: 			6,
+				min: 			2,
+				max: 			4,
 			},
 			/*river:{
 				min: 			2,
@@ -539,7 +559,7 @@ var all_available_actions = {
 			}*/
 		},
 		action_loot:{
-			sand: 		10,
+			//sand: 		10,
 		},
 		final_loot:{
 			sand: 		1,

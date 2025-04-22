@@ -3,6 +3,7 @@ var all_available_buildings = {
 	
 	alchemist:{
 		image: 			'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
+		item_image: 	'herbs',
 		cost:{
 			herbs: 		10,
 			water: 		10,
@@ -16,7 +17,7 @@ var all_available_buildings = {
 	},
 	furnace:{
 		image: 		'buildings/metallurgy-2932947_640.jpg',
-		//item_image: 'coal',
+		item_image: 'coal',
 		cost:{
 			stone: 		2,
 			coal: 		1,
@@ -37,9 +38,8 @@ var all_available_buildings = {
 		},
 	},
 	hunting_lodge:{
-		name: 		'Hunting lodge',
 		image: 		'buildings/dream_TradingCard-2025-04-18T155127.500.jpg',
-		//item_image: 'meat',
+		item_image: 'hide',
 		cost:{
 			lumber: 	3,
 			hide: 		4,
@@ -54,7 +54,7 @@ var all_available_buildings = {
 	},
 	pottery:{
 		image: 		'buildings/dream_TradingCard-2025-04-19T063316.434.jpg',
-		//item_image: 'meat',
+		item_image: 'clay',
 		cost:{
 			clay: 		10,
 		},
@@ -68,10 +68,10 @@ var all_available_buildings = {
 	},
 	kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
-		item_image: 'meat',
+		item_image: 'firewood',
 		cost:{
-			brick: 		2,
-			meat: 		1,
+			firewood: 	5,
+			meat: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -139,7 +139,7 @@ var all_available_buildings = {
 	},
 	stonesmith:{
 		image: 		'buildings/dream_TradingCard-2025-04-19T073259.134.jpg',
-		//item_image: 'copper_pot',
+		item_image: 'stone',
 		cost:{
 			stone: 		5,
 		},
@@ -153,7 +153,7 @@ var all_available_buildings = {
 	},
 	tailor_shop:{
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
-		//item_image: 'cloth',
+		item_image: 'twine',
 		cost:{
 			brick: 		2,
 			twine: 		1,
@@ -188,7 +188,7 @@ var all_available_buildings = {
 	well:{
 		//description: 	'Increases maximum energy by 2 each level.',
 		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
-		//item_image: 	'water',
+		item_image: 	'water',
 		//free_levels: 1,
 		cost:{
 			brick: 		2,
@@ -203,7 +203,7 @@ var all_available_buildings = {
 	},
 	wood_workshop:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
-		//item_image: 'lumber',
+		item_image: 'lumber',
 		cost:{
 			lumber: 	5,
 		},
@@ -213,7 +213,6 @@ var all_available_buildings = {
 		},
 		effect_type: 	'fixed',
 		recipes:{
-			firewood: 	1,
 			cane:  		1,
 			plank: 		1,
 			pole: 		1,

@@ -252,20 +252,36 @@ var all_available_recipes = {
 			alchemist: 	true,
 		}
 	},
+	explorer:{
+		cost:{
+			cane: 		1,
+			map: 		1,
+			peasant: 	1,
+		},
+		result:{
+			explorer: 	1
+		},
+		buildings:{
+			paper_mill: true,
+		}
+	},
 	firewood:{
 		cost:{
-			lumber: 1,
+			leaves: 	5,
 		},
 		result:{
 			firewood: 	5
+		},
+		buildings:{
+			wood_workshop: true,
 		}
 	},
 	firewood_reeds:{
 		cost:{
-			reeds: 10,
+			reeds: 5,
 		},
 		result:{
-			firewood: 	10
+			firewood: 	5
 		},
 		buildings:{
 			pottery: true,
@@ -289,6 +305,18 @@ var all_available_recipes = {
 		result:{
 			fries: 		1
 		},
+	},
+	gatherer:{
+		cost:{
+			basket: 	1,
+			peasant: 	1,
+		},
+		result:{
+			gatherer: 	1
+		},
+		buildings:{
+			warehouse: true,
+		}
 	},
 	glass:{
 		cost:{
