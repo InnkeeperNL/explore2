@@ -51,7 +51,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			twine: 		0.25,
+			twine: 		0.5,
 			cloth: 		0.1,
 			peasant: 	0.1,
 		}
@@ -185,15 +185,10 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
-/*			leaves:  	10,
-			firewood: 	10,
-			twine: 		10,
-			herbs: 		1,*/
 		},
 		final_loot:{
 			leaves:  	0.5,
 			firewood: 	1,
-			twine: 		0.2,
 			herbs: 		0.1,
 		}
 	},
@@ -498,7 +493,6 @@ var all_available_actions = {
 		},
 		action_loot:{
 			reeds: 		25,
-			twine: 		5,
 		},
 		final_loot:{
 			reeds: 		1,

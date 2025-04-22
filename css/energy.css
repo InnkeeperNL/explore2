@@ -139,7 +139,8 @@
 .farming_icon,
 .gathering_icon,
 .combat_icon,
-.max_energy_icon
+.max_energy_icon,
+.charm_iron
 {
 	display: inline-block;
 	width: 18px;
@@ -219,6 +220,11 @@
 .max_energy_icon
 {
 	background-image: url('../images/icons/electric-grey.svg');
+}
+
+.charm_iron
+{
+	background-image: url('../images/icons/charm-grey.svg');
 }
 
 .expeditions_cost_text,

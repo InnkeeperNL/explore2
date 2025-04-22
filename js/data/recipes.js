@@ -224,6 +224,19 @@ var all_available_recipes = {
 		},
 		//cost_factor: 2,
 	},
+	digger:{
+		cost:{
+			shovel: 	1,
+			peasant: 	1,
+			sand: 		10,
+		},
+		result:{
+			digger: 1
+		},
+		buildings:{
+			furnace: 	true,
+		}
+	},
 	endurance_potion:{
 		cost:{
 			firewood: 	10,
@@ -433,8 +446,9 @@ var all_available_recipes = {
 	},
 	miner:{
 		cost:{
-			stone_shovel: 	1,
+			pickaxe: 	1,
 			peasant: 	1,
+			stone: 		10,
 		},
 		result:{
 			miner: 1
@@ -619,19 +633,19 @@ var all_available_recipes = {
 			stonesmith: 	true,
 		}
 	},
-	stone_shovel:{
+	shovel:{
 		cost:{
 			stone:  	2,
 			pole: 		1,
 		},
 		result:{
-			stone_shovel: 	1
+			shovel: 	1
 		},
 		buildings:{
 			stonesmith: 	true,
 		}
 	},
-	stone:{
+	/*stone:{
 		cost:{
 			clay: 	5,
 		},
@@ -641,7 +655,7 @@ var all_available_recipes = {
 		buildings:{
 			//pottery: true,
 		}
-	},
+	},*/
 	trap:{
 		cost:{
 			firewood: 	2,

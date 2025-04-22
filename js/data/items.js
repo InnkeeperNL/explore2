@@ -150,6 +150,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
+	digger:{
+		image: 	'items/dream_TradingCard-2025-04-22T064745.409.jpg',
+		value: 	1,
+		effects:{
+			passive_sand: 	1,
+		},
+		effect_type: 		'fixed',
+	},
 	endurance_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T081303.873.jpg',
 		effects:{
@@ -283,8 +291,8 @@ var all_available_items = {
 		value: 	7,
 	},
 	peasant:{
-		image: 	'items/dream_TradingCard25.jpg',
-		value: 	50,
+		image: 	'items/dream_TradingCard-2025-04-22T063743.520.jpg',
+		value: 	25,
 	},
 	pickaxe:{
 		image: 	'items/pickaxe-5070026_640.jpg',
@@ -397,7 +405,7 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
-	stone_shovel:{
+	shovel:{
 		image: 	'items/dream_TradingCard-2025-04-20T092211.503.jpg',
 		effects:{
 			mining: 	1,
