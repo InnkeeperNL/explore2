@@ -151,6 +151,17 @@ var all_available_recipes = {
 			warehouse: true,
 		}
 	},
+	box_bone:{
+		cost:{
+			bone: 	15,
+		},
+		result:{
+			box: 	1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
 	bread:{
 		cost:{
 			firewood: 	1,

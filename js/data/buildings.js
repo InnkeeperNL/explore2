@@ -122,9 +122,9 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			travel_speed: 		5,
+			max_storage: 		5,
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{
 			paper: 		1,
 			parchment: 	2,
