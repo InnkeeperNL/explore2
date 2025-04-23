@@ -376,11 +376,11 @@ var all_available_actions = {
 		type: 					'resource',
 		subtypes: 				['hunting'],
 		min_action_amount: 		3,
-		max_action_amount: 		6,
+		max_action_amount: 		4,
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			1,
+				max: 			1.75,
 			}
 		},
 		energy_cost: 			6,
@@ -388,7 +388,6 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		1,
 			hide: 		2,
 		}
 	},
