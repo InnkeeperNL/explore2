@@ -37,6 +37,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
+			graveyard:{
+				min: 			1,
+				max: 			1,
+			},
 			mountain:{
 				min: 			1,
 				max: 			1,
@@ -180,7 +184,7 @@ var all_available_actions = {
 			river:{
 				min: 			1,
 				max: 			1,
-				chance: 		0.2,
+				chance: 		0.5,
 			},
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
@@ -388,6 +392,28 @@ var all_available_actions = {
 			hide: 		2,
 		}
 	},
+	grave:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		3,
+		max_action_amount: 		10,
+		locations:{
+			graveyard:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-23T065110.890.jpg',
+		action_loot:{
+			stone: 		10,
+		},
+		final_loot:{
+			bone: 		0.75,
+			stone: 		1,
+			skull: 		0.25
+		}
+	},
 	herbs:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
@@ -441,6 +467,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
+			graveyard:{
+				min: 			1,
+				max: 			1,
+			},
 			mountain:{
 				min: 			1,
 				max: 			1,
@@ -484,6 +514,10 @@ var all_available_actions = {
 		max_action_amount: 		1,
 		locations:{
 			cave:{
+				min: 			1,
+				max: 			1,
+			},
+			graveyard:{
 				min: 			1,
 				max: 			1,
 			},
@@ -565,6 +599,26 @@ var all_available_actions = {
 			sand: 		1,
 		}
 	},
+	skeleton:{
+		type: 					'resource',
+		subtypes: 				['combat'],
+		min_action_amount: 		3,
+		max_action_amount: 		6,
+		locations:{
+			graveyard:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-23T071532.379.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			bone: 		1,
+			skull: 		0.5
+		}
+	},
 	stream:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
@@ -609,6 +663,7 @@ var all_available_actions = {
 			river:{
 				min: 			1,
 				max: 			1,
+				chance: 		0.5,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',

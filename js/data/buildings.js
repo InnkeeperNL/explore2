@@ -15,6 +15,20 @@ var all_available_buildings = {
 		effect_type: 	'fixed',
 		recipes:{},
 	},
+	bone_workshop:{
+		image: 			'buildings/dream_TradingCard-2025-04-23T070722.467.jpg',
+		item_image: 	'bone',
+		cost:{
+			bone: 		2,
+			brick: 		2,
+		},
+		cost_factor: 	2,
+		effects:{
+			passive_bone: 	1 / all_available_items['bone']['value'],
+		},
+		effect_type: 	'fixed',
+		recipes:{},
+	},
 	furnace:{
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		item_image: 'coal',

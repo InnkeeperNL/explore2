@@ -19,6 +19,10 @@ var all_available_locations = {
 		image: 'locations/dream_TradingCard-2023-08-17T065727.jpg',
 		local_actions:{}
 	},
+	graveyard:{
+		image: 'locations/dream_TradingCard-2025-04-23T064243.621.jpg',
+		local_actions:{}
+	},
 	mountain:{
 		image: 'locations/dream_TradingCard-2023-08-17T070201.jpg',
 		local_actions:{},

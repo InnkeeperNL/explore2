@@ -65,6 +65,55 @@ var all_available_recipes = {
 		},
 		//cost_factor: 2,
 	},
+	bone_dagger:{
+		cost:{
+			bone: 		5,
+			stone: 		1,
+		},
+		result:{
+			bone_dagger: 		1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
+	bone_hammer:{
+		cost:{
+			bone: 		10,
+			skull: 		1,
+		},
+		result:{
+			bone_hammer: 		1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
+	bone_pickaxe:{
+		cost:{
+			bone: 		10,
+			lumber: 	2,
+		},
+		result:{
+			bone_pickaxe: 		1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
+	bone_sword:{
+		cost:{
+			bone: 		10,
+			hide: 		1,
+			stone: 		1,
+		},
+		result:{
+			bone_sword: 		1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
 	boot:{
 		cost:{
 			leather: 	4,
@@ -368,6 +417,19 @@ var all_available_recipes = {
 			paper_mill: true,
 		}
 	},
+	ink_bone:{
+		cost:{
+			bone: 		5,
+			jar: 		1,
+			water: 		5,
+		},
+		result:{
+			ink: 		2
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
 	ink_firewood:{
 		cost:{
 			firewood: 	2,
@@ -390,6 +452,7 @@ var all_available_recipes = {
 			iron: 		1
 		}
 	},
+
 	jar_clay:{
 		cost:{
 			firewood: 	1,
@@ -426,6 +489,17 @@ var all_available_recipes = {
 			//stonesmith: true,
 		}
 	},*/
+	jar_skull:{
+		cost:{
+			skull: 		1,
+		},
+		result:{
+			jar: 		1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
 	jar_wood:{
 		cost:{
 			lumber: 	4,

@@ -49,6 +49,43 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	25,
 	},
+	bone:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-23T065629.831.jpg',
+		value: 	3,
+	},
+	bone_dagger:{
+		image: 	'items/dream_TradingCard-2025-04-23T073116.990.jpg',
+		effects:{
+			combat: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	1,
+	},
+	bone_hammer:{
+		image: 	'items/dream_TradingCard-2025-04-23T072516.204.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	1,
+	},
+	bone_pickaxe:{
+		image: 	'items/dream_TradingCard-2025-04-23T073703.696.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	1,
+	},
+	bone_sword:{
+		image: 	'items/dream_TradingCard-2025-04-23T072133.192.jpg',
+		effects:{
+			combat: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	1,
+	},
 	boot:{
 		image: 	'items/dream_TradingCard-2025-04-17T152546.292.jpg',
 		effects:{
@@ -416,6 +453,11 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T061915.192.jpg',
 		value: 	1,
+	},
+	skull:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-23T070019.923.jpg',
+		value: 	16,
 	},
 	stone:{
 		type: 	'resource',
