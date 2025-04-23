@@ -227,12 +227,12 @@ var all_available_actions = {
 				max: 			4,
 			},
 			mountain:{
-				min: 			1,
-				max: 			1,
+				min: 			2,
+				max: 			4,
 			}
 		},
 		action_loot:{
-			coal: 		5,
+			coal: 		10,
 		},
 		final_loot:{
 			coal: 		1,
@@ -388,7 +388,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		2,
+			meat: 		1,
 			hide: 		2,
 		}
 	},
@@ -633,10 +633,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
-			mountain:{
+			/*mountain:{
 				min: 			1,
 				max: 			1,
-			},
+			},*/
 			river:{
 				min: 			1,
 				max: 			1,
@@ -685,10 +685,10 @@ var all_available_actions = {
 				min: 			2,
 				max: 			4,
 			},
-			mountain:{
+			/*mountain:{
 				min: 			1,
 				max: 			3,
-			}
+			}*/
 		},
 		image: 					'actions/dream_TradingCard-2025-04-19T075158.894.jpg',
 		action_loot:{
