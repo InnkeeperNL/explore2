@@ -37,6 +37,7 @@ var all_available_recipes = {
 	bag:{
 		cost:{
 			cloth: 		10,
+			leather: 	10,
 			twine: 		5,
 		},
 		result:{
@@ -105,9 +106,10 @@ var all_available_recipes = {
 	},
 	bone_sword:{
 		cost:{
-			bone: 		10,
-			hide: 		1,
-			stone: 		1,
+			bone: 		20,
+			hide: 		5,
+			stone: 		5,
+			twine: 		5,
 		},
 		result:{
 			bone_sword: 		1
@@ -118,7 +120,7 @@ var all_available_recipes = {
 	},
 	boot:{
 		cost:{
-			leather: 	4,
+			leather: 	10,
 			lumber: 	1,
 			twine: 		2,
 		},
@@ -133,7 +135,7 @@ var all_available_recipes = {
 		cost:{
 			pole: 		1,
 			twine: 		1,
-			arrow: 		5,
+			arrow: 		10,
 		},
 		result:{
 			bow: 		1
@@ -144,7 +146,7 @@ var all_available_recipes = {
 	},
 	box:{
 		cost:{
-			lumber: 	10,
+			lumber: 	20,
 		},
 		result:{
 			box: 	1
@@ -155,13 +157,26 @@ var all_available_recipes = {
 	},
 	box_bone:{
 		cost:{
-			bone: 	15,
+			bone: 	30,
 		},
 		result:{
 			box: 	1
 		},
 		buildings:{
 			bone_workshop: true,
+		}
+	},
+	box_clay:{
+		cost:{
+			firewood: 	1,
+			clay: 		4,
+			water: 		1,
+		},
+		result:{
+			box: 		1,
+		},
+		buildings:{
+			pottery: true,
 		}
 	},
 	bread:{
@@ -228,7 +243,7 @@ var all_available_recipes = {
 	},
 	cloak:{
 		cost:{
-			cloth: 	5,
+			cloth: 	10,
 			twine: 	5
 		},
 		result:{
@@ -269,7 +284,7 @@ var all_available_recipes = {
 	copper_pot:{
 		cost:{
 			copper: 	2,
-			coal: 		1,
+			coal: 		10,
 		},
 		result:{
 			copper_pot: 	1
@@ -734,8 +749,8 @@ var all_available_recipes = {
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 	2,
-			meat: 		2,
+			firewood: 	5,
+			meat: 		5,
 		},
 		result:{
 			roasted_meat: 1
@@ -743,7 +758,7 @@ var all_available_recipes = {
 	},
 	sack:{
 		cost:{
-			cloth: 		4,
+			cloth: 		5,
 			twine: 		2,
 		},
 		result:{
@@ -753,7 +768,7 @@ var all_available_recipes = {
 	},
 	stone_box:{
 		cost:{
-			stone: 	10,
+			stone: 	20,
 		},
 		result:{
 			box: 	1
@@ -774,6 +789,18 @@ var all_available_recipes = {
 			stonesmith: 	true,
 		}
 	},*/
+	shield:{
+		cost:{
+			plank:  	10,
+			nail: 		10,
+		},
+		result:{
+			shield: 	1
+		},
+		buildings:{
+			wood_workshop: 	true,
+		}
+	},
 	shovel:{
 		cost:{
 			stone:  	2,
@@ -820,6 +847,18 @@ var all_available_recipes = {
 		},
 		buildings:{
 			hunting_lodge: 	true,
+		}
+	},
+	trumpet:{
+		cost:{
+			copper: 	6,
+			coal: 		10,
+		},
+		result:{
+			trumpet: 	1
+		},
+		buildings:{
+			smithy: 	true,
 		}
 	},
 	twine_flax:{

@@ -440,7 +440,36 @@ function show_item_details(item_id){
 						total_bonus = Math.sqrt(gamedata['storage'][item_id]) * effect_amount;
 					}
 				}
-				item_details += bonus_text + ': ' + nFormatter(total_bonus,1) + bonus_type + '</br>';
+				var global_bonus = get_building_bonus(effect_id, 1);
+				if(effect_id == 'max_storage'){global_bonus = get_max_storage();}
+				if(effect_id == 'max_energy'){global_bonus = get_max_energy();}
+				if(effect_id == 'max_inventory'){global_bonus = get_inventory_size();}
+				var pre_global_bonus_text = '';
+				var global_bonus_text = '';
+				if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
+				{
+					global_bonus -= 1;
+					global_bonus_text = '/m';
+				}
+				if(bonus_type == '%' && effect_id != 'max_storage' && effect_id != 'max_energy')
+				{
+					if(global_bonus < 10)
+					{
+						global_bonus *= 100;
+						global_bonus_text = '%';
+					}
+					else
+					{
+						pre_global_bonus_text = 'x';
+					}
+				}
+				//if(bonus_type == '%'){global_bonus *= 100;}
+				item_details += bonus_text + ': ' + nFormatter(total_bonus,1) + bonus_type;
+				if(global_bonus != false)
+				{
+					item_details += ' (' + pre_global_bonus_text + nFormatter(global_bonus,1) + global_bonus_text + ')';
+				}
+				item_details += '</br>';
 			});
 		}
 		item_details += '</div></span>';

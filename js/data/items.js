@@ -277,7 +277,7 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-22T091827.520.jpg',
 		value: 	1,
 		effects:{
-			passive_hide: 	1,
+			passive_meat: 	1,
 		},
 		effect_type: 		'fixed',
 	},
@@ -365,7 +365,7 @@ var all_available_items = {
 		value: 	25,
 	},
 	pickaxe:{
-		image: 	'items/pickaxe-5070026_640.jpg',
+		image: 	'items/dream_TradingCard-2025-04-24T074225.943.jpg',
 		effects:{
 			mining: 	10,
 		},
@@ -454,6 +454,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-20T061915.192.jpg',
 		value: 	1,
 	},
+	shield:{
+		image: 	'items/dream_TradingCard-2025-04-24T074626.540.jpg',
+		effects:{
+			combat: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	18,
+	},
 	skull:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-23T070019.923.jpg',
@@ -492,9 +500,16 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-22T092243.852.jpg',
 		value: 	1,
 		effects:{
-			passive_meat: 	1,
+			passive_hide: 	1,
 		},
 		effect_type: 		'fixed',
+	},
+	trumpet:{
+		image: 	'items/dream_TradingCard-2025-04-24T080050.505.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
 	},
 	twine:{
 		type: 	'resource',

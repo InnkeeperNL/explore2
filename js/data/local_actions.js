@@ -104,7 +104,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			feather: 	1.5,
+			feather: 	2,
+			meat: 		0.6
 		}
 	},
 	boar:{
@@ -372,6 +373,25 @@ var all_available_actions = {
 			firewood: 	4
 		}
 	},
+	floating_skull:{
+		type: 					'resource',
+		subtypes: 				['combat'],
+		min_action_amount: 		3,
+		max_action_amount: 		4,
+		locations:{
+			graveyard:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-24T072258.187.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			skull: 		0.5
+		}
+	},
 	goat:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -596,6 +616,28 @@ var all_available_actions = {
 		},
 		final_loot:{
 			sand: 		1,
+		}
+	},
+	skeletal_warrior:{
+		type: 					'resource',
+		subtypes: 				['combat'],
+		min_action_amount: 		6,
+		max_action_amount: 		10,
+		locations:{
+			graveyard:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-24T075200.116.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			bone: 		1,
+			skull: 		0.5,
+			bone_sword: 0.1,
+			shield: 	0.1
 		}
 	},
 	skeleton:{

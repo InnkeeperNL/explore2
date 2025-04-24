@@ -84,8 +84,8 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		item_image: 'firewood',
 		cost:{
-			firewood: 	5,
-			meat: 		5,
+			firewood: 	10,
+			meat: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
