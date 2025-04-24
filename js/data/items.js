@@ -393,7 +393,7 @@ var all_available_items = {
 		value: 	10,
 	},
 	pole:{
-		image: 	'items/rods-53130_640.jpg',
+		image: 	'items/dream_TradingCard-2025-04-24T062428.026.jpg',
 		value: 	10,
 	},
 	potato:{

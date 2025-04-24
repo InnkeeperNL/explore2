@@ -13,8 +13,9 @@ var all_available_recipes = {
 	},
 	axe:{
 		cost:{
-			iron: 		3,
-			pole: 		1,
+			iron: 		5,
+			pole: 		3,
+			twine: 		3,
 		},
 		result:{
 			hatchet: 	1
@@ -79,7 +80,7 @@ var all_available_recipes = {
 	},
 	bone_hammer:{
 		cost:{
-			bone: 		10,
+			pole: 		5,
 			skull: 		1,
 		},
 		result:{
@@ -91,11 +92,12 @@ var all_available_recipes = {
 	},
 	bone_pickaxe:{
 		cost:{
-			bone: 		10,
-			lumber: 	2,
+			bone: 		40,
+			pole: 		5,
+			twine: 		5,
 		},
 		result:{
-			bone_pickaxe: 		1
+			pickaxe: 		1
 		},
 		buildings:{
 			bone_workshop: true,
@@ -282,7 +284,9 @@ var all_available_recipes = {
 		result:{
 			crate: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			warehouse: 	true,
+		}
 	},
 	digger:{
 		cost:{
@@ -635,8 +639,9 @@ var all_available_recipes = {
 	},
 	pickaxe:{
 		cost:{
-			iron: 		3,
-			pole: 		1,
+			iron: 		5,
+			pole: 		3,
+			twine: 		3,
 		},
 		result:{
 			pickaxe: 1
@@ -665,7 +670,6 @@ var all_available_recipes = {
 		cost:{
 			herbs:  	4,
 			jar: 		1,
-			water: 		10
 		},
 		result:{
 			poison: 	1
@@ -680,6 +684,17 @@ var all_available_recipes = {
 		},
 		result:{
 			pole: 		1
+		}
+	},
+	pole_bone:{
+		cost:{
+			bone: 		4,
+		},
+		result:{
+			pole: 		1
+		},
+		buildings:{
+			bone_workshop: 	true,
 		}
 	},
 	pouch:{
@@ -741,16 +756,16 @@ var all_available_recipes = {
 			stone: 	10,
 		},
 		result:{
-			stone_box: 	1
+			box: 	1
 		},
 		buildings:{
 			stonesmith: true,
 		}
 	},
-	stone_hatchet:{
+	/*stone_hatchet:{
 		cost:{
-			stone:  	2,
-			pole: 		1,
+			stone:  	20,
+			pole: 		10,
 		},
 		result:{
 			hatchet: 	1
@@ -758,7 +773,7 @@ var all_available_recipes = {
 		buildings:{
 			stonesmith: 	true,
 		}
-	},
+	},*/
 	shovel:{
 		cost:{
 			stone:  	2,

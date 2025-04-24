@@ -118,7 +118,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
 		cost:{
-			jar: 		1,
+			jar: 		2,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -192,7 +192,6 @@ var all_available_buildings = {
 		recipes:{
 			basket: 	1,
 			bucket: 	2,
-			crate: 		3,
 		},
 		effects:{
 			max_storage: 	5,
@@ -254,8 +253,14 @@ eachoa(all_available_buildings, function(building_id, building_info){
 	{
 		building_info['name'] = capitalizeFirstLetter(building_id.replaceAll('_',' '));
 	}
+	var building_value = 0;
 	eachoa(building_info['cost'], function(cost_id, cost_amount){
 		building_info['cost'][cost_id] = Math.ceil(cost_amount * building_cost_factor);
+		building_value += all_available_items[cost_id]['value'] * building_info['cost'][cost_id];
+	});
+	building_info['value'] = building_value;
+	eachoa(building_info['effects'], function(effect_id, effect_amount){
+		building_info['effects'][effect_id] *= building_value / 25;
 	});
 	eachoa(building_info['recipes'], function(recipe_id, recipe_level){
 		if(all_available_recipes[recipe_id] == undefined)
