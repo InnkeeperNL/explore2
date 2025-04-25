@@ -61,7 +61,7 @@ function show_inventory(){
 
 	eachoa(gamedata['inventory'], function(item_id, item_amount){
 		parsed_inventory += '<div class="inventory_line">';
-		parsed_inventory += 	parse_item(item_id, item_amount);
+		parsed_inventory += 	'<span onclick="show_item_details(\'' + item_id + '\')">' + parse_item(item_id, item_amount) + '</span>';
 		parsed_inventory += 	'<div class="trash_item_icon" onclick="delete_inventory_item(\'' + item_id + '\')"></div>';
 		if(all_available_items[item_id]['energy'] != undefined)
 		{

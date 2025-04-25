@@ -67,6 +67,17 @@ var all_available_recipes = {
 		},
 		//cost_factor: 2,
 	},
+	basket_reeds:{
+		cost:{
+			reeds: 	5,
+		},
+		result:{
+			basket: 	1
+		},
+		buildings:{
+			tailor_shop: true,
+		}
+	},
 	bone_dagger:{
 		cost:{
 			bone: 		5,
@@ -541,6 +552,30 @@ var all_available_recipes = {
 			wood_workshop: true,
 		}
 	},
+	knife:{
+		cost:{
+			iron: 		1,
+			twine: 		1,
+		},
+		result:{
+			knife: 		1
+		},
+		buildings:{
+			smithy: 	true,
+		}
+	},
+	copper_knife:{
+		cost:{
+			copper: 	1,
+			firewood: 	1,
+		},
+		result:{
+			copper_knife: 		1
+		},
+		buildings:{
+			smithy: 	true,
+		}
+	},
 	leather:{
 		cost:{
 			firewood: 	2,
@@ -641,6 +676,9 @@ var all_available_recipes = {
 		},
 		result:{
 			paper: 1
+		},
+		buildings:{
+			paper_mill: true,
 		}
 	},
 	parchment:{
@@ -650,6 +688,9 @@ var all_available_recipes = {
 		},
 		result:{
 			paper: 1
+		},
+		buildings:{
+			paper_mill: true,
 		}
 	},
 	pickaxe:{
@@ -874,7 +915,7 @@ var all_available_recipes = {
 	},
 	twine_reeds:{
 		cost:{
-			reeds: 		1,
+			reeds: 		4,
 		},
 		result:{
 			twine: 		1

@@ -10,17 +10,17 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_herbs: 	1 / all_available_items['herbs']['value'],
+			gathering: 	5,
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	bone_workshop:{
 		image: 			'buildings/dream_TradingCard-2025-04-23T070722.467.jpg',
 		item_image: 	'bone',
 		cost:{
-			bone: 		2,
-			brick: 		2,
+			bone: 		5,
+			brick: 		1,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -33,8 +33,8 @@ var all_available_buildings = {
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		item_image: 'coal',
 		cost:{
-			stone: 		2,
-			coal: 		1,
+			brick: 		1,
+			coal: 		5,
 		},
 		/*additional_costs:{
 			2:{
@@ -55,12 +55,12 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2025-04-18T155127.500.jpg',
 		item_image: 'hide',
 		cost:{
-			lumber: 	3,
-			hide: 		4,
+			lumber: 	5,
+			hide: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_hide: 	1 / all_available_items['hide']['value'],
+			hunting: 	5,
 		},
 		effect_type: 	'fixed',
 		recipes:{
@@ -118,7 +118,7 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
 		cost:{
-			jar: 		2,
+			jar: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
@@ -126,8 +126,6 @@ var all_available_buildings = {
 		},
 		effect_type: 	'fixed',
 		recipes:{
-			paper: 		1,
-			parchment: 	2,
 			map: 		1,
 		},
 	},
@@ -170,13 +168,13 @@ var all_available_buildings = {
 		item_image: 'twine',
 		cost:{
 			brick: 		2,
-			twine: 		1,
+			reeds: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_twine: 	1 / all_available_items['twine']['value'],
+			gathering: 	5,
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{
 			cloth: 		1,
 			sack: 		1,

@@ -26,8 +26,8 @@ var all_available_actions = {
 	bandit:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			cave:{
 				min: 			1,
@@ -55,9 +55,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			twine: 		0.75,
-			cloth: 		0.1,
-			peasant: 	0.1,
+			twine: 		2,
+			peasant: 	0.4,
 		}
 	},
 	bear:{
@@ -182,11 +181,11 @@ var all_available_actions = {
 				min: 			3,
 				max: 			10,
 			},
-			river:{
+			/*river:{
 				min: 			1,
 				max: 			1,
 				chance: 		0.5,
-			},
+			},*/
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
@@ -540,10 +539,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
-			river:{
+			/*river:{
 				min: 			1,
 				max: 			1,
-			}
+			}*/
 		},
 		energy_cost: 			5,
 		image: 					'actions/dream_TradingCard-2025-04-18T162051.177.jpg',
@@ -701,11 +700,11 @@ var all_available_actions = {
 				min: 			2,
 				max: 			4,
 			},
-			river:{
+/*			river:{
 				min: 			1,
 				max: 			1,
 				chance: 		0.5,
-			}
+			}*/
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
 		action_loot:{
@@ -749,10 +748,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
-			river:{
+/*			river:{
 				min: 			1,
 				max: 			1,
-			}
+			}*/
 		},
 		energy_cost: 			2,
 		image: 					'actions/dream_TradingCard-2023-08-26T072820.jpg',
