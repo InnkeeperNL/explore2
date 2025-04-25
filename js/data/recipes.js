@@ -859,7 +859,7 @@ var all_available_recipes = {
 	},
 	sack:{
 		cost:{
-			cloth: 		5,
+			cloth: 		4,
 			twine: 		2,
 		},
 		result:{

@@ -808,6 +808,28 @@ var all_available_actions = {
 			lumber: 	5
 		},
 	},
+	water_well:{
+		type: 					'resource',
+		subtypes: 				['woodcutting'],
+		min_action_amount: 		5,
+		max_action_amount: 		7,
+		locations:{
+			farm:{
+				min: 			1,
+				max: 			1,
+			},
+		},
+		energy_cost: 			2,
+		image: 					'buildings/dream_TradingCard-2025-04-25T080808.452.jpg',
+		action_loot:{
+			water: 		10,
+		},
+		final_loot:{
+			jar: 		0.5,
+			stone: 		0.5,
+			water: 		1,
+		},
+	},
 	
 }
 

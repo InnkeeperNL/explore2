@@ -145,8 +145,8 @@ var all_available_buildings = {
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
 		//item_image: 'twine',
 		cost:{
-			brick: 		2,
-			reeds: 		5,
+			brick: 		1,
+			reeds: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
