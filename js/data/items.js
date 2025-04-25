@@ -122,7 +122,7 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/carrot-1565597_640.jpg',
 		energy: 3,
-		value: 	3,
+		value: 	5,
 	},
 	clay:{
 		type: 	'resource',
@@ -207,7 +207,7 @@ var all_available_items = {
 	flax:{
 		type: 	'resource',
 		image: 	'items/nature-3082560_640.jpg',
-		value: 	2,
+		value: 	4,
 	},
 	flour:{
 		image: 	'items/dream_TradingCard-2023-05-20T094740.jpg',
@@ -524,7 +524,7 @@ var all_available_items = {
 	wheat:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-20T094127.jpg',
-		value: 	2,
+		value: 	3,
 	},
 	woodcutting_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T084103.345.jpg',

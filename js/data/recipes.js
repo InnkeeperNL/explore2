@@ -943,7 +943,7 @@ var all_available_recipes = {
 	},
 	twine_flax:{
 		cost:{
-			flax: 		2,
+			flax: 		1,
 		},
 		result:{
 			twine: 		1
