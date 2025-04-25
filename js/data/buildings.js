@@ -3,7 +3,7 @@ var all_available_buildings = {
 	
 	alchemist:{
 		image: 			'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
-		item_image: 	'herbs',
+		//item_image: 	'herbs',
 		cost:{
 			herbs: 		10,
 			water: 		10,
@@ -11,6 +11,19 @@ var all_available_buildings = {
 		cost_factor: 	2,
 		effects:{
 			gathering: 	5,
+		},
+		effect_type: 	'percent',
+		recipes:{},
+	},
+	armory:{
+		image: 			'buildings/dream_TradingCard-2025-04-25T075436.478.jpg',
+		//item_image: 	'herbs',
+		cost:{
+			pole: 		5,
+		},
+		cost_factor: 	2,
+		effects:{
+			combat: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{},
@@ -46,14 +59,11 @@ var all_available_buildings = {
 			passive_coal: 	1 / all_available_items['coal']['value'],
 		},
 		effect_type: 	'fixed',
-		recipes:{
-			copper: 	1,
-			iron: 		2,
-		},
+		recipes:{},
 	},
 	hunting_lodge:{
 		image: 		'buildings/dream_TradingCard-2025-04-18T155127.500.jpg',
-		item_image: 'hide',
+		//item_image: 'hide',
 		cost:{
 			lumber: 	5,
 			hide: 		5,
@@ -63,8 +73,7 @@ var all_available_buildings = {
 			hunting: 	5,
 		},
 		effect_type: 	'fixed',
-		recipes:{
-		},
+		recipes:{},
 	},
 	pottery:{
 		image: 		'buildings/dream_TradingCard-2025-04-19T063316.434.jpg',
@@ -77,57 +86,33 @@ var all_available_buildings = {
 			passive_clay: 	1 / all_available_items['clay']['value'],
 		},
 		effect_type: 	'fixed',
-		recipes:{
-		},
+		recipes:{},
 	},
 	kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
-		item_image: 'firewood',
+		//item_image: 'firewood',
 		cost:{
-			firewood: 	10,
-			meat: 		10,
+			meat: 		5,
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_firewood: 	1 / all_available_items['firewood']['value'],
-		},
-		effect_type: 	'fixed',
-		recipes:{
-			roasted_meat: 	1,
-			/*bread: 			2,
-			fries: 			2,*/
-		},
-	},
-	/*mill:{
-		image: 		'buildings/mill-1745186_640.jpg',
-		//item_image: 'flax',
-		cost:{
-			flax: 		10,
-		},
-		cost_factor: 	2,
-		effects:{
-			farming: 	10,
+			hunting: 	5,
 		},
 		effect_type: 	'percent',
-		recipes:{
-			twine: 		1,
-			flour: 		1,
-		},
-	},*/
+		recipes:{},
+	},
 	paper_mill:{
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
 		cost:{
-			jar: 		5,
+			jar: 		2,
 		},
 		cost_factor: 	2,
 		effects:{
 			max_storage: 		5,
 		},
 		effect_type: 	'fixed',
-		recipes:{
-			map: 		1,
-		},
+		recipes:{},
 	},
 	smithy:{
 		image: 		'buildings/horseshoe-1516273_640.jpg',
@@ -141,13 +126,7 @@ var all_available_buildings = {
 			mining: 	5,
 		},
 		effect_type: 	'percent',
-		recipes:{
-			copper_pot: 	1,
-			nail: 			2,
-			axe: 			2,
-			pickaxe: 		2,
-			//pitchfork: 		2,
-		},
+		recipes:{},
 	},
 	stonesmith:{
 		image: 		'buildings/dream_TradingCard-2025-04-19T073259.134.jpg',
@@ -160,12 +139,11 @@ var all_available_buildings = {
 			passive_stone: 	1 / all_available_items['stone']['value'],
 		},
 		effect_type: 	'fixed',
-		recipes:{
-		},
+		recipes:{},
 	},
 	tailor_shop:{
 		image: 		'buildings/dream_TradingCard-2023-06-03T065758.jpg',
-		item_image: 'twine',
+		//item_image: 'twine',
 		cost:{
 			brick: 		2,
 			reeds: 		5,
@@ -175,12 +153,9 @@ var all_available_buildings = {
 			gathering: 	5,
 		},
 		effect_type: 	'percent',
-		recipes:{
-			cloth: 		1,
-			sack: 		1,
-		},
+		recipes:{},
 	},
-	warehouse:{
+	/*warehouse:{
 		image: 		'buildings/dream_TradingCard-2023-08-17T141755.jpg',
 		//item_image: 'basket',
 		cost:{
@@ -195,10 +170,10 @@ var all_available_buildings = {
 			max_storage: 	5,
 		},
 		effect_type: 		'fixed',
-	},
+	},*/
 	well:{
 		//description: 	'Increases maximum energy by 2 each level.',
-		image: 			'buildings/dream_TradingCard-2023-08-18T085231.jpg',
+		image: 			'buildings/dream_TradingCard-2025-04-25T080808.452.jpg',
 		item_image: 	'water',
 		//free_levels: 1,
 		cost:{
@@ -223,12 +198,7 @@ var all_available_buildings = {
 			passive_lumber: 	1 / all_available_items['lumber']['value'],
 		},
 		effect_type: 	'fixed',
-		recipes:{
-			cane:  		1,
-			plank: 		1,
-			pole: 		1,
-			barrel: 	3,
-		},
+		recipes:{},
 	},
 	
 }
@@ -258,7 +228,7 @@ eachoa(all_available_buildings, function(building_id, building_info){
 	});
 	building_info['value'] = building_value;
 	eachoa(building_info['effects'], function(effect_id, effect_amount){
-		building_info['effects'][effect_id] *= building_value / 25;
+		building_info['effects'][effect_id] *= building_value / 50;
 	});
 	eachoa(building_info['recipes'], function(recipe_id, recipe_level){
 		if(all_available_recipes[recipe_id] == undefined)

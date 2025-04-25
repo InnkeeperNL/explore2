@@ -304,8 +304,8 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			5,
-				max: 			10
+				min: 			3,
+				max: 			6
 			}
 		},
 		action_loot:{
@@ -342,8 +342,8 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			5,
-				max: 			10
+				min: 			3,
+				max: 			6
 			}
 		},
 		action_loot:{
@@ -562,6 +562,11 @@ var all_available_actions = {
 				min: 			3,
 				max: 			6,
 			},
+			farm:{
+				min: 			1,
+				max: 			1,
+				chance: 		0.35
+			},
 		},
 		action_loot:{
 			reeds: 		25,
@@ -617,6 +622,26 @@ var all_available_actions = {
 			sand: 		1,
 		}
 	},
+	sheep:{
+		type: 					'resource',
+		subtypes: 				['hunting'],
+		min_action_amount: 		3,
+		max_action_amount: 		4,
+		locations:{
+			farm:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-25T082016.067.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			meat: 		1,
+			wool: 		1,
+		}
+	},
 	skeletal_warrior:{
 		type: 					'resource',
 		subtypes: 				['combat'],
@@ -635,7 +660,7 @@ var all_available_actions = {
 		final_loot:{
 			bone: 		1,
 			skull: 		0.5,
-			bone_sword: 0.1,
+			sword: 		0.1,
 			shield: 	0.1
 		}
 	},
@@ -659,6 +684,7 @@ var all_available_actions = {
 			skull: 		0.5
 		}
 	},
+	
 	stream:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
@@ -689,6 +715,26 @@ var all_available_actions = {
 		final_loot:{
 			water: 		4
 		},
+	},
+	stone_wall:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		5,
+		max_action_amount: 		10,
+		energy_cost: 			2,
+		image: 					'actions/dream_TradingCard-2025-04-25T081501.193.jpg',
+		locations:{
+			farm:{
+				min: 			1,
+				max: 			1,
+			},
+		},
+		action_loot:{
+			stone: 	1,
+		},
+		final_loot:{
+			stone: 	1
+		}
 	},
 	tree:{
 		type: 					'resource',

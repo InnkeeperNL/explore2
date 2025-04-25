@@ -20,12 +20,15 @@ var all_available_recipes = {
 		result:{
 			hatchet: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			smithy: true,
+		}
 	},
 	backpack:{
 		cost:{
-			iron: 		1,
-			leather: 	5,
+			iron: 		2,
+			leather: 	10,
+			twine: 		1,
 		},
 		result:{
 			backpack: 	1
@@ -56,7 +59,9 @@ var all_available_recipes = {
 		result:{
 			barrel: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			wood_workshop: true,
+		}
 	},
 	basket:{
 		cost:{
@@ -65,7 +70,9 @@ var all_available_recipes = {
 		result:{
 			basket: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			wood_workshop: true,
+		}
 	},
 	basket_reeds:{
 		cost:{
@@ -80,19 +87,19 @@ var all_available_recipes = {
 	},
 	bone_dagger:{
 		cost:{
-			bone: 		5,
-			stone: 		1,
+			bone: 		9,
+			stone: 		2,
 		},
 		result:{
-			bone_dagger: 		1
+			knife: 		1
 		},
 		buildings:{
-			bone_workshop: true,
+			armory: true,
 		}
 	},
 	bone_hammer:{
 		cost:{
-			pole: 		5,
+			pole: 		2,
 			skull: 		1,
 		},
 		result:{
@@ -115,18 +122,29 @@ var all_available_recipes = {
 			bone_workshop: true,
 		}
 	},
-	bone_sword:{
+	sword:{
 		cost:{
 			bone: 		20,
 			hide: 		5,
 			stone: 		5,
-			twine: 		5,
 		},
 		result:{
-			bone_sword: 		1
+			sword: 		1
 		},
 		buildings:{
-			bone_workshop: true,
+			armory: true,
+		}
+	},
+	sword_iron:{
+		cost:{
+			iron: 		2,
+			hide: 		1,
+		},
+		result:{
+			sword: 		1
+		},
+		buildings:{
+			armory: true,
 		}
 	},
 	boot:{
@@ -157,13 +175,13 @@ var all_available_recipes = {
 	},
 	box:{
 		cost:{
-			lumber: 	20,
+			plank: 	4,
 		},
 		result:{
 			box: 	1
 		},
 		buildings:{
-			warehouse: true,
+			wood_workshop: true,
 		}
 	},
 	box_bone:{
@@ -193,12 +211,15 @@ var all_available_recipes = {
 	bread:{
 		cost:{
 			firewood: 	1,
-			flour: 		4,
+			flour: 		1,
 			water: 		1,
 		},
 		result:{
 			bread: 		1
 		},
+		buildings:{
+			kitchen: true,
+		}
 	},
 	brick_clay:{
 		cost:{
@@ -242,7 +263,9 @@ var all_available_recipes = {
 		result:{
 			bucket: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			wood_workshop: true,
+		}
 	},
 	cane:{
 		cost:{
@@ -251,6 +274,9 @@ var all_available_recipes = {
 		result:{
 			cane: 	1
 		},
+		buildings:{
+			armory: true,
+		}
 	},
 	cloak:{
 		cost:{
@@ -271,6 +297,9 @@ var all_available_recipes = {
 		result:{
 			cloth: 		1
 		},
+		buildings:{
+			tailor_shop: true,
+		}
 	},
 	coal:{
 		cost:{
@@ -290,6 +319,9 @@ var all_available_recipes = {
 		},
 		result:{
 			copper: 	1
+		},
+		buildings:{
+			furnace: true,
 		}
 	},
 	copper_pot:{
@@ -300,7 +332,9 @@ var all_available_recipes = {
 		result:{
 			copper_pot: 	1
 		},
-		//cost_factor: 2,
+		buildings:{
+			smithy: true,
+		}
 	},
 	crate:{
 		cost:{
@@ -311,7 +345,7 @@ var all_available_recipes = {
 			crate: 	1
 		},
 		buildings:{
-			warehouse: 	true,
+			wood_workshop: 	true,
 		}
 	},
 	digger:{
@@ -374,17 +408,19 @@ var all_available_recipes = {
 			firewood: 	5
 		},
 		buildings:{
-			pottery: true,
+			tailor_shop: true,
 		}
 	},
 	flour:{
 		cost:{
-			stone: 		1,
-			wheat: 		4,
+			wheat: 		5,
 		},
 		result:{
 			flour: 		1
 		},
+		buildings:{
+			kitchen: true,
+		}
 	},
 	fries:{
 		cost:{
@@ -395,6 +431,9 @@ var all_available_recipes = {
 		result:{
 			fries: 		1
 		},
+		buildings:{
+			kitchen: true,
+		}
 	},
 	gatherer:{
 		cost:{
@@ -405,7 +444,7 @@ var all_available_recipes = {
 			gatherer: 	1
 		},
 		buildings:{
-			warehouse: true,
+			wood_workshop: true,
 		}
 	},
 	glass:{
@@ -429,7 +468,7 @@ var all_available_recipes = {
 			herbal_cane: 	1
 		},
 		buildings:{
-			wood_workshop: true,
+			alchemist: true,
 		}
 	},
 	hunter:{
@@ -491,9 +530,11 @@ var all_available_recipes = {
 		},
 		result:{
 			iron: 		1
+		},
+		buildings:{
+			smithy: true,
 		}
 	},
-
 	jar_clay:{
 		cost:{
 			firewood: 	1,
@@ -519,17 +560,6 @@ var all_available_recipes = {
 			furnace: true,
 		}
 	},
-	/*jar_stone:{
-		cost:{
-			stone: 		4,
-		},
-		result:{
-			jar: 		1
-		},
-		buildings:{
-			//stonesmith: true,
-		}
-	},*/
 	jar_skull:{
 		cost:{
 			skull: 		1,
@@ -552,7 +582,19 @@ var all_available_recipes = {
 			wood_workshop: true,
 		}
 	},
-	knife:{
+	knife_copper:{
+		cost:{
+			copper: 	1,
+			firewood: 	1,
+		},
+		result:{
+			knife: 		1
+		},
+		buildings:{
+			armory: 	true,
+		}
+	},
+	knife_iron:{
 		cost:{
 			iron: 		1,
 			twine: 		1,
@@ -561,19 +603,7 @@ var all_available_recipes = {
 			knife: 		1
 		},
 		buildings:{
-			smithy: 	true,
-		}
-	},
-	copper_knife:{
-		cost:{
-			copper: 	1,
-			firewood: 	1,
-		},
-		result:{
-			copper_knife: 		1
-		},
-		buildings:{
-			smithy: 	true,
+			armory: 	true,
 		}
 	},
 	leather:{
@@ -622,6 +652,9 @@ var all_available_recipes = {
 		},
 		result:{
 			map: 1
+		},
+		buildings:{
+			paper_mill: true,
 		}
 	},
 	miner:{
@@ -656,6 +689,9 @@ var all_available_recipes = {
 		},
 		result:{
 			nail: 		10
+		},
+		buildings:{
+			smithy: true,
 		}
 	},
 	nail_copper:{
@@ -702,7 +738,9 @@ var all_available_recipes = {
 		result:{
 			pickaxe: 1
 		},
-		//cost_factor: 2,
+		buildings:{
+			smithy: true,
+		}
 	},
 	pitchfork:{
 		cost:{
@@ -712,7 +750,9 @@ var all_available_recipes = {
 		result:{
 			pitchfork: 1
 		},
-		//cost_factor: 2,
+		buildings:{
+			smithy: true,
+		}
 	},
 	plank:{
 		cost:{
@@ -720,6 +760,9 @@ var all_available_recipes = {
 		},
 		result:{
 			plank: 		1
+		},
+		buildings:{
+			wood_workshop: true,
 		}
 	},
 	poison:{
@@ -740,9 +783,12 @@ var all_available_recipes = {
 		},
 		result:{
 			pole: 		1
+		},
+		buildings:{
+			wood_workshop: true,
 		}
 	},
-	pole_bone:{
+	/*pole_bone:{
 		cost:{
 			bone: 		4,
 		},
@@ -751,6 +797,17 @@ var all_available_recipes = {
 		},
 		buildings:{
 			bone_workshop: 	true,
+		}
+	},*/
+	pole_stone:{
+		cost:{
+			stone: 	2,
+		},
+		result:{
+			pole: 		1
+		},
+		buildings:{
+			stonesmith: 	true,
 		}
 	},
 	pouch:{
@@ -790,12 +847,15 @@ var all_available_recipes = {
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 	5,
-			meat: 		5,
+			firewood: 	4,
+			meat: 		4,
 		},
 		result:{
 			roasted_meat: 1
 		},
+		buildings:{
+			kitchen: true,
+		}
 	},
 	sack:{
 		cost:{
@@ -805,7 +865,9 @@ var all_available_recipes = {
 		result:{
 			sack: 		1
 		},
-		//cost_factor: 2,
+		buildings:{
+			tailor_shop: true,
+		}
 	},
 	stone_box:{
 		cost:{
@@ -818,28 +880,16 @@ var all_available_recipes = {
 			stonesmith: true,
 		}
 	},
-	/*stone_hatchet:{
-		cost:{
-			stone:  	20,
-			pole: 		10,
-		},
-		result:{
-			hatchet: 	1
-		},
-		buildings:{
-			stonesmith: 	true,
-		}
-	},*/
 	shield:{
 		cost:{
-			plank:  	10,
+			plank:  	8,
 			nail: 		10,
 		},
 		result:{
 			shield: 	1
 		},
 		buildings:{
-			wood_workshop: 	true,
+			armory: 	true,
 		}
 	},
 	shovel:{
@@ -854,17 +904,6 @@ var all_available_recipes = {
 			stonesmith: 	true,
 		}
 	},
-	/*stone:{
-		cost:{
-			clay: 	5,
-		},
-		result:{
-			stone: 	3
-		},
-		buildings:{
-			//pottery: true,
-		}
-	},*/
 	trap:{
 		cost:{
 			firewood: 	2,
@@ -910,7 +949,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			//tailor_shop: true,
+			tailor_shop: true,
 		}
 	},
 	twine_reeds:{
@@ -919,6 +958,17 @@ var all_available_recipes = {
 		},
 		result:{
 			twine: 		1
+		},
+		buildings:{
+			tailor_shop: true,
+		}
+	},
+	twine_wool:{
+		cost:{
+			wool: 		4,
+		},
+		result:{
+			twine: 		3
 		},
 		buildings:{
 			tailor_shop: true,

@@ -54,14 +54,6 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-23T065629.831.jpg',
 		value: 	3,
 	},
-	bone_dagger:{
-		image: 	'items/dream_TradingCard-2025-04-23T073116.990.jpg',
-		effects:{
-			combat: 	1,
-		},
-		effect_type: 		'percent',
-		value: 	1,
-	},
 	bone_hammer:{
 		image: 	'items/dream_TradingCard-2025-04-23T072516.204.jpg',
 		effects:{
@@ -74,14 +66,6 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-23T073703.696.jpg',
 		effects:{
 			mining: 	1,
-		},
-		effect_type: 		'percent',
-		value: 	1,
-	},
-	bone_sword:{
-		image: 	'items/dream_TradingCard-2025-04-23T072133.192.jpg',
-		effects:{
-			combat: 	1,
 		},
 		effect_type: 		'percent',
 		value: 	1,
@@ -165,14 +149,6 @@ var all_available_items = {
 	copper:{
 		image: 	'items/dream_TradingCard-2023-06-03T065335.jpg',
 		value: 	5,
-	},
-	copper_knife:{
-		image: 	'items/dream_TradingCard-2025-04-25T070648.593.jpg',
-		effects:{
-			combat: 	1,
-		},
-		effect_type: 		'percent',
-		value: 	1,
 	},
 	copper_ore:{
 		type: 	'resource',
@@ -504,6 +480,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
+	sword:{
+		image: 	'items/dream_TradingCard-2025-04-23T072133.192.jpg',
+		effects:{
+			combat: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	1,
+	},
 	trap:{
 		image: 	'items/dream_TradingCard-2025-04-18T154805.392.jpg',
 		effects:{
@@ -557,6 +541,12 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	33,
 	},
+	wool:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-25T082510.703.jpg',
+		value: 	3,
+	},
+	
 	
 };
 
