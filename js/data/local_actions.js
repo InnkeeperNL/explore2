@@ -814,7 +814,7 @@ var all_available_actions = {
 	},
 	water_well:{
 		type: 					'resource',
-		subtypes: 				['woodcutting'],
+		subtypes: 				['gathering'],
 		min_action_amount: 		5,
 		max_action_amount: 		7,
 		locations:{
