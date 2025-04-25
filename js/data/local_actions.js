@@ -639,7 +639,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			meat: 		1,
-			wool: 		1,
+			wool: 		1.25,
 		}
 	},
 	skeletal_warrior:{

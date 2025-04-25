@@ -544,7 +544,7 @@ var all_available_items = {
 	wool:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-25T082510.703.jpg',
-		value: 	3,
+		value: 	2,
 	},
 	
 	

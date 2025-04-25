@@ -402,10 +402,10 @@ var all_available_recipes = {
 	},
 	firewood_reeds:{
 		cost:{
-			reeds: 5,
+			reeds: 3,
 		},
 		result:{
-			firewood: 	5
+			firewood: 	3
 		},
 		buildings:{
 			tailor_shop: true,
@@ -965,10 +965,10 @@ var all_available_recipes = {
 	},
 	twine_wool:{
 		cost:{
-			wool: 		4,
+			wool: 		2,
 		},
 		result:{
-			twine: 		3
+			twine: 		1
 		},
 		buildings:{
 			tailor_shop: true,
