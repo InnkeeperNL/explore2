@@ -177,6 +177,10 @@ var all_available_actions = {
 		min_action_amount: 		1,
 		max_action_amount: 		1,
 		locations:{
+			farm:{
+				min: 			1,
+				max: 			3,
+			},
 			forest:{
 				min: 			3,
 				max: 			10,
@@ -191,9 +195,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			leaves:  	0.5,
+			//leaves:  	0.5,
 			firewood: 	1,
-			herbs: 		0.1,
+			//herbs: 		0.1,
 		}
 	},
 	clay:{

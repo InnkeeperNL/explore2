@@ -402,13 +402,13 @@ var all_available_recipes = {
 	},
 	firewood_reeds:{
 		cost:{
-			reeds: 3,
+			reeds: 5,
 		},
 		result:{
-			firewood: 	3
+			firewood: 	5
 		},
 		buildings:{
-			tailor_shop: true,
+			pottery: true,
 		}
 	},
 	flour:{
@@ -847,8 +847,8 @@ var all_available_recipes = {
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 	4,
-			meat: 		4,
+			firewood: 	2,
+			meat: 		2,
 		},
 		result:{
 			roasted_meat: 1
