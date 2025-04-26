@@ -196,6 +196,27 @@ var all_available_actions = {
 			//herbs: 		0.1,
 		}
 	},
+	chicken:{
+		type: 					'resource',
+		subtypes: 				['hunting'],
+		min_action_amount: 		1,
+		max_action_amount: 		1,
+		locations:{
+			farm:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-26T081917.774.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			meat: 		0.75,
+			feather: 	2,
+			egg: 		1,
+		}
+	},
 	clay:{
 		type: 					'resource',
 		subtypes: 				['mining'],
@@ -281,7 +302,7 @@ var all_available_actions = {
 		type: 					'resource',
 		subtypes: 				['farming'],
 		min_action_amount: 		3,
-		max_action_amount: 		6,
+		max_action_amount: 		4,
 		energy_cost: 			6,
 		locations:{
 			farm:{
@@ -300,7 +321,7 @@ var all_available_actions = {
 		type: 					'resource',
 		subtypes: 				['farming'],
 		min_action_amount: 		3,
-		max_action_amount: 		6,
+		max_action_amount: 		4,
 		energy_cost: 			6,
 		locations:{
 			farm:{
@@ -319,7 +340,7 @@ var all_available_actions = {
 		type: 					'resource',
 		subtypes: 				['farming'],
 		min_action_amount: 		3,
-		max_action_amount: 		6,
+		max_action_amount: 		4,
 		energy_cost: 			6,
 		locations:{
 			farm:{
@@ -334,11 +355,30 @@ var all_available_actions = {
 			potato: 	1,
 		}
 	},
+	field_sugar_beet:{
+		type: 					'resource',
+		subtypes: 				['farming'],
+		min_action_amount: 		3,
+		max_action_amount: 		4,
+		energy_cost: 			6,
+		locations:{
+			farm:{
+				min: 			3,
+				max: 			6
+			}
+		},
+		action_loot:{
+			sugar_beet: 		10,
+		},
+		final_loot:{
+			sugar_beet: 		1,
+		}
+	},
 	field_wheat:{
 		type: 					'resource',
 		subtypes: 				['farming'],
 		min_action_amount: 		3,
-		max_action_amount: 		6,
+		max_action_amount: 		4,
 		energy_cost: 			6,
 		locations:{
 			farm:{
@@ -565,7 +605,7 @@ var all_available_actions = {
 			farm:{
 				min: 			1,
 				max: 			1,
-				chance: 		0.35
+				chance: 		0.25
 			},
 		},
 		action_loot:{
@@ -825,9 +865,8 @@ var all_available_actions = {
 			water: 		10,
 		},
 		final_loot:{
-			jar: 		0.5,
-			stone: 		0.5,
-			water: 		1,
+			jar: 		1,
+			water: 		5,
 		},
 	},
 	

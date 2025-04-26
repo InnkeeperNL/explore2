@@ -278,6 +278,33 @@ var all_available_recipes = {
 			armory: true,
 		}
 	},
+	candy:{
+		cost:{
+			firewood: 	1,
+			sugar: 		5,
+		},
+		result:{
+			candy: 1
+		},
+		buildings:{
+			kitchen: true,
+		}
+	},
+	carrot_cake:{
+		cost:{
+			carrot: 	5,
+			egg: 		2,
+			firewood: 	2,
+			flour: 		4,
+			sugar: 		2,
+		},
+		result:{
+			carrot_cake: 1
+		},
+		buildings:{
+			kitchen: true,
+		}
+	},
 	cloak:{
 		cost:{
 			cloth: 	10,
@@ -705,6 +732,18 @@ var all_available_recipes = {
 			smithy: true,
 		}
 	},
+	omelette:{
+		cost:{
+			firewood: 	2,
+			egg: 		5,
+		},
+		result:{
+			omelette: 1
+		},
+		buildings:{
+			kitchen: true,
+		}
+	},
 	paper:{
 		cost:{
 			firewood: 	4,
@@ -857,6 +896,18 @@ var all_available_recipes = {
 			kitchen: true,
 		}
 	},
+	roasted_potato:{
+		cost:{
+			firewood: 	3,
+			potato: 	3,
+		},
+		result:{
+			roasted_potato: 1
+		},
+		buildings:{
+			kitchen: true,
+		}
+	},
 	sack:{
 		cost:{
 			cloth: 		4,
@@ -902,6 +953,17 @@ var all_available_recipes = {
 		},
 		buildings:{
 			stonesmith: 	true,
+		}
+	},
+	sugar:{
+		cost:{
+			sugar_beet: 3,
+		},
+		result:{
+			sugar: 		1
+		},
+		buildings:{
+			kitchen: true,
 		}
 	},
 	trap:{

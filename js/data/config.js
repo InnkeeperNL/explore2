@@ -13,7 +13,7 @@ var expeditions_per_tick_base = 1 / 60;
 
 
 // ITEMS
-var energy_per_value 		= 0.2;
+var energy_per_value 		= 0.5;
 var effects_per_value 		= {
 	max_energy: 	1,
 	max_inventory: 	1,

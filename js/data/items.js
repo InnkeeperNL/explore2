@@ -118,11 +118,21 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	25,
 	},
+	candy:{
+		image: 	'items/dream_TradingCard-2025-04-26T084333.992.jpg',
+		energy: 3,
+		value: 	5,
+	},
 	carrot:{
 		type: 	'resource',
 		image: 	'items/carrot-1565597_640.jpg',
 		energy: 3,
 		value: 	5,
+	},
+	carrot_cake:{
+		image: 	'items/dream_TradingCard-2025-04-26T081554.856.jpg',
+		energy: 1,
+		value: 	1,
 	},
 	clay:{
 		type: 	'resource',
@@ -178,6 +188,11 @@ var all_available_items = {
 			passive_sand: 	1,
 		},
 		effect_type: 		'fixed',
+	},
+	egg:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-26T082354.335.jpg',
+		value: 	2,
 	},
 	endurance_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T081303.873.jpg',
@@ -348,6 +363,11 @@ var all_available_items = {
 		image: 	'items/nails-4168539_640.jpg',
 		value: 	16,
 	},
+	omelette:{
+		image: 	'items/dream_TradingCard-2025-04-26T084649.438.jpg',
+		energy: 3,
+		value: 	5,
+	},
 	paper:{
 		image: 	'items/dream_TradingCard-2023-08-20T070748.jpg',
 		value: 	7,
@@ -428,6 +448,11 @@ var all_available_items = {
 		energy: 1,
 		value: 	1,
 	},
+	roasted_potato:{
+		image: 	'items/dream_TradingCard-2025-04-26T081234.455.jpg',
+		energy: 1,
+		value: 	1,
+	},
 	sack:{
 		image: 	'items/dream_TradingCard-2023-08-26T074414.jpg',
 		effects:{
@@ -454,6 +479,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	18,
 	},
+	shovel:{
+		image: 	'items/dream_TradingCard-2025-04-20T092211.503.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
 	skull:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-23T070019.923.jpg',
@@ -472,13 +505,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	5,
 	},
-	shovel:{
-		image: 	'items/dream_TradingCard-2025-04-20T092211.503.jpg',
-		effects:{
-			mining: 	1,
-		},
-		effect_type: 		'percent',
-		value: 	5,
+	sugar:{
+		image: 	'items/dream_TradingCard-2025-04-26T083329.129.jpg',
+		value: 	3,
+	},
+	sugar_beet:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-26T082947.235.jpg',
+		value: 	3,
 	},
 	sword:{
 		image: 	'items/dream_TradingCard-2025-04-23T072133.192.jpg',
