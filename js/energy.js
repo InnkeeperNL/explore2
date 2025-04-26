@@ -22,6 +22,14 @@ function update_energy(){
 	class_html('max_energy', Math.floor(max_energy));
 	var energy_percent = (gamedata['energy'] / max_energy) * 100;
 	class_style('energy_bar','width',energy_percent + '%');
+	if(gamedata['energy'] < 1)
+	{
+		class_add_class('current_location_button', 'danger');
+	}
+	else
+	{
+		class_remove_class('current_location_button', 'danger');
+	}
 }
 
 function check_energy_gain(){

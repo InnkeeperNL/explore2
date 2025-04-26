@@ -278,6 +278,27 @@ var all_available_actions = {
 			copper_ore: 	2,
 		}
 	},
+	cow:{
+		type: 					'resource',
+		subtypes: 				['hunting'],
+		min_action_amount: 		3,
+		max_action_amount: 		4,
+		locations:{
+			farm:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/dream_TradingCard-2025-04-26T092544.006.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			meat: 		2,
+			hide: 		2,
+			milk: 		4,
+		}
+	},
 	deer:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -415,8 +436,8 @@ var all_available_actions = {
 	floating_skull:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		3,
-		max_action_amount: 		4,
+		min_action_amount: 		6,
+		max_action_amount: 		8,
 		locations:{
 			graveyard:{
 				min: 			1,
@@ -428,7 +449,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			skull: 		0.5
+			skull: 		1
 		}
 	},
 	goat:{

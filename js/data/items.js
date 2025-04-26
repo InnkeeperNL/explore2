@@ -49,6 +49,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	25,
 	},
+	bed:{
+		image: 	'items/dream_TradingCard-2025-04-26T094254.199.jpg',
+		effects:{
+			max_energy: 	10,
+		},
+		effect_type: 		'percent',
+		value: 	33,
+	},
 	bone:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-23T065629.831.jpg',
@@ -133,6 +141,11 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-26T081554.856.jpg',
 		energy: 1,
 		value: 	1,
+	},
+	cheese:{
+		image: 	'items/dream_TradingCard-2025-04-26T093016.108.jpg',
+		energy: 3,
+		value: 	3,
 	},
 	clay:{
 		type: 	'resource',
@@ -246,6 +259,11 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
 		value: 	5,
 	},
+	hamburger:{
+		image: 	'items/dream_TradingCard-2025-04-26T093546.570.jpg',
+		energy: 3,
+		value: 	3,
+	},
 	hatchet:{
 		image: 	'items/dream_TradingCard-2025-04-20T092037.855.jpg',
 		effects:{
@@ -344,6 +362,12 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-08-24T112300.jpg',
 		value: 	3,
 	},
+	milk:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-26T092723.275.jpg',
+		energy: 3,
+		value: 	3,
+	},
 	miner:{
 		image: 	'items/dream_TradingCard-2025-04-21T094646.422.jpg',
 		value: 	1,
@@ -380,6 +404,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-24T074225.943.jpg',
 		effects:{
 			mining: 	10,
+		},
+		effect_type: 		'percent',
+		value: 	33,
+	},
+	pillow:{
+		image: 	'items/dream_TradingCard-2025-04-26T094002.777.jpg',
+		effects:{
+			max_energy: 	10,
 		},
 		effect_type: 		'percent',
 		value: 	33,

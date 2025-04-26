@@ -36,6 +36,7 @@ function show_building(){
 			var parsed_recipes_title = false;
 			var lowest_recipe_value = false;
 			var shown_recipe_count = 0;
+			var to_low_for_recipe_count = 0;
 			eachoa(building_info['recipes'], function(recipe_id, recipe_level){
 				var know_cost = true;
 				eachoa(all_available_recipes[recipe_id]['cost'], function(cost_id, cost_amount){
@@ -63,6 +64,10 @@ function show_building(){
 					{
 						lowest_recipe_value = all_available_recipes[recipe_id]['value'];
 					}
+					else
+					{
+						to_low_for_recipe_count += 1;
+					}
 				}
 			});
 			/*if(building_level > 0 && count_object(building_info['recipes']) > 0 && parsed_recipes_title == false && lowest_recipe_value > 0)
@@ -80,6 +85,10 @@ function show_building(){
 					}
 				});
 			};*/
+			if(to_low_for_recipe_count > 0)
+			{
+				parsed_building += '<br/><br/>Upgrade for more possible recipes.<br/>';
+			}
 			parsed_building += '<div class="breaker"></div>';
 		}
 

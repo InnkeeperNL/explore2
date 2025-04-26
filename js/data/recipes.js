@@ -85,6 +85,19 @@ var all_available_recipes = {
 			tailor_shop: true,
 		}
 	},
+	bed:{
+		cost:{
+			nail: 		10,
+			pillow: 	2,
+			plank: 		10,
+		},
+		result:{
+			bed: 1
+		},
+		buildings:{
+			wood_workshop: true,
+		}
+	},
 	bone_dagger:{
 		cost:{
 			bone: 		9,
@@ -120,31 +133,6 @@ var all_available_recipes = {
 		},
 		buildings:{
 			bone_workshop: true,
-		}
-	},
-	sword:{
-		cost:{
-			bone: 		20,
-			hide: 		5,
-			stone: 		5,
-		},
-		result:{
-			sword: 		1
-		},
-		buildings:{
-			armory: true,
-		}
-	},
-	sword_iron:{
-		cost:{
-			iron: 		2,
-			hide: 		1,
-		},
-		result:{
-			sword: 		1
-		},
-		buildings:{
-			armory: true,
 		}
 	},
 	boot:{
@@ -300,6 +288,18 @@ var all_available_recipes = {
 		},
 		result:{
 			carrot_cake: 1
+		},
+		buildings:{
+			kitchen: true,
+		}
+	},
+	cheese:{
+		cost:{
+			milk: 		10,
+			salt: 		1,
+		},
+		result:{
+			cheese: 1
 		},
 		buildings:{
 			kitchen: true,
@@ -484,6 +484,19 @@ var all_available_recipes = {
 		},
 		buildings:{
 			furnace: true,
+		}
+	},
+	hamburger:{
+		cost:{
+			bread: 			2,
+			roasted_meat: 	5,
+			cheese: 		1,
+		},
+		result:{
+			hamburger: 		1
+		},
+		buildings:{
+			kitchen: true,
 		}
 	},
 	herbal_cane:{
@@ -781,6 +794,18 @@ var all_available_recipes = {
 			smithy: true,
 		}
 	},
+	pillow:{
+		cost:{
+			cloth: 		2,
+			feather: 	10,
+		},
+		result:{
+			pillow: 1
+		},
+		buildings:{
+			tailor_shop: true,
+		}
+	},
 	pitchfork:{
 		cost:{
 			iron: 		2,
@@ -964,6 +989,31 @@ var all_available_recipes = {
 		},
 		buildings:{
 			kitchen: true,
+		}
+	},
+	sword:{
+		cost:{
+			bone: 		20,
+			hide: 		5,
+			stone: 		5,
+		},
+		result:{
+			sword: 		1
+		},
+		buildings:{
+			armory: true,
+		}
+	},
+	sword_iron:{
+		cost:{
+			iron: 		2,
+			hide: 		1,
+		},
+		result:{
+			sword: 		1
+		},
+		buildings:{
+			armory: true,
 		}
 	},
 	trap:{
