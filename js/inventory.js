@@ -397,6 +397,16 @@ function gain_all_items(amount){
 	});
 }
 
+function gain_all_resources(amount){
+	if(amount == undefined){amount = 1;}
+	eachoa(all_available_items, function(item_id, item_info){
+		if(item_info['type'] != undefined && item_info['type'] == 'resource')
+		{
+			gamedata['storage'][item_id] = amount;
+		}
+	});
+}
+
 function show_item_details(item_id){
 	if(all_available_items[item_id] != undefined)
 	{

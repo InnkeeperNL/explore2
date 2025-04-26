@@ -3,7 +3,7 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T080707.jpg',
 		energy: 3,
-		value: 	3,
+		value: 	6,
 	},
 	arrow:{
 		image: 	'items/arrows-4082046_640.jpg',

@@ -222,12 +222,16 @@ function parse_building_effect(building_id){
 
 	if(building_info['effects']['max_storage'] != undefined)
 	{
-		parsed_building_effect += 'Maximum storage stack size: ' + get_max_storage() + '<br/>';
+		var local_storage = '';
+		if(building_info['effect_type'] == 'fixed'){local_storage = '(+' + nFormatter(building_info['effects']['max_storage'],0) + ')';}
+		parsed_building_effect += 'Maximum storage: ' + get_max_storage() + ' ' + local_storage + '<br/>';
 	}
 	eachoa(all_skills, function(skill_id, skill_available){
 		if(building_info['effects'][skill_id] != undefined)
 		{
-			parsed_building_effect += capitalizeFirstLetter(skill_id.replaceAll('_',' ')) + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '%<br/>';
+			var local_effect = '';
+			if(building_info['effect_type'] == 'percent'){local_effect = '(+' + nFormatter(building_info['effects'][skill_id],0) + ')';}
+			parsed_building_effect += capitalizeFirstLetter(skill_id.replaceAll('_',' ')) + ': ' + nFormatter(get_building_bonus(skill_id, 100),0) + '% ' + local_effect + '<br/>';
 		}
 	});
 	eachoa(building_info['effects'], function(effect_id, effect_amount){
@@ -235,9 +239,11 @@ function parse_building_effect(building_id){
 		if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
 		{
 			var passive_item_id = effect_id.replaceAll('passive_','');
+			var local_effect = '';
+			if(building_info['effect_type'] == 'fixed'){local_effect = '(+' + nFormatter(building_info['effects'][effect_id],1) + ')';}
 			if(all_available_items[passive_item_id] != undefined)
 			{
-				parsed_building_effect += 'Production: ' + nFormatter(effect_amount * building_level,1) + ' ' + capitalizeFirstLetter(all_available_items[passive_item_id]['name']) + '/m';
+				parsed_building_effect += 'Production: ' + nFormatter(effect_amount * building_level,1) + ' ' + capitalizeFirstLetter(all_available_items[passive_item_id]['name']) + '/m ' + local_effect + '<br/>';
 			}
 		}
 	});

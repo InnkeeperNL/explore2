@@ -3,7 +3,7 @@ var all_available_actions = {
 	apple_tree:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
-		min_action_amount: 		2,
+		min_action_amount: 		3,
 		max_action_amount: 		4,
 		image: 					'actions/dream_TradingCard-2023-08-18T081111.jpg',
 		locations:{
@@ -14,13 +14,9 @@ var all_available_actions = {
 		},
 		action_loot:{
 			apple: 		10,
-			firewood: 	10,
-			leaves: 	10
 		},
 		final_loot:{
-			apple: 		2,
-			lumber: 	1,
-			firewood: 	1,
+			apple: 		1,
 		}
 	},
 	bandit:{
@@ -110,8 +106,8 @@ var all_available_actions = {
 	boar:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
-		min_action_amount: 		4,
-		max_action_amount: 		6,
+		min_action_amount: 		3,
+		max_action_amount: 		5,
 		locations:{
 			forest:{
 				min: 			1,
@@ -123,8 +119,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		4,
-			hide: 		2,
+			meat: 		2,
+			hide: 		4,
 		}
 	},
 	boulder:{
@@ -182,8 +178,8 @@ var all_available_actions = {
 				max: 			3,
 			},
 			forest:{
-				min: 			3,
-				max: 			10,
+				min: 			1,
+				max: 			3,
 			},
 			/*river:{
 				min: 			1,
@@ -265,7 +261,7 @@ var all_available_actions = {
 		type: 					'resource',
 		subtypes: 				['hunting'],
 		min_action_amount: 		3,
-		max_action_amount: 		6,
+		max_action_amount: 		5,
 		locations:{
 			forest:{
 				min: 			1,
@@ -277,8 +273,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		4,
-			meat: 		2,
+			hide: 		2,
+			meat: 		4,
 		}
 	},
 	field_carrot:{
@@ -439,12 +435,12 @@ var all_available_actions = {
 	herbs:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		2,
-		max_action_amount: 		5,
+		min_action_amount: 		5,
+		max_action_amount: 		8,
 		locations:{
 			forest:{
 				min: 			1,
-				max: 			1,
+				max: 			2,
 			}
 		},
 		energy_cost: 			5,
@@ -452,7 +448,7 @@ var all_available_actions = {
 			herbs: 		10,
 		},
 		final_loot:{
-			herbs: 		1,
+			herbs: 		2,
 		}
 	},
 	iron_ore:{
@@ -649,7 +645,7 @@ var all_available_actions = {
 	skeletal_warrior:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		6,
+		min_action_amount: 		9,
 		max_action_amount: 		10,
 		locations:{
 			graveyard:{
@@ -664,8 +660,8 @@ var all_available_actions = {
 		final_loot:{
 			bone: 		1,
 			skull: 		0.5,
-			sword: 		0.1,
-			shield: 	0.1
+			sword: 		0.2,
+			shield: 	0.2
 		}
 	},
 	skeleton:{

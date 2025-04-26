@@ -532,7 +532,7 @@ var all_available_recipes = {
 			iron: 		1
 		},
 		buildings:{
-			smithy: true,
+			furnace: true,
 		}
 	},
 	jar_clay:{
