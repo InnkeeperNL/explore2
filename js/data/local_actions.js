@@ -862,11 +862,11 @@ var all_available_actions = {
 		energy_cost: 			2,
 		image: 					'buildings/dream_TradingCard-2025-04-25T080808.452.jpg',
 		action_loot:{
-			water: 		10,
+			water: 		25,
 		},
 		final_loot:{
 			jar: 		1,
-			water: 		5,
+			water: 		1,
 		},
 	},
 	
