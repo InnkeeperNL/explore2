@@ -72,7 +72,7 @@ var all_available_buildings = {
 		effects:{
 			hunting: 	5,
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	pottery:{
