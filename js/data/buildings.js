@@ -122,7 +122,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			farming: 		5,
+			gathering: 		5,
 		},
 		effect_type: 	'percent',
 		recipes:{},
