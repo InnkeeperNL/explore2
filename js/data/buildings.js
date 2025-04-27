@@ -96,7 +96,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			hunting: 	5,
+			farming: 	5,
 		},
 		effect_type: 	'percent',
 		recipes:{},
@@ -112,6 +112,19 @@ var all_available_buildings = {
 			max_storage: 		5,
 		},
 		effect_type: 	'fixed',
+		recipes:{},
+	},
+	mill:{
+		image: 		'buildings/dream_TradingCard-2025-04-27T064404.422.jpg',
+		//item_image: 'paper',
+		cost:{
+			brick: 		1,
+		},
+		cost_factor: 	2,
+		effects:{
+			farming: 		5,
+		},
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	smithy:{
@@ -146,7 +159,7 @@ var all_available_buildings = {
 		//item_image: 'twine',
 		cost:{
 			brick: 		2,
-			reeds: 		5,
+			twine: 		2,
 		},
 		cost_factor: 	2,
 		effects:{

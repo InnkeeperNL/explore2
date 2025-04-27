@@ -21,12 +21,12 @@ var effects_per_value 		= {
 	max_storage: 	1,
 	travel_speed: 	1,
 
-	farming: 		0.5,
-	gathering: 		0.5,
-	hunting: 		0.5,
-	mining: 		0.5,
-	woodcutting: 	0.5,
-	combat: 		0.5,
+	farming: 		1,
+	gathering: 		1,
+	hunting: 		1,
+	mining: 		1,
+	woodcutting: 	1,
+	combat: 		1,
 	passive: 		0.33,
 }
 

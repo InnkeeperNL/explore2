@@ -457,7 +457,7 @@ var all_available_items = {
 	reeds:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-18T063401.552.jpg',
-		value: 	1,
+		value: 	2,
 	},
 	reeds_collector:{
 		image: 	'items/dream_TradingCard-2025-04-21T072911.980.jpg',
@@ -539,11 +539,17 @@ var all_available_items = {
 	},
 	sugar:{
 		image: 	'items/dream_TradingCard-2025-04-26T083329.129.jpg',
+		energy: 1,
 		value: 	3,
 	},
 	sugar_beet:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-26T082947.235.jpg',
+		value: 	3,
+	},
+	sugarcane:{
+		type: 	'resource',
+		image: 	'items/dream_TradingCard-2025-04-27T054755.391.jpg',
 		value: 	3,
 	},
 	sword:{
@@ -584,7 +590,7 @@ var all_available_items = {
 	water:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-20T073449.jpg',
-		energy: 1,
+		//energy: 1,
 		value: 	1,
 	},
 	wheat:{

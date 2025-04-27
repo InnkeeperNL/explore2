@@ -65,7 +65,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	5,
+			firewood: 	10,
 		},
 		result:{
 			basket: 	1
@@ -429,10 +429,10 @@ var all_available_recipes = {
 	},
 	firewood_reeds:{
 		cost:{
-			reeds: 5,
+			reeds: 4,
 		},
 		result:{
-			firewood: 	5
+			firewood: 	8,
 		},
 		buildings:{
 			pottery: true,
@@ -446,13 +446,13 @@ var all_available_recipes = {
 			flour: 		1
 		},
 		buildings:{
-			kitchen: true,
+			mill: true,
 		}
 	},
 	fries:{
 		cost:{
-			firewood: 	1,
-			potato: 	4,
+			firewood: 	5,
+			potato: 	10,
 			salt: 		1,
 		},
 		result:{
@@ -471,7 +471,7 @@ var all_available_recipes = {
 			gatherer: 	1
 		},
 		buildings:{
-			wood_workshop: true,
+			mill: true,
 		}
 	},
 	glass:{
@@ -531,7 +531,7 @@ var all_available_recipes = {
 			water: 		1,
 		},
 		result:{
-			ink: 		1
+			ink: 		2
 		},
 		buildings:{
 			paper_mill: true,
@@ -544,7 +544,7 @@ var all_available_recipes = {
 			water: 		5,
 		},
 		result:{
-			ink: 		2
+			ink: 		4
 		},
 		buildings:{
 			bone_workshop: true,
@@ -557,7 +557,7 @@ var all_available_recipes = {
 			water: 		1,
 		},
 		result:{
-			ink: 		1
+			ink: 		2
 		},
 		buildings:{
 			paper_mill: true,
@@ -661,6 +661,7 @@ var all_available_recipes = {
 	lumberjack:{
 		cost:{
 			hatchet: 	1,
+			lumber: 	10,
 			peasant: 	1,
 		},
 		result:{
@@ -895,7 +896,7 @@ var all_available_recipes = {
 			reeds_collector: 	1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	road:{
@@ -988,7 +989,18 @@ var all_available_recipes = {
 			sugar: 		1
 		},
 		buildings:{
-			kitchen: true,
+			mill: true,
+		}
+	},
+	sugar_cane:{
+		cost:{
+			sugarcane: 3,
+		},
+		result:{
+			sugar: 		1
+		},
+		buildings:{
+			mill: true,
 		}
 	},
 	sword:{
@@ -1061,18 +1073,18 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	twine_reeds:{
 		cost:{
-			reeds: 		4,
+			reeds: 		2,
 		},
 		result:{
 			twine: 		1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	twine_wool:{
@@ -1083,7 +1095,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	woodcutting_potion:{

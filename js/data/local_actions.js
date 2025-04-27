@@ -181,11 +181,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			3,
 			},
-			/*river:{
+			river:{
 				min: 			1,
-				max: 			1,
-				chance: 		0.5,
-			},*/
+				max: 			3,
+			},
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
@@ -623,11 +622,11 @@ var all_available_actions = {
 				min: 			3,
 				max: 			6,
 			},
-			farm:{
+			/*farm:{
 				min: 			1,
 				max: 			1,
 				chance: 		0.25
-			},
+			},*/
 		},
 		action_loot:{
 			reeds: 		25,
@@ -797,6 +796,25 @@ var all_available_actions = {
 			stone: 	1
 		}
 	},
+	sugarcane:{
+		type: 					'resource',
+		subtypes: 				['gathering'],
+		min_action_amount: 		3,
+		max_action_amount: 		4,
+		energy_cost: 			6,
+		locations:{
+			river:{
+				min: 			3,
+				max: 			6
+			}
+		},
+		action_loot:{
+			sugarcane: 		10,
+		},
+		final_loot:{
+			sugarcane: 		1,
+		}
+	},
 	tree:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
@@ -807,11 +825,11 @@ var all_available_actions = {
 				min: 			2,
 				max: 			4,
 			},
-/*			river:{
+			river:{
 				min: 			1,
 				max: 			1,
 				chance: 		0.5,
-			}*/
+			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
 		action_loot:{
@@ -905,6 +923,9 @@ eachoa(all_available_actions, function(action_id, action_info){
 		eachoa(action_info['locations'], function(location_id, action_location_info){
 			if(all_available_locations[location_id] != undefined)
 			{
+				if(all_available_locations[location_id]['resources'] == undefined){all_available_locations[location_id]['resources'] = {};}
+				eachoa(action_info['action_loot'], function(loot_it, loot_amount){all_available_locations[location_id]['resources'][loot_it] = true;});
+				eachoa(action_info['final_loot'], function(loot_it, loot_amount){all_available_locations[location_id]['resources'][loot_it] = true;});
 				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
 				var local_action_value = action_info['value'] + 0;
 				if(action_location_info['chance'] != undefined){local_action_value /= action_location_info['chance'];}
