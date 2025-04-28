@@ -346,11 +346,11 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-08-18T110531.jpg',
 		value: 	9,
 	},
-	leaves:{
+	/*leaves:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T084739.533.jpg',
 		value: 	1,
-	},
+	},*/
 	lumber:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-17T085131.jpg',
@@ -519,6 +519,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-20T061915.192.jpg',
 		value: 	1,
 	},
+	sheep_herder:{
+		image: 	'items/dream_TradingCard-2025-04-28T074659.932.jpg',
+		value: 	1,
+		effects:{
+			passive_wool: 	1,
+		},
+		effect_type: 		'fixed',
+	},
 	shield:{
 		image: 	'items/dream_TradingCard-2025-04-24T074626.540.jpg',
 		effects:{
@@ -613,6 +621,14 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-20T094127.jpg',
 		value: 	3,
+	},
+	wheat_farmer:{
+		image: 	'items/dream_TradingCard-2025-04-28T075536.594.jpg',
+		value: 	1,
+		effects:{
+			passive_wheat: 	1,
+		},
+		effect_type: 		'fixed',
 	},
 	woodcutting_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T084103.345.jpg',

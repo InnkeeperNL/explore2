@@ -991,6 +991,22 @@ function count_total_upgrades(){
 	return total_effects;
 }
 
+function get_passive_storage_productions(){
+	var total_passive_production = {};
+	if(gamedata['passive_storage'] != undefined)
+	{
+		var total_upgrades = count_total_upgrades();
+		eachoa(gamedata['passive_storage'], function(production_id, production_amount){
+			if(total_passive_production[production_id] == undefined){total_passive_production[production_id] = 0;}
+			if(total_upgrades['passive_' + production_id] != undefined)
+			{
+				total_passive_production[production_id] += total_upgrades['passive_' + production_id];
+			}
+		});
+	}
+	return total_passive_production;
+}
+
 function set_action_image(action_id){
 	var new_image = false;
 	var action_info = all_available_actions[action_id];

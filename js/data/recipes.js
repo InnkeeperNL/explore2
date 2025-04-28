@@ -835,6 +835,18 @@ var all_available_recipes = {
 	},
 	pitchfork:{
 		cost:{
+			lumber: 	5,
+			pole: 		5,
+		},
+		result:{
+			pitchfork: 1
+		},
+		buildings:{
+			wood_workshop: true,
+		}
+	},
+	pitchfork_wood:{
+		cost:{
 			iron: 		2,
 			pole: 		1,
 		},
@@ -972,15 +984,18 @@ var all_available_recipes = {
 			tailor_shop: true,
 		}
 	},
-	stone_box:{
+	sheep_herder:{
 		cost:{
-			stone: 	20,
+			cane: 		1,
+			peasant: 	1,
+			sack: 		1,
+			wool: 		10,
 		},
 		result:{
-			box: 	1
+			sheep_herder: 1
 		},
 		buildings:{
-			stonesmith: true,
+			mill: 	true,
 		}
 	},
 	shield:{
@@ -1005,6 +1020,17 @@ var all_available_recipes = {
 		},
 		buildings:{
 			stonesmith: 	true,
+		}
+	},
+	stone_box:{
+		cost:{
+			stone: 	20,
+		},
+		result:{
+			box: 	1
+		},
+		buildings:{
+			stonesmith: true,
 		}
 	},
 	sugar:{
@@ -1122,6 +1148,19 @@ var all_available_recipes = {
 		},
 		buildings:{
 			mill: true,
+		}
+	},
+	wheat_farmer:{
+		cost:{
+			peasant: 	1,
+			pitchfork: 	1,
+			wheat: 		10,
+		},
+		result:{
+			wheat_farmer: 1
+		},
+		buildings:{
+			mill: 	true,
 		}
 	},
 	woodcutting_potion:{
