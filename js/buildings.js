@@ -388,25 +388,25 @@ function parse_recipe(recipe_id){
 						bonus_type = '%';
 						if(gamedata['storage'][result_id] > 0)
 						{
-							total_bonus = Math.sqrt(gamedata['storage'][result_id]) * effect_amount;
+							total_bonus = /*Math.sqrt*/(gamedata['storage'][result_id]) * effect_amount;
 						}
 					}
 					else
 					{
 						if(gamedata['storage'][result_id] > 0)
 						{
-							total_bonus = Math.sqrt(gamedata['storage'][result_id]) * effect_amount;
+							total_bonus = /*Math.sqrt*/(gamedata['storage'][result_id]) * effect_amount;
 						}
 					}
-					if(total_bonus <= 100 || bonus_type == '')
-					{
+					/*if(total_bonus <= 100 || bonus_type == '')
+					{*/
 						parsed_recipe += 	'<div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text ' + bonus_icon + '_text">' + nFormatter(total_bonus,1) + bonus_type + '</span>';
-					}
+					/*}
 					else
 					{
 						total_bonus = (total_bonus / 100) + 1;
 						parsed_recipe += 	'<div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text ' + bonus_icon + '_text">x' + nFormatter(total_bonus, 1) + '</span>';
-					}
+					}*/
 				});
 				if((item_info['effects'] != undefined && count_object(item_info['effects']) > 0) || item_info['energy'] != undefined)
 				{

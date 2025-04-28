@@ -2,7 +2,7 @@ var all_available_recipes = {
 	apple_picker:{
 		cost:{
 			apple: 		10,
-			basket: 	1,
+			basket: 	5,
 			peasant: 	1,
 		},
 		result:{
@@ -838,6 +838,7 @@ var all_available_recipes = {
 		cost:{
 			cloth: 		2,
 			feather: 	10,
+			twine: 		1,
 		},
 		result:{
 			pillow: 1
@@ -1321,7 +1322,16 @@ function check_all_item_effects(){
 		{
 			eachoa(item_info['effects'], function(effect_id, effect_amount){
 				item_info['effects'][effect_id] = calc_effect_per_value(item_info['value'], effect_id, item_info['effect_type'], item_id);
+				if(item_info['effects'][effect_id] == 0)
+				{
+					delete item_info['effects'][effect_id];
+				}
 			});
+			if(count_object(item_info['effects']) == 0)
+			{
+				delete item_info['effects'];
+				delete item_info['effect_type'];
+			}
 		}
 	});
 }
@@ -1343,23 +1353,24 @@ function calc_effect_per_value(base_value, effect_id, effect_type, item_id){
 		}
 	}
 	var value = base_value * 1; 
+	value *= 1 + ((Math.sqrt(value) / 100) * percent_ponus_per_value);
 	if(effect_type != undefined && effect_type == 'fixed')
 	{
 		value *= fixed_effect_factor;
 	}
 	else
 	{
-		value = (Math.sqrt(base_value)); 
+		//value = (Math.sqrt(base_value)); 
 	}
 	value *= calced_effect_per_value;
 	
-	if(value < 0.1)
+	if(value < 0.05)
 	{
 		console.log(item_id + ' effect to low: ' + value);
 		console.log('calced_effect_per_value: ' + calced_effect_per_value);
 		console.log('base_value: ' + base_value);
 	}
-	return Math.ceil(value * 10) / 10;
+	return Math.round(value * 10) / 10;
 }
 
 check_all_recipes();

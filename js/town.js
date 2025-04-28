@@ -126,9 +126,9 @@ function get_max_storage(){
 	return Math.ceil(max_storage);
 }
 
-function get_building_bonus(bonus_id, base_amount){
+function get_building_bonus(bonus_id, base_amount, showme){
 	if(gamedata['buildings'] == undefined){gamedata['buildings'] = {};}
-	var total_percent_bonus = 1;
+	var total_percent_bonus = 0;
 	var total_factor = 1;
 	eachoa(gamedata['buildings'], function(building_id, building_level){
 		if(all_available_buildings[building_id] != undefined)
@@ -141,7 +141,8 @@ function get_building_bonus(bonus_id, base_amount){
 				}
 				if(all_available_buildings[building_id]['effect_type'] == 'percent')
 				{
-					total_percent_bonus *= 1 + ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
+					//total_percent_bonus *= 1 + ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
+					total_percent_bonus += ((building_level * all_available_buildings[building_id]['effects'][bonus_id]) / 100);
 				}
 				if(all_available_buildings[building_id]['effect_type'] == 'factor')
 				{
@@ -159,11 +160,13 @@ function get_building_bonus(bonus_id, base_amount){
 			{
 				if(all_available_items[item_id]['effect_type'] == 'fixed')
 				{
-					base_amount += Math.sqrt(owned_amount) * all_available_items[item_id]['effects'][bonus_id];
+					base_amount += /*Math.sqrt*/(owned_amount) * all_available_items[item_id]['effects'][bonus_id];
+					
 				}
 				if(all_available_items[item_id]['effect_type'] == 'percent')
 				{
-					total_percent_bonus *= 1 + ((Math.sqrt(owned_amount) * all_available_items[item_id]['effects'][bonus_id]) / 100);
+					//total_percent_bonus *= 1 + ((Math.sqrt(owned_amount) * all_available_items[item_id]['effects'][bonus_id]) / 100);
+					total_percent_bonus += ((/*Math.sqrt*/(owned_amount) * all_available_items[item_id]['effects'][bonus_id]) / 100);
 				}
 				if(all_available_items[item_id]['effect_type'] == 'factor')
 				{
@@ -173,7 +176,9 @@ function get_building_bonus(bonus_id, base_amount){
 			}
 		}
 	});
-	base_amount *= total_percent_bonus;
+	//if(showme != undefined){console.log(total_percent_bonus);}
+	base_amount *= 1 + total_percent_bonus;
 	base_amount *= total_factor;
+
 	return /*Math.floor*/(base_amount);
 }

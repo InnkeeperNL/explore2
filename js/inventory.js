@@ -446,14 +446,14 @@ function show_item_details(item_id){
 					bonus_type = '%';
 					if(gamedata['storage'][item_id] > 0)
 					{
-						total_bonus = Math.sqrt(gamedata['storage'][item_id]) * effect_amount;
+						total_bonus = /*Math.sqrt*/(gamedata['storage'][item_id]) * effect_amount;
 					}
 				}
 				else
 				{
 					if(gamedata['storage'][item_id] > 0)
 					{
-						total_bonus = Math.sqrt(gamedata['storage'][item_id]) * effect_amount;
+						total_bonus = /*Math.sqrt*/(gamedata['storage'][item_id]) * effect_amount;
 					}
 				}
 				var global_bonus = get_building_bonus(effect_id, 1);

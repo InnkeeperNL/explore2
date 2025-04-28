@@ -27,22 +27,23 @@ var effects_per_value 		= {
 	mining: 		1,
 	woodcutting: 	1,
 	combat: 		1,
-	passive: 		0.33,
+	passive: 		1,
 }
 
 var all_skills = {
-	farming: 		0.5,
-	gathering: 		0.5,
-	hunting: 		0.5,
-	mining: 		0.5,
-	woodcutting: 	0.5,
-	combat: 		0.5,
+	farming: 		1,
+	gathering: 		1,
+	hunting: 		1,
+	mining: 		1,
+	woodcutting: 	1,
+	combat: 		1,
 	travel_speed: 	1,
 };
 
 eachoa(effects_per_value, function(effect_id, bonus_amount){
-	effects_per_value[effect_id] = bonus_amount / 1;
+	effects_per_value[effect_id] = bonus_amount / 10;
 });
+var percent_ponus_per_value = 1;
 var fixed_effect_factor = 0.02;
 
 // ACTIONS

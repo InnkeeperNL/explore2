@@ -54,7 +54,7 @@ var all_available_items = {
 		effects:{
 			max_storage: 	5,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	25,
 	},
 	bed:{
@@ -62,7 +62,7 @@ var all_available_items = {
 		effects:{
 			max_energy: 	10,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	33,
 	},
 	bone:{
@@ -107,7 +107,7 @@ var all_available_items = {
 		effects:{
 			max_storage: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	5,
 	},
 	bread:{
@@ -192,14 +192,14 @@ var all_available_items = {
 		effects:{
 			max_storage: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 	},
 	crate:{
 		image: 	'items/boxes-2719166_640.jpg',
 		effects:{
 			max_storage: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	5,
 	},
 	digger:{
@@ -220,7 +220,7 @@ var all_available_items = {
 		effects:{
 			max_energy: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 	},
 	explorer:{
 		image: 	'items/dream_TradingCard-2025-04-22T080550.376.jpg',
@@ -338,7 +338,7 @@ var all_available_items = {
 	jar:{
 		image: 	'items/dream_TradingCard-2025-04-19T064458.051.jpg',
 		effects:{
-			max_storage: 	1,
+			gathering: 	1,
 		},
 		effect_type: 		'percent',
 	},
@@ -437,7 +437,7 @@ var all_available_items = {
 		effects:{
 			max_energy: 	10,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	33,
 	},
 	pitchfork:{
@@ -513,7 +513,7 @@ var all_available_items = {
 		effects:{
 			max_storage: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	18,
 	},
 	salt:{
