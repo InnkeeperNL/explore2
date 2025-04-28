@@ -139,6 +139,11 @@
 	background-image: url('../images/icons/walking-boot-white.svg');
 }
 
+.fast_forward_button
+{
+	background-image: url('../images/icons/fast-forward-button.svg');
+}
+
 .explore_now_button.danger,
 .build_now_button.danger
 {
@@ -184,6 +189,7 @@
 	display: inline-block;
 	margin-right: 10px;
 	border: 2px solid rgba(250,250,250,0.5);
+	padding-top: 10px;
 }
 
 .recipe_cost_bar span

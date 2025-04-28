@@ -941,6 +941,59 @@ eachoa(all_available_actions, function(action_id, action_info){
 	}
 });
 
+function count_resource_locations(amount, show){
+	if(amount == undefined){amount = 1;}
+	var resourse_location_count = {};
+	eachoa(all_available_items, function(item_id, item_info){
+		if(item_info['type'] == 'resource')
+		{
+			resourse_location_count[item_id] = 0;
+			eachoa(all_available_locations, function(location_id, location_info){
+				if(all_available_locations[location_id]['resources'][item_id] != undefined)
+				{
+					resourse_location_count[item_id]++;
+				}
+			});
+		}
+	});
+	eachoa(resourse_location_count, function(item_id, location_count){
+		if(location_count == amount && show == undefined)
+		{
+			console.log(item_id + ': ' + location_count);
+		}
+	});
+	return resourse_location_count;
+}
+
+function count_total_upgrades(){
+	var total_effects = {};
+	eachoa(all_available_items, function(item_id, item_info){
+		if(item_info['effects'] != undefined)
+		{
+			eachoa(item_info['effects'], function(effect_id, effect_amount){
+				if(total_effects[effect_id] == undefined)
+				{
+					total_effects[effect_id] = 0;
+				}
+				total_effects[effect_id] += effect_amount;
+			});
+		}
+	});
+	eachoa(all_available_buildings, function(item_id, item_info){
+		if(item_info['effects'] != undefined)
+		{
+			eachoa(item_info['effects'], function(effect_id, effect_amount){
+				if(total_effects[effect_id] == undefined)
+				{
+					total_effects[effect_id] = 0;
+				}
+				total_effects[effect_id] += effect_amount;
+			});
+		}
+	});
+	return total_effects;
+}
+
 function set_action_image(action_id){
 	var new_image = false;
 	var action_info = all_available_actions[action_id];

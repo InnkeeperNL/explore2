@@ -70,14 +70,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	1,
 	},
-	bone_pickaxe:{
+	/*bone_pickaxe:{
 		image: 	'items/dream_TradingCard-2025-04-23T073703.696.jpg',
 		effects:{
 			mining: 	1,
 		},
 		effect_type: 		'percent',
 		value: 	1,
-	},
+	},*/
 	boot:{
 		image: 	'items/dream_TradingCard-2025-04-17T152546.292.jpg',
 		effects:{
@@ -529,14 +529,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-08-18T090111.jpg',
 		value: 	5,
 	},
-	stone_box:{
+	/*stone_box:{
 		image: 	'items/dream_TradingCard-2025-04-19T073703.880.jpg',
 		effects:{
 			max_storage: 	1,
 		},
 		effect_type: 		'percent',
 		value: 	5,
-	},
+	},*/
 	sugar:{
 		image: 	'items/dream_TradingCard-2025-04-26T083329.129.jpg',
 		energy: 1,

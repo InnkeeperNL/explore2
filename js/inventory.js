@@ -414,6 +414,12 @@ function show_item_details(item_id){
 		var item_details = '<span class="item_details">';
 		item_details += parse_item(item_id, '');
 		item_details += '<div class="item_stats">';
+		var owned_amount = 0;
+		if(gamedata['storage'] != undefined && gamedata['storage'][item_id] != undefined)
+		{
+			owned_amount = gamedata['storage'][item_id];
+		}
+		item_details += 'Owned: ' + owned_amount + '<br/>';
 		if(item_info['value'] != undefined)
 		{
 			item_details += 'Value: ' + item_info['value'] + '<br/>';

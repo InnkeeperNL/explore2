@@ -183,6 +183,7 @@ function parse_explore(){
 	{
 		explore_cost = 0;
 	}
+	if(gamedata['explore_progress'] == undefined){gamedata['explore_progress'] = 0;}
 
 	parsed_explore += '<div class="building_effect">';
 	parsed_explore += '<div class="building_description">Exploration</div>';
@@ -191,7 +192,7 @@ function parse_explore(){
 	var not_enough = '';
 	if(explore_cost > 0)
 	{
-		if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
+		if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < 1)
 		{
 			not_enough = 'not_enough';
 			can_unlock = false;
@@ -199,23 +200,71 @@ function parse_explore(){
 		var owned_amount = 0;
 		if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
 		parsed_explore += 	'<div class="recipe_cost_bar ' + not_enough + '">';
-		parsed_explore += 		'<div class="cost_item" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
+		parsed_explore += 		'<div class="button slim explore_cost" onclick="show_item_details(\'map\')" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
+		parsed_explore += 		'<span>' + owned_amount + '</span>';
 		parsed_explore += 		'</div>';
-		parsed_explore += 		'<span>' + owned_amount + ' / ' + explore_cost + '</span>';
+		
+		
+		parsed_explore += 		'<div class="button slim fast_forward_button ' + not_enough + '" onclick="explore_now()"></div>';
 		parsed_explore += 	'</div>';
+
+		parsed_explore += 	'<div class="breaker"></div>';
+		parsed_explore += 	'<div class="explore_progress_bar_container">';
+		parsed_explore += 		'<div class="explore_progress_bar" style="width:' + ((gamedata['explore_progress'] / explore_cost) * 100) + '%">';
+		parsed_explore += 		'</div>';
+		parsed_explore += 		'<div class="explore_progress_amount">' + gamedata['explore_progress'] + ' / ' + explore_cost + '</div>';
+		parsed_explore += 	'</div>';
+
 	}
 	
-
-	if(can_unlock == true)
+	parsed_explore += '<div class="breaker"></div>';
+	if(gamedata['explore_progress'] >= explore_cost)
 	{
 		parsed_explore += '<div class="button slim explore_now_button good" onclick="unlock_random_location()">EXPLORE</div>';
 	}
 	else
 	{
-		parsed_explore += '<div class="button slim explore_now_button danger">EXPLORE</div>';
+		parsed_explore += '<div class="button slim explore_now_button danger" onclick="unlock_random_location()">EXPLORE</div>';
 	}
 	parsed_explore += '</div>';
 	return parsed_explore;
+}
+
+function explore_now(){
+	var explore_cost = to_the_nth(1, count_object(gamedata['known_locations']), 5);
+	if(count_object(gamedata['known_locations']) == 0)
+	{
+		explore_cost = 0;
+	}
+	if(gamedata['explore_progress'] == undefined){gamedata['explore_progress'] = 0;}
+	var cost_id = 'map';
+	var owned_amount = 0;
+	if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
+	if(owned_amount > 0 && gamedata['explore_progress'] < explore_cost)
+	{
+		var max_used = explore_cost - gamedata['explore_progress'];
+		var used = owned_amount + 0;
+		if(max_used < used){used = max_used + 0;}
+		gamedata['storage'][cost_id] -= used;
+		show_locations();
+		gamedata['explore_progress'] += used;
+		setTimeout(function(){
+			class_style('explore_progress_bar','width',((gamedata['explore_progress'] / explore_cost) * 100) + '%');
+			class_html('explore_progress_amount',gamedata['explore_progress'] + ' / ' + explore_cost);
+		},10);
+		if(gamedata['explore_progress'] >= explore_cost)
+		{
+			class_remove_class('explore_now_button','danger');
+			class_add_class('explore_now_button','good');
+		}
+		
+		saveToLocalStorage();
+	}
+	else
+	{
+		show_locations();
+	}
+	
 }
 
 function unlock_random_location(){
@@ -224,23 +273,22 @@ function unlock_random_location(){
 	{
 		explore_cost = 0;
 	}
+	if(gamedata['explore_progress'] == undefined){gamedata['explore_progress'] = 0;}
 	var can_unlock = true;
 	var cost_id = 'map';
 	if(explore_cost > 0)
 	{
-		if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < explore_cost)
+		if(gamedata['explore_progress'] < explore_cost)
 		{
 			can_unlock = false;
-			console.log('ding');
+			//console.log('ding');
 		}
-		var owned_amount = 0;
-		if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
 	}
 	if(can_unlock == true)
 	{
 		if(explore_cost > 0)
 		{
-			gamedata['storage'][cost_id] -= explore_cost;
+			gamedata['explore_progress'] = 0;
 		}
 		var possible_locations = {};
 		eachoa(all_available_locations, function(location_id, location_info){
