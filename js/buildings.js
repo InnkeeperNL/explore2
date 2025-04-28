@@ -400,7 +400,7 @@ function parse_recipe(recipe_id){
 					}
 					/*if(total_bonus <= 100 || bonus_type == '')
 					{*/
-						parsed_recipe += 	'<div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text ' + bonus_icon + '_text">' + nFormatter(total_bonus,1) + bonus_type + '</span>';
+						parsed_recipe += 	'<div class="' + bonus_icon + '_icon"></div><span class="action_energy_cost_text ' + bonus_icon + '_text">' + nFormatter(effect_amount,1) + bonus_type + '</span>';
 					/*}
 					else
 					{
