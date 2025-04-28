@@ -296,6 +296,14 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	25,
 	},
+	herbalist:{
+		image: 	'items/dream_TradingCard-2025-04-28T081402.081.jpg',
+		value: 	1,
+		effects:{
+			passive_herbs: 	1,
+		},
+		effect_type: 		'fixed',
+	},
 	herbs:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T073923.191.jpg',
@@ -462,8 +470,7 @@ var all_available_items = {
 		value: 	5,
 	},
 	pouch:{
-		description: 'Each pouch increases maximum inventory by 1',
-		image: 	'items/dream_TradingCard-2023-08-22T075422.jpg',
+		image: 	'items/dream_TradingCard-2025-04-28T081814.885.jpg',
 		effects:{
 			max_inventory: 	1,
 		},
@@ -607,7 +614,6 @@ var all_available_items = {
 		effect_type: 		'percent',
 	},
 	twine:{
-		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-05-29T084103.jpg',
 		value: 	5,
 	},

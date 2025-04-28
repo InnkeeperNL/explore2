@@ -254,7 +254,7 @@ function show_storage(show_deposit){
 	var items_shown = 0;
 	var total_items = 0;
 	eachoa(all_available_items, function(item_id, item_info){
-		if(gamedata['storage'][item_id] != undefined && ((item_info['type'] != undefined && item_info['type'] == 'resource' && gamedata['show_only_food_storage'] == false) || item_info['energy'] != undefined))
+		if(gamedata['storage'][item_id] != undefined && ((item_info['type'] != undefined && item_info['type'] == 'resource' && gamedata['show_only_food_storage'] == false) || (item_info['energy'] != undefined && gamedata['show_only_food_storage'] == true)))
 		{
 			total_items++;
 			if(total_items > (current_inventory_page - 1) * items_shown_per_page && total_items <= current_inventory_page * items_shown_per_page)

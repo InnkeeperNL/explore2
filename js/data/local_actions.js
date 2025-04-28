@@ -1007,6 +1007,18 @@ function get_passive_storage_productions(){
 	return total_passive_production;
 }
 
+function check_passive_storage_productions(){
+	var total_passive_production = get_passive_storage_productions();
+
+	eachoa(total_passive_production, function(production_id, production_amount){
+		if(production_amount == 0)
+		{
+			console.log(production_id);
+		}
+	});
+	
+}
+
 function set_action_image(action_id){
 	var new_image = false;
 	var action_info = all_available_actions[action_id];

@@ -537,6 +537,19 @@ var all_available_recipes = {
 			alchemist: true,
 		}
 	},
+	herbalist:{
+		cost:{
+			herbs: 		10,
+			peasant: 	1,
+			pouch: 		1,
+		},
+		result:{
+			herbalist: 1
+		},
+		buildings:{
+			alchemist: 	true,
+		}
+	},
 	hunter:{
 		cost:{
 			boot: 		1,
