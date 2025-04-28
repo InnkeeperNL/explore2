@@ -185,48 +185,53 @@ function parse_explore(){
 	}
 	if(gamedata['explore_progress'] == undefined){gamedata['explore_progress'] = 0;}
 
-	parsed_explore += '<div class="building_effect">';
-	parsed_explore += '<div class="building_description">Exploration</div>';
 	var can_unlock = true;
 	var cost_id = 'map';
 	var not_enough = '';
-	if(explore_cost > 0)
+	if(explore_cost == 0 || gamedata['storage'][cost_id] != undefined)
 	{
-		if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < 1)
+		parsed_explore += '<div class="building_effect">';
+		parsed_explore += '<div class="building_description">Exploration</div>';
+		
+		if(explore_cost > 0)
 		{
-			not_enough = 'not_enough';
-			can_unlock = false;
+			if(gamedata['storage'][cost_id] == undefined || gamedata['storage'][cost_id] < 1)
+			{
+				not_enough = 'not_enough';
+				can_unlock = false;
+			}
+			var owned_amount = 0;
+			if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
+			parsed_explore += 	'<div class="recipe_cost_bar ' + not_enough + '">';
+			parsed_explore += 		'<div class="button slim explore_cost" onclick="show_item_details(\'map\')" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
+			parsed_explore += 		'<span>' + owned_amount + '</span>';
+			parsed_explore += 		'</div>';
+			
+			
+			parsed_explore += 		'<div class="button slim fast_forward_button ' + not_enough + '" onclick="explore_now()"></div>';
+			parsed_explore += 	'</div>';
+
+			parsed_explore += 	'<div class="breaker"></div>';
+			parsed_explore += 	'<div class="explore_progress_bar_container">';
+			parsed_explore += 		'<div class="explore_progress_bar" style="width:' + ((gamedata['explore_progress'] / explore_cost) * 100) + '%">';
+			parsed_explore += 		'</div>';
+			parsed_explore += 		'<div class="explore_progress_amount">' + gamedata['explore_progress'] + ' / ' + explore_cost + '</div>';
+			parsed_explore += 	'</div>';
+
 		}
-		var owned_amount = 0;
-		if(gamedata['storage'][cost_id] != undefined){owned_amount = gamedata['storage'][cost_id];}
-		parsed_explore += 	'<div class="recipe_cost_bar ' + not_enough + '">';
-		parsed_explore += 		'<div class="button slim explore_cost" onclick="show_item_details(\'map\')" style="background-image:url(\'images/' + all_available_items[cost_id]['image'] + '\')">';
-		parsed_explore += 		'<span>' + owned_amount + '</span>';
-		parsed_explore += 		'</div>';
 		
+			parsed_explore += '<div class="breaker"></div>';
+			if(gamedata['explore_progress'] >= explore_cost)
+			{
+				parsed_explore += '<div class="button slim explore_now_button good" onclick="unlock_random_location()">EXPLORE</div>';
+			}
+			else
+			{
+				parsed_explore += '<div class="button slim explore_now_button danger" onclick="unlock_random_location()">EXPLORE</div>';
+			}
 		
-		parsed_explore += 		'<div class="button slim fast_forward_button ' + not_enough + '" onclick="explore_now()"></div>';
-		parsed_explore += 	'</div>';
-
-		parsed_explore += 	'<div class="breaker"></div>';
-		parsed_explore += 	'<div class="explore_progress_bar_container">';
-		parsed_explore += 		'<div class="explore_progress_bar" style="width:' + ((gamedata['explore_progress'] / explore_cost) * 100) + '%">';
-		parsed_explore += 		'</div>';
-		parsed_explore += 		'<div class="explore_progress_amount">' + gamedata['explore_progress'] + ' / ' + explore_cost + '</div>';
-		parsed_explore += 	'</div>';
-
+		parsed_explore += '</div>';
 	}
-	
-	parsed_explore += '<div class="breaker"></div>';
-	if(gamedata['explore_progress'] >= explore_cost)
-	{
-		parsed_explore += '<div class="button slim explore_now_button good" onclick="unlock_random_location()">EXPLORE</div>';
-	}
-	else
-	{
-		parsed_explore += '<div class="button slim explore_now_button danger" onclick="unlock_random_location()">EXPLORE</div>';
-	}
-	parsed_explore += '</div>';
 	return parsed_explore;
 }
 
