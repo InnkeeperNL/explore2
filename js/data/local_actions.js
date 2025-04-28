@@ -190,9 +190,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			//leaves:  	0.5,
 			firewood: 	1,
-			//herbs: 		0.1,
 		}
 	},
 	chicken:{
@@ -833,7 +831,6 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
 		action_loot:{
-			leaves:  	5,
 			firewood: 	5,
 		},
 		final_loot:{

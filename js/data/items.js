@@ -5,6 +5,14 @@ var all_available_items = {
 		energy: 3,
 		value: 	6,
 	},
+	apple_picker:{
+		image: 	'items/dream_TradingCard-2025-04-28T070336.478.jpg',
+		value: 	1,
+		effects:{
+			passive_apple: 	1,
+		},
+		effect_type: 		'fixed',
+	},
 	arrow:{
 		image: 	'items/arrows-4082046_640.jpg',
 		value: 	3,
@@ -258,6 +266,14 @@ var all_available_items = {
 	glass:{
 		image: 	'items/dream_TradingCard-2025-04-20T062101.353.jpg',
 		value: 	5,
+	},
+	grave_digger:{
+		image: 	'items/dream_TradingCard-2025-04-28T071717.536.jpg',
+		value: 	1,
+		effects:{
+			passive_bone: 	1,
+		},
+		effect_type: 		'fixed',
 	},
 	hamburger:{
 		image: 	'items/dream_TradingCard-2025-04-26T093546.570.jpg',
@@ -608,7 +624,7 @@ var all_available_items = {
 	wooden_hammer:{
 		image: 	'items/dream_TradingCard-2025-04-20T091540.624.jpg',
 		effects:{
-			mining: 	10,
+			woodcutting: 	10,
 		},
 		effect_type: 		'percent',
 		value: 	33,

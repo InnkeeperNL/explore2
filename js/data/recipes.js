@@ -1,4 +1,17 @@
 var all_available_recipes = {
+	apple_picker:{
+		cost:{
+			apple: 		10,
+			basket: 	1,
+			peasant: 	1,
+		},
+		result:{
+			apple_picker: 1
+		},
+		buildings:{
+			kitchen: 	true,
+		}
+	},
 	arrow:{
 		cost:{
 			firewood: 	1,
@@ -416,12 +429,12 @@ var all_available_recipes = {
 			paper_mill: true,
 		}
 	},
-	firewood:{
+	firewood_lumber:{
 		cost:{
-			leaves: 	5,
+			lumber: 1,
 		},
 		result:{
-			firewood: 	5
+			firewood: 	5,
 		},
 		buildings:{
 			wood_workshop: true,
@@ -484,6 +497,19 @@ var all_available_recipes = {
 		},
 		buildings:{
 			furnace: true,
+		}
+	},
+	grave_digger:{
+		cost:{
+			bone: 		10,
+			peasant: 	1,
+			shovel: 	1,
+		},
+		result:{
+			grave_digger: 1
+		},
+		buildings:{
+			bone_workshop: 	true,
 		}
 	},
 	hamburger:{
@@ -1100,7 +1126,7 @@ var all_available_recipes = {
 	},
 	woodcutting_potion:{
 		cost:{
-			leaves:  	20,
+			firewood:  	20,
 			jar: 		1,
 			water: 		1
 		},
