@@ -44,7 +44,7 @@ eachoa(effects_per_value, function(effect_id, bonus_amount){
 	effects_per_value[effect_id] = bonus_amount / 10;
 });
 var percent_ponus_per_value = 1;
-var fixed_effect_factor = 0.02;
+var fixed_effect_factor = 0.05;
 
 // ACTIONS
 var value_per_energy 		= 1.5;
