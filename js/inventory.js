@@ -457,9 +457,9 @@ function show_item_details(item_id){
 					}
 				}
 				var global_bonus = get_building_bonus(effect_id, 1);
-				if(effect_id == 'max_storage'){global_bonus = get_max_storage();}
-				if(effect_id == 'max_energy'){global_bonus = get_max_energy();}
-				if(effect_id == 'max_inventory'){global_bonus = get_inventory_size();}
+				if(effect_id == 'max_storage'){global_bonus = get_building_bonus(effect_id, 10);}
+				if(effect_id == 'max_energy'){global_bonus = get_building_bonus(effect_id, 10);}
+				if(effect_id == 'max_inventory'){global_bonus = get_building_bonus(effect_id, 10);}
 				var pre_global_bonus_text = '';
 				var global_bonus_text = '';
 				if(split_bonus_string[0] != undefined && split_bonus_string[0] == 'passive')
