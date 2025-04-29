@@ -2,7 +2,7 @@ var all_available_items = {
 	apple:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T080707.jpg',
-		energy: 3,
+		energy: 100,
 		value: 	6,
 	},
 	apple_picker:{
@@ -142,7 +142,7 @@ var all_available_items = {
 	carrot:{
 		type: 	'resource',
 		image: 	'items/carrot-1565597_640.jpg',
-		energy: 3,
+		energy: 100,
 		value: 	5,
 	},
 	carrot_cake:{
@@ -389,7 +389,8 @@ var all_available_items = {
 	milk:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-26T092723.275.jpg',
-		energy: 3,
+		energy: 100,
+		effect_type: 		'fixed',
 		value: 	3,
 	},
 	miner:{
@@ -413,7 +414,10 @@ var all_available_items = {
 	},
 	omelette:{
 		image: 	'items/dream_TradingCard-2025-04-26T084649.438.jpg',
-		energy: 3,
+		effects:{
+			max_energy: 	1,
+		},
+		effect_type: 		'fixed',
 		value: 	5,
 	},
 	paper:{
@@ -435,7 +439,7 @@ var all_available_items = {
 	pillow:{
 		image: 	'items/dream_TradingCard-2025-04-26T094002.777.jpg',
 		effects:{
-			max_energy: 	10,
+			max_energy: 	1,
 		},
 		effect_type: 		'fixed',
 		value: 	33,
@@ -570,7 +574,7 @@ var all_available_items = {
 	},*/
 	sugar:{
 		image: 	'items/dream_TradingCard-2025-04-26T083329.129.jpg',
-		energy: 1,
+		energy: 100,
 		value: 	3,
 	},
 	sugar_beet:{
@@ -670,16 +674,19 @@ eachoa(all_available_items, function(item_id, item_info){
 	{
 		item_info['name'] = item_id.replaceAll('_',' ');
 	}
-	if(item_info['energy'] != undefined)
+	if(item_info['energy'] != undefined && item_info['energy'] < 100)
 	{
-		if(item_info['value'] != undefined)
+		item_info['effects'] = {max_energy: 	1};
+		item_info['effect_type'] = 'fixed';
+		delete item_info['energy'];
+		/*if(item_info['value'] != undefined)
 		{
 			item_info['energy'] = calc_energy_per_value(item_info['value']);
 		}
 		else
 		{
 			console.log('cannot set energy for ' + item_id);
-		}
+		}*/
 	}
 	if(item_info['effects'] != undefined)
 	{
