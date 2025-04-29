@@ -484,7 +484,7 @@ var all_available_recipes = {
 			gatherer: 	1
 		},
 		buildings:{
-			mill: true,
+			wood_workshop: true,
 		}
 	},
 	glass:{
@@ -948,7 +948,7 @@ var all_available_recipes = {
 			reeds_collector: 	1
 		},
 		buildings:{
-			mill: true,
+			tailor_shop: true,
 		}
 	},
 	road:{
@@ -1139,7 +1139,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			mill: true,
+			tailor_shop: true,
 		}
 	},
 	twine_reeds:{
@@ -1150,7 +1150,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			mill: true,
+			tailor_shop: true,
 		}
 	},
 	twine_wool:{
@@ -1161,7 +1161,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			mill: true,
+			tailor_shop: true,
 		}
 	},
 	wheat_farmer:{

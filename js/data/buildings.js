@@ -114,7 +114,7 @@ var all_available_buildings = {
 		effect_type: 	'fixed',
 		recipes:{},
 	},
-	mill:{
+	/*mill:{
 		image: 		'buildings/dream_TradingCard-2025-04-27T064404.422.jpg',
 		//item_image: 'paper',
 		cost:{
@@ -126,7 +126,7 @@ var all_available_buildings = {
 		},
 		effect_type: 	'percent',
 		recipes:{},
-	},
+	},*/
 	smithy:{
 		image: 		'buildings/horseshoe-1516273_640.jpg',
 		//item_image: 'copper_pot',
