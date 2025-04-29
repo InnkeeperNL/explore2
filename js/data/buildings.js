@@ -88,7 +88,7 @@ var all_available_buildings = {
 		effect_type: 	'fixed',
 		recipes:{},
 	},
-	kitchen:{
+	/*kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		//item_image: 'firewood',
 		cost:{
@@ -100,7 +100,7 @@ var all_available_buildings = {
 		},
 		effect_type: 	'percent',
 		recipes:{},
-	},
+	},*/
 	paper_mill:{
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',

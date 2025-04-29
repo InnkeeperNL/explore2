@@ -338,9 +338,9 @@ var all_available_items = {
 	jar:{
 		image: 	'items/dream_TradingCard-2025-04-19T064458.051.jpg',
 		effects:{
-			gathering: 	1,
+			max_storage: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 	},
 	knife:{
 		image: 	'items/dream_TradingCard-2025-04-25T070338.016.jpg',
@@ -674,7 +674,7 @@ eachoa(all_available_items, function(item_id, item_info){
 	{
 		item_info['name'] = item_id.replaceAll('_',' ');
 	}
-	if(item_info['energy'] != undefined && item_info['energy'] < 100)
+	if(item_info['energy'] != undefined && item_info['energy'] < 0)
 	{
 		item_info['effects'] = {max_energy: 	1};
 		item_info['effect_type'] = 'fixed';

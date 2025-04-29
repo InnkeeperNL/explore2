@@ -18,7 +18,7 @@ var effects_per_value 		= {
 	max_energy: 	1,
 	max_inventory: 	1,
 
-	max_storage: 	1,
+	max_storage: 	2,
 	travel_speed: 	1,
 
 	farming: 		1,

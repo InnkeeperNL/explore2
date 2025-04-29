@@ -80,7 +80,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			hide: 		9,
-			meat: 		9,
+			//meat: 		9,
 		}
 	},
 	bird:{
@@ -100,7 +100,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			feather: 	2,
-			meat: 		0.6
+			//meat: 		0.6
 		}
 	},
 	boar:{
@@ -119,7 +119,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		2,
+			//meat: 		2,
 			hide: 		4,
 		}
 	},
@@ -208,9 +208,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		0.75,
+			//meat: 		0.75,
 			feather: 	2,
-			egg: 		1,
+			//egg: 		1,
 		}
 	},
 	clay:{
@@ -290,9 +290,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		2,
+			//meat: 		2,
 			hide: 		2,
-			milk: 		4,
+			//milk: 		4,
 		}
 	},
 	deer:{
@@ -312,7 +312,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			hide: 		2,
-			meat: 		4,
+			//meat: 		4,
 		}
 	},
 	field_carrot:{
@@ -695,7 +695,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		1,
+			//meat: 		1,
 			wool: 		1.25,
 		}
 	},
