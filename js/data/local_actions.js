@@ -164,7 +164,6 @@ var all_available_actions = {
 		},
 		final_loot:{
 			hide: 		1,
-			meat: 		1,
 		}
 	},
 	bushes:{
