@@ -295,6 +295,26 @@ var all_available_actions = {
 			//milk: 		4,
 		}
 	},
+	dark_crystal_cave:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		5,
+		max_action_amount: 		8,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/crystal_cave.jpg',
+		action_loot:{
+			dark_crystal: 		10,
+		},
+		final_loot:{
+			dark_crystal: 		1,
+		}
+	},
 	deer:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -526,6 +546,26 @@ var all_available_actions = {
 		},
 		final_loot:{
 			iron_ore: 	2,
+		}
+	},
+	light_crystal_cave:{
+		type: 					'resource',
+		subtypes: 				['mining'],
+		min_action_amount: 		5,
+		max_action_amount: 		8,
+		locations:{
+			cave:{
+				min: 			1,
+				max: 			1,
+			}
+		},
+		energy_cost: 			6,
+		image: 					'actions/light_crystal_cave.jpg',
+		action_loot:{
+			light_crystal: 		10,
+		},
+		final_loot:{
+			light_crystal: 		1,
 		}
 	},
 	peasant:{

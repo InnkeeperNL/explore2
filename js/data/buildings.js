@@ -61,6 +61,20 @@ var all_available_buildings = {
 		effect_type: 	'fixed',
 		recipes:{},
 	},
+	gemcutter:{
+		image: 		'buildings/gemcutter.jpg',
+		//item_image: 'hide',
+		cost:{
+			dark_crystal: 	5,
+			brick: 			5,
+		},
+		cost_factor: 	2,
+		effects:{
+			mining: 	5,
+		},
+		effect_type: 	'percent',
+		recipes:{},
+	},
 	hunting_lodge:{
 		image: 		'buildings/dream_TradingCard-2025-04-18T155127.500.jpg',
 		//item_image: 'hide',

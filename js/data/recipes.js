@@ -135,6 +135,17 @@ var all_available_recipes = {
 			bone_workshop: true,
 		}
 	},
+	bone_pendant:{
+		cost:{
+			bone: 		10,
+		},
+		result:{
+			bone_pendant: 		1
+		},
+		buildings:{
+			bone_workshop: true,
+		}
+	},
 	bone_pickaxe:{
 		cost:{
 			bone: 		40,
@@ -386,6 +397,30 @@ var all_available_recipes = {
 		},
 		buildings:{
 			wood_workshop: 	true,
+		}
+	},
+	dark_crystal_pendant:{
+		cost:{
+			dark_crystal: 	5,
+			twine: 			1,
+		},
+		result:{
+			dark_crystal_pendant: 1
+		},
+		buildings:{
+			gemcutter: 	true,
+		}
+	},
+	dark_crystal_staff:{
+		cost:{
+			dark_crystal: 	10,
+			pole: 			2,
+		},
+		result:{
+			dark_crystal_staff: 1
+		},
+		buildings:{
+			gemcutter: 	true,
 		}
 	},
 	digger:{
@@ -695,6 +730,30 @@ var all_available_recipes = {
 		},
 		buildings:{
 			hunting_lodge: true,
+		}
+	},
+	light_crystal_pendant:{
+		cost:{
+			light_crystal: 	5,
+			twine: 			1,
+		},
+		result:{
+			light_crystal_pendant: 1
+		},
+		buildings:{
+			gemcutter: 	true,
+		}
+	},
+	light_crystal_staff:{
+		cost:{
+			light_crystal: 	10,
+			pole: 			2,
+		},
+		result:{
+			light_crystal_staff: 1
+		},
+		buildings:{
+			gemcutter: 	true,
 		}
 	},
 	lumberjack:{
@@ -1041,7 +1100,7 @@ var all_available_recipes = {
 			stone: 	20,
 		},
 		result:{
-			box: 	1
+			stone_box: 	1
 		},
 		buildings:{
 			stonesmith: true,

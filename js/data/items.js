@@ -86,6 +86,15 @@ var all_available_items = {
 		effect_type: 		'percent',
 		value: 	1,
 	},*/
+	bone_pendant:{
+		image: 	'items/bone_pendant.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	1,
+	},
+	
 	boot:{
 		image: 	'items/dream_TradingCard-2025-04-17T152546.292.jpg',
 		effects:{
@@ -200,6 +209,27 @@ var all_available_items = {
 			max_storage: 	1,
 		},
 		effect_type: 		'fixed',
+		value: 	5,
+	},
+	dark_crystal:{
+		type: 	'resource',
+		image: 	'items/dark_crystal.jpg',
+		value: 	10,
+	},
+	dark_crystal_pendant:{
+		image: 	'items/dark_crystal_pendant.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
+	dark_crystal_staff:{
+		image: 	'items/dark_crystal_staff.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
 		value: 	5,
 	},
 	digger:{
@@ -359,6 +389,27 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-20T084739.533.jpg',
 		value: 	1,
 	},*/
+	light_crystal:{
+		type: 	'resource',
+		image: 	'items/light_crystal.jpg',
+		value: 	25,
+	},
+	light_crystal_pendant:{
+		image: 	'items/light_crystal_pendant.jpg',
+		effects:{
+			mining: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
+	light_crystal_staff:{
+		image: 	'items/light_crystal_staff.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	5,
+	},
 	lumber:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-17T085131.jpg',
@@ -564,14 +615,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2023-08-18T090111.jpg',
 		value: 	5,
 	},
-	/*stone_box:{
+	stone_box:{
 		image: 	'items/dream_TradingCard-2025-04-19T073703.880.jpg',
 		effects:{
 			max_storage: 	1,
 		},
 		effect_type: 		'percent',
 		value: 	5,
-	},*/
+	},
 	sugar:{
 		image: 	'items/dream_TradingCard-2025-04-26T083329.129.jpg',
 		energy: 100,
