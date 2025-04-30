@@ -640,7 +640,7 @@ var all_available_recipes = {
 	iron:{
 		cost:{
 			iron_ore: 	2,
-			coal: 		1,
+			coal: 		5,
 		},
 		result:{
 			iron: 		1
@@ -724,6 +724,18 @@ var all_available_recipes = {
 		cost:{
 			firewood: 	2,
 			hide: 		2,
+		},
+		result:{
+			leather: 1
+		},
+		buildings:{
+			hunting_lodge: true,
+		}
+	},
+	leather_salt:{
+		cost:{
+			hide: 		10,
+			salt: 		1,
 		},
 		result:{
 			leather: 1
@@ -825,6 +837,7 @@ var all_available_recipes = {
 	nail:{
 		cost:{
 			iron: 		1,
+			coal: 		1,
 		},
 		result:{
 			nail: 		10
@@ -836,6 +849,7 @@ var all_available_recipes = {
 	nail_copper:{
 		cost:{
 			copper: 	1,
+			coal: 		1,
 		},
 		result:{
 			nail: 		1
@@ -915,7 +929,7 @@ var all_available_recipes = {
 			pitchfork: 1
 		},
 		buildings:{
-			wood_workshop: true,
+			//wood_workshop: true,
 		}
 	},
 	pitchfork_wood:{
@@ -927,7 +941,7 @@ var all_available_recipes = {
 			pitchfork: 1
 		},
 		buildings:{
-			smithy: true,
+			//smithy: true,
 		}
 	},
 	plank:{
@@ -1265,12 +1279,12 @@ var all_available_recipes = {
 }
 
 eachoa(all_available_recipes, function(recipe_id, recipe_info){
-	if(all_available_items[recipe_id] != undefined && all_available_items[recipe_id]['value'] != undefined)
+	if(all_available_items[recipe_id] != undefined && all_available_items[recipe_id]['value'] != undefined && all_available_items[recipe_id]['calculated'] == undefined)
 	{
 		delete all_available_items[recipe_id]['value'];
 	}
 	eachoa(recipe_info['result'], function(result_id, result_amount){
-		if(all_available_items[result_id] != undefined && all_available_items[result_id]['value'] != undefined)
+		if(all_available_items[result_id] != undefined && all_available_items[result_id]['value'] != undefined && all_available_items[result_id]['calculated'] == undefined)
 		{
 			delete all_available_items[result_id]['value'];
 		}

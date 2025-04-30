@@ -461,7 +461,8 @@ var all_available_items = {
 	},
 	nail:{
 		image: 	'items/nails-4168539_640.jpg',
-		value: 	16,
+		value: 	2,
+		calculated: true,
 	},
 	omelette:{
 		image: 	'items/dream_TradingCard-2025-04-26T084649.438.jpg',
