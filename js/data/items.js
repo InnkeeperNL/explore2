@@ -620,7 +620,7 @@ var all_available_items = {
 		effects:{
 			max_storage: 	1,
 		},
-		effect_type: 		'percent',
+		effect_type: 		'fixed',
 		value: 	5,
 	},
 	sugar:{
