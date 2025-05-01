@@ -5,7 +5,7 @@ var all_available_buildings = {
 		image: 			'buildings/dream_TradingCard-2025-04-20T073658.407.jpg',
 		//item_image: 	'herbs',
 		cost:{
-			jar: 		2,
+			jar: 		3,
 			flower: 	10,
 			water: 		5,
 		},

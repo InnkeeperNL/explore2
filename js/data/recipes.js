@@ -125,6 +125,7 @@ var all_available_recipes = {
 	},
 	bone_hammer:{
 		cost:{
+			bone: 		10,
 			pole: 		2,
 			skull: 		1,
 		},
