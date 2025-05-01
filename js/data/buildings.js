@@ -97,6 +97,7 @@ var all_available_buildings = {
 		item_image: 'clay',
 		cost:{
 			clay: 		10,
+			water: 		10,
 		},
 		cost_factor: 	2,
 		effects:{
