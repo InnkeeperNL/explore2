@@ -262,7 +262,7 @@ eachoa(all_available_buildings, function(building_id, building_info){
 	});
 	building_info['value'] = building_value;
 	eachoa(building_info['effects'], function(effect_id, effect_amount){
-		building_info['effects'][effect_id] *= building_value / 25;
+		building_info['effects'][effect_id] *= building_value / 50;
 	});
 	eachoa(building_info['recipes'], function(recipe_id, recipe_level){
 		if(all_available_recipes[recipe_id] == undefined)
