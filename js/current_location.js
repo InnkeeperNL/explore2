@@ -42,7 +42,7 @@ function set_location(location_id, forced){
 			var action_pick_chances = {};
 			eachoa(all_available_locations[location_id]['local_actions'], function(action_id, action_chances){
 				var actual_chance = action_chances['chance'] + (gamedata['expedition_distance'] / 10);
-				if(actual_chance > 100){actual_chance = 100 / (actual_chance / 100);}
+				//if(actual_chance > 100){actual_chance = 100 / (actual_chance / 100);}
 				if(action_chances['max_chance'] != undefined && actual_chance > action_chances['max_chance']){actual_chance = action_chances['max_chance'];}
 				if(actual_chance > 0)
 				{
