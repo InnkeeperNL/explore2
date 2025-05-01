@@ -201,7 +201,7 @@ var all_available_recipes = {
 			bone: 	30,
 		},
 		result:{
-			box: 	1
+			bone_box: 	1
 		},
 		buildings:{
 			bone_workshop: true,
@@ -519,7 +519,7 @@ var all_available_recipes = {
 			gatherer: 	1
 		},
 		buildings:{
-			wood_workshop: true,
+			mill: true,
 		}
 	},
 	glass:{
@@ -652,7 +652,7 @@ var all_available_recipes = {
 	jar_clay:{
 		cost:{
 			firewood: 	1,
-			clay: 		3,
+			clay: 		4,
 			water: 		1,
 		},
 		result:{
@@ -860,8 +860,8 @@ var all_available_recipes = {
 	},
 	omelette:{
 		cost:{
-			firewood: 	2,
-			egg: 		5,
+			firewood: 	5,
+			egg: 		10,
 		},
 		result:{
 			omelette: 1
@@ -1021,7 +1021,7 @@ var all_available_recipes = {
 			reeds_collector: 	1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	road:{
@@ -1212,7 +1212,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	twine_reeds:{
@@ -1223,7 +1223,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	twine_wool:{
@@ -1234,7 +1234,7 @@ var all_available_recipes = {
 			twine: 		1
 		},
 		buildings:{
-			tailor_shop: true,
+			mill: true,
 		}
 	},
 	wheat_farmer:{

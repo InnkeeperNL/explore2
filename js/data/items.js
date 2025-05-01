@@ -2,16 +2,16 @@ var all_available_items = {
 	apple:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-18T080707.jpg',
-		energy: 100,
+		energy: 1,
 		value: 	6,
 	},
 	apple_picker:{
 		image: 	'items/dream_TradingCard-2025-04-28T070336.478.jpg',
 		value: 	1,
 		effects:{
-			passive_apple: 	1,
+			gathering: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	arrow:{
 		image: 	'items/arrows-4082046_640.jpg',
@@ -69,6 +69,14 @@ var all_available_items = {
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-23T065629.831.jpg',
 		value: 	3,
+	},
+	bone_box:{
+		image: 	'items/bone_box.jpg',
+		effects:{
+			max_storage: 	1,
+		},
+		effect_type: 		'fixed',
+		value: 	5,
 	},
 	bone_hammer:{
 		image: 	'items/dream_TradingCard-2025-04-23T072516.204.jpg',
@@ -236,9 +244,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-22T064745.409.jpg',
 		value: 	1,
 		effects:{
-			passive_sand: 	1,
+			mining: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	egg:{
 		type: 	'resource',
@@ -288,9 +296,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-22T081056.345.jpg',
 		value: 	1,
 		effects:{
-			passive_firewood: 	1,
+			gathering: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	
 	glass:{
@@ -301,9 +309,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-28T071717.536.jpg',
 		value: 	1,
 		effects:{
-			passive_bone: 	1,
+			mining: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	hamburger:{
 		image: 	'items/dream_TradingCard-2025-04-26T093546.570.jpg',
@@ -330,9 +338,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-28T081402.081.jpg',
 		value: 	1,
 		effects:{
-			passive_herbs: 	1,
+			gathering: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	herbs:{
 		type: 	'resource',
@@ -348,9 +356,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-22T091827.520.jpg',
 		value: 	1,
 		effects:{
-			passive_meat: 	1,
+			hunting: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	ink:{
 		image: 	'items/dream_TradingCard-2025-04-20T062644.592.jpg',
@@ -419,9 +427,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-21T091431.826.jpg',
 		value: 	1,
 		effects:{
-			passive_lumber: 	1,
+			woodcutting: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	mana_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T081019.769.jpg',
@@ -448,9 +456,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-21T094646.422.jpg',
 		value: 	1,
 		effects:{
-			passive_stone: 	1,
+			mining: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	mining_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T083650.124.jpg',
@@ -466,10 +474,7 @@ var all_available_items = {
 	},
 	omelette:{
 		image: 	'items/dream_TradingCard-2025-04-26T084649.438.jpg',
-		effects:{
-			max_energy: 	1,
-		},
-		effect_type: 		'fixed',
+		energy: 1,
 		value: 	5,
 	},
 	paper:{
@@ -542,9 +547,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-21T072911.980.jpg',
 		value: 	1,
 		effects:{
-			passive_reeds: 	1,
+			gathering: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	road:{
 		image: 	'items/dream_TradingCard-2025-04-20T072358.383.jpg',
@@ -586,9 +591,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-28T074659.932.jpg',
 		value: 	1,
 		effects:{
-			passive_wool: 	1,
+			hunting: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	shield:{
 		image: 	'items/dream_TradingCard-2025-04-24T074626.540.jpg',
@@ -658,9 +663,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-22T092243.852.jpg',
 		value: 	1,
 		effects:{
-			passive_hide: 	1,
+			hunting: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	trumpet:{
 		image: 	'items/dream_TradingCard-2025-04-24T080050.505.jpg',
@@ -676,7 +681,7 @@ var all_available_items = {
 	water:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2023-08-20T073449.jpg',
-		//energy: 1,
+		energy: 1,
 		value: 	1,
 	},
 	wheat:{
@@ -688,9 +693,9 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-28T075536.594.jpg',
 		value: 	1,
 		effects:{
-			passive_wheat: 	1,
+			farming: 	1,
 		},
-		effect_type: 		'fixed',
+		effect_type: 		'percent',
 	},
 	woodcutting_potion:{
 		image: 	'items/dream_TradingCard-2025-04-20T084103.345.jpg',
@@ -726,19 +731,19 @@ eachoa(all_available_items, function(item_id, item_info){
 	{
 		item_info['name'] = item_id.replaceAll('_',' ');
 	}
-	if(item_info['energy'] != undefined && item_info['energy'] < 0)
+	if(item_info['energy'] != undefined)
 	{
-		item_info['effects'] = {max_energy: 	1};
+		/*item_info['effects'] = {max_energy: 	1};
 		item_info['effect_type'] = 'fixed';
-		delete item_info['energy'];
-		/*if(item_info['value'] != undefined)
+		delete item_info['energy'];*/
+		if(item_info['value'] != undefined)
 		{
 			item_info['energy'] = calc_energy_per_value(item_info['value']);
 		}
 		else
 		{
 			console.log('cannot set energy for ' + item_id);
-		}*/
+		}
 	}
 	if(item_info['effects'] != undefined)
 	{

@@ -86,9 +86,9 @@ function set_location(location_id, forced){
 }
 
 function reset_location(){
-	if(gamedata['energy'] >= 1)
+	if(gamedata['energy'] >= travel_energy_cost)
 	{
-		gain_energy(-1);
+		gain_energy(-1 * travel_energy_cost);
 		gamedata['current_location']['actions'] = {};
 		set_location(gamedata['current_location']['location_id'], true);
 		show_current_location(true);
@@ -96,6 +96,8 @@ function reset_location(){
 }
 
 function show_current_location(fade_in){
+	
+	class_html('current_location_button .action_energy_cost_text', travel_energy_cost);
 	if(fade_in == undefined){fade_in = true;}
 	if(gamedata['current_location'] != undefined && gamedata['current_location']['location_id'] != undefined && all_available_locations[gamedata['current_location']['location_id']] != undefined && gamedata['current_location']['actions'] != undefined)
 	{

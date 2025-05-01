@@ -40,8 +40,11 @@ function check_energy_gain(){
 	gamedata['last_energy_tick'] += seconds_passed * 1000;
 }
 
-function calc_energy_per_value(value){
-	return Math.ceil(Math.sqrt(energy_per_value * value));
+function calc_energy_per_value(base_value){
+	/*var value = base_value * energy_per_value; 
+	value *= 1 + ((Math.sqrt(value) / 100) * percent_ponus_per_value);
+	return Math.floor(value);*/
+	return Math.ceil(Math.sqrt(base_value) * energy_per_value);
 }
 
 function get_max_expeditions(){

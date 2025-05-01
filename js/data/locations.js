@@ -6,10 +6,10 @@ var all_available_locations = {
 		image: 'locations/dream_TradingCard-2025-04-18T161409.540.jpg',
 		local_actions:{},
 	},
-	/*farm:{
+	farm:{
 		image: 'locations/dream_TradingCard-2023-08-22T071732.jpg',
 		local_actions:{},
-	},*/
+	},
 	forest:{
 		image: 'locations/dream_TradingCard-2023-08-17T065727.jpg',
 		local_actions:{}

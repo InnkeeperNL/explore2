@@ -197,7 +197,7 @@
 {
 	background-image: url('../images/icons/shiny-apple.svg');
 	font-size: 20px;
-	color: #48BAFF;
+	color: rgba(150,255,255,1);
 	text-shadow:1px 1px 0px rgba(0,0,0,1),1px -1px 0px rgba(0,0,0,1),-1px 1px 0px rgba(0,0,0,1),-1px -1px 0px rgba(0,0,0,1),1px 1px 3px rgba(0,0,0,1);
 	padding-top: 45px;
 	text-align: center;

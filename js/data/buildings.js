@@ -38,9 +38,10 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_bone: 	1 / all_available_items['bone']['value'],
+			combat: 	5,
+			//passive_bone: 	1 / all_available_items['bone']['value'],
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	furnace:{
@@ -57,9 +58,10 @@ var all_available_buildings = {
 		},*/
 		cost_factor: 	2,
 		effects:{
-			passive_coal: 	1 / all_available_items['coal']['value'],
+			mining: 	5,
+			//passive_coal: 	1 / all_available_items['coal']['value'],
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	gemcutter:{
@@ -98,12 +100,13 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_clay: 	1 / all_available_items['clay']['value'],
+			mining: 	5,
+			//passive_clay: 	1 / all_available_items['clay']['value'],
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
-	/*kitchen:{
+	kitchen:{
 		image: 		'buildings/dream_TradingCard-2023-08-24T113017.jpg',
 		//item_image: 'firewood',
 		cost:{
@@ -115,7 +118,7 @@ var all_available_buildings = {
 		},
 		effect_type: 	'percent',
 		recipes:{},
-	},*/
+	},
 	paper_mill:{
 		image: 		'buildings/dream_TradingCard-2023-08-20T072951.jpg',
 		//item_image: 'paper',
@@ -129,7 +132,7 @@ var all_available_buildings = {
 		effect_type: 	'fixed',
 		recipes:{},
 	},
-	/*mill:{
+	mill:{
 		image: 		'buildings/dream_TradingCard-2025-04-27T064404.422.jpg',
 		//item_image: 'paper',
 		cost:{
@@ -141,7 +144,7 @@ var all_available_buildings = {
 		},
 		effect_type: 	'percent',
 		recipes:{},
-	},*/
+	},
 	smithy:{
 		image: 		'buildings/horseshoe-1516273_640.jpg',
 		//item_image: 'copper_pot',
@@ -164,9 +167,10 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_stone: 	1 / all_available_items['stone']['value'],
+			mining: 	5,
+			//passive_stone: 	1 / all_available_items['stone']['value'],
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	tailor_shop:{
@@ -199,7 +203,7 @@ var all_available_buildings = {
 		},
 		effect_type: 		'fixed',
 	},*/
-	well:{
+	/*well:{
 		//description: 	'Increases maximum energy by 2 each level.',
 		image: 			'buildings/dream_TradingCard-2025-04-25T080808.452.jpg',
 		item_image: 	'water',
@@ -214,7 +218,7 @@ var all_available_buildings = {
 		effect_type: 	'fixed',
 		//effect_is_local: true,
 
-	},
+	},*/
 	wood_workshop:{
 		image: 		'buildings/dream_TradingCard-2023-08-18T095038.jpg',
 		item_image: 'lumber',
@@ -223,9 +227,10 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			passive_lumber: 	1 / all_available_items['lumber']['value'],
+			woodcutting: 	5,
+			//passive_lumber: 	1 / all_available_items['lumber']['value'],
 		},
-		effect_type: 	'fixed',
+		effect_type: 	'percent',
 		recipes:{},
 	},
 	

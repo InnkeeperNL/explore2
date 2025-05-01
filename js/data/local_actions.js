@@ -22,8 +22,8 @@ var all_available_actions = {
 	bandit:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		3,
-		max_action_amount: 		6,
+		min_action_amount: 		2,
+		max_action_amount: 		4,
 		locations:{
 			cave:{
 				min: 			1,
@@ -51,8 +51,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			twine: 		2,
-			peasant: 	0.4,
+			twine: 		1,
+			peasant: 	0.5,
 		}
 	},
 	bear:{
@@ -80,7 +80,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			hide: 		9,
-			//meat: 		9,
+			meat: 		9,
 		}
 	},
 	bird:{
@@ -100,7 +100,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			feather: 	2,
-			//meat: 		0.6
+			meat: 		0.6
 		}
 	},
 	boar:{
@@ -119,7 +119,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			//meat: 		2,
+			meat: 		2,
 			hide: 		4,
 		}
 	},
@@ -208,9 +208,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			//meat: 		0.75,
+			meat: 		0.75,
 			feather: 	2,
-			//egg: 		1,
+			egg: 		1,
 		}
 	},
 	clay:{
@@ -290,9 +290,9 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			//meat: 		2,
+			meat: 		2,
 			hide: 		2,
-			//milk: 		4,
+			milk: 		4,
 		}
 	},
 	dark_crystal_cave:{
@@ -332,7 +332,7 @@ var all_available_actions = {
 		},
 		final_loot:{
 			hide: 		2,
-			//meat: 		4,
+			meat: 		4,
 		}
 	},
 	field_carrot:{
@@ -636,10 +636,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
-			/*river:{
+			river:{
 				min: 			1,
 				max: 			1,
-			}*/
+			}
 		},
 		energy_cost: 			5,
 		image: 					'actions/dream_TradingCard-2025-04-18T162051.177.jpg',
@@ -735,8 +735,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			//meat: 		1,
-			wool: 		1.25,
+			meat: 		0.75,
+			wool: 		1,
 		}
 	},
 	skeletal_warrior:{
@@ -781,7 +781,6 @@ var all_available_actions = {
 			skull: 		0.5
 		}
 	},
-	
 	stream:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
@@ -796,10 +795,14 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
-			/*mountain:{
+			graveyard:{
 				min: 			1,
 				max: 			1,
-			},*/
+			},
+			mountain:{
+				min: 			1,
+				max: 			1,
+			},
 			river:{
 				min: 			1,
 				max: 			1,
@@ -965,7 +968,7 @@ eachoa(all_available_actions, function(action_id, action_info){
 				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
 				var local_action_value = action_info['value'] + 0;
 				if(action_location_info['chance'] != undefined){local_action_value /= action_location_info['chance'];}
-				var local_chance = 100 - (local_action_value * 50 * Math.sqrt(local_action_amount));
+				var local_chance = 200 - (local_action_value * 100 * Math.sqrt(local_action_amount));
 				all_available_locations[location_id]['local_actions'][action_id] = {
 					chance: 	local_chance,
 					min: 		action_location_info['min'],
