@@ -491,7 +491,7 @@ var all_available_actions = {
 		type: 					'resource',
 		subtypes: 				['hunting'],
 		min_action_amount: 		3,
-		max_action_amount: 		4,
+		max_action_amount: 		5,
 		locations:{
 			mountain:{
 				min: 			1,
