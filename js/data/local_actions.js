@@ -236,17 +236,17 @@ var all_available_actions = {
 	coal:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		1,
-		max_action_amount: 		3,
+		min_action_amount: 		8,
+		max_action_amount: 		10,
 		energy_cost: 			2,
 		locations:{
 			cave:{
-				min: 			2,
-				max: 			4,
+				min: 			1,
+				max: 			1,
 			},
 			mountain:{
-				min: 			2,
-				max: 			4,
+				min: 			1,
+				max: 			1,
 			}
 		},
 		action_loot:{
@@ -963,7 +963,7 @@ var all_available_actions = {
 			water: 		25,
 		},
 		final_loot:{
-			jar: 		1,
+			jar: 		0.25,
 			water: 		1,
 		},
 	},
