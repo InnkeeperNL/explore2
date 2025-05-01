@@ -209,12 +209,12 @@ var all_available_recipes = {
 	},
 	box_clay:{
 		cost:{
-			firewood: 	1,
-			clay: 		4,
-			water: 		1,
+			firewood: 	5,
+			clay: 		10,
+			water: 		5,
 		},
 		result:{
-			box: 		1,
+			clay_box: 		1,
 		},
 		buildings:{
 			pottery: true,
@@ -652,7 +652,7 @@ var all_available_recipes = {
 	jar_clay:{
 		cost:{
 			firewood: 	1,
-			clay: 		4,
+			clay: 		3,
 			water: 		1,
 		},
 		result:{

@@ -177,6 +177,14 @@ var all_available_items = {
 		image: 	'items/dream_TradingCard-2025-04-19T055341.297.jpg',
 		value: 	2,
 	},
+	clay_box:{
+		image: 	'items/clay_box.jpg',
+		effects:{
+			max_storage: 	1,
+		},
+		effect_type: 		'fixed',
+		value: 	5,
+	},
 	cloak:{
 		image: 	'items/dream_TradingCard-2025-04-18T063009.220.jpg',
 		effects:{
