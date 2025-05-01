@@ -9,31 +9,48 @@ function show_locations(){
 		}
 	});
 	all_parsed_locations += '<div class="breaker"></div>';
-	if(count_object(gamedata['known_locations']) < count_object(all_available_locations) /*&& gamedata['storage']['map'] != undefined*/)
+	if(count_object(gamedata['known_locations']) == 0)
 	{
-		all_parsed_locations += parse_explore();
+		unlock_random_location();
 	}
-	/*var found_unlockable_building = false;
-	eachoa(all_available_locations, function(location_id, location_info){
-		if(check_location_available(location_id))
+	if(count_object(gamedata['known_locations']) == 1 && gamedata['storage']['map'] == undefined)
+	{
+		var only_known_location = '';
+		eachoa(gamedata['known_locations'], function(known_location_id, known_location_value){
+			only_known_location = known_location_id;
+		});
+		set_new_location(only_known_location);
+		//show_content('current_location');
+	}
+	else
+	{
+		if(count_object(gamedata['known_locations']) < count_object(all_available_locations) /*&& gamedata['storage']['map'] != undefined*/)
 		{
-			if(gamedata['known_locations'][location_id] == undefined)
+			all_parsed_locations += parse_explore();
+		}
+		/*var found_unlockable_building = false;
+		eachoa(all_available_locations, function(location_id, location_info){
+			if(check_location_available(location_id))
 			{
-				if(found_unlockable_building == false)
+				if(gamedata['known_locations'][location_id] == undefined)
 				{
-					all_parsed_locations += '<div class="building_effect">';
-					all_parsed_locations += '<div class="building_description">Exploration</div>';
-				}
-				all_parsed_locations += parse_unlock_location(location_id);
-				if(found_unlockable_building == false)
-				{
-					all_parsed_locations += '</div>';
-					//found_unlockable_building = true;
+					if(found_unlockable_building == false)
+					{
+						all_parsed_locations += '<div class="building_effect">';
+						all_parsed_locations += '<div class="building_description">Exploration</div>';
+					}
+					all_parsed_locations += parse_unlock_location(location_id);
+					if(found_unlockable_building == false)
+					{
+						all_parsed_locations += '</div>';
+						//found_unlockable_building = true;
+					}
 				}
 			}
-		}
-	});*/
-	class_html('locations_container', all_parsed_locations);
+		});*/
+		class_html('locations_container', all_parsed_locations);
+	}
+	
 }
 
 function check_location_available(location_id){

@@ -8,6 +8,10 @@ function show_town(){
 	gain_energy(get_max_energy());
 	class_html('town_container', all_parsed_buildings);
 	class_html('bottom_bar_right', '<button class="menu_button options_button slim" data-target-content="options">Options</button>');
+	if(count_object(gamedata['storage']) == 0)
+	{
+		show_content('locations');
+	}
 }
 
 function parse_building_button(building_id){
