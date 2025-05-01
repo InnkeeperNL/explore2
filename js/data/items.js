@@ -256,6 +256,10 @@ var all_available_items = {
 		},
 		effect_type: 		'percent',
 	},
+	dye:{
+		image: 	'items/dye.jpg',
+		value: 	1,
+	},
 	egg:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-26T082354.335.jpg',
@@ -293,6 +297,11 @@ var all_available_items = {
 	},
 	flour:{
 		image: 	'items/dream_TradingCard-2023-05-20T094740.jpg',
+		value: 	1,
+	},
+	flower:{
+		type: 	'resource',
+		image: 	'items/flowers.jpg',
 		value: 	1,
 	},
 	fries:{
@@ -577,6 +586,14 @@ var all_available_items = {
 		energy: 1,
 		value: 	1,
 	},
+	robe:{
+		image: 	'items/robe.jpg',
+		effects:{
+			travel_speed: 	1,
+		},
+		effect_type: 		'percent',
+		value: 	25,
+	},
 	sack:{
 		image: 	'items/dream_TradingCard-2023-08-26T074414.jpg',
 		effects:{
@@ -622,7 +639,7 @@ var all_available_items = {
 	skull:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-23T070019.923.jpg',
-		value: 	16,
+		value: 	18,
 	},
 	stone:{
 		type: 	'resource',

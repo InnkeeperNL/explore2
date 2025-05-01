@@ -169,8 +169,8 @@ var all_available_actions = {
 	bushes:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		1,
-		max_action_amount: 		1,
+		min_action_amount: 		2,
+		max_action_amount: 		3,
 		locations:{
 			farm:{
 				min: 			1,
@@ -187,6 +187,7 @@ var all_available_actions = {
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
+			firewood: 	25,
 		},
 		final_loot:{
 			firewood: 	1,
@@ -468,6 +469,24 @@ var all_available_actions = {
 			skull: 		1
 		}
 	},
+	flower_patch:{
+		type: 					'resource',
+		subtypes: 				['gathering'],
+		min_action_amount: 		1,
+		max_action_amount: 		1,
+		locations:{
+			forest:{
+				min: 			1,
+				max: 			7,
+			},
+		},
+		image: 					'actions/flower_patch.jpg',
+		action_loot:{
+		},
+		final_loot:{
+			flower: 	1,
+		}
+	},
 	goat:{
 		type: 					'resource',
 		subtypes: 				['hunting'],
@@ -501,10 +520,11 @@ var all_available_actions = {
 		energy_cost: 			6,
 		image: 					'actions/dream_TradingCard-2025-04-23T065110.890.jpg',
 		action_loot:{
-			stone: 		10,
+			stone: 		15,
 		},
 		final_loot:{
-			bone: 		0.75,
+			bone: 		0.5,
+			flower:  	0.5,
 			stone: 		1,
 			skull: 		0.25
 		}

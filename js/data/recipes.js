@@ -436,6 +436,18 @@ var all_available_recipes = {
 			furnace: 	true,
 		}
 	},
+	dye:{
+		cost:{
+			flower: 	5,
+			stone: 		1,
+		},
+		result:{
+			dye: 		1
+		},
+		buildings:{
+			mill: true,
+		}
+	},
 	endurance_potion:{
 		cost:{
 			firewood: 	10,
@@ -605,7 +617,7 @@ var all_available_recipes = {
 			water: 		1,
 		},
 		result:{
-			ink: 		2
+			ink: 		5
 		},
 		buildings:{
 			paper_mill: true,
@@ -618,10 +630,23 @@ var all_available_recipes = {
 			water: 		5,
 		},
 		result:{
-			ink: 		4
+			ink: 		1
 		},
 		buildings:{
 			bone_workshop: true,
+		}
+	},
+	ink_dye:{
+		cost:{
+			dye: 		1,
+			jar: 		1,
+			water: 		1,
+		},
+		result:{
+			ink: 		1
+		},
+		buildings:{
+			paper_mill: true,
 		}
 	},
 	ink_firewood:{
@@ -631,7 +656,7 @@ var all_available_recipes = {
 			water: 		1,
 		},
 		result:{
-			ink: 		2
+			ink: 		1
 		},
 		buildings:{
 			paper_mill: true,
@@ -957,7 +982,7 @@ var all_available_recipes = {
 	},
 	poison:{
 		cost:{
-			herbs:  	4,
+			flower:  	4,
 			jar: 		1,
 		},
 		result:{
@@ -1057,6 +1082,19 @@ var all_available_recipes = {
 		},
 		buildings:{
 			kitchen: true,
+		}
+	},
+	robe:{
+		cost:{
+			cloth: 		3,
+			dye: 		2,
+			twine: 		3,
+		},
+		result:{
+			robe: 1
+		},
+		buildings:{
+			tailor_shop: true,
 		}
 	},
 	sack:{
@@ -1356,10 +1394,13 @@ function check_all_recipes(){
 								}
 								else
 								{
-									var cost_correction_factor = all_available_items[result_id]['value'] / cost_value;
-									eachoa(recipe_info['cost'], function(cost_id, cost_amount){
-										recipe_info['cost'][cost_id] = Math.ceil(cost_amount * cost_correction_factor);
-									});
+									if(cost_value < all_available_items[result_id]['value'])
+									{
+										var cost_correction_factor = all_available_items[result_id]['value'] / cost_value;
+										eachoa(recipe_info['cost'], function(cost_id, cost_amount){
+											recipe_info['cost'][cost_id] = Math.round(cost_amount * cost_correction_factor);
+										});
+									}
 								}
 							}
 						});
