@@ -38,7 +38,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			combat: 	5,
+			//combat: 	5,
 			passive_bone: 	1 / all_available_items['bone']['value'],
 		},
 		effect_type: 	'fixed',
@@ -58,7 +58,7 @@ var all_available_buildings = {
 		},*/
 		cost_factor: 	2,
 		effects:{
-			mining: 	5,
+			//mining: 	5,
 			passive_coal: 	1 / all_available_items['coal']['value'],
 		},
 		effect_type: 	'fixed',
@@ -101,7 +101,7 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			mining: 	5,
+			//mining: 	5,
 			passive_clay: 	1 / all_available_items['clay']['value'],
 		},
 		effect_type: 	'fixed',
@@ -228,10 +228,10 @@ var all_available_buildings = {
 		},
 		cost_factor: 	2,
 		effects:{
-			woodcutting: 	5,
-			//passive_lumber: 	1 / all_available_items['lumber']['value'],
+			//woodcutting: 	5,
+			passive_lumber: 	1 / all_available_items['lumber']['value'],
 		},
-		effect_type: 	'percent',
+		effect_type: 	'fixed',
 		recipes:{},
 	},
 	

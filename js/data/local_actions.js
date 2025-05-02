@@ -248,6 +248,7 @@ var all_available_actions = {
 			mountain:{
 				min: 			1,
 				max: 			2,
+				fixed_chance: 	0,
 			}
 		},
 		action_loot:{
@@ -730,10 +731,12 @@ var all_available_actions = {
 			cave:{
 				min: 			2,
 				max: 			4,
+				fixed_chance: 	0,
 			},
 			mountain:{
 				min: 			2,
 				max: 			4,
+				fixed_chance: 	0,
 			},
 			/*river:{
 				min: 			2,
@@ -816,10 +819,10 @@ var all_available_actions = {
 		min_action_amount: 		2,
 		max_action_amount: 		3,
 		locations:{
-			cave:{
+			/*cave:{
 				min: 			1,
 				max: 			1,
-			},
+			},*/
 			forest:{
 				min: 			1,
 				max: 			1,
@@ -828,10 +831,10 @@ var all_available_actions = {
 				min: 			1,
 				max: 			1,
 			},
-			mountain:{
+			/*mountain:{
 				min: 			1,
 				max: 			1,
-			},
+			},*/
 			river:{
 				min: 			1,
 				max: 			1,
@@ -1013,6 +1016,10 @@ eachoa(all_available_actions, function(action_id, action_info){
 									local_chance = action_location_info['fixed_chance'];
 									corrected_max = ((fixed_local_action_amount - corrected_min) * 2) + corrected_min;
 								}
+								else
+								{
+									console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + corrected_max  + ' max)');
+								}
 							}
 						}
 						else
@@ -1027,6 +1034,10 @@ eachoa(all_available_actions, function(action_id, action_info){
 								{
 									local_chance = action_location_info['fixed_chance'];
 									corrected_max = ((fixed_local_action_amount - corrected_min) * 2) + corrected_min;
+								}
+								else
+								{
+									console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + corrected_max  + ' max)');
 								}
 							}
 						}
