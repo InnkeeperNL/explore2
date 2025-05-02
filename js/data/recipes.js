@@ -1127,6 +1127,19 @@ var all_available_recipes = {
 			tailor_shop: true,
 		}
 	},
+	/*sand:{
+		cost:{
+			stone: 	1,
+			stone_hammer: 1,
+		},
+		result:{
+			sand: 			5,
+			stone_hammer: 	1,
+		},
+		buildings:{
+			stonesmith: true,
+		}
+	},*/
 	sheep_herder:{
 		cost:{
 			cane: 		2,
@@ -1176,6 +1189,17 @@ var all_available_recipes = {
 			stonesmith: true,
 		}
 	},
+	/*stone_hammer:{
+		cost:{
+			stone: 	5,
+		},
+		result:{
+			stone_hammer: 	1
+		},
+		buildings:{
+			stonesmith: true,
+		}
+	},*/
 	sugar:{
 		cost:{
 			sugar_beet: 5,

@@ -48,8 +48,8 @@ var all_available_buildings = {
 		image: 		'buildings/metallurgy-2932947_640.jpg',
 		item_image: 'coal',
 		cost:{
-			brick: 		1,
-			coal: 		5,
+			brick: 		2,
+			coal: 		2,
 		},
 		/*additional_costs:{
 			2:{

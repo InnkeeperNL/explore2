@@ -416,7 +416,7 @@ var all_available_items = {
 	light_crystal:{
 		type: 	'resource',
 		image: 	'items/light_crystal.jpg',
-		value: 	25,
+		value: 	20,
 	},
 	light_crystal_pendant:{
 		image: 	'items/light_crystal_pendant.jpg',
@@ -604,12 +604,13 @@ var all_available_items = {
 	salt:{
 		type: 	'resource',
 		image: 	'items/salt-602215_640.jpg',
-		value: 	10,
+		value: 	5,
 	},
 	sand:{
 		type: 	'resource',
 		image: 	'items/dream_TradingCard-2025-04-20T061915.192.jpg',
 		value: 	1,
+		calculated: true,
 	},
 	sheep_herder:{
 		image: 	'items/dream_TradingCard-2025-04-28T074659.932.jpg',
@@ -652,6 +653,14 @@ var all_available_items = {
 		},
 		effect_type: 		'fixed',
 		value: 	5,
+	},
+	stone_hammer:{
+		image: 	'items/stone_hammer.jpg',
+		effects:{
+			mining: 	10,
+		},
+		effect_type: 		'percent',
+		value: 	33,
 	},
 	sugar:{
 		image: 	'items/dream_TradingCard-2025-04-26T083329.129.jpg',

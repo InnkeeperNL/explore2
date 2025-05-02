@@ -10,6 +10,7 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-25,
 			}
 		},
 		action_loot:{
@@ -22,8 +23,8 @@ var all_available_actions = {
 	bandit:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		2,
-		max_action_amount: 		4,
+		min_action_amount: 		3,
+		max_action_amount: 		6,
 		locations:{
 			cave:{
 				min: 			1,
@@ -79,8 +80,8 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		9,
-			meat: 		9,
+			hide: 		5,
+			meat: 		5,
 		}
 	},
 	bird:{
@@ -92,6 +93,7 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	10,
 			}
 		},
 		energy_cost: 			3,
@@ -112,6 +114,7 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-5,
 			}
 		},
 		energy_cost: 			6,
@@ -133,11 +136,13 @@ var all_available_actions = {
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			3,
+				max: 			1,
+				fixed_chance: 	50,
 			},
 			mountain:{
 				min: 			1,
-				max: 			3,
+				max: 			1,
+				fixed_chance: 	50,
 			},
 		},
 		action_loot:{
@@ -156,6 +161,7 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	25,
 			}
 		},
 		energy_cost: 			5,
@@ -169,28 +175,31 @@ var all_available_actions = {
 	bushes:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		2,
-		max_action_amount: 		3,
+		min_action_amount: 		1,
+		max_action_amount: 		1,
 		locations:{
 			farm:{
 				min: 			1,
-				max: 			3,
+				max: 			1,
+				fixed_chance: 	10,
 			},
 			forest:{
 				min: 			1,
-				max: 			3,
+				max: 			1,
+				fixed_chance: 	40,
 			},
 			river:{
 				min: 			1,
-				max: 			3,
+				max: 			1,
+				fixed_chance: 	10,
 			},
 		},
 		image: 					'actions/dream_TradingCard-2023-08-26T072559.jpg',
 		action_loot:{
-			firewood: 	25,
+			//firewood: 	25,
 		},
 		final_loot:{
-			firewood: 	1,
+			firewood: 	2,
 		}
 	},
 	chicken:{
@@ -202,6 +211,7 @@ var all_available_actions = {
 			farm:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	0,
 			}
 		},
 		energy_cost: 			6,
@@ -210,8 +220,8 @@ var all_available_actions = {
 		},
 		final_loot:{
 			meat: 		0.75,
-			feather: 	2,
-			egg: 		1,
+			feather: 	5,
+			egg: 		2,
 		}
 	},
 	clay:{
@@ -224,6 +234,7 @@ var all_available_actions = {
 			river:{
 				min: 			2,
 				max: 			4,
+				fixed_chance: 	50,
 			}
 		},
 		action_loot:{
@@ -261,20 +272,21 @@ var all_available_actions = {
 	copper_ore:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
-		max_action_amount: 		8,
+		min_action_amount: 		8,
+		max_action_amount: 		10,
 		energy_cost: 			2,
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			2,
+				max: 			1,
+				fixed_chance: 	-50,
 			}
 		},
 		action_loot:{
 			copper_ore: 	10,
 		},
 		final_loot:{
-			copper_ore: 	2,
+			copper_ore: 	1,
 		}
 	},
 	cow:{
@@ -286,6 +298,7 @@ var all_available_actions = {
 			farm:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-15,
 			}
 		},
 		energy_cost: 			6,
@@ -301,18 +314,19 @@ var all_available_actions = {
 	dark_crystal_cave:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
+		min_action_amount: 		8,
 		max_action_amount: 		8,
 		locations:{
 			cave:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-50,
 			}
 		},
 		energy_cost: 			6,
 		image: 					'actions/crystal_cave.jpg',
 		action_loot:{
-			dark_crystal: 		10,
+			dark_crystal: 		5,
 		},
 		final_loot:{
 			dark_crystal: 		1,
@@ -327,6 +341,7 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-5,
 			}
 		},
 		energy_cost: 			8,
@@ -346,8 +361,9 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			3,
-				max: 			6
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	-50,
 			}
 		},
 		action_loot:{
@@ -365,8 +381,9 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			3,
-				max: 			6
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	-5,
 			}
 		},
 		action_loot:{
@@ -384,8 +401,9 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			3,
-				max: 			6
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	-30,
 			}
 		},
 		action_loot:{
@@ -403,8 +421,9 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			3,
-				max: 			6
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	-20,
 			}
 		},
 		action_loot:{
@@ -422,8 +441,9 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			farm:{
-				min: 			3,
-				max: 			6
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	-10,
 			}
 		},
 		action_loot:{
@@ -455,12 +475,13 @@ var all_available_actions = {
 	floating_skull:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		6,
-		max_action_amount: 		8,
+		min_action_amount: 		12,
+		max_action_amount: 		12,
 		locations:{
 			graveyard:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-50,
 			}
 		},
 		energy_cost: 			6,
@@ -478,16 +499,19 @@ var all_available_actions = {
 		max_action_amount: 		1,
 		locations:{
 			farm:{
-				min: 			1,
-				max: 			7,
+				min: 			3,
+				max: 			3,
+				fixed_chance: 	0,
 			},
 			forest:{
-				min: 			1,
-				max: 			7,
+				min: 			3,
+				max: 			3,
+				fixed_chance: 	0,
 			},
 			river:{
-				min: 			1,
-				max: 			7,
+				min: 			3,
+				max: 			3,
+				fixed_chance: 	0,
 			}
 		},
 		image: 					'actions/flower_patch.jpg',
@@ -505,7 +529,8 @@ var all_available_actions = {
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			1.75,
+				max: 			1,
+				fixed_chance: 	5,
 			}
 		},
 		energy_cost: 			6,
@@ -525,6 +550,7 @@ var all_available_actions = {
 			graveyard:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	50,
 			}
 		},
 		energy_cost: 			6,
@@ -548,6 +574,7 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			2,
+				fixed_chance: 	-50,
 			}
 		},
 		energy_cost: 			5,
@@ -555,7 +582,7 @@ var all_available_actions = {
 			herbs: 		10,
 		},
 		final_loot:{
-			herbs: 		2,
+			herbs: 		1,
 		}
 	},
 	iron_ore:{
@@ -567,7 +594,8 @@ var all_available_actions = {
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			2,
+				max: 			1,
+				fixed_chance: 	-100,
 			}
 		},
 		image: 					'items/meteorite-91891_640.jpg',
@@ -575,27 +603,28 @@ var all_available_actions = {
 			iron_ore: 	10,
 		},
 		final_loot:{
-			iron_ore: 	2,
+			iron_ore: 	1,
 		}
 	},
 	light_crystal_cave:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
-		max_action_amount: 		8,
+		min_action_amount: 		10,
+		max_action_amount: 		10,
 		locations:{
 			cave:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-100,
 			}
 		},
 		energy_cost: 			6,
 		image: 					'actions/light_crystal_cave.jpg',
 		action_loot:{
-			light_crystal: 		10,
+			light_crystal: 		5,
 		},
 		final_loot:{
-			light_crystal: 		1,
+			light_crystal: 		0.5,
 		}
 	},
 	peasant:{
@@ -607,29 +636,34 @@ var all_available_actions = {
 			cave:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			},
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			},
 			graveyard:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			},
 			mountain:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			}
 		},
 		energy_cost: 			5,
 		action_loot:{
 		},
 		final_loot:{
-			peasant: 		1,
+			peasant: 		0.15,
 		}
 	},
 	peasant_stuck:{
@@ -646,10 +680,10 @@ var all_available_actions = {
 		energy_cost: 			5,
 		image: 					'actions/dream_TradingCard-2025-04-22T082408.969.jpg',
 		action_loot:{
-			stone: 			10,
+			stone: 			5,
 		},
 		final_loot:{
-			peasant: 		1,
+			peasant: 		0.5,
 		}
 	},
 	rat:{
@@ -661,14 +695,17 @@ var all_available_actions = {
 			cave:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	5,
 			},
 			graveyard:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	5,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	0,
 			}
 		},
 		energy_cost: 			5,
@@ -676,7 +713,7 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			hide: 		0.6,
+			hide: 		1,
 		}
 	},
 	reeds:{
@@ -686,8 +723,9 @@ var all_available_actions = {
 		max_action_amount: 		6,
 		locations:{
 			river:{
-				min: 			3,
-				max: 			6,
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	30,
 			},
 			/*farm:{
 				min: 			1,
@@ -705,13 +743,14 @@ var all_available_actions = {
 	salt:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		5,
+		min_action_amount: 		10,
 		max_action_amount: 		10,
 		energy_cost: 			2,
 		locations:{
 			mountain:{
 				min: 			1,
-				max: 			2,
+				max: 			1,
+				fixed_chance: 	-30,
 			}
 		},
 		action_loot:{
@@ -730,12 +769,12 @@ var all_available_actions = {
 		locations:{
 			cave:{
 				min: 			2,
-				max: 			4,
+				max: 			2,
 				fixed_chance: 	0,
 			},
 			mountain:{
 				min: 			2,
-				max: 			4,
+				max: 			2,
 				fixed_chance: 	0,
 			},
 			/*river:{
@@ -760,6 +799,7 @@ var all_available_actions = {
 			farm:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	50,
 			}
 		},
 		energy_cost: 			6,
@@ -767,19 +807,20 @@ var all_available_actions = {
 		action_loot:{
 		},
 		final_loot:{
-			meat: 		0.75,
-			wool: 		1,
+			meat: 		1,
+			wool: 		2,
 		}
 	},
 	skeletal_warrior:{
 		type: 					'resource',
 		subtypes: 				['combat'],
-		min_action_amount: 		9,
+		min_action_amount: 		10,
 		max_action_amount: 		10,
 		locations:{
 			graveyard:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			}
 		},
 		energy_cost: 			6,
@@ -788,9 +829,9 @@ var all_available_actions = {
 		},
 		final_loot:{
 			bone: 		1,
-			skull: 		0.5,
-			sword: 		0.2,
-			shield: 	0.2
+			skull: 		1,
+			sword: 		0.05,
+			shield: 	0.04
 		}
 	},
 	skeleton:{
@@ -802,6 +843,7 @@ var all_available_actions = {
 			graveyard:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	50,
 			}
 		},
 		energy_cost: 			6,
@@ -826,11 +868,12 @@ var all_available_actions = {
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	10,
 			},
-			graveyard:{
+			/*graveyard:{
 				min: 			1,
 				max: 			1,
-			},
+			},*/
 			/*mountain:{
 				min: 			1,
 				max: 			1,
@@ -838,6 +881,7 @@ var all_available_actions = {
 			river:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	25,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-20T073648.jpg',
@@ -859,6 +903,7 @@ var all_available_actions = {
 			farm:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	50,
 			},
 		},
 		action_loot:{
@@ -876,8 +921,9 @@ var all_available_actions = {
 		energy_cost: 			6,
 		locations:{
 			river:{
-				min: 			3,
-				max: 			6
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	-10,
 			}
 		},
 		action_loot:{
@@ -894,13 +940,15 @@ var all_available_actions = {
 		max_action_amount: 		10,
 		locations:{
 			forest:{
-				min: 			2,
-				max: 			4,
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	50,
 			},
 			river:{
 				min: 			1,
 				max: 			1,
 				chance: 		0.5,
+				fixed_chance: 	10,
 			}
 		},
 		image: 					'actions/dream_TradingCard-2023-08-17T084822.jpg',
@@ -918,8 +966,9 @@ var all_available_actions = {
 		max_action_amount: 		10,
 		locations:{
 			forest:{
-				min: 			2,
-				max: 			4,
+				min: 			1,
+				max: 			1,
+				fixed_chance: 	50,
 			},
 			/*mountain:{
 				min: 			1,
@@ -937,12 +986,13 @@ var all_available_actions = {
 	tree_large:{
 		type: 					'resource',
 		subtypes: 				['woodcutting'],
-		min_action_amount: 		10,
-		max_action_amount: 		20,
+		min_action_amount: 		12,
+		max_action_amount: 		12,
 		locations:{
 			forest:{
 				min: 			1,
 				max: 			1,
+				fixed_chance: 	-10,
 			},
 /*			river:{
 				min: 			1,
@@ -952,21 +1002,22 @@ var all_available_actions = {
 		energy_cost: 			2,
 		image: 					'actions/dream_TradingCard-2023-08-26T072820.jpg',
 		action_loot:{
-			lumber: 	10,
+			lumber: 	1,
 		},
 		final_loot:{
-			lumber: 	5
+			lumber: 	3
 		},
 	},
 	water_well:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		8,
-		max_action_amount: 		10,
+		min_action_amount: 		5,
+		max_action_amount: 		5,
 		locations:{
 			farm:{
 				min: 			1,
 				max: 			1,
+				//fixed_chance: 	0,
 			},
 		},
 		energy_cost: 			2,
@@ -975,7 +1026,8 @@ var all_available_actions = {
 			water: 		25,
 		},
 		final_loot:{
-			jar: 		0.25,
+			jar: 		1,
+			water: 		1,
 		},
 	},
 	
@@ -996,51 +1048,72 @@ eachoa(all_available_actions, function(action_id, action_info){
 				if(all_available_locations[location_id]['resources'] == undefined){all_available_locations[location_id]['resources'] = {};}
 				eachoa(action_info['action_loot'], function(loot_it, loot_amount){all_available_locations[location_id]['resources'][loot_it] = true;});
 				eachoa(action_info['final_loot'], function(loot_it, loot_amount){all_available_locations[location_id]['resources'][loot_it] = true;});
+				var average_taps = action_info['min_action_amount'] + ((action_info['max_action_amount'] - action_info['min_action_amount']) / 2);
 				var corrected_min = action_location_info['min'] + 0;
 				var corrected_max = action_location_info['max'] + 0;
 				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
-				var local_action_value = action_info['value'] + 0;
+				var local_action_value = (action_info['total_value'] * local_action_amount * action_info['value']) /*/ (1 + ((average_taps - 1) / 10))*/;
+				action_location_info['local_action_value'] = local_action_value;
 				if(action_location_info['chance'] != undefined){local_action_value /= action_location_info['chance'];}
-				var local_chance = 200 - (local_action_value * 100 * Math.sqrt(local_action_amount));
+				var local_chance = 100 - (local_action_value * 5 /** Math.sqrt(local_action_amount)*/);
 				if(action_location_info['fixed_chance'] != undefined && local_chance != action_location_info['fixed_chance'])
 					{
-						if(local_chance < action_location_info['fixed_chance'])
+						/*if(local_chance < action_location_info['fixed_chance'])
 						{
 							var chance_difference = action_location_info['fixed_chance'] - local_chance;
-							var chance_value_difference = chance_difference / 100 / local_action_value;
-							var fixed_local_action_amount = sqr(Math.sqrt(local_action_amount) - chance_value_difference);
-							if(fixed_local_action_amount > 1)
+							var chance_value_difference = chance_difference / (local_action_value * 5);
+							var fixed_local_action_amount = (local_action_amount) - chance_value_difference;*/
+							
+							var fixed_local_action_amount =  (-1 * (action_location_info['fixed_chance'] - 100)) / (local_action_value * 5);
+							
+							if(fixed_local_action_amount >= 1)
 							{
-								if(fixed_local_action_amount > corrected_min)
+								if(fixed_local_action_amount >= corrected_min)
 								{
 									local_chance = action_location_info['fixed_chance'];
-									corrected_max = ((fixed_local_action_amount - corrected_min) * 2) + corrected_min;
+									corrected_max = (fixed_local_action_amount - corrected_min) + fixed_local_action_amount;
+									if(corrected_max > 25)
+									{
+										console.log('too many actions for ' + action_id + ' at ' + location_id + ' (' + corrected_max  + ' max)');
+									}
 								}
 								else
 								{
-									console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + corrected_max  + ' max)');
+									console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + fixed_local_action_amount  + ')');
 								}
 							}
-						}
+							else
+							{
+								console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + fixed_local_action_amount  + ')');
+							}
+						/*}
 						else
 						{
 							var chance_difference = local_chance - action_location_info['fixed_chance'];
-							var chance_value_difference = chance_difference / 100 / local_action_value;
-							var fixed_local_action_amount = sqr(Math.sqrt(local_action_amount) + chance_value_difference);
-							/*console.log(fixed_local_action_amount);*/
+							var chance_value_difference = chance_difference / (local_action_value * 5);
+							var fixed_local_action_amount = (local_action_amount) + chance_value_difference;
+							//console.log(fixed_local_action_amount);
 							if(fixed_local_action_amount > 1)
 							{
 								if(fixed_local_action_amount > corrected_min)
 								{
 									local_chance = action_location_info['fixed_chance'];
 									corrected_max = ((fixed_local_action_amount - corrected_min) * 2) + corrected_min;
+									if(corrected_max > 25)
+									{
+										console.log('too many actions for ' + action_id + ' at ' + location_id + ' (' + corrected_max  + ' max)');
+									}
 								}
 								else
 								{
 									console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + corrected_max  + ' max)');
 								}
 							}
-						}
+							else
+							{
+								console.log('cannot correct fixed chance for ' + action_id + ' at ' + location_id + ' (' + fixed_local_action_amount  + ')');
+							}
+						}*/
 					}
 				all_available_locations[location_id]['local_actions'][action_id] = {
 					chance: 	local_chance,

@@ -52,7 +52,7 @@ function set_location(location_id, forced){
 				{
 					//console.log(action_id + ' ' + actual_chance + ' chance to be picked');
 				}
-				if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 /*/ (1 + action_pick_chances[action_id] / 100)*/;}
+				if(action_pick_chances[action_id] > 100){action_pick_chances[action_id] = 100 / (1 + (action_pick_chances[action_id] / 100));}
 			});
 			var chosen_action_id = get_random_key_from_object_based_on_num_value(action_pick_chances);
 			var action_id = chosen_action_id;
