@@ -236,17 +236,18 @@ var all_available_actions = {
 	coal:{
 		type: 					'resource',
 		subtypes: 				['mining'],
-		min_action_amount: 		8,
-		max_action_amount: 		10,
+		min_action_amount: 		3,
+		max_action_amount: 		4,
 		energy_cost: 			2,
 		locations:{
 			cave:{
 				min: 			1,
-				max: 			1,
+				max: 			2,
+				fixed_chance: 	0,
 			},
 			mountain:{
 				min: 			1,
-				max: 			1,
+				max: 			2,
 			}
 		},
 		action_loot:{
@@ -475,10 +476,18 @@ var all_available_actions = {
 		min_action_amount: 		1,
 		max_action_amount: 		1,
 		locations:{
+			farm:{
+				min: 			1,
+				max: 			7,
+			},
 			forest:{
 				min: 			1,
 				max: 			7,
 			},
+			river:{
+				min: 			1,
+				max: 			7,
+			}
 		},
 		image: 					'actions/flower_patch.jpg',
 		action_loot:{
@@ -949,8 +958,8 @@ var all_available_actions = {
 	water_well:{
 		type: 					'resource',
 		subtypes: 				['gathering'],
-		min_action_amount: 		5,
-		max_action_amount: 		7,
+		min_action_amount: 		8,
+		max_action_amount: 		10,
 		locations:{
 			farm:{
 				min: 			1,
@@ -964,7 +973,6 @@ var all_available_actions = {
 		},
 		final_loot:{
 			jar: 		0.25,
-			water: 		1,
 		},
 	},
 	
@@ -985,14 +993,48 @@ eachoa(all_available_actions, function(action_id, action_info){
 				if(all_available_locations[location_id]['resources'] == undefined){all_available_locations[location_id]['resources'] = {};}
 				eachoa(action_info['action_loot'], function(loot_it, loot_amount){all_available_locations[location_id]['resources'][loot_it] = true;});
 				eachoa(action_info['final_loot'], function(loot_it, loot_amount){all_available_locations[location_id]['resources'][loot_it] = true;});
+				var corrected_min = action_location_info['min'] + 0;
+				var corrected_max = action_location_info['max'] + 0;
 				var local_action_amount = ((action_location_info['max'] - action_location_info['min']) / 2) + action_location_info['min'];
 				var local_action_value = action_info['value'] + 0;
 				if(action_location_info['chance'] != undefined){local_action_value /= action_location_info['chance'];}
 				var local_chance = 200 - (local_action_value * 100 * Math.sqrt(local_action_amount));
+				if(action_location_info['fixed_chance'] != undefined && local_chance != action_location_info['fixed_chance'])
+					{
+						if(local_chance < action_location_info['fixed_chance'])
+						{
+							var chance_difference = action_location_info['fixed_chance'] - local_chance;
+							var chance_value_difference = chance_difference / 100 / local_action_value;
+							var fixed_local_action_amount = sqr(Math.sqrt(local_action_amount) - chance_value_difference);
+							if(fixed_local_action_amount > 1)
+							{
+								if(fixed_local_action_amount > corrected_min)
+								{
+									local_chance = action_location_info['fixed_chance'];
+									corrected_max = ((fixed_local_action_amount - corrected_min) * 2) + corrected_min;
+								}
+							}
+						}
+						else
+						{
+							var chance_difference = local_chance - action_location_info['fixed_chance'];
+							var chance_value_difference = chance_difference / 100 / local_action_value;
+							var fixed_local_action_amount = sqr(Math.sqrt(local_action_amount) + chance_value_difference);
+							/*console.log(fixed_local_action_amount);*/
+							if(fixed_local_action_amount > 1)
+							{
+								if(fixed_local_action_amount > corrected_min)
+								{
+									local_chance = action_location_info['fixed_chance'];
+									corrected_max = ((fixed_local_action_amount - corrected_min) * 2) + corrected_min;
+								}
+							}
+						}
+					}
 				all_available_locations[location_id]['local_actions'][action_id] = {
 					chance: 	local_chance,
-					min: 		action_location_info['min'],
-					max: 		action_location_info['max'],
+					min: 		corrected_min,
+					max: 		corrected_max,
 				};
 				if(action_location_info['max_chance'] != undefined){all_available_locations[location_id]['local_actions'][action_id]['max_chance'] = action_location_info['max_chance'];}
 			}

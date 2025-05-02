@@ -55,4 +55,4 @@ var value_per_energy 		= 1.5;
 var building_cost_factor = 1;
 
 // RECIPES
-var recipe_cost_factor = 2;
+var recipe_cost_factor = 1;

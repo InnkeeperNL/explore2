@@ -1,8 +1,8 @@
 var all_available_recipes = {
 	apple_picker:{
 		cost:{
-			apple: 		10,
-			basket: 	5,
+			apple: 		20,
+			basket: 	10,
 			peasant: 	1,
 		},
 		result:{
@@ -27,8 +27,8 @@ var all_available_recipes = {
 	axe:{
 		cost:{
 			iron: 		5,
-			pole: 		3,
-			twine: 		3,
+			pole: 		5,
+			twine: 		5,
 		},
 		result:{
 			hatchet: 	1
@@ -39,9 +39,10 @@ var all_available_recipes = {
 	},
 	backpack:{
 		cost:{
-			iron: 		2,
-			leather: 	10,
-			twine: 		1,
+			cloth: 		2,
+			iron: 		1,
+			leather: 	20,
+			twine: 		5,
 		},
 		result:{
 			backpack: 	1
@@ -52,9 +53,9 @@ var all_available_recipes = {
 	},
 	bag:{
 		cost:{
-			cloth: 		10,
-			leather: 	10,
-			twine: 		5,
+			cloth: 		20,
+			leather: 	20,
+			twine: 		10,
 		},
 		result:{
 			bag: 		1
@@ -65,9 +66,9 @@ var all_available_recipes = {
 	},
 	barrel:{
 		cost:{
-			iron: 		2,
-			nail: 		10,
-			plank: 		24,
+			iron: 		5,
+			nail: 		50,
+			plank: 		30,
 		},
 		result:{
 			barrel: 	1
@@ -78,7 +79,7 @@ var all_available_recipes = {
 	},
 	basket:{
 		cost:{
-			firewood: 	10,
+			firewood: 	20,
 		},
 		result:{
 			basket: 	1
@@ -89,7 +90,7 @@ var all_available_recipes = {
 	},
 	basket_reeds:{
 		cost:{
-			reeds: 	5,
+			reeds: 	10,
 		},
 		result:{
 			basket: 	1
@@ -100,9 +101,11 @@ var all_available_recipes = {
 	},
 	bed:{
 		cost:{
+			cloth: 		10,
 			nail: 		10,
 			pillow: 	2,
 			plank: 		10,
+			wooden_hammer: 1,
 		},
 		result:{
 			bed: 1
@@ -113,7 +116,7 @@ var all_available_recipes = {
 	},
 	bone_dagger:{
 		cost:{
-			bone: 		9,
+			bone: 		10,
 			stone: 		2,
 		},
 		result:{
@@ -125,8 +128,8 @@ var all_available_recipes = {
 	},
 	bone_hammer:{
 		cost:{
-			bone: 		10,
-			pole: 		2,
+			bone: 		20,
+			pole: 		1,
 			skull: 		1,
 		},
 		result:{
@@ -151,6 +154,7 @@ var all_available_recipes = {
 		cost:{
 			bone: 		40,
 			pole: 		5,
+			stone: 		5,
 			twine: 		5,
 		},
 		result:{
@@ -162,9 +166,9 @@ var all_available_recipes = {
 	},
 	boot:{
 		cost:{
-			leather: 	10,
-			lumber: 	1,
-			twine: 		2,
+			leather: 	20,
+			lumber: 	5,
+			twine: 		5,
 		},
 		result:{
 			boot: 		1
@@ -177,7 +181,7 @@ var all_available_recipes = {
 		cost:{
 			pole: 		1,
 			twine: 		1,
-			arrow: 		10,
+			arrow: 		25,
 		},
 		result:{
 			bow: 		1
@@ -211,7 +215,7 @@ var all_available_recipes = {
 	box_clay:{
 		cost:{
 			firewood: 	5,
-			clay: 		10,
+			clay: 		20,
 			water: 		5,
 		},
 		result:{
@@ -224,7 +228,7 @@ var all_available_recipes = {
 	bread:{
 		cost:{
 			firewood: 	1,
-			flour: 		1,
+			flour: 		5,
 			water: 		1,
 		},
 		result:{
@@ -237,7 +241,7 @@ var all_available_recipes = {
 	brick_clay:{
 		cost:{
 			firewood: 	1,
-			clay: 		4,
+			clay: 		8,
 			water: 		1,
 		},
 		result:{
@@ -260,7 +264,7 @@ var all_available_recipes = {
 	},*/
 	brick_stone:{
 		cost:{
-			stone: 	4,
+			stone: 	8,
 		},
 		result:{
 			brick: 		1
@@ -271,7 +275,7 @@ var all_available_recipes = {
 	},
 	bucket:{
 		cost:{
-			lumber: 	10,
+			lumber: 	20,
 		},
 		result:{
 			bucket: 	1
@@ -282,7 +286,7 @@ var all_available_recipes = {
 	},
 	cane:{
 		cost:{
-			pole: 	2,
+			pole: 	4,
 		},
 		result:{
 			cane: 	1
@@ -294,7 +298,7 @@ var all_available_recipes = {
 	candy:{
 		cost:{
 			firewood: 	1,
-			sugar: 		5,
+			sugar: 		10,
 		},
 		result:{
 			candy: 1
@@ -305,10 +309,10 @@ var all_available_recipes = {
 	},
 	carrot_cake:{
 		cost:{
-			carrot: 	5,
+			carrot: 	20,
 			egg: 		2,
 			firewood: 	2,
-			flour: 		4,
+			flour: 		10,
 			sugar: 		2,
 		},
 		result:{
@@ -320,8 +324,8 @@ var all_available_recipes = {
 	},
 	cheese:{
 		cost:{
-			milk: 		10,
-			salt: 		1,
+			milk: 		20,
+			salt: 		2,
 		},
 		result:{
 			cheese: 1
@@ -332,8 +336,8 @@ var all_available_recipes = {
 	},
 	cloak:{
 		cost:{
-			cloth: 	10,
-			twine: 	5
+			cloth: 	20,
+			twine: 	10
 		},
 		result:{
 			cloak: 	1
@@ -344,7 +348,8 @@ var all_available_recipes = {
 	},
 	cloth:{
 		cost:{
-			twine: 		2,
+			dye: 		1,
+			twine: 		4,
 		},
 		result:{
 			cloth: 		1
@@ -355,7 +360,7 @@ var all_available_recipes = {
 	},
 	coal:{
 		cost:{
-			firewood: 2,
+			firewood: 4,
 		},
 		result:{
 			coal: 	1
@@ -366,8 +371,8 @@ var all_available_recipes = {
 	},
 	copper:{
 		cost:{
-			copper_ore: 2,
-			coal: 		1,
+			copper_ore: 4,
+			coal: 		4,
 		},
 		result:{
 			copper: 	1
@@ -378,7 +383,7 @@ var all_available_recipes = {
 	},
 	copper_pot:{
 		cost:{
-			copper: 	2,
+			copper: 	5,
 			coal: 		10,
 		},
 		result:{
@@ -390,8 +395,8 @@ var all_available_recipes = {
 	},
 	crate:{
 		cost:{
-			nail: 		5,
-			plank: 		12,
+			nail: 		10,
+			plank: 		20,
 		},
 		result:{
 			crate: 	1
@@ -402,8 +407,9 @@ var all_available_recipes = {
 	},
 	dark_crystal_pendant:{
 		cost:{
-			dark_crystal: 	5,
-			twine: 			1,
+			dark_crystal: 	10,
+			stone: 			2,
+			twine: 			2,
 		},
 		result:{
 			dark_crystal_pendant: 1
@@ -414,8 +420,9 @@ var all_available_recipes = {
 	},
 	dark_crystal_staff:{
 		cost:{
-			dark_crystal: 	10,
+			dark_crystal: 	20,
 			pole: 			2,
+			stone: 			2,
 		},
 		result:{
 			dark_crystal_staff: 1
@@ -426,9 +433,9 @@ var all_available_recipes = {
 	},
 	digger:{
 		cost:{
-			shovel: 	1,
+			shovel: 	2,
 			peasant: 	1,
-			sand: 		10,
+			sand: 		20,
 		},
 		result:{
 			digger: 1
@@ -439,7 +446,7 @@ var all_available_recipes = {
 	},
 	dye:{
 		cost:{
-			flower: 	5,
+			flower: 	10,
 			stone: 		1,
 		},
 		result:{
@@ -451,11 +458,11 @@ var all_available_recipes = {
 	},
 	endurance_potion:{
 		cost:{
-			firewood: 	10,
-			apple:  	10,
-			herbs: 		10,
+			firewood: 	20,
+			apple:  	20,
+			herbs: 		20,
 			jar: 		1,
-			water: 		10
+			water: 		20
 		},
 		result:{
 			endurance_potion: 	1
@@ -467,7 +474,7 @@ var all_available_recipes = {
 	explorer:{
 		cost:{
 			cane: 		1,
-			map: 		1,
+			map: 		5,
 			peasant: 	1,
 		},
 		result:{
@@ -501,7 +508,8 @@ var all_available_recipes = {
 	},
 	flour:{
 		cost:{
-			wheat: 		5,
+			stone: 		1,
+			wheat: 		10,
 		},
 		result:{
 			flour: 		1
@@ -513,7 +521,7 @@ var all_available_recipes = {
 	fries:{
 		cost:{
 			firewood: 	5,
-			potato: 	10,
+			potato: 	20,
 			salt: 		1,
 		},
 		result:{
@@ -525,7 +533,7 @@ var all_available_recipes = {
 	},
 	gatherer:{
 		cost:{
-			basket: 	1,
+			basket: 	5,
 			peasant: 	1,
 		},
 		result:{
@@ -549,9 +557,9 @@ var all_available_recipes = {
 	},
 	grave_digger:{
 		cost:{
-			bone: 		10,
 			peasant: 	1,
-			shovel: 	1,
+			shovel: 	2,
+			skull: 		20,
 		},
 		result:{
 			grave_digger: 1
@@ -563,7 +571,7 @@ var all_available_recipes = {
 	hamburger:{
 		cost:{
 			bread: 			2,
-			roasted_meat: 	5,
+			roasted_meat: 	10,
 			cheese: 		1,
 		},
 		result:{
@@ -576,7 +584,8 @@ var all_available_recipes = {
 	herbal_cane:{
 		cost:{
 			cane: 	1,
-			herbs: 	10,
+			herbs: 	20,
+			knife: 	1,
 		},
 		result:{
 			herbal_cane: 	1
@@ -587,9 +596,9 @@ var all_available_recipes = {
 	},
 	herbalist:{
 		cost:{
-			herbs: 		10,
+			herbs: 		20,
 			peasant: 	1,
-			pouch: 		1,
+			pouch: 		2,
 		},
 		result:{
 			herbalist: 1
@@ -600,7 +609,7 @@ var all_available_recipes = {
 	},
 	hunter:{
 		cost:{
-			boot: 		1,
+			boot: 		2,
 			bow: 		1,
 			peasant: 	1,
 		},
@@ -666,7 +675,7 @@ var all_available_recipes = {
 	iron:{
 		cost:{
 			iron_ore: 	2,
-			coal: 		5,
+			coal: 		10,
 		},
 		result:{
 			iron: 		1
@@ -724,8 +733,9 @@ var all_available_recipes = {
 	},
 	knife_copper:{
 		cost:{
-			copper: 	1,
-			firewood: 	1,
+			copper: 	2,
+			firewood: 	2,
+			stone: 		2,
 		},
 		result:{
 			knife: 		1
@@ -736,8 +746,9 @@ var all_available_recipes = {
 	},
 	knife_iron:{
 		cost:{
-			iron: 		1,
-			twine: 		1,
+			iron: 		2,
+			stone: 		2,
+			twine: 		2,
 		},
 		result:{
 			knife: 		1
@@ -748,8 +759,8 @@ var all_available_recipes = {
 	},
 	leather:{
 		cost:{
-			firewood: 	2,
-			hide: 		2,
+			firewood: 	4,
+			hide: 		4,
 		},
 		result:{
 			leather: 1
@@ -772,8 +783,9 @@ var all_available_recipes = {
 	},
 	light_crystal_pendant:{
 		cost:{
-			light_crystal: 	5,
-			twine: 			1,
+			light_crystal: 	10,
+			stone: 			2,
+			twine: 			2,
 		},
 		result:{
 			light_crystal_pendant: 1
@@ -784,8 +796,9 @@ var all_available_recipes = {
 	},
 	light_crystal_staff:{
 		cost:{
-			light_crystal: 	10,
+			light_crystal: 	20,
 			pole: 			2,
+			stone: 			2,
 		},
 		result:{
 			light_crystal_staff: 1
@@ -797,7 +810,7 @@ var all_available_recipes = {
 	lumberjack:{
 		cost:{
 			hatchet: 	1,
-			lumber: 	10,
+			lumber: 	20,
 			peasant: 	1,
 		},
 		result:{
@@ -811,6 +824,7 @@ var all_available_recipes = {
 		cost:{
 			apple: 		5,
 			firewood: 	10,
+			flower: 	20,
 			herbs:  	10,
 			jar: 		1,
 			water: 		10
@@ -838,7 +852,7 @@ var all_available_recipes = {
 		cost:{
 			pickaxe: 	1,
 			peasant: 	1,
-			stone: 		10,
+			stone: 		20,
 		},
 		result:{
 			miner: 1
@@ -887,7 +901,7 @@ var all_available_recipes = {
 	omelette:{
 		cost:{
 			firewood: 	5,
-			egg: 		10,
+			egg: 		20,
 		},
 		result:{
 			omelette: 1
@@ -922,9 +936,10 @@ var all_available_recipes = {
 	},
 	pickaxe:{
 		cost:{
-			iron: 		5,
-			pole: 		3,
-			twine: 		3,
+			iron: 		10,
+			pole: 		5,
+			stone: 		5,
+			twine: 		5,
 		},
 		result:{
 			pickaxe: 1
@@ -935,9 +950,9 @@ var all_available_recipes = {
 	},
 	pillow:{
 		cost:{
-			cloth: 		2,
+			cloth: 		4,
 			feather: 	10,
-			twine: 		1,
+			twine: 		2,
 		},
 		result:{
 			pillow: 1
@@ -948,26 +963,28 @@ var all_available_recipes = {
 	},
 	pitchfork:{
 		cost:{
-			lumber: 	5,
-			pole: 		5,
+			iron: 		5,
+			pole: 		2,
+			stone: 		5,
 		},
 		result:{
 			pitchfork: 1
 		},
 		buildings:{
-			//wood_workshop: true,
+			smithy: true,
 		}
 	},
 	pitchfork_wood:{
 		cost:{
-			iron: 		2,
-			pole: 		1,
+			lumber: 	10,
+			pole: 		10,
+			twine: 		5,
 		},
 		result:{
 			pitchfork: 1
 		},
 		buildings:{
-			//smithy: true,
+			wood_workshop: true,
 		}
 	},
 	plank:{
@@ -983,7 +1000,7 @@ var all_available_recipes = {
 	},
 	poison:{
 		cost:{
-			flower:  	4,
+			flower:  	10,
 			jar: 		1,
 		},
 		result:{
@@ -1028,7 +1045,7 @@ var all_available_recipes = {
 	},
 	pouch:{
 		cost:{
-			leather: 	4,
+			leather: 	10,
 		},
 		result:{
 			pouch: 		1
@@ -1039,7 +1056,7 @@ var all_available_recipes = {
 	},
 	reeds_collector:{
 		cost:{
-			basket: 	1,
+			basket: 	5,
 			reeds: 		20,
 			peasant: 	1,
 		},
@@ -1052,7 +1069,7 @@ var all_available_recipes = {
 	},
 	road:{
 		cost:{
-			stone: 		30,
+			stone: 		40,
 		},
 		result:{
 			road: 		1
@@ -1063,8 +1080,8 @@ var all_available_recipes = {
 	},
 	roasted_meat:{
 		cost:{
-			firewood: 	2,
-			meat: 		2,
+			firewood: 	4,
+			meat: 		4,
 		},
 		result:{
 			roasted_meat: 1
@@ -1075,8 +1092,8 @@ var all_available_recipes = {
 	},
 	roasted_potato:{
 		cost:{
-			firewood: 	3,
-			potato: 	3,
+			firewood: 	5,
+			potato: 	5,
 		},
 		result:{
 			roasted_potato: 1
@@ -1087,9 +1104,9 @@ var all_available_recipes = {
 	},
 	robe:{
 		cost:{
-			cloth: 		3,
-			dye: 		2,
-			twine: 		3,
+			cloth: 		5,
+			dye: 		5,
+			twine: 		5,
 		},
 		result:{
 			robe: 1
@@ -1100,7 +1117,7 @@ var all_available_recipes = {
 	},
 	sack:{
 		cost:{
-			cloth: 		4,
+			cloth: 		5,
 			twine: 		2,
 		},
 		result:{
@@ -1112,10 +1129,10 @@ var all_available_recipes = {
 	},
 	sheep_herder:{
 		cost:{
-			cane: 		1,
+			cane: 		2,
 			peasant: 	1,
-			sack: 		1,
-			wool: 		10,
+			sack: 		2,
+			wool: 		20,
 		},
 		result:{
 			sheep_herder: 1
@@ -1126,8 +1143,8 @@ var all_available_recipes = {
 	},
 	shield:{
 		cost:{
-			plank:  	8,
-			nail: 		10,
+			plank:  	10,
+			nail: 		20,
 		},
 		result:{
 			shield: 	1
@@ -1138,7 +1155,7 @@ var all_available_recipes = {
 	},
 	shovel:{
 		cost:{
-			stone:  	2,
+			stone:  	5,
 			pole: 		1,
 		},
 		result:{
@@ -1161,7 +1178,7 @@ var all_available_recipes = {
 	},
 	sugar:{
 		cost:{
-			sugar_beet: 3,
+			sugar_beet: 5,
 		},
 		result:{
 			sugar: 		1
@@ -1172,7 +1189,7 @@ var all_available_recipes = {
 	},
 	sugar_cane:{
 		cost:{
-			sugarcane: 3,
+			sugarcane: 5,
 		},
 		result:{
 			sugar: 		1
@@ -1183,9 +1200,9 @@ var all_available_recipes = {
 	},
 	sword:{
 		cost:{
-			bone: 		20,
-			hide: 		5,
-			stone: 		5,
+			bone: 		40,
+			hide: 		10,
+			stone: 		10,
 		},
 		result:{
 			sword: 		1
@@ -1196,8 +1213,9 @@ var all_available_recipes = {
 	},
 	sword_iron:{
 		cost:{
-			iron: 		2,
-			hide: 		1,
+			iron: 		4,
+			hide: 		4,
+			stone: 		4,
 		},
 		result:{
 			sword: 		1
@@ -1208,7 +1226,7 @@ var all_available_recipes = {
 	},
 	trap:{
 		cost:{
-			firewood: 	2,
+			firewood: 	10,
 			twine: 		1,
 		},
 		result:{
@@ -1220,9 +1238,9 @@ var all_available_recipes = {
 	},
 	trapper:{
 		cost:{
-			trap: 		1,
+			trap: 		10,
 			peasant: 	1,
-			pouch: 		1,
+			pouch: 		2,
 		},
 		result:{
 			trapper: 1
@@ -1233,8 +1251,8 @@ var all_available_recipes = {
 	},
 	trumpet:{
 		cost:{
-			copper: 	6,
-			coal: 		10,
+			copper: 	10,
+			coal: 		20,
 		},
 		result:{
 			trumpet: 	1
@@ -1245,7 +1263,7 @@ var all_available_recipes = {
 	},
 	twine_flax:{
 		cost:{
-			flax: 		1,
+			flax: 		2,
 		},
 		result:{
 			twine: 		1
@@ -1256,7 +1274,7 @@ var all_available_recipes = {
 	},
 	twine_reeds:{
 		cost:{
-			reeds: 		2,
+			reeds: 		4,
 		},
 		result:{
 			twine: 		1
@@ -1267,7 +1285,7 @@ var all_available_recipes = {
 	},
 	twine_wool:{
 		cost:{
-			wool: 		2,
+			wool: 		4,
 		},
 		result:{
 			twine: 		1
@@ -1280,7 +1298,7 @@ var all_available_recipes = {
 		cost:{
 			peasant: 	1,
 			pitchfork: 	1,
-			wheat: 		10,
+			wheat: 		20,
 		},
 		result:{
 			wheat_farmer: 1
@@ -1304,7 +1322,7 @@ var all_available_recipes = {
 	},
 	wooden_hammer:{
 		cost:{
-			lumber:  	2,
+			plank:  	1,
 			pole: 		1,
 		},
 		result:{
