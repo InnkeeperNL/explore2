@@ -844,7 +844,7 @@ var all_available_actions = {
 			graveyard:{
 				min: 			1,
 				max: 			1,
-				fixed_chance: 	50,
+				fixed_chance: 	20,
 			}
 		},
 		energy_cost: 			6,
