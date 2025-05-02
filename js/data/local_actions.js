@@ -680,10 +680,11 @@ var all_available_actions = {
 		energy_cost: 			5,
 		image: 					'actions/dream_TradingCard-2025-04-22T082408.969.jpg',
 		action_loot:{
-			stone: 			5,
+			stone: 			12,
 		},
 		final_loot:{
 			peasant: 		0.5,
+			stone: 			1,
 		}
 	},
 	rat:{
